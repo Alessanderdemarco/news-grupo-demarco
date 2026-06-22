@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Análise de Concorrência — Grupo Demarco/Tozzo</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f1f5f9; color: #1f2937; }
+  .header { background: linear-gradient(135deg,#1a1a2e,#16213e); color: #fff; padding: 28px 32px; }
+  .header h1 { font-size: 24px; font-weight: 700; }
+  .header p { font-size: 13px; color: #94a3b8; margin-top: 4px; }
+  .tabs { display: flex; gap: 0; background: #1e293b; padding: 0 32px; }
+  .tab { padding: 12px 22px; color: #94a3b8; font-size: 14px; font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent; text-decoration: none; }
+  .tab.active { color: #f59e0b; border-bottom-color: #f59e0b; }
+  .tab:hover { color: #fff; }
+  .content { max-width: 1200px; margin: 28px auto; padding: 0 24px; }
+  .info-bar { background: #fff; border-radius: 8px; padding: 12px 18px; margin-bottom: 24px; border-left: 4px solid #f59e0b; font-size: 13px; color: #374151; }
+  .legenda { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; align-items: center; }
+  .legenda-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #6b7280; }
+  .dot { width: 14px; height: 14px; border-radius: 50%; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Grupo Demarco / Tozzo</h1>
+  <p>Análise de Concorrência — Portfolio x Mercado Brasileiro</p>
+</div>
+
+<div class="tabs">
+  <a href="news_grupo.html" class="tab">Noticias</a>
+  <a href="concorrencia.html" class="tab active">Concorrência</a>
+</div>
+
+<div class="content">
+
+  <div class="info-bar">
+    Atualizado em 22/06/2026 às 14:40 &nbsp;|&nbsp;
+    Fonte: sites oficiais das montadoras e tabela FIPE &nbsp;|&nbsp;
+    <b>Base para treinamento e avaliação de vendedores</b>
+  </div>
+
+  <div class="legenda">
+    <b style="font-size:13px">Legenda:</b>
+    <div class="legenda-item"><div class="dot" style="background:#2563eb"></div> Card azul escuro = nosso portfólio</div>
+    <div class="legenda-item"><div class="dot" style="background:#d1d5db"></div> Card cinza = concorrente de mercado</div>
+    <div class="legenda-item" style="gap:4px">
+      <span style="background:#6b7280;color:#fff;padding:1px 8px;border-radius:10px;font-size:11px">Combustão</span>
+      <span style="background:#16a34a;color:#fff;padding:1px 8px;border-radius:10px;font-size:11px">Híbrido</span>
+      <span style="background:#2563eb;color:#fff;padding:1px 8px;border-radius:10px;font-size:11px">Elétrico</span>
+      <span style="background:#ca8a04;color:#fff;padding:1px 8px;border-radius:10px;font-size:11px">Híbrido Leve</span>
+    </div>
+  </div>
+
+  
+<div style="background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px 24px;margin-bottom:24px">
+  <div style="font-size:18px;font-weight:700;color:#111;border-bottom:2px solid #e5e7eb;padding-bottom:10px;margin-bottom:14px">
+    Hatch Entry
+  </div>
+  <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Nosso Portfolio
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    
+<div style="background:#fff;border:2px solid #f2c200;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#f2c200;font-weight:700;text-transform:uppercase;letter-spacing:1px">Renault</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Renault Kwid</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 1.0 SCe<br>
+    <b>Potência:</b> 68–71 cv<br>
+    <b>Preço:</b> R$ 82.790 – R$ 100.990<br>
+    <b>Câmbio:</b> Manual 5v / CVT<br>
+    <b>Tração:</b> FWD
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+  
+<div style="margin-top:12px">
+  <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Concorrentes no Segmento
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c79020;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c79020;font-weight:700;text-transform:uppercase;letter-spacing:1px">Chevrolet</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Chevrolet Onix</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.0 Turbo 116cv<br>
+    <b>Preço:</b> R$ 82.990 – 107.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1b5f9e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1b5f9e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Volkswagen</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Volkswagen Polo</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.0 TSI 116cv<br>
+    <b>Preço:</b> R$ 99.990 – 129.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #9b1c1c;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#9b1c1c;font-weight:700;text-transform:uppercase;letter-spacing:1px">Fiat</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Fiat Argo</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.0 / 1.3 Turbo 109cv<br>
+    <b>Preço:</b> R$ 84.990 – 109.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #002c5f;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#002c5f;font-weight:700;text-transform:uppercase;letter-spacing:1px">Hyundai</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Hyundai HB20</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.0 Turbo 120cv<br>
+    <b>Preço:</b> R$ 89.990 – 119.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c8102e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c8102e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Toyota</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Toyota Yaris</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.3 / 1.5 107–110cv<br>
+    <b>Preço:</b> R$ 112.990 – 134.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #7c2d12;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#7c2d12;font-weight:700;text-transform:uppercase;letter-spacing:1px">Caoa Chery</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Caoa Chery iCAR S53</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.5 Turbo 130cv<br>
+    <b>Preço:</b> R$ 89.990 – 109.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+</div>
+</div>
+
+<div style="background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px 24px;margin-bottom:24px">
+  <div style="font-size:18px;font-weight:700;color:#111;border-bottom:2px solid #e5e7eb;padding-bottom:10px;margin-bottom:14px">
+    Hatch Compacto
+  </div>
+  <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Nosso Portfolio
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    
+<div style="background:#fff;border:2px solid #1a3a6b;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#1a3a6b;font-weight:700;text-transform:uppercase;letter-spacing:1px">Peugeot</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Peugeot 208</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 1.0 Turbo / 1.6 16V<br>
+    <b>Potência:</b> 100–122 cv<br>
+    <b>Preço:</b> R$ 104.990 – R$ 134.990<br>
+    <b>Câmbio:</b> Manual 5v / Auto 6v<br>
+    <b>Tração:</b> FWD
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#fff;border:2px solid #e05a00;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#e05a00;font-weight:700;text-transform:uppercase;letter-spacing:1px">Citroen</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Citroen C3</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 1.0 / 1.0 Turbo<br>
+    <b>Potência:</b> 75–100 cv<br>
+    <b>Preço:</b> R$ 94.990 – R$ 119.990<br>
+    <b>Câmbio:</b> Manual 5v / Auto 6v<br>
+    <b>Tração:</b> FWD
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+  
+<div style="margin-top:12px">
+  <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Concorrentes no Segmento
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c79020;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c79020;font-weight:700;text-transform:uppercase;letter-spacing:1px">Chevrolet</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Chevrolet Onix</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.0 Turbo 116cv<br>
+    <b>Preço:</b> R$ 82.990 – 107.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1b5f9e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1b5f9e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Volkswagen</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Volkswagen Polo</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.0 TSI 116cv<br>
+    <b>Preço:</b> R$ 99.990 – 129.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #9b1c1c;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#9b1c1c;font-weight:700;text-transform:uppercase;letter-spacing:1px">Fiat</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Fiat Argo</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.0 / 1.3 Turbo 109cv<br>
+    <b>Preço:</b> R$ 84.990 – 109.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #002c5f;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#002c5f;font-weight:700;text-transform:uppercase;letter-spacing:1px">Hyundai</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Hyundai HB20</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.0 Turbo 120cv<br>
+    <b>Preço:</b> R$ 89.990 – 119.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c8102e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c8102e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Toyota</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Toyota Yaris</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.3 / 1.5 107–110cv<br>
+    <b>Preço:</b> R$ 112.990 – 134.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #7c2d12;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#7c2d12;font-weight:700;text-transform:uppercase;letter-spacing:1px">Caoa Chery</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Caoa Chery iCAR S53</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.5 Turbo 130cv<br>
+    <b>Preço:</b> R$ 89.990 – 109.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+</div>
+</div>
+
+<div style="background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px 24px;margin-bottom:24px">
+  <div style="font-size:18px;font-weight:700;color:#111;border-bottom:2px solid #e5e7eb;padding-bottom:10px;margin-bottom:14px">
+    Hatch Elétrico Compacto
+  </div>
+  <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Nosso Portfolio
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    
+<div style="background:#fff;border:2px solid #0050b0;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#0050b0;font-weight:700;text-transform:uppercase;letter-spacing:1px">Geely</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Geely EX2</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> Elétrico<br>
+    <b>Potência:</b> 95 cv<br>
+    <b>Preço:</b> R$ 149.990 – R$ 179.990<br>
+    <b>Câmbio:</b> Direto<br>
+    <b>Tração:</b> FWD
+  </div>
+  <div style="margin-top:8px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+  </div>
+  
+<div style="margin-top:12px">
+  <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Concorrentes no Segmento
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1d4ed8;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1d4ed8;font-weight:700;text-transform:uppercase;letter-spacing:1px">BYD</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">BYD Dolphin</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 204cv<br>
+    <b>Preço:</b> R$ 159.800 – 194.800
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1d4ed8;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1d4ed8;font-weight:700;text-transform:uppercase;letter-spacing:1px">BYD</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">BYD Seagull</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 74cv<br>
+    <b>Preço:</b> R$ 114.800 – 134.800
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #7c2d12;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#7c2d12;font-weight:700;text-transform:uppercase;letter-spacing:1px">Caoa Chery</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Caoa Chery iCAR Q6</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 204cv<br>
+    <b>Preço:</b> R$ 179.990 – 209.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1b5f9e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1b5f9e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Volkswagen</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Volkswagen ID.3</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 204cv<br>
+    <b>Preço:</b> R$ 209.990 – 229.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+  </div>
+</div>
+</div>
+
+<div style="background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px 24px;margin-bottom:24px">
+  <div style="font-size:18px;font-weight:700;color:#111;border-bottom:2px solid #e5e7eb;padding-bottom:10px;margin-bottom:14px">
+    Hatch Elétrico
+  </div>
+  <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Nosso Portfolio
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    
+<div style="background:#fff;border:2px solid #c00020;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#c00020;font-weight:700;text-transform:uppercase;letter-spacing:1px">GWM</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Ora 03</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> Elétrico<br>
+    <b>Potência:</b> 143–204 cv<br>
+    <b>Preço:</b> R$ 179.990 – R$ 209.990<br>
+    <b>Câmbio:</b> Direto<br>
+    <b>Tração:</b> FWD
+  </div>
+  <div style="margin-top:8px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+  </div>
+  
+<div style="margin-top:12px">
+  <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Concorrentes no Segmento
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1d4ed8;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1d4ed8;font-weight:700;text-transform:uppercase;letter-spacing:1px">BYD</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">BYD Dolphin</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 204cv<br>
+    <b>Preço:</b> R$ 159.800 – 194.800
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1d4ed8;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1d4ed8;font-weight:700;text-transform:uppercase;letter-spacing:1px">BYD</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">BYD Seagull</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 74cv<br>
+    <b>Preço:</b> R$ 114.800 – 134.800
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #7c2d12;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#7c2d12;font-weight:700;text-transform:uppercase;letter-spacing:1px">Caoa Chery</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Caoa Chery iCAR Q6</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 204cv<br>
+    <b>Preço:</b> R$ 179.990 – 209.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1b5f9e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1b5f9e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Volkswagen</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Volkswagen ID.3</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 204cv<br>
+    <b>Preço:</b> R$ 209.990 – 229.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+  </div>
+</div>
+</div>
+
+<div style="background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px 24px;margin-bottom:24px">
+  <div style="font-size:18px;font-weight:700;color:#111;border-bottom:2px solid #e5e7eb;padding-bottom:10px;margin-bottom:14px">
+    SUV Compacto Entry
+  </div>
+  <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Nosso Portfolio
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    
+<div style="background:#fff;border:2px solid #f2c200;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#f2c200;font-weight:700;text-transform:uppercase;letter-spacing:1px">Renault</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Renault Kardian</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 1.0 TCe Turbo<br>
+    <b>Potência:</b> 125 cv<br>
+    <b>Preço:</b> R$ 113.690 – R$ 149.990<br>
+    <b>Câmbio:</b> Manual 6v / CVT<br>
+    <b>Tração:</b> FWD
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#fff;border:2px solid #e05a00;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#e05a00;font-weight:700;text-transform:uppercase;letter-spacing:1px">Citroen</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Citroen Basalt</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 1.0 / 1.0 Turbo<br>
+    <b>Potência:</b> 75–130 cv<br>
+    <b>Preço:</b> R$ 109.990 – R$ 139.990<br>
+    <b>Câmbio:</b> Manual 5v / Auto 6v<br>
+    <b>Tração:</b> FWD
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#fff;border:2px solid #e05a00;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#e05a00;font-weight:700;text-transform:uppercase;letter-spacing:1px">Citroen</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Citroen Aircross</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 1.0 Turbo<br>
+    <b>Potência:</b> 130 cv<br>
+    <b>Preço:</b> R$ 119.990 – R$ 154.990<br>
+    <b>Câmbio:</b> Auto 6v<br>
+    <b>Tração:</b> FWD
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#fff;border:2px solid #1a3a6b;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#1a3a6b;font-weight:700;text-transform:uppercase;letter-spacing:1px">Peugeot</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Peugeot 2008</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 1.0 Turbo<br>
+    <b>Potência:</b> 130 cv<br>
+    <b>Preço:</b> R$ 134.990 – R$ 174.990<br>
+    <b>Câmbio:</b> Auto 6v<br>
+    <b>Tração:</b> FWD
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+  
+<div style="margin-top:12px">
+  <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Concorrentes no Segmento
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #9b1c1c;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#9b1c1c;font-weight:700;text-transform:uppercase;letter-spacing:1px">Fiat</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Fiat Pulse</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.0 Turbo 130cv<br>
+    <b>Preço:</b> R$ 109.990 – 154.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1b5f9e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1b5f9e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Volkswagen</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Volkswagen T-Cross</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.0 TSI 128cv<br>
+    <b>Preço:</b> R$ 129.990 – 164.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #002c5f;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#002c5f;font-weight:700;text-transform:uppercase;letter-spacing:1px">Hyundai</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Hyundai Creta</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.0 Turbo 120cv<br>
+    <b>Preço:</b> R$ 134.990 – 184.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #2a6117;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#2a6117;font-weight:700;text-transform:uppercase;letter-spacing:1px">Jeep</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Jeep Renegade</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.3 Turbo 185cv (4xe PHEV)<br>
+    <b>Preço:</b> R$ 129.990 – 169.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #cc0000;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#cc0000;font-weight:700;text-transform:uppercase;letter-spacing:1px">Honda</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Honda HR-V</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.5 Turbo 177cv<br>
+    <b>Preço:</b> R$ 164.990 – 204.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c8102e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c8102e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Toyota</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Toyota Corolla Cross</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 Hybrid 197cv<br>
+    <b>Preço:</b> R$ 174.990 – 229.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #7c2d12;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#7c2d12;font-weight:700;text-transform:uppercase;letter-spacing:1px">Caoa Chery</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Caoa Chery Tiggo 5x</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.5 Turbo 150cv<br>
+    <b>Preço:</b> R$ 119.990 – 154.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1d4ed8;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1d4ed8;font-weight:700;text-transform:uppercase;letter-spacing:1px">BYD</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">BYD Dolphin Mini</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 95cv<br>
+    <b>Preço:</b> R$ 99.800 – 119.800
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+  </div>
+</div>
+</div>
+
+<div style="background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px 24px;margin-bottom:24px">
+  <div style="font-size:18px;font-weight:700;color:#111;border-bottom:2px solid #e5e7eb;padding-bottom:10px;margin-bottom:14px">
+    SUV Compacto
+  </div>
+  <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Nosso Portfolio
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    
+<div style="background:#fff;border:2px solid #f2c200;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#f2c200;font-weight:700;text-transform:uppercase;letter-spacing:1px">Renault</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Renault Duster</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 1.3 TCe / 1.6 16V<br>
+    <b>Potência:</b> 130–163 cv<br>
+    <b>Preço:</b> R$ 131.990 – R$ 189.990<br>
+    <b>Câmbio:</b> Manual / CVT / Auto 6v<br>
+    <b>Tração:</b> FWD / 4x4
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#fff;border:2px solid #c00020;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#c00020;font-weight:700;text-transform:uppercase;letter-spacing:1px">GWM</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Haval Jolion</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 1.5T<br>
+    <b>Potência:</b> 147 cv<br>
+    <b>Preço:</b> R$ 164.990 – R$ 194.990<br>
+    <b>Câmbio:</b> Auto 7v DCT<br>
+    <b>Tração:</b> FWD
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+  
+<div style="margin-top:12px">
+  <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Concorrentes no Segmento
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #9b1c1c;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#9b1c1c;font-weight:700;text-transform:uppercase;letter-spacing:1px">Fiat</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Fiat Pulse</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.0 Turbo 130cv<br>
+    <b>Preço:</b> R$ 109.990 – 154.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1b5f9e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1b5f9e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Volkswagen</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Volkswagen T-Cross</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.0 TSI 128cv<br>
+    <b>Preço:</b> R$ 129.990 – 164.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #002c5f;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#002c5f;font-weight:700;text-transform:uppercase;letter-spacing:1px">Hyundai</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Hyundai Creta</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.0 Turbo 120cv<br>
+    <b>Preço:</b> R$ 134.990 – 184.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #2a6117;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#2a6117;font-weight:700;text-transform:uppercase;letter-spacing:1px">Jeep</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Jeep Renegade</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.3 Turbo 185cv (4xe PHEV)<br>
+    <b>Preço:</b> R$ 129.990 – 169.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #cc0000;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#cc0000;font-weight:700;text-transform:uppercase;letter-spacing:1px">Honda</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Honda HR-V</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.5 Turbo 177cv<br>
+    <b>Preço:</b> R$ 164.990 – 204.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c8102e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c8102e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Toyota</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Toyota Corolla Cross</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 Hybrid 197cv<br>
+    <b>Preço:</b> R$ 174.990 – 229.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #7c2d12;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#7c2d12;font-weight:700;text-transform:uppercase;letter-spacing:1px">Caoa Chery</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Caoa Chery Tiggo 5x</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.5 Turbo 150cv<br>
+    <b>Preço:</b> R$ 119.990 – 154.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1d4ed8;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1d4ed8;font-weight:700;text-transform:uppercase;letter-spacing:1px">BYD</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">BYD Dolphin Mini</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 95cv<br>
+    <b>Preço:</b> R$ 99.800 – 119.800
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+  </div>
+</div>
+</div>
+
+<div style="background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px 24px;margin-bottom:24px">
+  <div style="font-size:18px;font-weight:700;color:#111;border-bottom:2px solid #e5e7eb;padding-bottom:10px;margin-bottom:14px">
+    SUV Médio
+  </div>
+  <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Nosso Portfolio
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    
+<div style="background:#fff;border:2px solid #f2c200;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#f2c200;font-weight:700;text-transform:uppercase;letter-spacing:1px">Renault</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Renault Boreal</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 1.3 TCe<br>
+    <b>Potência:</b> 163 cv<br>
+    <b>Preço:</b> R$ 179.990 – R$ 219.990<br>
+    <b>Câmbio:</b> Auto 7v EDC<br>
+    <b>Tração:</b> FWD
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#fff;border:2px solid #c00020;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#c00020;font-weight:700;text-transform:uppercase;letter-spacing:1px">GWM</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Haval H6</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 1.5T / 2.0T<br>
+    <b>Potência:</b> 169–238 cv<br>
+    <b>Preço:</b> R$ 199.990 – R$ 249.990<br>
+    <b>Câmbio:</b> Auto 7v DCT<br>
+    <b>Tração:</b> FWD / AWD
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+  
+<div style="margin-top:12px">
+  <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Concorrentes no Segmento
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c8102e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c8102e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Toyota</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Toyota RAV4</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.5 Hybrid 222cv<br>
+    <b>Preço:</b> R$ 259.990 – 319.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1b5f9e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1b5f9e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Volkswagen</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Volkswagen Tiguan</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.4 TSI 150cv / 2.0 TSI 320cv<br>
+    <b>Preço:</b> R$ 229.990 – 289.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #2a6117;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#2a6117;font-weight:700;text-transform:uppercase;letter-spacing:1px">Jeep</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Jeep Compass</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.3 Turbo 185–270cv (4xe PHEV)<br>
+    <b>Preço:</b> R$ 179.990 – 259.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #002c5f;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#002c5f;font-weight:700;text-transform:uppercase;letter-spacing:1px">Hyundai</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Hyundai Tucson</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.6 Turbo 180cv<br>
+    <b>Preço:</b> R$ 219.990 – 279.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #cc0000;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#cc0000;font-weight:700;text-transform:uppercase;letter-spacing:1px">Honda</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Honda CR-V</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 Hybrid 204cv<br>
+    <b>Preço:</b> R$ 259.990 – 299.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #7c2d12;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#7c2d12;font-weight:700;text-transform:uppercase;letter-spacing:1px">Caoa Chery</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Caoa Chery Tiggo 8</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.6 Turbo 186cv<br>
+    <b>Preço:</b> R$ 189.990 – 249.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1d4ed8;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1d4ed8;font-weight:700;text-transform:uppercase;letter-spacing:1px">BYD</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">BYD Song Plus</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.5 Turbo PHEV 243cv<br>
+    <b>Preço:</b> R$ 219.990 – 269.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+  </div>
+</div>
+</div>
+
+<div style="background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px 24px;margin-bottom:24px">
+  <div style="font-size:18px;font-weight:700;color:#111;border-bottom:2px solid #e5e7eb;padding-bottom:10px;margin-bottom:14px">
+    SUV Elétrico Compacto
+  </div>
+  <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Nosso Portfolio
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    
+<div style="background:#fff;border:2px solid #0050b0;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#0050b0;font-weight:700;text-transform:uppercase;letter-spacing:1px">Geely</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Geely EX5</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> Elétrico<br>
+    <b>Potência:</b> 218 cv<br>
+    <b>Preço:</b> R$ 199.990 – R$ 239.990<br>
+    <b>Câmbio:</b> Direto<br>
+    <b>Tração:</b> FWD
+  </div>
+  <div style="margin-top:8px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+  </div>
+  
+<div style="margin-top:12px">
+  <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Concorrentes no Segmento
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1d4ed8;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1d4ed8;font-weight:700;text-transform:uppercase;letter-spacing:1px">BYD</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">BYD Atto 3</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 204cv<br>
+    <b>Preço:</b> R$ 219.800 – 244.800
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1d4ed8;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1d4ed8;font-weight:700;text-transform:uppercase;letter-spacing:1px">BYD</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">BYD Seal U DM-i</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> PHEV 218cv<br>
+    <b>Preço:</b> R$ 249.800 – 289.800
+  </div>
+  <div style="margin-top:6px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1b5f9e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1b5f9e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Volkswagen</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Volkswagen ID.4</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 204–299cv<br>
+    <b>Preço:</b> R$ 289.990 – 329.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c8102e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c8102e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Toyota</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Toyota bZ4X</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 204cv<br>
+    <b>Preço:</b> R$ 299.990 – 349.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+  </div>
+</div>
+</div>
+
+<div style="background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px 24px;margin-bottom:24px">
+  <div style="font-size:18px;font-weight:700;color:#111;border-bottom:2px solid #e5e7eb;padding-bottom:10px;margin-bottom:14px">
+    SUV Compacto PHEV
+  </div>
+  <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Nosso Portfolio
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    
+<div style="background:#fff;border:2px solid #0050b0;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#0050b0;font-weight:700;text-transform:uppercase;letter-spacing:1px">Geely</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Geely EX5 EM-I</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 1.5T + Elétrico PHEV<br>
+    <b>Potência:</b> 326 cv<br>
+    <b>Preço:</b> R$ 219.990 – R$ 259.990<br>
+    <b>Câmbio:</b> Direto (PHEV)<br>
+    <b>Tração:</b> AWD
+  </div>
+  <div style="margin-top:8px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+  </div>
+  
+<div style="margin-top:12px">
+  <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Concorrentes no Segmento
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1d4ed8;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1d4ed8;font-weight:700;text-transform:uppercase;letter-spacing:1px">BYD</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">BYD Atto 3</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 204cv<br>
+    <b>Preço:</b> R$ 219.800 – 244.800
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1d4ed8;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1d4ed8;font-weight:700;text-transform:uppercase;letter-spacing:1px">BYD</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">BYD Seal U DM-i</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> PHEV 218cv<br>
+    <b>Preço:</b> R$ 249.800 – 289.800
+  </div>
+  <div style="margin-top:6px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1b5f9e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1b5f9e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Volkswagen</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Volkswagen ID.4</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 204–299cv<br>
+    <b>Preço:</b> R$ 289.990 – 329.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c8102e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c8102e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Toyota</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Toyota bZ4X</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> Elétrico 204cv<br>
+    <b>Preço:</b> R$ 299.990 – 349.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Elétrico</span></div>
+</div>
+  </div>
+</div>
+</div>
+
+<div style="background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px 24px;margin-bottom:24px">
+  <div style="font-size:18px;font-weight:700;color:#111;border-bottom:2px solid #e5e7eb;padding-bottom:10px;margin-bottom:14px">
+    SUV Grande PHEV
+  </div>
+  <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Nosso Portfolio
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    
+<div style="background:#fff;border:2px solid #c00020;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#c00020;font-weight:700;text-transform:uppercase;letter-spacing:1px">GWM</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Tank 500</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 3.0T V6 PHEV<br>
+    <b>Potência:</b> 449 cv<br>
+    <b>Preço:</b> R$ 469.990 – R$ 499.990<br>
+    <b>Câmbio:</b> Auto 9v<br>
+    <b>Tração:</b> 4x4
+  </div>
+  <div style="margin-top:8px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+  </div>
+  
+<div style="margin-top:12px">
+  <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Concorrentes no Segmento
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c8102e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c8102e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Toyota</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Toyota Land Cruiser Prado</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.4 Turbo + Elétrico 326cv<br>
+    <b>Preço:</b> R$ 469.990 – 569.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #2a6117;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#2a6117;font-weight:700;text-transform:uppercase;letter-spacing:1px">Jeep</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Jeep Grand Cherokee</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 Turbo 272cv / 4xe PHEV 375cv<br>
+    <b>Preço:</b> R$ 399.990 – 569.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1b5f9e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1b5f9e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Volkswagen</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Volkswagen Amarok</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 / 3.0 TDI 204–258cv<br>
+    <b>Preço:</b> R$ 329.990 – 469.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #003087;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#003087;font-weight:700;text-transform:uppercase;letter-spacing:1px">Ford</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Ford Bronco</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 EcoBoost 330cv<br>
+    <b>Preço:</b> R$ 399.990 – 469.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c0392b;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c0392b;font-weight:700;text-transform:uppercase;letter-spacing:1px">Mitsubishi</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Mitsubishi Pajero Sport</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.4 Turbo Diesel 181cv<br>
+    <b>Preço:</b> R$ 289.990 – 339.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+</div>
+</div>
+
+<div style="background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px 24px;margin-bottom:24px">
+  <div style="font-size:18px;font-weight:700;color:#111;border-bottom:2px solid #e5e7eb;padding-bottom:10px;margin-bottom:14px">
+    SUV Off-road
+  </div>
+  <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Nosso Portfolio
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    
+<div style="background:#fff;border:2px solid #c00020;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#c00020;font-weight:700;text-transform:uppercase;letter-spacing:1px">GWM</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Tank 300</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 2.0T<br>
+    <b>Potência:</b> 227 cv<br>
+    <b>Preço:</b> R$ 349.990 – R$ 389.990<br>
+    <b>Câmbio:</b> Auto 8v<br>
+    <b>Tração:</b> 4x4
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+  
+<div style="margin-top:12px">
+  <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Concorrentes no Segmento
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c8102e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c8102e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Toyota</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Toyota Land Cruiser Prado</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.4 Turbo + Elétrico 326cv<br>
+    <b>Preço:</b> R$ 469.990 – 569.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #2a6117;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#2a6117;font-weight:700;text-transform:uppercase;letter-spacing:1px">Jeep</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Jeep Grand Cherokee</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 Turbo 272cv / 4xe PHEV 375cv<br>
+    <b>Preço:</b> R$ 399.990 – 569.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1b5f9e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1b5f9e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Volkswagen</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Volkswagen Amarok</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 / 3.0 TDI 204–258cv<br>
+    <b>Preço:</b> R$ 329.990 – 469.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #003087;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#003087;font-weight:700;text-transform:uppercase;letter-spacing:1px">Ford</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Ford Bronco</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 EcoBoost 330cv<br>
+    <b>Preço:</b> R$ 399.990 – 469.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c0392b;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c0392b;font-weight:700;text-transform:uppercase;letter-spacing:1px">Mitsubishi</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Mitsubishi Pajero Sport</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.4 Turbo Diesel 181cv<br>
+    <b>Preço:</b> R$ 289.990 – 339.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+</div>
+</div>
+
+<div style="background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px 24px;margin-bottom:24px">
+  <div style="font-size:18px;font-weight:700;color:#111;border-bottom:2px solid #e5e7eb;padding-bottom:10px;margin-bottom:14px">
+    SUV Grande Off-road
+  </div>
+  <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Nosso Portfolio
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    
+<div style="background:#fff;border:2px solid #c00020;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#c00020;font-weight:700;text-transform:uppercase;letter-spacing:1px">GWM</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Haval H9</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 2.0T<br>
+    <b>Potência:</b> 218 cv<br>
+    <b>Preço:</b> R$ 319.990 – R$ 369.990<br>
+    <b>Câmbio:</b> Auto 8v<br>
+    <b>Tração:</b> 4x4
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+  
+<div style="margin-top:12px">
+  <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Concorrentes no Segmento
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c8102e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c8102e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Toyota</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Toyota Land Cruiser Prado</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.4 Turbo + Elétrico 326cv<br>
+    <b>Preço:</b> R$ 469.990 – 569.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #2a6117;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#2a6117;font-weight:700;text-transform:uppercase;letter-spacing:1px">Jeep</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Jeep Grand Cherokee</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 Turbo 272cv / 4xe PHEV 375cv<br>
+    <b>Preço:</b> R$ 399.990 – 569.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Híbrido/PHEV</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1b5f9e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1b5f9e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Volkswagen</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Volkswagen Amarok</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 / 3.0 TDI 204–258cv<br>
+    <b>Preço:</b> R$ 329.990 – 469.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #003087;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#003087;font-weight:700;text-transform:uppercase;letter-spacing:1px">Ford</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Ford Bronco</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 EcoBoost 330cv<br>
+    <b>Preço:</b> R$ 399.990 – 469.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c0392b;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c0392b;font-weight:700;text-transform:uppercase;letter-spacing:1px">Mitsubishi</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Mitsubishi Pajero Sport</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.4 Turbo Diesel 181cv<br>
+    <b>Preço:</b> R$ 289.990 – 339.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+</div>
+</div>
+
+<div style="background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px 24px;margin-bottom:24px">
+  <div style="font-size:18px;font-weight:700;color:#111;border-bottom:2px solid #e5e7eb;padding-bottom:10px;margin-bottom:14px">
+    Picape Compacta
+  </div>
+  <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Nosso Portfolio
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    
+<div style="background:#fff;border:2px solid #f2c200;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#f2c200;font-weight:700;text-transform:uppercase;letter-spacing:1px">Renault</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Renault Oroch</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 1.3 TCe / 2.0 16V<br>
+    <b>Potência:</b> 112–163 cv<br>
+    <b>Preço:</b> R$ 139.990 – R$ 189.990<br>
+    <b>Câmbio:</b> Manual / Auto 6v<br>
+    <b>Tração:</b> FWD / 4x4
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+  
+<div style="margin-top:12px">
+  <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Concorrentes no Segmento
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #9b1c1c;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#9b1c1c;font-weight:700;text-transform:uppercase;letter-spacing:1px">Fiat</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Fiat Strada</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.3 Turbo 109cv<br>
+    <b>Preço:</b> R$ 109.990 – 154.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1b5f9e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1b5f9e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Volkswagen</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Volkswagen Saveiro</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.6 8V 104cv<br>
+    <b>Preço:</b> R$ 92.990 – 119.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c79020;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c79020;font-weight:700;text-transform:uppercase;letter-spacing:1px">Chevrolet</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Chevrolet Montana</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.2 Turbo 133cv<br>
+    <b>Preço:</b> R$ 139.990 – 184.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+</div>
+</div>
+
+<div style="background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px 24px;margin-bottom:24px">
+  <div style="font-size:18px;font-weight:700;color:#111;border-bottom:2px solid #e5e7eb;padding-bottom:10px;margin-bottom:14px">
+    Picape Média
+  </div>
+  <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Nosso Portfolio
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    
+<div style="background:#fff;border:2px solid #f2c200;border-radius:10px;padding:14px 16px;min-width:220px;max-width:280px">
+  <div style="font-size:11px;color:#f2c200;font-weight:700;text-transform:uppercase;letter-spacing:1px">Renault</div>
+  <div style="font-size:17px;font-weight:700;color:#111;margin:2px 0 6px">Renault Niagara</div>
+  <div style="font-size:12px;color:#4b5563;line-height:1.7">
+    <b>Motor:</b> 1.3 TCe<br>
+    <b>Potência:</b> 163 cv<br>
+    <b>Preço:</b> R$ 219.990 – R$ 249.990<br>
+    <b>Câmbio:</b> Auto 7v EDC<br>
+    <b>Tração:</b> 4x4
+  </div>
+  <div style="margin-top:8px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+  
+<div style="margin-top:12px">
+  <div style="font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+    Concorrentes no Segmento
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #9b1c1c;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#9b1c1c;font-weight:700;text-transform:uppercase;letter-spacing:1px">Fiat</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Fiat Toro</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 1.3 Turbo / 2.0 Diesel 152–170cv<br>
+    <b>Preço:</b> R$ 169.990 – 259.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c8102e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c8102e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Toyota</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Toyota Hilux</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.8 Diesel 204cv<br>
+    <b>Preço:</b> R$ 249.990 – 339.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #1b5f9e;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#1b5f9e;font-weight:700;text-transform:uppercase;letter-spacing:1px">Volkswagen</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Volkswagen Amarok</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 / 3.0 V6 TDI 204–258cv<br>
+    <b>Preço:</b> R$ 329.990 – 469.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c79020;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c79020;font-weight:700;text-transform:uppercase;letter-spacing:1px">Chevrolet</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Chevrolet S10</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.5 / 2.8 Diesel 200cv<br>
+    <b>Preço:</b> R$ 249.990 – 349.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #c0392b;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#c0392b;font-weight:700;text-transform:uppercase;letter-spacing:1px">Mitsubishi</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Mitsubishi L200</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.4 Diesel 181cv<br>
+    <b>Preço:</b> R$ 259.990 – 319.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #003087;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#003087;font-weight:700;text-transform:uppercase;letter-spacing:1px">Ford</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Ford Ranger</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 / 3.0 Diesel 205–250cv<br>
+    <b>Preço:</b> R$ 279.990 – 399.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+
+<div style="background:#f9fafb;border:1.5px solid #d1d5db;border-left:4px solid #2a6117;border-radius:8px;padding:12px 14px;min-width:200px;max-width:260px">
+  <div style="font-size:10px;color:#2a6117;font-weight:700;text-transform:uppercase;letter-spacing:1px">Jeep</div>
+  <div style="font-size:15px;font-weight:700;color:#111;margin:2px 0 4px">Jeep Gladiator</div>
+  <div style="font-size:12px;color:#6b7280;line-height:1.7">
+    <b>Motor:</b> 2.0 Turbo 272cv<br>
+    <b>Preço:</b> R$ 399.990 – 449.990
+  </div>
+  <div style="margin-top:6px"><span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600">Combustão</span></div>
+</div>
+  </div>
+</div>
+</div>
+
+  <div style="text-align:center;padding:32px 0 16px;font-size:12px;color:#9ca3af">
+    Grupo Demarco / Tozzo &mdash; Análise Competitiva &mdash; 22/06/2026 às 14:40
+  </div>
+
+</div>
+</body>
+</html>
