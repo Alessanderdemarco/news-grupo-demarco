@@ -11,6 +11,8 @@ from specs_portfolio import (
     get_spec, encontrar_concorrentes, fmt_preco,
 )
 from gerar_concorrencia import gerar_secao as gerar_secao_concorrencia
+from gerar_mkt   import gerar_secao as gerar_secao_mkt
+from gerar_lojas import gerar_secao as gerar_secao_lojas
 
 # ─── Feeds de notícias gerais ─────────────────────────────────────────────────
 
@@ -207,6 +209,8 @@ def gerar_html(lancamentos, noticias_gerais):
                    or "<p class='vazio'>Nenhuma noticia encontrada.</p>"
 
     secao_concorrencia = gerar_secao_concorrencia()
+    secao_mkt          = gerar_secao_mkt()
+    secao_lojas        = gerar_secao_lojas()
 
     return f"""<!DOCTYPE html>
 <html lang="pt-BR">
@@ -340,6 +344,8 @@ def gerar_html(lancamentos, noticias_gerais):
   <button class="tab-btn active" onclick="abrirAba('lancamentos', this)">Lancamentos</button>
   <button class="tab-btn" onclick="abrirAba('noticias', this)">Noticias das Marcas</button>
   <button class="tab-btn" onclick="abrirAba('concorrencia', this)">Concorrencia</button>
+  <button class="tab-btn" onclick="abrirAba('lojas', this)">Nossas Lojas</button>
+  <button class="tab-btn" onclick="abrirAba('mkt', this)">Painel MKT</button>
 </nav>
 
 <!-- ABA: Lancamentos -->
@@ -377,6 +383,16 @@ def gerar_html(lancamentos, noticias_gerais):
     {secao_concorrencia}
     <div style="text-align:center;padding:24px 0 8px;font-size:12px;color:#9ca3af">Grupo Demarco / Tozzo &mdash; {agora}</div>
   </div>
+</div>
+
+<!-- ABA: Nossas Lojas -->
+<div id="aba-lojas" class="tab-content">
+  {secao_lojas}
+</div>
+
+<!-- ABA: Painel MKT -->
+<div id="aba-mkt" class="tab-content">
+  {secao_mkt}
 </div>
 
 <script>
