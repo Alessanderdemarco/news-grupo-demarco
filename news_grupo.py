@@ -320,10 +320,10 @@ def gerar_html(lancamentos, noticias_gerais):
   <div class="meta">Atualizado em<br><strong style="font-size:1rem;opacity:1">{agora}</strong></div>
 </header>
 
-<div style="display:flex;gap:0;background:#16213e;padding:0 40px">
-  <a href="news_grupo.html" style="padding:12px 22px;color:#f59e0b;font-size:14px;font-weight:600;border-bottom:3px solid #f59e0b;text-decoration:none">Noticias</a>
-  <a href="concorrencia.html" style="padding:12px 22px;color:#94a3b8;font-size:14px;font-weight:600;border-bottom:3px solid transparent;text-decoration:none">Concorrência</a>
-</div>
+<nav style="background:#1e293b;padding:0 32px;display:flex;gap:0;border-bottom:1px solid #334155">
+  <a href="news_grupo.html" style="padding:13px 22px;color:#f59e0b;font-size:14px;font-weight:600;border-bottom:3px solid #f59e0b;text-decoration:none">Noticias</a>
+  <a href="concorrencia.html" style="padding:13px 22px;color:#94a3b8;font-size:14px;font-weight:600;border-bottom:3px solid transparent;text-decoration:none">Concorrencia</a>
+</nav>
 
 <div class="stats">
   <div class="num"><strong>{len(lancamentos)}</strong> lancamentos analisados</div>
