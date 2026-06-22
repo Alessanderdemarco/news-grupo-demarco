@@ -114,6 +114,44 @@
 
   /* ── Aba concorrência ── */
   .conc-wrap { max-width: 1300px; margin: 28px auto; padding: 0 24px; }
+
+  /* ════════════════════════════════════════════
+     RESPONSIVO — MOBILE
+  ════════════════════════════════════════════ */
+  @media (max-width: 900px) {
+    header { padding: 18px 20px; }
+    .tabs-nav {
+      padding: 0 4px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .tabs-nav::-webkit-scrollbar { display: none; }
+    .tab-btn { padding: 11px 16px; font-size: 13px; }
+    .stats { padding: 12px 20px; gap: 14px; }
+    .container { padding: 20px 16px; }
+    .grid { grid-template-columns: 1fr; gap: 16px; }
+    .conc-wrap { padding: 0 16px; margin: 16px auto; }
+  }
+
+  @media (max-width: 600px) {
+    header {
+      padding: 14px 16px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    header h1 { font-size: 1.05rem; }
+    .meta { text-align: left; font-size: 0.78rem; }
+    .tab-btn { padding: 10px 12px; font-size: 11.5px; }
+    .stats { padding: 10px 14px; gap: 10px; flex-direction: column; align-items: flex-start; }
+    .container { padding: 14px 12px; }
+    .conc-wrap { padding: 0 10px; margin: 10px auto; }
+    .tabela-comp th, .tabela-comp td { padding: 5px 8px; font-size: 0.68rem; }
+    .td-modelo { min-width: 120px; }
+    .card { padding: 16px; }
+    .card h3 { font-size: 0.88rem; }
+  }
 </style>
 </head>
 <body>
@@ -123,7 +161,7 @@
     <div style="font-size:0.7rem;opacity:0.5;margin-bottom:4px;letter-spacing:2px">GRUPO DEMARCO / TOZZO</div>
     <h1>Central de Inteligencia Automotiva</h1>
   </div>
-  <div class="meta">Atualizado em<br><strong style="font-size:1rem;opacity:1">22/06/2026 as 17:20</strong></div>
+  <div class="meta">Atualizado em<br><strong style="font-size:1rem;opacity:1">22/06/2026 as 17:38</strong></div>
 </header>
 
 <nav class="tabs-nav">
@@ -138,7 +176,7 @@
 <div id="aba-lancamentos" class="tab-content active">
   <div class="stats">
     <div class="num"><strong>18</strong> lancamentos analisados</div>
-    <div class="num"><strong>11</strong> concorrem com nosso portfolio</div>
+    <div class="num"><strong>16</strong> concorrem com nosso portfolio</div>
     <div class="num">Fonte: Autoesporte</div>
   </div>
   <div class="container">
@@ -174,11 +212,23 @@
     <div class="card card-outro">
         <div class="card-header">
             <span class="portal">Autoesporte</span>
-            <span class="badge-seg">Sedan</span><span class="mot-elet">Elétrico</span>
+            <span class="badge-seg">Suv</span><span class="mot-elet">Elétrico</span>
         </div>
         <h3><a href="https://autoesporte.globo.com/carros/lancamentos-de-carros/noticia/2026/06/novo-audi-rs-e-tron-gt-estreia-brasil-925-cv.ghtml" target="_blank">Novo Audi RS e-tron GT estreia por R$ 1,3 milhão e até dança para o dono</a></h3>
         <p class="resumo">Sedã elétrico vai de 0 a 100 km/h em 2,5 segundos e estreia no Brasil por encomenda e muitas opções de personalização</p>
         
+    <div class="tabela-comp-wrap">
+        <div class="tabela-comp-titulo">
+            Concorrentes no portfolio &mdash; Carroceria: <strong>Suv</strong>
+            &nbsp;|&nbsp; Motorização: <strong>Elétrico</strong>
+        </div>
+        <div class="tabela-scroll">
+        <table class="tabela-comp">
+            <thead><tr><th>Modelo</th><th>Motorização</th><th>Motor</th><th>Potência</th><th>Torque</th><th>Câmbio</th><th>Tração</th><th>Preço</th></tr></thead>
+            <tbody><tr class="tr-novo"><td class="td-modelo"><span class="tag-novo">LANÇAMENTO</span><br>Novo Audi RS e-tron GT estreia por R$ 1,3 mi…</td><td><span class="mot-elet">Elétrico</span></td><td>77 litros</td><td>925 cv</td><td>104 kgfm</td><td>—</td><td>tração integral</td><td>R$ 1.334.990</td></tr></tbody>
+        </table>
+        </div>
+    </div>
         <div class="card-footer">
             <span class="data">2026-06-22T10:19</span>
             <a href="https://autoesporte.globo.com/carros/lancamentos-de-carros/noticia/2026/06/novo-audi-rs-e-tron-gt-estreia-brasil-925-cv.ghtml" target="_blank" class="btn-ler">Ler na Autoesporte &rarr;</a>
@@ -237,14 +287,26 @@
         </div>
     </div>
 
-    <div class="card card-outro">
+    <div class="card card-concorre">
         <div class="card-header">
             <span class="portal">Autoesporte</span>
-            <span class="badge-seg">Perua</span><span class="mot-comb">Combustão</span>
+            <span class="badge-seg">Suv</span><span class="mot-elet">Elétrico</span><span class="badge-concorre">Concorre conosco</span>
         </div>
         <h3><a href="https://autoesporte.globo.com/motos/lancamentos-de-motos/noticia/2026/06/novos-audi-a5-e-a6-precos-pre-venda.ghtml" target="_blank">Novos Audi A5 e A6 Avant dão fôlego às peruas no Brasil com muita potência</a></h3>
         <p class="resumo">Dupla entra em pré-venda no país e chegará às lojas em setembro para movimentar segmento de stations de luxo no país; veja preços e especificações</p>
         
+    <div class="tabela-comp-wrap">
+        <div class="tabela-comp-titulo">
+            Concorrentes no portfolio &mdash; Carroceria: <strong>Suv</strong>
+            &nbsp;|&nbsp; Motorização: <strong>Elétrico</strong>
+        </div>
+        <div class="tabela-scroll">
+        <table class="tabela-comp">
+            <thead><tr><th>Modelo</th><th>Motorização</th><th>Motor</th><th>Potência</th><th>Torque</th><th>Câmbio</th><th>Tração</th><th>Preço</th></tr></thead>
+            <tbody><tr class="tr-novo"><td class="td-modelo"><span class="tag-novo">LANÇAMENTO</span><br>Novos Audi A5 e A6 Avant dão fôlego às perua…</td><td><span class="mot-elet">Elétrico</span></td><td>1.396 litros no porta</td><td>272 cv</td><td>40,8 kgfm</td><td>—</td><td>tração integral</td><td>R$ 474.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | faixa de preço compatível | potência compatível | motorização compatível (Elétrico)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Tank 500<div class="score-wrap"><span class="score-bar" style="width:100%"></span><span class="score-num">100</span></div></td><td><span class="mot-hib">Híbrido / PHEV</span></td><td>3.0T V6 PHEV</td><td>449 cv</td><td>76 kgfm</td><td>Auto 9v</td><td>4x4</td><td>R$ 469.990 – 499.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | faixa de preço compatível"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Haval H9<div class="score-wrap"><span class="score-bar" style="width:70%"></span><span class="score-num">70</span></div></td><td><span class="mot-comb">Combustão</span></td><td>2.0T</td><td>218 cv</td><td>35 kgfm</td><td>Auto 8v</td><td>4x4</td><td>R$ 319.990 – 369.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | faixa de preço compatível"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Tank 300<div class="score-wrap"><span class="score-bar" style="width:70%"></span><span class="score-num">70</span></div></td><td><span class="mot-comb">Combustão</span></td><td>2.0T</td><td>227 cv</td><td>38 kgfm</td><td>Auto 8v</td><td>4x4</td><td>R$ 349.990 – 389.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | potência compatível | motorização compatível (Elétrico)"><td class="td-modelo"><span class="td-marca-tag">Geely</span>Geely EX5 EM-I<div class="score-wrap"><span class="score-bar" style="width:70%"></span><span class="score-num">70</span></div></td><td><span class="mot-hib">Híbrido / PHEV</span></td><td>1.5T + Elétrico PHEV</td><td>326 cv</td><td>50 kgfm</td><td>Direto (PHEV)</td><td>AWD</td><td>R$ 219.990 – 259.990</td></tr></tbody>
+        </table>
+        </div>
+    </div>
         <div class="card-footer">
             <span class="data">2026-06-18T07:00</span>
             <a href="https://autoesporte.globo.com/motos/lancamentos-de-motos/noticia/2026/06/novos-audi-a5-e-a6-precos-pre-venda.ghtml" target="_blank" class="btn-ler">Ler na Autoesporte &rarr;</a>
@@ -254,7 +316,7 @@
     <div class="card card-concorre">
         <div class="card-header">
             <span class="portal">Autoesporte</span>
-            <span class="badge-seg">Suv</span><span class="mot-comb">Combustão</span><span class="badge-concorre">Concorre conosco</span>
+            <span class="badge-seg">Suv</span><span class="mot-elet">Elétrico</span><span class="badge-concorre">Concorre conosco</span>
         </div>
         <h3><a href="https://autoesporte.globo.com/carros/lancamentos-de-carros/noticia/2026/06/toyota-corolla-cross-2027-precos-versoes-equipamentos-e-tudo-que-muda.ghtml" target="_blank">Toyota Corolla Cross 2027: preços, versões, equipamentos e tudo que muda</a></h3>
         <p class="resumo">Destaque da linha 2027 do SUV japonês é sua versão esportiva que recebe um novo visual e design exclusivo.</p>
@@ -262,12 +324,12 @@
     <div class="tabela-comp-wrap">
         <div class="tabela-comp-titulo">
             Concorrentes no portfolio &mdash; Carroceria: <strong>Suv</strong>
-            &nbsp;|&nbsp; Motorização: <strong>Combustão</strong>
+            &nbsp;|&nbsp; Motorização: <strong>Elétrico</strong>
         </div>
         <div class="tabela-scroll">
         <table class="tabela-comp">
             <thead><tr><th>Modelo</th><th>Motorização</th><th>Motor</th><th>Potência</th><th>Torque</th><th>Câmbio</th><th>Tração</th><th>Preço</th></tr></thead>
-            <tbody><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Kardian<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 TCe Turbo</td><td>125 cv</td><td>20 kgfm</td><td>Manual 6v / CVT</td><td>FWD</td><td>R$ 113.690 – 149.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Duster<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.3 TCe / 1.6 16V</td><td>130–163 cv</td><td>24–26 kgfm</td><td>Manual / CVT / Auto 6v</td><td>FWD / 4x4</td><td>R$ 131.990 – 189.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Boreal<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.3 TCe</td><td>163 cv</td><td>27 kgfm</td><td>Auto 7v EDC</td><td>FWD</td><td>R$ 179.990 – 219.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Haval H6<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.5T / 2.0T</td><td>169–238 cv</td><td>28–39 kgfm</td><td>Auto 7v DCT</td><td>FWD / AWD</td><td>R$ 199.990 – 249.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Haval H9<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>2.0T</td><td>218 cv</td><td>35 kgfm</td><td>Auto 8v</td><td>4x4</td><td>R$ 319.990 – 369.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Haval Jolion<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.5T</td><td>147 cv</td><td>22 kgfm</td><td>Auto 7v DCT</td><td>FWD</td><td>R$ 164.990 – 194.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Tank 300<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>2.0T</td><td>227 cv</td><td>38 kgfm</td><td>Auto 8v</td><td>4x4</td><td>R$ 349.990 – 389.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Peugeot</span>Peugeot 2008<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 Turbo</td><td>130 cv</td><td>20 kgfm</td><td>Auto 6v</td><td>FWD</td><td>R$ 134.990 – 174.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Citroen</span>Citroen Aircross<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 Turbo</td><td>130 cv</td><td>20 kgfm</td><td>Auto 6v</td><td>FWD</td><td>R$ 119.990 – 154.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Citroen</span>Citroen Basalt<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 / 1.0 Turbo</td><td>75–130 cv</td><td>10–20 kgfm</td><td>Manual 5v / Auto 6v</td><td>FWD</td><td>R$ 109.990 – 139.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Tank 500<div class="score-wrap"><span class="score-bar" style="width:65%"></span><span class="score-num">65</span></div></td><td><span class="mot-hib">Híbrido / PHEV</span></td><td>3.0T V6 PHEV</td><td>449 cv</td><td>76 kgfm</td><td>Auto 9v</td><td>4x4</td><td>R$ 469.990 – 499.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado"><td class="td-modelo"><span class="td-marca-tag">Geely</span>Geely EX5<div class="score-wrap"><span class="score-bar" style="width:65%"></span><span class="score-num">65</span></div></td><td><span class="mot-elet">Elétrico</span></td><td>Elétrico</td><td>218 cv</td><td>32 kgfm</td><td>Direto</td><td>FWD</td><td>R$ 199.990 – 239.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado"><td class="td-modelo"><span class="td-marca-tag">Geely</span>Geely EX5 EM-I<div class="score-wrap"><span class="score-bar" style="width:65%"></span><span class="score-num">65</span></div></td><td><span class="mot-hib">Híbrido / PHEV</span></td><td>1.5T + Elétrico PHEV</td><td>326 cv</td><td>50 kgfm</td><td>Direto (PHEV)</td><td>AWD</td><td>R$ 219.990 – 259.990</td></tr></tbody>
+            <tbody><tr class="tr-novo"><td class="td-modelo"><span class="tag-novo">LANÇAMENTO</span><br>Toyota Corolla Cross 2027: preços, versões, …</td><td><span class="mot-elet">Elétrico</span></td><td>—</td><td>167 cv</td><td>20,8 kgfm</td><td>cvt</td><td>—</td><td>R$ 58.580</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | potência compatível"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Kardian<div class="score-wrap"><span class="score-bar" style="width:60%"></span><span class="score-num">60</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 TCe Turbo</td><td>125 cv</td><td>20 kgfm</td><td>Manual 6v / CVT</td><td>FWD</td><td>R$ 113.690 – 149.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | potência compatível"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Duster<div class="score-wrap"><span class="score-bar" style="width:60%"></span><span class="score-num">60</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.3 TCe / 1.6 16V</td><td>130–163 cv</td><td>24–26 kgfm</td><td>Manual / CVT / Auto 6v</td><td>FWD / 4x4</td><td>R$ 131.990 – 189.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | potência compatível"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Boreal<div class="score-wrap"><span class="score-bar" style="width:60%"></span><span class="score-num">60</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.3 TCe</td><td>163 cv</td><td>27 kgfm</td><td>Auto 7v EDC</td><td>FWD</td><td>R$ 179.990 – 219.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | potência compatível"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Haval H6<div class="score-wrap"><span class="score-bar" style="width:60%"></span><span class="score-num">60</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.5T / 2.0T</td><td>169–238 cv</td><td>28–39 kgfm</td><td>Auto 7v DCT</td><td>FWD / AWD</td><td>R$ 199.990 – 249.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | potência compatível"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Haval Jolion<div class="score-wrap"><span class="score-bar" style="width:60%"></span><span class="score-num">60</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.5T</td><td>147 cv</td><td>22 kgfm</td><td>Auto 7v DCT</td><td>FWD</td><td>R$ 164.990 – 194.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | potência compatível"><td class="td-modelo"><span class="td-marca-tag">Peugeot</span>Peugeot 2008<div class="score-wrap"><span class="score-bar" style="width:60%"></span><span class="score-num">60</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 Turbo</td><td>130 cv</td><td>20 kgfm</td><td>Auto 6v</td><td>FWD</td><td>R$ 134.990 – 174.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | potência compatível"><td class="td-modelo"><span class="td-marca-tag">Citroen</span>Citroen Aircross<div class="score-wrap"><span class="score-bar" style="width:60%"></span><span class="score-num">60</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 Turbo</td><td>130 cv</td><td>20 kgfm</td><td>Auto 6v</td><td>FWD</td><td>R$ 119.990 – 154.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | potência compatível"><td class="td-modelo"><span class="td-marca-tag">Citroen</span>Citroen Basalt<div class="score-wrap"><span class="score-bar" style="width:60%"></span><span class="score-num">60</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 / 1.0 Turbo</td><td>75–130 cv</td><td>10–20 kgfm</td><td>Manual 5v / Auto 6v</td><td>FWD</td><td>R$ 109.990 – 139.990</td></tr></tbody>
         </table>
         </div>
     </div>
@@ -306,7 +368,7 @@
     <div class="card card-concorre">
         <div class="card-header">
             <span class="portal">Autoesporte</span>
-            <span class="badge-seg">Suv</span><span class="mot-comb">Combustão</span><span class="badge-concorre">Concorre conosco</span>
+            <span class="badge-seg">Suv</span><span class="mot-hib">Híbrido / PHEV</span><span class="badge-concorre">Concorre conosco</span>
         </div>
         <h3><a href="https://autoesporte.globo.com/carros/lancamentos-de-carros/noticia/2026/06/caoa-changan-cs75-precos-versoes-equipamentos-consumo.ghtml" target="_blank">Novo Caoa Changan CS75: preço, equipamentos e consumo</a></h3>
         <p class="resumo">Novo SUV médio da marca chinesa estreia em versão única com o mesmo motor 1.5 turbo flex do Uni-T; veja todos os detalhes</p>
@@ -314,12 +376,12 @@
     <div class="tabela-comp-wrap">
         <div class="tabela-comp-titulo">
             Concorrentes no portfolio &mdash; Carroceria: <strong>Suv</strong>
-            &nbsp;|&nbsp; Motorização: <strong>Combustão</strong>
+            &nbsp;|&nbsp; Motorização: <strong>Híbrido / PHEV</strong>
         </div>
         <div class="tabela-scroll">
         <table class="tabela-comp">
             <thead><tr><th>Modelo</th><th>Motorização</th><th>Motor</th><th>Potência</th><th>Torque</th><th>Câmbio</th><th>Tração</th><th>Preço</th></tr></thead>
-            <tbody><tr class="tr-novo"><td class="td-modelo"><span class="tag-novo">LANÇAMENTO</span><br>Novo Caoa Changan CS75: preço, equipamentos …</td><td><span class="mot-comb">Combustão</span></td><td>1.5 turbo</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Kardian<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 TCe Turbo</td><td>125 cv</td><td>20 kgfm</td><td>Manual 6v / CVT</td><td>FWD</td><td>R$ 113.690 – 149.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Duster<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.3 TCe / 1.6 16V</td><td>130–163 cv</td><td>24–26 kgfm</td><td>Manual / CVT / Auto 6v</td><td>FWD / 4x4</td><td>R$ 131.990 – 189.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Boreal<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.3 TCe</td><td>163 cv</td><td>27 kgfm</td><td>Auto 7v EDC</td><td>FWD</td><td>R$ 179.990 – 219.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Haval H6<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.5T / 2.0T</td><td>169–238 cv</td><td>28–39 kgfm</td><td>Auto 7v DCT</td><td>FWD / AWD</td><td>R$ 199.990 – 249.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Haval H9<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>2.0T</td><td>218 cv</td><td>35 kgfm</td><td>Auto 8v</td><td>4x4</td><td>R$ 319.990 – 369.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Haval Jolion<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.5T</td><td>147 cv</td><td>22 kgfm</td><td>Auto 7v DCT</td><td>FWD</td><td>R$ 164.990 – 194.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Tank 300<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>2.0T</td><td>227 cv</td><td>38 kgfm</td><td>Auto 8v</td><td>4x4</td><td>R$ 349.990 – 389.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Peugeot</span>Peugeot 2008<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 Turbo</td><td>130 cv</td><td>20 kgfm</td><td>Auto 6v</td><td>FWD</td><td>R$ 134.990 – 174.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Citroen</span>Citroen Aircross<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 Turbo</td><td>130 cv</td><td>20 kgfm</td><td>Auto 6v</td><td>FWD</td><td>R$ 119.990 – 154.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Citroen</span>Citroen Basalt<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 / 1.0 Turbo</td><td>75–130 cv</td><td>10–20 kgfm</td><td>Manual 5v / Auto 6v</td><td>FWD</td><td>R$ 109.990 – 139.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Tank 500<div class="score-wrap"><span class="score-bar" style="width:65%"></span><span class="score-num">65</span></div></td><td><span class="mot-hib">Híbrido / PHEV</span></td><td>3.0T V6 PHEV</td><td>449 cv</td><td>76 kgfm</td><td>Auto 9v</td><td>4x4</td><td>R$ 469.990 – 499.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado"><td class="td-modelo"><span class="td-marca-tag">Geely</span>Geely EX5<div class="score-wrap"><span class="score-bar" style="width:65%"></span><span class="score-num">65</span></div></td><td><span class="mot-elet">Elétrico</span></td><td>Elétrico</td><td>218 cv</td><td>32 kgfm</td><td>Direto</td><td>FWD</td><td>R$ 199.990 – 239.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado"><td class="td-modelo"><span class="td-marca-tag">Geely</span>Geely EX5 EM-I<div class="score-wrap"><span class="score-bar" style="width:65%"></span><span class="score-num">65</span></div></td><td><span class="mot-hib">Híbrido / PHEV</span></td><td>1.5T + Elétrico PHEV</td><td>326 cv</td><td>50 kgfm</td><td>Direto (PHEV)</td><td>AWD</td><td>R$ 219.990 – 259.990</td></tr></tbody>
+            <tbody><tr class="tr-novo"><td class="td-modelo"><span class="tag-novo">LANÇAMENTO</span><br>Novo Caoa Changan CS75: preço, equipamentos …</td><td><span class="mot-hib">Híbrido / PHEV</span></td><td>610 litros de capacidade</td><td>180 cv</td><td>29,2 kgfm</td><td>—</td><td>—</td><td>R$ 199.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | faixa de preço compatível | potência compatível | motorização compatível (Híbrido / PHEV)"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Duster<div class="score-wrap"><span class="score-bar" style="width:100%"></span><span class="score-num">100</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.3 TCe / 1.6 16V</td><td>130–163 cv</td><td>24–26 kgfm</td><td>Manual / CVT / Auto 6v</td><td>FWD / 4x4</td><td>R$ 131.990 – 189.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | faixa de preço compatível | potência compatível | motorização compatível (Híbrido / PHEV)"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Boreal<div class="score-wrap"><span class="score-bar" style="width:100%"></span><span class="score-num">100</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.3 TCe</td><td>163 cv</td><td>27 kgfm</td><td>Auto 7v EDC</td><td>FWD</td><td>R$ 179.990 – 219.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | faixa de preço compatível | potência compatível | motorização compatível (Híbrido / PHEV)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Haval H6<div class="score-wrap"><span class="score-bar" style="width:100%"></span><span class="score-num">100</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.5T / 2.0T</td><td>169–238 cv</td><td>28–39 kgfm</td><td>Auto 7v DCT</td><td>FWD / AWD</td><td>R$ 199.990 – 249.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | faixa de preço compatível | potência compatível | motorização compatível (Híbrido / PHEV)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Haval Jolion<div class="score-wrap"><span class="score-bar" style="width:100%"></span><span class="score-num">100</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.5T</td><td>147 cv</td><td>22 kgfm</td><td>Auto 7v DCT</td><td>FWD</td><td>R$ 164.990 – 194.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | faixa de preço compatível | potência compatível"><td class="td-modelo"><span class="td-marca-tag">Geely</span>Geely EX5<div class="score-wrap"><span class="score-bar" style="width:90%"></span><span class="score-num">90</span></div></td><td><span class="mot-elet">Elétrico</span></td><td>Elétrico</td><td>218 cv</td><td>32 kgfm</td><td>Direto</td><td>FWD</td><td>R$ 199.990 – 239.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | faixa de preço compatível | motorização compatível (Híbrido / PHEV)"><td class="td-modelo"><span class="td-marca-tag">Peugeot</span>Peugeot 2008<div class="score-wrap"><span class="score-bar" style="width:80%"></span><span class="score-num">80</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 Turbo</td><td>130 cv</td><td>20 kgfm</td><td>Auto 6v</td><td>FWD</td><td>R$ 134.990 – 174.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | faixa de preço compatível | motorização compatível (Híbrido / PHEV)"><td class="td-modelo"><span class="td-marca-tag">Citroen</span>Citroen Aircross<div class="score-wrap"><span class="score-bar" style="width:80%"></span><span class="score-num">80</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 Turbo</td><td>130 cv</td><td>20 kgfm</td><td>Auto 6v</td><td>FWD</td><td>R$ 119.990 – 154.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | faixa de preço compatível | motorização compatível (Híbrido / PHEV)"><td class="td-modelo"><span class="td-marca-tag">Geely</span>Geely EX5 EM-I<div class="score-wrap"><span class="score-bar" style="width:80%"></span><span class="score-num">80</span></div></td><td><span class="mot-hib">Híbrido / PHEV</span></td><td>1.5T + Elétrico PHEV</td><td>326 cv</td><td>50 kgfm</td><td>Direto (PHEV)</td><td>AWD</td><td>R$ 219.990 – 259.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | potência compatível | motorização compatível (Híbrido / PHEV)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Haval H9<div class="score-wrap"><span class="score-bar" style="width:70%"></span><span class="score-num">70</span></div></td><td><span class="mot-comb">Combustão</span></td><td>2.0T</td><td>218 cv</td><td>35 kgfm</td><td>Auto 8v</td><td>4x4</td><td>R$ 319.990 – 369.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | potência compatível | motorização compatível (Híbrido / PHEV)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Tank 300<div class="score-wrap"><span class="score-bar" style="width:70%"></span><span class="score-num">70</span></div></td><td><span class="mot-comb">Combustão</span></td><td>2.0T</td><td>227 cv</td><td>38 kgfm</td><td>Auto 8v</td><td>4x4</td><td>R$ 349.990 – 389.990</td></tr></tbody>
         </table>
         </div>
     </div>
@@ -329,14 +391,26 @@
         </div>
     </div>
 
-    <div class="card card-outro">
+    <div class="card card-concorre">
         <div class="card-header">
             <span class="portal">Autoesporte</span>
-            <span class="badge-seg">Sedan</span><span class="mot-comb">Combustão</span>
+            <span class="badge-seg">Suv</span><span class="mot-elet">Elétrico</span><span class="badge-concorre">Concorre conosco</span>
         </div>
         <h3><a href="https://autoesporte.globo.com/carros/lancamentos-de-carros/noticia/2026/06/novo-chevrolet-camaro-versao-seda-4-portas-ford-mustang.ghtml" target="_blank">Novo Chevrolet Camaro pode ter versão sedã de 4 portas contra Ford Mustang</a></h3>
         <p class="resumo">Esportivo voltará ao mercado após 4 anos e tem início da produção programada para setembro de 2027</p>
         
+    <div class="tabela-comp-wrap">
+        <div class="tabela-comp-titulo">
+            Concorrentes no portfolio &mdash; Carroceria: <strong>Suv</strong>
+            &nbsp;|&nbsp; Motorização: <strong>Elétrico</strong>
+        </div>
+        <div class="tabela-scroll">
+        <table class="tabela-comp">
+            <thead><tr><th>Modelo</th><th>Motorização</th><th>Motor</th><th>Potência</th><th>Torque</th><th>Câmbio</th><th>Tração</th><th>Preço</th></tr></thead>
+            <tbody><tr class="tr-novo"><td class="td-modelo"><span class="tag-novo">LANÇAMENTO</span><br>Novo Chevrolet Camaro pode ter versão sedã d…</td><td><span class="mot-elet">Elétrico</span></td><td>—</td><td>700 cv</td><td>71,9 kgfm</td><td>—</td><td>—</td><td>—</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Elétrico)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Tank 500<div class="score-wrap"><span class="score-bar" style="width:65%"></span><span class="score-num">65</span></div></td><td><span class="mot-hib">Híbrido / PHEV</span></td><td>3.0T V6 PHEV</td><td>449 cv</td><td>76 kgfm</td><td>Auto 9v</td><td>4x4</td><td>R$ 469.990 – 499.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Elétrico)"><td class="td-modelo"><span class="td-marca-tag">Geely</span>Geely EX5<div class="score-wrap"><span class="score-bar" style="width:65%"></span><span class="score-num">65</span></div></td><td><span class="mot-elet">Elétrico</span></td><td>Elétrico</td><td>218 cv</td><td>32 kgfm</td><td>Direto</td><td>FWD</td><td>R$ 199.990 – 239.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | preço não identificado | motorização compatível (Elétrico)"><td class="td-modelo"><span class="td-marca-tag">Geely</span>Geely EX5 EM-I<div class="score-wrap"><span class="score-bar" style="width:65%"></span><span class="score-num">65</span></div></td><td><span class="mot-hib">Híbrido / PHEV</span></td><td>1.5T + Elétrico PHEV</td><td>326 cv</td><td>50 kgfm</td><td>Direto (PHEV)</td><td>AWD</td><td>R$ 219.990 – 259.990</td></tr></tbody>
+        </table>
+        </div>
+    </div>
         <div class="card-footer">
             <span class="data">2026-06-16T07:00</span>
             <a href="https://autoesporte.globo.com/carros/lancamentos-de-carros/noticia/2026/06/novo-chevrolet-camaro-versao-seda-4-portas-ford-mustang.ghtml" target="_blank" class="btn-ler">Ler na Autoesporte &rarr;</a>
@@ -346,20 +420,20 @@
     <div class="card card-concorre">
         <div class="card-header">
             <span class="portal">Autoesporte</span>
-            <span class="badge-seg">Hatch</span><span class="mot-comb">Combustão</span><span class="badge-concorre">Concorre conosco</span>
+            <span class="badge-seg">Suv</span><span class="mot-elet">Elétrico</span><span class="badge-concorre">Concorre conosco</span>
         </div>
         <h3><a href="https://autoesporte.globo.com/carros/lancamentos-de-carros/noticia/2026/06/novo-hyundai-i20-ultimate-todos-detalhes.ghtml" target="_blank">Novo Hyundai i20 Ultimate: todos os detalhes em 44 fotos exclusivas</a></h3>
         <p class="resumo">Versão topo de linha do hatch compacto da marca custa R$ 139.990 e traz lista de equipamentos completa; confira</p>
         
     <div class="tabela-comp-wrap">
         <div class="tabela-comp-titulo">
-            Concorrentes no portfolio &mdash; Carroceria: <strong>Hatch</strong>
-            &nbsp;|&nbsp; Motorização: <strong>Combustão</strong>
+            Concorrentes no portfolio &mdash; Carroceria: <strong>Suv</strong>
+            &nbsp;|&nbsp; Motorização: <strong>Elétrico</strong>
         </div>
         <div class="tabela-scroll">
         <table class="tabela-comp">
             <thead><tr><th>Modelo</th><th>Motorização</th><th>Motor</th><th>Potência</th><th>Torque</th><th>Câmbio</th><th>Tração</th><th>Preço</th></tr></thead>
-            <tbody><tr class="tr-novo"><td class="td-modelo"><span class="tag-novo">LANÇAMENTO</span><br>Novo Hyundai i20 Ultimate: todos os detalhes…</td><td><span class="mot-comb">Combustão</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>R$ 139.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (hatch) | faixa de preço compatível | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Peugeot</span>Peugeot 208<div class="score-wrap"><span class="score-bar" style="width:90%"></span><span class="score-num">90</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 Turbo / 1.6 16V</td><td>100–122 cv</td><td>17–16 kgfm</td><td>Manual 5v / Auto 6v</td><td>FWD</td><td>R$ 104.990 – 134.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (hatch) | faixa de preço compatível | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Citroen</span>Citroen C3<div class="score-wrap"><span class="score-bar" style="width:90%"></span><span class="score-num">90</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 / 1.0 Turbo</td><td>75–100 cv</td><td>10–17 kgfm</td><td>Manual 5v / Auto 6v</td><td>FWD</td><td>R$ 94.990 – 119.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (hatch) | faixa de preço compatível"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Ora 03<div class="score-wrap"><span class="score-bar" style="width:80%"></span><span class="score-num">80</span></div></td><td><span class="mot-elet">Elétrico</span></td><td>Elétrico</td><td>143–204 cv</td><td>21–34 kgfm</td><td>Direto</td><td>FWD</td><td>R$ 179.990 – 209.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (hatch) | faixa de preço compatível"><td class="td-modelo"><span class="td-marca-tag">Geely</span>Geely EX2<div class="score-wrap"><span class="score-bar" style="width:80%"></span><span class="score-num">80</span></div></td><td><span class="mot-elet">Elétrico</span></td><td>Elétrico</td><td>95 cv</td><td>15 kgfm</td><td>Direto</td><td>FWD</td><td>R$ 149.990 – 179.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (hatch) | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Kwid<div class="score-wrap"><span class="score-bar" style="width:60%"></span><span class="score-num">60</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 SCe</td><td>68–71 cv</td><td>9,5 kgfm</td><td>Manual 5v / CVT</td><td>FWD</td><td>R$ 82.790 – 100.990</td></tr></tbody>
+            <tbody><tr class="tr-novo"><td class="td-modelo"><span class="tag-novo">LANÇAMENTO</span><br>Novo Hyundai i20 Ultimate: todos os detalhes…</td><td><span class="mot-elet">Elétrico</span></td><td>2027l</td><td>—</td><td>—</td><td>—</td><td>—</td><td>R$ 2.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | motorização compatível (Elétrico)"><td class="td-modelo"><span class="td-marca-tag">GWM</span>Tank 500<div class="score-wrap"><span class="score-bar" style="width:60%"></span><span class="score-num">60</span></div></td><td><span class="mot-hib">Híbrido / PHEV</span></td><td>3.0T V6 PHEV</td><td>449 cv</td><td>76 kgfm</td><td>Auto 9v</td><td>4x4</td><td>R$ 469.990 – 499.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | motorização compatível (Elétrico)"><td class="td-modelo"><span class="td-marca-tag">Geely</span>Geely EX5<div class="score-wrap"><span class="score-bar" style="width:60%"></span><span class="score-num">60</span></div></td><td><span class="mot-elet">Elétrico</span></td><td>Elétrico</td><td>218 cv</td><td>32 kgfm</td><td>Direto</td><td>FWD</td><td>R$ 199.990 – 239.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | motorização compatível (Elétrico)"><td class="td-modelo"><span class="td-marca-tag">Geely</span>Geely EX5 EM-I<div class="score-wrap"><span class="score-bar" style="width:60%"></span><span class="score-num">60</span></div></td><td><span class="mot-hib">Híbrido / PHEV</span></td><td>1.5T + Elétrico PHEV</td><td>326 cv</td><td>50 kgfm</td><td>Direto (PHEV)</td><td>AWD</td><td>R$ 219.990 – 259.990</td></tr></tbody>
         </table>
         </div>
     </div>
@@ -372,53 +446,101 @@
     <div class="card card-outro">
         <div class="card-header">
             <span class="portal">Autoesporte</span>
-            <span class="mot-comb">Combustão</span>
+            <span class="badge-seg">Perua</span><span class="mot-elet">Elétrico</span>
         </div>
         <h3><a href="https://autoesporte.globo.com/servicos/noticia/2023/03/como-declarar-o-carro-no-imposto-de-renda-2023.ghtml" target="_blank">Como declarar o carro no Imposto de Renda</a></h3>
         <p class="resumo">Para não cair na malha fina, explicamos como declarar carros comprados, vendidos, financiados e até roubados ao governo</p>
         
+    <div class="tabela-comp-wrap">
+        <div class="tabela-comp-titulo">
+            Concorrentes no portfolio &mdash; Carroceria: <strong>Perua</strong>
+            &nbsp;|&nbsp; Motorização: <strong>Elétrico</strong>
+        </div>
+        <div class="tabela-scroll">
+        <table class="tabela-comp">
+            <thead><tr><th>Modelo</th><th>Motorização</th><th>Motor</th><th>Potência</th><th>Torque</th><th>Câmbio</th><th>Tração</th><th>Preço</th></tr></thead>
+            <tbody><tr class="tr-novo"><td class="td-modelo"><span class="tag-novo">LANÇAMENTO</span><br>Como declarar o carro no Imposto de Renda</td><td><span class="mot-elet">Elétrico</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>R$ 2.000.000</td></tr></tbody>
+        </table>
+        </div>
+    </div>
         <div class="card-footer">
             <span class="data">2023-03-15T08:42</span>
             <a href="https://autoesporte.globo.com/servicos/noticia/2023/03/como-declarar-o-carro-no-imposto-de-renda-2023.ghtml" target="_blank" class="btn-ler">Ler na Autoesporte &rarr;</a>
         </div>
     </div>
 
-    <div class="card card-outro">
+    <div class="card card-concorre">
         <div class="card-header">
             <span class="portal">Autoesporte</span>
-            <span class="mot-comb">Combustão</span>
+            <span class="badge-seg">Picape</span><span class="mot-comb">Combustão</span><span class="badge-concorre">Concorre conosco</span>
         </div>
         <h3><a href="https://autoesporte.globo.com/carros/usados-e-seminovos/noticia/2023/03/por-que-o-carro-usado-vai-desvalorizar-em-2023.ghtml" target="_blank">Por que o usado vai desvalorizar em 2023?</a></h3>
         <p class="resumo">Preço do seminovo e do usado retraiu até 7% em 2022 e deverá cair em ritmo moderado neste ano</p>
         
+    <div class="tabela-comp-wrap">
+        <div class="tabela-comp-titulo">
+            Concorrentes no portfolio &mdash; Carroceria: <strong>Picape</strong>
+            &nbsp;|&nbsp; Motorização: <strong>Combustão</strong>
+        </div>
+        <div class="tabela-scroll">
+        <table class="tabela-comp">
+            <thead><tr><th>Modelo</th><th>Motorização</th><th>Motor</th><th>Potência</th><th>Torque</th><th>Câmbio</th><th>Tração</th><th>Preço</th></tr></thead>
+            <tbody><tr class="tr-portfolio" title="mesma carroceria (picape) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Oroch<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.3 TCe / 2.0 16V</td><td>112–163 cv</td><td>20–26 kgfm</td><td>Manual / Auto 6v</td><td>FWD / 4x4</td><td>R$ 139.990 – 189.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (picape) | preço não identificado | motorização compatível (Combustão)"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Niagara<div class="score-wrap"><span class="score-bar" style="width:75%"></span><span class="score-num">75</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.3 TCe</td><td>163 cv</td><td>27 kgfm</td><td>Auto 7v EDC</td><td>4x4</td><td>R$ 219.990 – 249.990</td></tr></tbody>
+        </table>
+        </div>
+    </div>
         <div class="card-footer">
             <span class="data">2023-03-06T10:59</span>
             <a href="https://autoesporte.globo.com/carros/usados-e-seminovos/noticia/2023/03/por-que-o-carro-usado-vai-desvalorizar-em-2023.ghtml" target="_blank" class="btn-ler">Ler na Autoesporte &rarr;</a>
         </div>
     </div>
 
-    <div class="card card-outro">
+    <div class="card card-concorre">
         <div class="card-header">
             <span class="portal">Autoesporte</span>
-            <span class="mot-comb">Combustão</span>
+            <span class="badge-seg">Suv</span><span class="mot-hib">Híbrido / PHEV</span><span class="badge-concorre">Concorre conosco</span>
         </div>
         <h3><a href="https://autoesporte.globo.com/carros/noticia/2023/03/os-10-carros-mais-economicos-de-ate-r-100-mil-no-brasil-em-2023.ghtml" target="_blank">Os carros mais econômicos do Brasil</a></h3>
         <p class="resumo">Lista traz apenas carros com motores 1.0 aspirados ou turbinados</p>
         
+    <div class="tabela-comp-wrap">
+        <div class="tabela-comp-titulo">
+            Concorrentes no portfolio &mdash; Carroceria: <strong>Suv</strong>
+            &nbsp;|&nbsp; Motorização: <strong>Híbrido / PHEV</strong>
+        </div>
+        <div class="tabela-scroll">
+        <table class="tabela-comp">
+            <thead><tr><th>Modelo</th><th>Motorização</th><th>Motor</th><th>Potência</th><th>Torque</th><th>Câmbio</th><th>Tração</th><th>Preço</th></tr></thead>
+            <tbody><tr class="tr-novo"><td class="td-modelo"><span class="tag-novo">LANÇAMENTO</span><br>Os carros mais econômicos do Brasil</td><td><span class="mot-hib">Híbrido / PHEV</span></td><td>—</td><td>116 cv</td><td>16,8 kgfm</td><td>—</td><td>—</td><td>R$ 67.490</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | potência compatível | motorização compatível (Híbrido / PHEV)"><td class="td-modelo"><span class="td-marca-tag">Renault</span>Renault Kardian<div class="score-wrap"><span class="score-bar" style="width:70%"></span><span class="score-num">70</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 TCe Turbo</td><td>125 cv</td><td>20 kgfm</td><td>Manual 6v / CVT</td><td>FWD</td><td>R$ 113.690 – 149.990</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | potência compatível | motorização compatível (Híbrido / PHEV)"><td class="td-modelo"><span class="td-marca-tag">Citroen</span>Citroen Basalt<div class="score-wrap"><span class="score-bar" style="width:70%"></span><span class="score-num">70</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 / 1.0 Turbo</td><td>75–130 cv</td><td>10–20 kgfm</td><td>Manual 5v / Auto 6v</td><td>FWD</td><td>R$ 109.990 – 139.990</td></tr></tbody>
+        </table>
+        </div>
+    </div>
         <div class="card-footer">
             <span class="data">2023-03-08T15:50</span>
             <a href="https://autoesporte.globo.com/carros/noticia/2023/03/os-10-carros-mais-economicos-de-ate-r-100-mil-no-brasil-em-2023.ghtml" target="_blank" class="btn-ler">Ler na Autoesporte &rarr;</a>
         </div>
     </div>
 
-    <div class="card card-outro">
+    <div class="card card-concorre">
         <div class="card-header">
             <span class="portal">Autoesporte</span>
-            <span class="mot-comb">Combustão</span>
+            <span class="badge-seg">Suv</span><span class="mot-elet">Elétrico</span><span class="badge-concorre">Concorre conosco</span>
         </div>
         <h3><a href="https://autoesporte.globo.com/testes/comparativo/noticia/2023/03/conheca-os-3-carros-mais-baratos-do-brasil-preco-motor-consumo-e-itens-de-serie.ghtml" target="_blank">Os 3 carros mais baratos do país</a></h3>
         <p class="resumo">Renault Kwid, Fiat Mobi e Citroën C3 beiram os R$ 70 mil, fazem mais de 14 km/l e têm lista sucinta de equipamentos</p>
         
+    <div class="tabela-comp-wrap">
+        <div class="tabela-comp-titulo">
+            Concorrentes no portfolio &mdash; Carroceria: <strong>Suv</strong>
+            &nbsp;|&nbsp; Motorização: <strong>Elétrico</strong>
+        </div>
+        <div class="tabela-scroll">
+        <table class="tabela-comp">
+            <thead><tr><th>Modelo</th><th>Motorização</th><th>Motor</th><th>Potência</th><th>Torque</th><th>Câmbio</th><th>Tração</th><th>Preço</th></tr></thead>
+            <tbody><tr class="tr-novo"><td class="td-modelo"><span class="tag-novo">LANÇAMENTO</span><br>Os 3 carros mais baratos do país</td><td><span class="mot-elet">Elétrico</span></td><td>290 l 235 l 315 l fonte</td><td>71 cv</td><td>10 kgfm</td><td>—</td><td>—</td><td>R$ 68.190</td></tr><tr class="tr-portfolio" title="mesma carroceria (suv) | potência compatível"><td class="td-modelo"><span class="td-marca-tag">Citroen</span>Citroen Basalt<div class="score-wrap"><span class="score-bar" style="width:60%"></span><span class="score-num">60</span></div></td><td><span class="mot-comb">Combustão</span></td><td>1.0 / 1.0 Turbo</td><td>75–130 cv</td><td>10–20 kgfm</td><td>Manual 5v / Auto 6v</td><td>FWD</td><td>R$ 109.990 – 139.990</td></tr></tbody>
+        </table>
+        </div>
+    </div>
         <div class="card-footer">
             <span class="data">2023-03-07T12:59</span>
             <a href="https://autoesporte.globo.com/testes/comparativo/noticia/2023/03/conheca-os-3-carros-mais-baratos-do-brasil-preco-motor-consumo-e-itens-de-serie.ghtml" target="_blank" class="btn-ler">Ler na Autoesporte &rarr;</a>
@@ -483,7 +605,7 @@
             <span class="badge-seg">Suv</span><span class="mot-comb">Combustão</span><span class="badge-concorre">Concorre conosco</span>
         </div>
         <h3><a href="https://autoesporte.globo.com/seu-bolso/noticia/2023/03/preco-medio-da-gasolina-chega-a-r-588-e-registra-alta-em-todas-as-regioes-do-brasil-em-marco.ghtml" target="_blank">Preço da gasolina</a></h3>
-        <p class="resumo">Acesse a materia completa.</p>
+        <p class="resumo">Do fechamento de fevereiro até a primeira quinzena de março o preço da gasolina subiu 9,04% nos postos</p>
         
     <div class="tabela-comp-wrap">
         <div class="tabela-comp-titulo">
@@ -498,7 +620,7 @@
         </div>
     </div>
         <div class="card-footer">
-            <span class="data"></span>
+            <span class="data">2023-03-15T12:31</span>
             <a href="https://autoesporte.globo.com/seu-bolso/noticia/2023/03/preco-medio-da-gasolina-chega-a-r-588-e-registra-alta-em-todas-as-regioes-do-brasil-em-marco.ghtml" target="_blank" class="btn-ler">Ler na Autoesporte &rarr;</a>
         </div>
     </div>
@@ -2527,14 +2649,26 @@ The post Com compras estimadas em R$ 35 bilhões, VW elege seus melhores fornece
 </div></div>
 </div>
 </section>
-    <div style="text-align:center;padding:24px 0 8px;font-size:12px;color:#9ca3af">Grupo Demarco / Tozzo &mdash; 22/06/2026 as 17:20</div>
+    <div style="text-align:center;padding:24px 0 8px;font-size:12px;color:#9ca3af">Grupo Demarco / Tozzo &mdash; 22/06/2026 as 17:38</div>
   </div>
 </div>
 
 <!-- ABA: Nossas Lojas -->
 <div id="aba-lojas" class="tab-content">
   
-<div style="padding:28px 32px;max-width:1400px;margin:0 auto">
+<style>
+.lojas-wrap { padding: 28px 32px; max-width: 1400px; margin: 0 auto; }
+@media (max-width: 900px) {
+  .lojas-wrap { padding: 20px 16px; }
+}
+@media (max-width: 600px) {
+  .lojas-wrap { padding: 14px 10px; }
+  .lojas-wrap [style*="border-radius:12px"] { min-width: unset !important; flex: 1 1 calc(50% - 8px); }
+  .lojas-wrap table { font-size: 11px; }
+  .lojas-wrap td, .lojas-wrap th { padding: 8px 10px !important; }
+}
+</style>
+<div class="lojas-wrap">
 
   <!-- Totalizadores -->
   <div style="display:flex;gap:14px;margin-bottom:22px;flex-wrap:wrap">
@@ -2814,7 +2948,9 @@ renderTabela('todas');
   margin-bottom: 22px;
 }
 @media(max-width:1100px){ .mkt-kpis{ grid-template-columns:repeat(3,1fr); } }
-@media(max-width:640px) { .mkt-kpis{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:640px)  { .mkt-kpis{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:900px)  { #mkt-root{ padding: 20px 16px; } .mkt-row{ gap:12px; } .mkt-chart-card{ min-width:unset; flex:1 1 100%; padding:16px; } }
+@media(max-width:600px)  { #mkt-root{ padding: 14px 10px; } .kpi-valor{ font-size:18px; } .kpi-card{ padding:14px 12px; } }
 .kpi-card {
   background:#fff; border-radius:14px; padding:18px 16px;
   box-shadow:0 2px 12px rgba(0,0,0,.07);
