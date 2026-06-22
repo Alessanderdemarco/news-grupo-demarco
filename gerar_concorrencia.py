@@ -7,7 +7,7 @@ import os
 from datetime import datetime
 from specs_portfolio import SPECS, PORTFOLIO, LABEL_MOTORIZACAO
 
-SAIDA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "concorrencia.html")
+SAIDA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "index.html")
 
 # ─────────────────────────────────────────────────────────────────────────────
 # DADOS COMERCIAIS COMPLETOS
@@ -601,12 +601,37 @@ def card_veiculo(nome, d):
   </div>
 </div>"""
 
-MENU = """
-<nav style="background:#1e293b;padding:0 32px;display:flex;gap:0;border-bottom:1px solid #334155">
-  <a href="news_grupo.html" style="padding:13px 22px;color:#94a3b8;font-size:14px;font-weight:600;border-bottom:3px solid transparent;text-decoration:none;transition:.2s">Noticias</a>
-  <a href="concorrencia.html" style="padding:13px 22px;color:#f59e0b;font-size:14px;font-weight:600;border-bottom:3px solid #f59e0b;text-decoration:none">Concorrencia</a>
-</nav>
-"""
+def gerar_secao():
+    """Retorna apenas o bloco HTML interno da aba de concorrência (sem <html>/<head>)."""
+    secoes = []
+    for segmento, proprios, concorrentes_lista in SEGMENTOS:
+        cards_p = [card_veiculo(n, GUIA[n]) for n in proprios if n in GUIA]
+        cards_c = [card_veiculo(n, GUIA[n]) for n in concorrentes_lista if n in GUIA]
+        sec_conc = ""
+        if cards_c:
+            sec_conc = f"""
+<div style="margin-top:20px">
+  <div style="font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;border-top:1px dashed #e5e7eb;padding-top:16px">
+    Concorrentes de Mercado
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:14px">{"".join(cards_c)}</div>
+</div>"""
+        secoes.append(f"""
+<section style="background:#fff;border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,.07);padding:24px 28px;margin-bottom:28px">
+  <h2 style="font-size:18px;font-weight:700;color:#1e293b;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #f1f5f9">{segmento}</h2>
+  <div style="font-size:11px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px">Nosso Portfolio</div>
+  <div style="display:flex;flex-wrap:wrap;gap:14px">{"".join(cards_p)}</div>
+  {sec_conc}
+</section>""")
+
+    legenda = """
+<div style="background:#fff;border-radius:10px;padding:14px 20px;margin-bottom:24px;border-left:4px solid #f59e0b;font-size:13px;color:#374151;display:flex;gap:24px;flex-wrap:wrap">
+  <span>Card com <b>borda colorida dupla</b> = nosso portfolio</span>
+  <span>Card com <b>borda simples cinza</b> = concorrente</span>
+  <span>Tag <b style="color:#166534">Nosso</b> = modelo do grupo</span>
+</div>"""
+    return legenda + "\n".join(secoes)
+
 
 def gerar_html():
     agora = datetime.now().strftime("%d/%m/%Y as %H:%M")

@@ -10,6 +10,7 @@ from specs_portfolio import (
     SPECS, PORTFOLIO, LABEL_MOTORIZACAO,
     get_spec, encontrar_concorrentes, fmt_preco,
 )
+from gerar_concorrencia import gerar_secao as gerar_secao_concorrencia
 
 # ─── Feeds de notícias gerais ─────────────────────────────────────────────────
 
@@ -205,12 +206,14 @@ def gerar_html(lancamentos, noticias_gerais):
     cards_gerais = "\n".join(card_noticia_geral(i) for i in noticias_gerais) \
                    or "<p class='vazio'>Nenhuma noticia encontrada.</p>"
 
+    secao_concorrencia = gerar_secao_concorrencia()
+
     return f"""<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>News Grupo Demarco/Tozzo</title>
+<title>Grupo Demarco / Tozzo</title>
 <style>
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{ font-family: 'Segoe UI', sans-serif; background: #f0f2f5; color: #222; }}
@@ -223,6 +226,33 @@ def gerar_html(lancamentos, noticias_gerais):
   header h1 {{ font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; }}
   .meta {{ font-size: 0.85rem; opacity: 0.7; text-align: right; }}
 
+  /* ── Navegação por abas ── */
+  .tabs-nav {{
+    background: #1e293b;
+    padding: 0 32px;
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid #334155;
+  }}
+  .tab-btn {{
+    padding: 13px 24px;
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-bottom: 3px solid transparent;
+    background: none;
+    cursor: pointer;
+    transition: color .15s;
+    white-space: nowrap;
+  }}
+  .tab-btn:hover {{ color: #e2e8f0; }}
+  .tab-btn.active {{ color: #f59e0b; border-bottom-color: #f59e0b; }}
+
+  .tab-content {{ display: none; }}
+  .tab-content.active {{ display: block; }}
+
+  /* ── Stats bar ── */
   .stats {{
     background: white; padding: 14px 40px;
     display: flex; gap: 28px; align-items: center;
@@ -231,6 +261,7 @@ def gerar_html(lancamentos, noticias_gerais):
   .stats .num {{ font-size: 0.88rem; color: #555; }}
   .stats strong {{ color: #1a1a2e; font-size: 1.05rem; }}
 
+  /* ── Conteúdo de notícias ── */
   .container {{ max-width: 1400px; margin: 0 auto; padding: 32px 20px; }}
   h2 {{ font-size: 1.1rem; font-weight: 700; margin-bottom: 6px;
         padding-left: 12px; border-left: 4px solid #e63946; color: #1a1a2e; }}
@@ -257,7 +288,6 @@ def gerar_html(lancamentos, noticias_gerais):
   .badge-carro {{ background: #e8f0fe; color: #1a56db; padding: 2px 8px; border-radius: 20px; font-size: 0.71rem; }}
   .badge-moto  {{ background: #fef3e2; color: #c0622a; padding: 2px 8px; border-radius: 20px; font-size: 0.71rem; }}
 
-  /* Badges motorização */
   .mot-comb  {{ background:#f3f4f6; color:#374151; padding:2px 8px; border-radius:4px; font-size:0.7rem; font-weight:600; white-space:nowrap; }}
   .mot-hleve {{ background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:4px; font-size:0.7rem; font-weight:600; white-space:nowrap; }}
   .mot-hib   {{ background:#ede9fe; color:#5b21b6; padding:2px 8px; border-radius:4px; font-size:0.7rem; font-weight:600; white-space:nowrap; }}
@@ -268,37 +298,20 @@ def gerar_html(lancamentos, noticias_gerais):
   .card h3 a:hover {{ color: #e63946; }}
   .resumo {{ font-size: 0.82rem; color: #555; line-height: 1.6; }}
 
-  /* Tabela comparativa */
-  .tabela-comp-wrap {{
-    background: #f4f6ff; border: 1px solid #dde3f0; border-radius: 8px; padding: 14px;
-  }}
-  .tabela-comp-titulo {{
-    font-size: 0.74rem; color: #444; margin-bottom: 10px;
-  }}
+  .tabela-comp-wrap {{ background: #f4f6ff; border: 1px solid #dde3f0; border-radius: 8px; padding: 14px; }}
+  .tabela-comp-titulo {{ font-size: 0.74rem; color: #444; margin-bottom: 10px; }}
   .tabela-comp-titulo strong {{ color: #1a1a2e; }}
   .tabela-scroll {{ overflow-x: auto; }}
   .tabela-comp {{ width: 100%; border-collapse: collapse; font-size: 0.73rem; }}
-  .tabela-comp th {{
-    background: #1a1a2e; color: white;
-    padding: 7px 10px; text-align: left; white-space: nowrap;
-  }}
+  .tabela-comp th {{ background: #1a1a2e; color: white; padding: 7px 10px; text-align: left; white-space: nowrap; }}
   .tabela-comp td {{ padding: 6px 10px; border-bottom: 1px solid #eee; vertical-align: middle; }}
   .td-modelo {{ font-weight: 600; min-width: 170px; }}
-  .td-marca-tag {{
-    display: inline-block; background: #1a1a2e; color: white;
-    font-size: 0.62rem; padding: 1px 6px; border-radius: 4px;
-    margin-right: 5px; vertical-align: middle;
-  }}
+  .td-marca-tag {{ display: inline-block; background: #1a1a2e; color: white; font-size: 0.62rem; padding: 1px 6px; border-radius: 4px; margin-right: 5px; vertical-align: middle; }}
   .tr-novo td {{ background: #fff5f5; }}
   .tr-portfolio td {{ background: white; }}
   .tr-portfolio:hover td {{ background: #f0f7ff; cursor: help; }}
-  .tag-novo {{
-    display: inline-block; background: #e63946; color: white;
-    font-size: 0.62rem; font-weight: 700; padding: 1px 7px;
-    border-radius: 4px; vertical-align: middle;
-  }}
+  .tag-novo {{ display: inline-block; background: #e63946; color: white; font-size: 0.62rem; font-weight: 700; padding: 1px 7px; border-radius: 4px; vertical-align: middle; }}
 
-  /* Barra de score de concorrência */
   .score-wrap {{ position: relative; height: 4px; background: #eee; border-radius: 2px; margin-top: 4px; width: 100%; }}
   .score-bar  {{ position: absolute; left: 0; top: 0; height: 4px; background: #e63946; border-radius: 2px; }}
   .score-num  {{ font-size: 0.6rem; color: #aaa; margin-left: 2px; position: absolute; right: 0; top: -1px; }}
@@ -308,6 +321,9 @@ def gerar_html(lancamentos, noticias_gerais):
   .btn-ler {{ font-size: 0.79rem; color: #457b9d; text-decoration: none; font-weight: 600; }}
   .btn-ler:hover {{ color: #e63946; }}
   .vazio {{ color: #999; font-style: italic; padding: 20px 0; }}
+
+  /* ── Aba concorrência ── */
+  .conc-wrap {{ max-width: 1300px; margin: 28px auto; padding: 0 24px; }}
 </style>
 </head>
 <body>
@@ -315,31 +331,62 @@ def gerar_html(lancamentos, noticias_gerais):
 <header>
   <div>
     <div style="font-size:0.7rem;opacity:0.5;margin-bottom:4px;letter-spacing:2px">GRUPO DEMARCO / TOZZO</div>
-    <h1>News Automotivo do Grupo</h1>
+    <h1>Central de Inteligencia Automotiva</h1>
   </div>
   <div class="meta">Atualizado em<br><strong style="font-size:1rem;opacity:1">{agora}</strong></div>
 </header>
 
-<nav style="background:#1e293b;padding:0 32px;display:flex;gap:0;border-bottom:1px solid #334155">
-  <a href="news_grupo.html" style="padding:13px 22px;color:#f59e0b;font-size:14px;font-weight:600;border-bottom:3px solid #f59e0b;text-decoration:none">Noticias</a>
-  <a href="concorrencia.html" style="padding:13px 22px;color:#94a3b8;font-size:14px;font-weight:600;border-bottom:3px solid transparent;text-decoration:none">Concorrencia</a>
+<nav class="tabs-nav">
+  <button class="tab-btn active" onclick="abrirAba('lancamentos', this)">Lancamentos</button>
+  <button class="tab-btn" onclick="abrirAba('noticias', this)">Noticias das Marcas</button>
+  <button class="tab-btn" onclick="abrirAba('concorrencia', this)">Concorrencia</button>
 </nav>
 
-<div class="stats">
-  <div class="num"><strong>{len(lancamentos)}</strong> lancamentos analisados</div>
-  <div class="num"><strong>{n_conc}</strong> concorrem com nosso portfolio</div>
-  <div class="num"><strong>{len(noticias_gerais)}</strong> noticias das nossas marcas</div>
+<!-- ABA: Lancamentos -->
+<div id="aba-lancamentos" class="tab-content active">
+  <div class="stats">
+    <div class="num"><strong>{len(lancamentos)}</strong> lancamentos analisados</div>
+    <div class="num"><strong>{n_conc}</strong> concorrem com nosso portfolio</div>
+    <div class="num">Fonte: Autoesporte</div>
+  </div>
+  <div class="container">
+    <h2>Lancamentos do Mercado</h2>
+    <p class="h2-sub">Cards com borda vermelha concorrem com o portfolio. Tabela mostra todos os modelos concorrentes por carroceria + preco + potencia + motorizacao.</p>
+    <div class="grid">{cards_lanc}</div>
+  </div>
 </div>
 
-<div class="container">
-  <h2>Lancamentos do Mercado &mdash; Autoesporte</h2>
-  <p class="h2-sub">Cards com borda vermelha concorrem diretamente com o portfolio. Tabela mostra todos os modelos elegíveis por carroceria + preco + potência + motorização.</p>
-  <div class="grid">{cards_lanc}</div>
-
-  <h2 class="noticias">Noticias das Nossas Marcas &mdash; Multiplos Portais</h2>
-  <div class="grid">{cards_gerais}</div>
+<!-- ABA: Noticias gerais -->
+<div id="aba-noticias" class="tab-content">
+  <div class="stats">
+    <div class="num"><strong>{len(noticias_gerais)}</strong> noticias encontradas</div>
+    <div class="num">Fontes: Quatro Rodas, Flatout, Noticias Automotivas, MotorPress e outros</div>
+  </div>
+  <div class="container">
+    <h2 class="noticias">Noticias das Nossas Marcas</h2>
+    <div class="grid">{cards_gerais}</div>
+  </div>
 </div>
 
+<!-- ABA: Concorrência -->
+<div id="aba-concorrencia" class="tab-content">
+  <div class="conc-wrap">
+    <div style="background:#fff;border-radius:10px;padding:14px 20px;margin-bottom:8px;border-left:4px solid #f59e0b;font-size:13px;color:#374151">
+      <b>Guia Comercial</b> — portfolio do grupo x mercado brasileiro. Use como base de treinamento e consulta de vendedores.
+    </div>
+    {secao_concorrencia}
+    <div style="text-align:center;padding:24px 0 8px;font-size:12px;color:#9ca3af">Grupo Demarco / Tozzo &mdash; {agora}</div>
+  </div>
+</div>
+
+<script>
+function abrirAba(nome, btn) {{
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('aba-' + nome).classList.add('active');
+  btn.classList.add('active');
+}}
+</script>
 </body>
 </html>"""
 
@@ -378,7 +425,7 @@ if __name__ == "__main__":
 
     html = gerar_html(lancamentos, noticias_gerais)
 
-    saida = os.path.join(os.path.dirname(os.path.abspath(__file__)), "news_grupo.html")
+    saida = os.path.join(os.path.dirname(os.path.abspath(__file__)), "index.html")
     with open(saida, "w", encoding="utf-8") as f:
         f.write(html)
 
