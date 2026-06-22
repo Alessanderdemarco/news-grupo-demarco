@@ -431,3 +431,14 @@ if __name__ == "__main__":
 
     print(f"\nHTML gerado: {saida}")
     webbrowser.open(f"file:///{saida}")
+
+    # ── Publica no GitHub Pages automaticamente ───────────────────────────────
+    print("\nPublicando no GitHub Pages...")
+    import subprocess
+    try:
+        subprocess.run(["git", "add", "index.html"], cwd=os.path.dirname(saida), check=True)
+        subprocess.run(["git", "commit", "-m", f"Atualizacao automatica {agora}"], cwd=os.path.dirname(saida))
+        result = subprocess.run(["git", "push"], cwd=os.path.dirname(saida), capture_output=True, text=True)
+        print("  Publicado em: https://alessanderdemarco.github.io/news-grupo-demarco/")
+    except Exception as e:
+        print(f"  Aviso: nao foi possivel publicar automaticamente — {e}")
