@@ -161,7 +161,7 @@
     <div style="font-size:0.7rem;opacity:0.5;margin-bottom:4px;letter-spacing:2px">GRUPO DEMARCO / TOZZO</div>
     <h1>Central de Inteligencia Automotiva</h1>
   </div>
-  <div class="meta">Atualizado em<br><strong style="font-size:1rem;opacity:1">09/07/2026 as 16:36</strong></div>
+  <div class="meta">Atualizado em<br><strong style="font-size:1rem;opacity:1">09/07/2026 as 17:16</strong></div>
 </header>
 
 <nav class="tabs-nav">
@@ -671,6 +671,20 @@
             <span class="marca">GWM</span>
             <span class="badge-carro">Carro</span>
         </div>
+        <h3><a href="https://quatrorodas.abril.com.br/testes/teste-omoda-7-e-suv-hibrido-diferentao-com-mais-personalidade-que-byd-e-gwm/" target="_blank">Teste: Omoda 7 é SUV híbrido ‘diferentão’ com mais personalidade que BYD e GWM</a></h3>
+        <p class="resumo">Desenho fora do comum é um dos chamarizes do híbrido, que acelera com vigor de SUV pequeno e tem espaço de SUV grande</p>
+        <div class="card-footer">
+            <span class="data">Thu, 09 Jul 2026</span>
+            <a href="https://quatrorodas.abril.com.br/testes/teste-omoda-7-e-suv-hibrido-diferentao-com-mais-personalidade-que-byd-e-gwm/" target="_blank" class="btn-ler">Ler materia &rarr;</a>
+        </div>
+    </div>
+
+    <div class="card card-geral">
+        <div class="card-header">
+            <span class="portal">Quatro Rodas</span>
+            <span class="marca">GWM</span>
+            <span class="badge-carro">Carro</span>
+        </div>
         <h3><a href="https://quatrorodas.abril.com.br/noticias/sw4-havalh9-vendas-primeiro-semestre-2026/" target="_blank">Toyota SW4 supera GWM Haval H9 e mantém liderança SUVs de chassi no 1º semestre</a></h3>
         <p class="resumo">Utilitário da Toyota produzido na Argentina somou 6.780 emplacamentos no primeiro semestre, mas modelo chinês se aproxima mês a mês</p>
         <div class="card-footer">
@@ -690,20 +704,6 @@
         <div class="card-footer">
             <span class="data">Wed, 08 Jul 2026</span>
             <a href="https://quatrorodas.abril.com.br/noticias/novo-dacia-striker-funde-suv-e-perua-foca-na-eficiencia-e-tem-preco-de-renault-boreal/" target="_blank" class="btn-ler">Ler materia &rarr;</a>
-        </div>
-    </div>
-
-    <div class="card card-geral">
-        <div class="card-header">
-            <span class="portal">Quatro Rodas</span>
-            <span class="marca">GWM</span>
-            <span class="badge-carro">Carro</span>
-        </div>
-        <h3><a href="https://quatrorodas.abril.com.br/carros-usados/bateria-carro-eletrico-usado-durabilidade-degradacao/" target="_blank">Bateria de carro elétrico dura mais que o previsto; veja o que analisar nos usados</a></h3>
-        <p class="resumo">Dados de telemetria mostram que degradação real das células de energia é de cerca de 2% ao ano, contrariando o receio na hora de comprar um seminovo</p>
-        <div class="card-footer">
-            <span class="data">Wed, 08 Jul 2026</span>
-            <a href="https://quatrorodas.abril.com.br/carros-usados/bateria-carro-eletrico-usado-durabilidade-degradacao/" target="_blank" class="btn-ler">Ler materia &rarr;</a>
         </div>
     </div>
 
@@ -2680,7 +2680,7 @@ The post Vinicius Nunes passa a comandar comercial da divisão de construção d
 </div></div>
 </div>
 </section>
-    <div style="text-align:center;padding:24px 0 8px;font-size:12px;color:#9ca3af">Grupo Demarco / Tozzo &mdash; 09/07/2026 as 16:36</div>
+    <div style="text-align:center;padding:24px 0 8px;font-size:12px;color:#9ca3af">Grupo Demarco / Tozzo &mdash; 09/07/2026 as 17:16</div>
   </div>
 </div>
 
@@ -3116,130 +3116,130 @@ new Chart(document.getElementById('chartShareInvest'),{
 <option value="3">Abr</option>
 <option value="4">Mai</option>
 <option value="5">Jun</option>
-<option value="all" selected>Acumulado Jan–Jun</option>
+<option value="all" selected>Acumulado Jan–Jun 2026</option>
     </select>
   </div>
   <div class="filtro-grupo">
     <label>Marca do Grupo</label>
-    <select id="mf-marca" onchange="mercadoAtualizar()">
+    <select id="mf-marca" onchange="mercadoTrocarMarca()">
       <option value="RENAULT">Renault</option>
 <option value="GWM">GWM</option>
+<option value="YAMAHA">Yamaha</option>
+<option value="TRIUMPH">Triumph</option>
+<option value="CF MOTO">CF Motos</option>
 <option value="PEUGEOT">Peugeot</option>
 <option value="CITROEN">Citroën</option>
+<option value="GEELY">Geely</option>
+    </select>
+  </div>
+  <div class="filtro-grupo">
+    <label>Área de Influência</label>
+    <select id="mf-micro" onchange="mercadoTrocarMicro()">
     </select>
   </div>
   <div class="filtro-grupo">
     <label>Cidade</label>
     <select id="mf-cidade" onchange="mercadoAtualizar()">
-      <option value="BLUMENAU">Blumenau</option>
-<option value="CACADOR">Caçador</option>
-<option value="CANOINHAS">Canoinhas</option>
-<option value="CHAPECO">Chapecó</option>
-<option value="CONCORDIA">Concórdia</option>
-<option value="CRICIUMA">Criciúma</option>
-<option value="JOACABA">Joaçaba</option>
-<option value="LAGES">Lages</option>
-<option value="RIO DO SUL">Rio do Sul</option>
-<option value="SAO MIGUEL DO OESTE">São Miguel do Oeste</option>
-<option value="TUBARAO">Tubarão</option>
-<option value="VIDEIRA">Videira</option>
     </select>
   </div>
   <div class="filtro-grupo" style="align-self:flex-end">
-    <div style="font-size:10px;color:#475569;line-height:1.5">
+    <div style="font-size:10px;color:#475569;line-height:1.6">
       Fonte: FENABRAVE/DENATRAN<br>
-      <span style="color:#34d399">● Dados reais Jan–Jun 2026</span>
+      <span style="color:#34d399;font-weight:700">● Dados reais Jan–Jun 2026</span>
     </div>
   </div>
 </div>
 
-<!-- ═══ KPIs dinâmicos ═══ -->
-<div class="mkt-kpis" id="merc-kpis">
+<!-- ═══ KPIs ═══ -->
+<div class="mkt-kpis">
   <div class="kpi-card" style="--accent:#f5c518">
     <div class="kpi-icon" style="color:#f5c518">&#9651;</div>
-    <div class="kpi-valor" id="kv-brasil">—</div>
-    <div class="kpi-label">Empl. Brasil</div>
-    <div class="kpi-sub" id="ks-brasil">Jan–Jun 2026</div>
+    <div class="kpi-valor" id="kv-area">—</div>
+    <div class="kpi-label" id="kl-area">Empl. Área</div>
+    <div class="kpi-sub" id="ks-area">Área selecionada</div>
   </div>
-  <div class="kpi-card" style="--accent:#38bdf8">
-    <div class="kpi-icon" style="color:#38bdf8">%</div>
-    <div class="kpi-valor" id="kv-share-br">—</div>
-    <div class="kpi-label">Share Brasil</div>
-    <div class="kpi-sub" id="ks-share-br">Marca selecionada</div>
+  <div class="kpi-card" style="--accent:#fb923c">
+    <div class="kpi-icon" style="color:#fb923c">%</div>
+    <div class="kpi-valor" id="kv-share-area">—</div>
+    <div class="kpi-label" id="kl-share-area">Share Área</div>
+    <div class="kpi-sub" id="ks-share-area">vs total da área</div>
   </div>
   <div class="kpi-card" style="--accent:#4ade80">
     <div class="kpi-icon" style="color:#4ade80">&#9651;</div>
     <div class="kpi-valor" id="kv-sc">—</div>
     <div class="kpi-label">Empl. SC</div>
-    <div class="kpi-sub" id="ks-sc">Santa Catarina</div>
+    <div class="kpi-sub">Santa Catarina</div>
   </div>
-  <div class="kpi-card" style="--accent:#818cf8">
-    <div class="kpi-icon" style="color:#818cf8">%</div>
+  <div class="kpi-card" style="--accent:#38bdf8">
+    <div class="kpi-icon" style="color:#38bdf8">%</div>
     <div class="kpi-valor" id="kv-share-sc">—</div>
     <div class="kpi-label">Share SC</div>
     <div class="kpi-sub">Santa Catarina</div>
   </div>
-  <div class="kpi-card" style="--accent:#22d3ee">
-    <div class="kpi-icon" style="color:#22d3ee">&#9651;</div>
-    <div class="kpi-valor" id="kv-cidade">—</div>
-    <div class="kpi-label">Empl. Cidade</div>
-    <div class="kpi-sub" id="ks-cidade">Cidade selecionada</div>
+  <div class="kpi-card" style="--accent:#818cf8">
+    <div class="kpi-icon" style="color:#818cf8">&#9651;</div>
+    <div class="kpi-valor" id="kv-br">—</div>
+    <div class="kpi-label">Empl. Brasil</div>
+    <div class="kpi-sub">Jan–Jun 2026</div>
   </div>
-  <div class="kpi-card" style="--accent:#fb923c">
-    <div class="kpi-icon" style="color:#fb923c">%</div>
-    <div class="kpi-valor" id="kv-share-cidade">—</div>
-    <div class="kpi-label">Share Cidade</div>
-    <div class="kpi-sub" id="ks-share-cidade">Cidade selecionada</div>
+  <div class="kpi-card kpi-destaque" style="--accent:#22d3ee">
+    <div class="kpi-icon" style="color:#22d3ee">%</div>
+    <div class="kpi-valor" id="kv-share-br">—</div>
+    <div class="kpi-label">Share Brasil</div>
+    <div class="kpi-sub">Participação nacional</div>
   </div>
 </div>
 
-<!-- ═══ Linha 1: Top 10 marcas na cidade + Modelos da marca ═══ -->
+<!-- ═══ Linha 1: Top 10 marcas na área + Modelos da marca ═══ -->
 <div class="mkt-row">
   <div class="mkt-chart-card" style="flex:1.2">
-    <div class="chart-title" id="ct-top10">Top 10 Marcas na Cidade</div>
-    <canvas id="chartTop10Cidade" height="240"></canvas>
+    <div class="chart-title" id="ct-top10">Top 10 Marcas — Área Selecionada</div>
+    <canvas id="chartTop10" height="250"></canvas>
   </div>
   <div class="mkt-chart-card" style="flex:1">
-    <div class="chart-title" id="ct-modelos">Modelos da Marca na Cidade</div>
-    <canvas id="chartModelosCidade" height="240"></canvas>
+    <div class="chart-title" id="ct-modelos">Modelos da Marca — Área Selecionada</div>
+    <canvas id="chartModelos" height="250"></canvas>
   </div>
 </div>
 
-<!-- ═══ Linha 2: Comparativo share Cidade / SC / R1 / Brasil (mensal) ═══ -->
+<!-- ═══ Linha 2: Share comparativo mês a mês ═══ -->
 <div class="mkt-row">
   <div class="mkt-chart-card full">
-    <div class="chart-title" id="ct-share-comp">Market Share Comparativo — Cidade vs SC vs Regional Sul (R1) vs Brasil (%)</div>
-    <canvas id="chartShareComp" height="80"></canvas>
+    <div class="chart-title" id="ct-share">
+      Market Share — Evolução Mês a Mês: Área vs SC vs Sul R1 vs Brasil (%)
+    </div>
+    <canvas id="chartShare" height="75"></canvas>
   </div>
 </div>
 
-<!-- ═══ Linha 3: Evolução mensal top marcas na cidade ═══ -->
+<!-- ═══ Linha 3: Evolução mensal top marcas + pizza ═══ -->
 <div class="mkt-row">
   <div class="mkt-chart-card" style="flex:2">
-    <div class="chart-title" id="ct-evo">Evolução Mensal de Emplacamentos — Top Marcas na Cidade</div>
-    <canvas id="chartEvoCidade" height="100"></canvas>
+    <div class="chart-title" id="ct-evo">
+      Evolução Mensal de Emplacamentos — Top Marcas na Área
+    </div>
+    <canvas id="chartEvo" height="95"></canvas>
   </div>
   <div class="mkt-chart-card" style="flex:1">
-    <div class="chart-title">Share de Mercado na Cidade (acumulado)</div>
-    <canvas id="chartPieCidade" height="240"></canvas>
+    <div class="chart-title" id="ct-pizza">Share na Área (acumulado)</div>
+    <canvas id="chartPizza" height="250"></canvas>
   </div>
 </div>
 
-<!-- ═══ Linha 4: Tabela top 10 ═══ -->
+<!-- ═══ Linha 4: Tabela ranking ═══ -->
 <div class="mkt-row">
   <div class="mkt-chart-card full">
-    <div class="chart-title" id="ct-tabela">Ranking de Emplacamentos — Cidade Selecionada</div>
+    <div class="chart-title" id="ct-tabela">Ranking de Emplacamentos — Área Selecionada</div>
     <div style="overflow-x:auto">
-      <table class="mkt-table" id="tbl-ranking">
+      <table class="mkt-table">
         <thead>
           <tr>
             <th style="text-align:left">#</th>
             <th style="text-align:left">Marca</th>
-            <th>Total</th>
-            <th>Share Cidade</th>
+            <th>Área</th>
+            <th>Share Área</th>
             <th>Share SC</th>
             <th>Share Brasil</th>
-            <th>vs Mês Ant.</th>
           </tr>
         </thead>
         <tbody id="tbody-ranking"></tbody>
@@ -3249,7 +3249,7 @@ new Chart(document.getElementById('chartShareInvest'),{
 </div>
 
 <div style="text-align:center;font-size:11px;color:#475569;padding:12px 0 4px">
-  Base: FENABRAVE/DENATRAN — Jan–Jun 2026 — 12 cidades do Grupo De Marco
+  Fonte: FENABRAVE/DENATRAN — Jan–Jun 2026 — Micro-regiões de influência Grupo De Marco
 </div>
 </div>
 
@@ -3260,7 +3260,7 @@ new Chart(document.getElementById('chartShareInvest'),{
   background:#0f1623; border:1px solid #1e293b; border-radius:14px;
   padding:18px 22px; margin-bottom:20px;
 }
-.filtro-grupo { display:flex; flex-direction:column; gap:5px; }
+.filtro-grupo { display:flex; flex-direction:column; gap:5px; min-width:160px; }
 .filtro-grupo label { font-size:10px; font-weight:700; color:#475569; text-transform:uppercase; letter-spacing:.5px; }
 .filtro-grupo select {
   background:#161f2e; border:1px solid #1e293b; color:#e2e8f0;
@@ -3268,100 +3268,144 @@ new Chart(document.getElementById('chartShareInvest'),{
   cursor:pointer; outline:none; -webkit-appearance:none; appearance:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
   background-repeat:no-repeat; background-position:right 10px center;
+  transition:border-color .15s;
 }
-.filtro-grupo select:focus { border-color:#f5c518; }
-@media(max-width:900px){ .mercado-root{ padding:20px 16px; } .mercado-filtros{ gap:10px; } }
+.filtro-grupo select:focus { border-color:#f5c518; box-shadow:0 0 0 2px #f5c51820; }
+@media(max-width:900px){ .mercado-root{ padding:20px 14px; } .mercado-filtros{ gap:10px; } .filtro-grupo{ min-width:140px; } }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
-// ═══ DADOS ═══
-const _D = {"meses":["Jan","Fev","Mar","Abr","Mai","Jun"],"brasil":{"FIAT":[34261,39670,52677,45641,49645,49082],"VOLKSWAGEN":[25873,29306,42432,39097,43124,46146],"GM":[16176,16883,28148,25123,27765,26703],"BYD":[9919,11553,16524,18563,22037,21820],"HYUNDAI":[10206,12138,19157,18565,20239,16429],"TOYOTA":[9545,10469,16018,14617,14818,14510],"RENAULT":[7783,9598,12475,12082,11060,10868],"JEEP":[8894,8236,10063,8531,10394,10257],"HONDA":[6722,7574,9912,9016,10290,10033],"CAOACHERY":[3550,3402,8771,7484,6660,7152],"NISSAN":[4559,4955,8787,5454,7122,6005],"GWM":[4416,4813,6215,4725,6489,6051],"FORD":[3954,3572,5050,4833,5166,4636],"GEELY":[1337,423,1375,4003,5215,5835],"CITROEN":[2536,2248,2844,2726,4575,2544],"RAM":[2177,2005,2576,2361,2336,2625],"OMODA":[1213,1376,1792,2116,1785,2095],"MMC":[1351,1350,1712,1593,1563,2370],"PEUGEOT":[1534,1175,1929,1331,1729,1058],"BMW":[960,1104,1455,1168,1245,1325],"MBENZ":[963,1002,1307,1174,1118,1126],"JAECOO":[476,457,659,710,1391,2736],"GAC":[709,467,694,918,672,1488],"VOLVO":[719,393,818,760,645,646],"LEAPMOTORS":[442,317,516,681,893,989],"JETOUR":[0,124,540,623,691,951],"KIA":[376,435,622,454,530,431],"IVECO":[207,253,332,465,742,556],"CHANGAN":[0,2,42,260,1164,1054],"PORSCHE":[364,347,529,345,341,315]},"sc":{"ARO":[0,0,0,1,0,0],"ASTON":[1,0,0,0,0,1],"AUDI":[24,25,41,22,27,29],"BENTLEY":[0,1,0,0,0,0],"BMW":[100,99,136,97,108,136],"BYD":[492,626,814,971,1091,1105],"CADILLAC":[2,2,11,6,9,9],"CAOACHERY":[175,210,407,371,335,316],"CHANGAN":[0,0,0,1,6,8],"CITROEN":[145,152,175,113,164,146],"DODGE":[5,3,8,1,12,7],"DONGFENG":[0,0,1,0,0,0],"EFFA":[17,12,6,3,18,19],"ENGESA":[0,0,4,1,0,1],"FERRARI":[0,3,4,3,1,3],"FIAT":[1310,1551,1776,1631,1522,1499],"FORD":[235,268,356,326,343,298],"FOTON":[1,1,2,1,1,3],"GAC":[25,32,36,75,30,83],"GEELY":[45,8,71,125,172,254],"GM":[689,807,992,981,1054,1086],"GMC":[0,0,0,0,0,1],"GWM":[244,285,367,258,362,272],"HONDA":[319,398,649,467,617,554],"HYUNDAI":[502,491,665,677,610,507],"IVECO":[1,4,25,12,11,9],"JAC":[2,0,0,0,0,0],"JAECOO":[50,56,80,56,123,257],"JAGUAR":[0,1,0,0,0,0],"JEEP":[707,628,811,610,688,657],"JETOUR":[0,0,7,17,7,20],"JINBEI":[1,2,3,1,0,0],"KIA":[46,61,64,53,42,46],"LAMBORGHINI":[0,1,1,0,0,0],"LANDROVER":[19,13,42,16,16,20],"LEAPMOTORS":[28,19,20,34,30,28],"LEXUS":[6,4,5,5,10,9],"LINCOLN":[0,0,0,0,1,0],"MBENZ":[78,103,78,69,80,81],"MCLAREN":[0,0,0,0,1,0],"MG":[9,12,14,13,14,11],"MINI":[6,9,18,8,5,2],"MMC":[123,76,95,90,96,110],"NEXTEM":[1,0,0,0,0,0],"NISSAN":[212,163,215,214,220,207],"OMODA":[95,125,145,170,156,179],"OUTRASMARCAS":[0,0,20,1,0,1],"PEUGEOT":[143,150,167,126,126,114],"PLYMOUTH":[0,0,0,0,0,2],"PORSCHE":[39,48,52,34,37,28],"RAM":[95,111,123,131,113,150],"RENAULT":[400,383,322,343,302,332],"ROLLSROYCE":[0,0,0,0,2,1],"SUZUKI":[2,3,1,0,0,0],"TESLA":[1,1,1,0,0,0],"TOYOTA":[306,455,533,592,560,592],"VOLKSWAGEN":[1245,1747,2140,1969,1819,1862],"VOLVO":[60,41,79,77,61,43],"VW":[0,1,1,0,34,4],"WILLYS":[0,0,0,0,1,0],"ZEEKR":[7,9,9,5,1,7]},"r1":{"AGRALE":[0,0,0,0,0,1],"ARO":[0,0,0,1,0,0],"ASTON":[1,0,2,1,0,2],"AUDI":[95,76,121,74,84,111],"BEACH":[0,0,1,0,0,0],"BENTLEY":[0,1,0,0,0,0],"BMW":[257,296,401,296,306,375],"BYD":[1899,2399,3089,3799,4198,4186],"CADILLAC":[5,3,13,7,11,10],"CAOACHERY":[742,781,1708,1562,1368,1364],"CHAMONIX":[0,0,1,0,0,1],"CHANGAN":[0,0,0,38,142,164],"CHRYSLER":[1,0,0,0,1,0],"CITROEN":[555,508,596,517,548,646],"DKW":[0,0,0,0,0,1],"DODGE":[7,4,13,6,18,12],"DONGFENG":[0,0,1,0,0,0],"EFFA":[55,41,31,23,53,57],"ENGESA":[0,0,4,1,1,1],"FERRARI":[4,5,9,6,3,6],"FIAT":[6174,6250,7764,7305,6363,6377],"FORD":[1138,1159,1763,1531,1497,1436],"FOTON":[8,20,18,28,15,25],"FYBER":[0,0,0,0,0,1],"GAC":[118,110,168,218,107,246],"GEELY":[240,77,343,929,1206,1388],"GM":[3791,4078,6629,6263,7197,5826],"GMC":[1,0,0,1,0,1],"GWM":[951,986,1413,982,1347,1128],"HONDA":[1066,1302,1808,1528,1810,1755],"HUDSON":[0,1,0,0,0,0],"HUMMER":[0,0,0,0,0,1],"HYUNDAI":[2304,2690,3891,4499,5981,4513],"IVECO":[33,112,102,174,103,310],"JAC":[5,13,5,1,5,0],"JAECOO":[125,145,207,190,302,663],"JAGUAR":[0,2,1,0,0,0],"JEEP":[2097,1824,2248,1838,2091,1924],"JETOUR":[0,19,63,124,94,144],"JINBEI":[3,6,6,1,0,3],"KIA":[93,102,146,106,111,93],"LAMBORGHINI":[1,2,1,0,1,1],"LANCIA":[0,1,0,0,0,0],"LANDROVER":[56,26,95,55,49,50],"LEAPMOTORS":[98,66,118,184,223,216],"LEXUS":[36,15,20,21,23,33],"LINCOLN":[0,0,0,0,2,0],"MAZDA":[0,0,1,0,0,1],"MBENZ":[236,307,302,307,297,288],"MCLAREN":[1,0,1,1,1,0],"MG":[24,33,147,50,49,56],"MINI":[19,33,43,25,25,18],"MMC":[338,286,383,333,325,520],"NETA":[23,2,41,0,0,25],"NEXTEM":[1,0,0,0,0,0],"NISSAN":[988,759,1196,988,1133,979],"OMODA":[257,319,412,513,427,498],"OUTRASMARCAS":[6,2,32,4,0,65],"PEUGEOT":[577,431,544,396,384,369],"PLYMOUTH":[0,0,0,0,0,2],"PONTIAC":[1,0,0,0,0,0],"PORSCHE":[95,103,122,83,87,77],"RAM":[435,420,521,480,511,624],"RDK":[0,0,0,1,0,0],"RENAULT":[1876,3167,4192,4963,4092,3722],"ROLLSROYCE":[0,0,1,0,2,2],"SELVAGEM":[0,1,0,0,0,0],"SSANGYONG":[0,2,2,2,4,3],"SUBARU":[1,0,0,0,0,0],"SUZUKI":[12,6,2,0,1,0],"TESLA":[1,1,2,0,0,0],"TOYOTA":[1708,2089,2984,3026,3024,3045],"VOLKSWAGEN":[5589,6346,9019,9583,9897,10707],"VOLVO":[156,114,206,228,164,133],"VW":[0,1,1,0,72,17],"WILLYS":[0,0,0,0,1,1],"ZEEKR":[21,17,32,25,13,17]},"cidades":{"BLUMENAU":{"marcas":{"AUDI":[5,4,8,7,5,2],"BMW":[4,12,8,6,7,13],"BYD":[29,48,65,74,67,74],"CAOACHERY":[8,12,30,22,19,15],"CITROEN":[10,3,6,8,6,11],"EFFA":[0,0,0,0,0,1],"FERRARI":[0,0,0,1,0,0],"FIAT":[58,69,78,88,67,70],"FORD":[11,11,12,18,14,7],"FOTON":[0,0,1,0,0,0],"GAC":[2,2,5,3,4,11],"GEELY":[2,0,8,9,10,10],"GM":[37,31,35,40,49,53],"GWM":[18,30,23,16,19,23],"HONDA":[44,36,65,36,59,48],"HYUNDAI":[18,31,23,29,24,28],"IVECO":[0,0,1,2,1,0],"JAECOO":[7,6,5,2,9,8],"JEEP":[29,19,33,33,33,25],"JETOUR":[0,0,0,0,0,2],"KIA":[3,7,4,6,3,0],"LANDROVER":[0,0,4,1,0,0],"LEAPMOTORS":[2,0,1,1,0,0],"LEXUS":[1,0,0,0,0,0],"MBENZ":[5,8,4,3,5,8],"MG":[0,0,1,0,0,1],"MMC":[3,2,3,4,1,6],"NISSAN":[21,7,10,15,20,19],"OMODA":[8,8,6,10,14,10],"PEUGEOT":[16,9,22,12,8,4],"PORSCHE":[3,6,10,5,5,0],"RAM":[2,3,6,4,5,5],"RENAULT":[17,22,13,12,14,34],"TOYOTA":[6,21,20,19,22,21],"VOLKSWAGEN":[93,138,148,139,144,139],"VOLVO":[6,4,7,6,7,6],"VW":[0,0,0,0,2,0],"WILLYS":[0,0,0,0,1,0]},"modelos":{"RENAULT":{"BOREAL":[2,5,5,0,1,2],"DUSTER":[0,1,0,0,0,2],"KANGOO":[2,0,0,1,0,0],"KARDIAN":[4,5,2,5,3,4],"KOLEOS E-TECH":[0,0,0,1,0,0],"KWID":[5,9,5,4,8,22],"KWID E-TECH":[2,0,0,0,0,0],"MASTER":[1,2,0,1,1,3],"MEGANE E-TECH":[0,0,0,0,0,1],"OROCH":[1,0,1,0,1,0]},"GWM":{"HAVAL H6":[12,24,12,11,15,19],"HAVAL H9":[2,1,1,2,2,0],"ORA 03":[0,0,3,0,1,0],"POER P30":[2,0,0,0,1,0],"TANK 300":[2,4,7,0,0,1],"WEY 07":[0,1,0,3,0,3]},"PEUGEOT":{"":[14,8,11,7,3,3],"BOXER":[2,0,5,2,1,0],"EXPERT":[0,1,6,2,3,1],"PARTNER RAPID":[0,0,0,1,1,0]},"CITROEN":{"BASALT":[4,2,4,4,3,7],"C3":[3,1,2,2,2,3],"C3 AIRCROSS":[3,0,0,1,0,0],"JUMPY":[0,0,0,1,1,1]}}},"JOACABA":{"marcas":{"AUDI":[1,0,0,0,0,0],"BMW":[1,0,1,0,0,1],"BYD":[2,1,2,3,2,1],"CAOACHERY":[1,0,0,1,0,0],"CITROEN":[0,1,0,0,0,0],"DODGE":[0,0,0,0,0,1],"EFFA":[0,0,0,0,1,2],"FIAT":[3,8,5,6,10,5],"FORD":[4,2,4,4,9,2],"GAC":[1,0,0,0,0,0],"GEELY":[0,1,0,1,0,1],"GM":[3,3,9,8,4,9],"GWM":[0,6,3,0,4,2],"HONDA":[2,10,2,3,3,1],"HYUNDAI":[0,0,0,0,1,1],"IVECO":[0,1,0,0,0,0],"JAECOO":[0,0,0,0,0,1],"JEEP":[1,6,4,3,4,5],"LANDROVER":[1,0,0,1,0,0],"LEAPMOTORS":[1,0,0,0,0,0],"MBENZ":[0,2,0,0,0,0],"MMC":[0,0,1,0,0,1],"NISSAN":[1,0,0,0,0,0],"OMODA":[0,0,0,0,0,1],"PEUGEOT":[0,0,2,0,0,0],"PORSCHE":[0,0,0,1,0,0],"RAM":[4,2,2,1,1,0],"RENAULT":[4,7,7,9,3,5],"TOYOTA":[0,0,0,2,0,4],"VOLKSWAGEN":[23,20,14,15,15,25],"VOLVO":[0,0,1,0,1,1]},"modelos":{"RENAULT":{"BOREAL":[0,4,2,1,1,0],"DUSTER":[0,0,0,1,0,0],"KANGOO":[0,1,1,1,0,2],"KARDIAN":[3,0,1,4,2,2],"KWID":[1,2,3,2,0,1]},"GWM":{"HAVAL H6":[0,4,0,0,3,2],"HAVAL H9":[0,0,1,0,1,0],"POER P30":[0,0,2,0,0,0],"TANK 300":[0,2,0,0,0,0]},"PEUGEOT":{"":[0,0,1,0,0,0],"EXPERT":[0,0,1,0,0,0]},"CITROEN":{"C3 AIRCROSS":[0,1,0,0,0,0]}}},"CHAPECO":{"marcas":{"AUDI":[0,0,0,0,0,1],"BMW":[0,3,9,0,2,10],"BYD":[25,26,48,46,45,40],"CAOACHERY":[13,8,22,21,18,27],"CITROEN":[0,5,6,7,8,6],"EFFA":[0,0,0,0,1,1],"FIAT":[41,75,77,70,73,56],"FORD":[10,15,13,18,9,18],"GAC":[0,0,1,11,1,6],"GEELY":[0,0,1,1,1,1],"GM":[25,22,35,37,27,35],"GWM":[21,20,26,13,19,21],"HONDA":[6,12,19,14,16,13],"HYUNDAI":[35,25,32,39,38,36],"JAECOO":[2,3,2,3,3,6],"JEEP":[20,30,22,26,27,27],"KIA":[0,4,0,3,1,1],"LANDROVER":[1,0,1,0,1,1],"LEAPMOTORS":[1,0,0,0,0,0],"MBENZ":[3,0,2,4,1,2],"MG":[0,0,0,0,0,1],"MMC":[1,3,5,2,5,5],"NISSAN":[15,2,4,8,6,8],"OMODA":[1,6,2,7,7,5],"PEUGEOT":[4,4,10,5,3,2],"PORSCHE":[2,0,1,1,0,0],"RAM":[5,7,6,10,2,9],"RENAULT":[13,15,16,8,12,11],"TOYOTA":[13,15,19,20,18,11],"VOLKSWAGEN":[54,72,112,61,70,67],"VOLVO":[1,2,3,1,0,0],"VW":[0,0,0,0,1,2]},"modelos":{"RENAULT":{"BOREAL":[1,4,3,1,1,1],"DUSTER":[0,0,0,0,2,1],"KANGOO":[3,0,0,0,2,0],"KARDIAN":[2,2,1,0,1,0],"KOLEOS E-TECH":[0,0,0,0,0,2],"KWID":[3,1,6,2,4,3],"KWID E-TECH":[1,1,0,0,0,0],"MASTER":[1,4,5,3,1,0],"OROCH":[2,3,1,2,1,4]},"GWM":{"HAVAL H6":[14,16,14,6,14,16],"HAVAL H9":[3,0,3,3,0,0],"ORA 03":[0,2,4,1,1,1],"ORA 5":[0,0,0,0,0,1],"POER P30":[1,1,1,0,1,0],"TANK 300":[2,0,2,1,2,1],"WEY 07":[1,1,2,2,1,2]},"PEUGEOT":{"":[4,4,6,5,3,2],"BOXER":[0,0,1,0,0,0],"EXPERT":[0,0,2,0,0,0],"PARTNER RAPID":[0,0,1,0,0,0]},"CITROEN":{"BASALT":[0,1,2,4,2,4],"C3":[0,2,3,3,4,0],"C3 AIRCROSS":[0,1,0,0,2,0],"JUMPY":[0,1,1,0,0,2]}}},"CRICIUMA":{"marcas":{"BMW":[4,2,1,6,4,8],"BYD":[7,14,10,28,12,32],"CAOACHERY":[8,11,22,21,18,13],"CITROEN":[6,3,2,4,3,6],"EFFA":[1,0,0,0,0,0],"FIAT":[36,60,59,46,44,49],"FORD":[10,7,18,6,10,6],"GAC":[0,0,0,0,0,3],"GEELY":[0,0,0,0,1,2],"GM":[18,24,30,18,39,37],"GWM":[8,9,16,8,14,11],"HONDA":[9,16,23,15,29,10],"HYUNDAI":[20,16,20,20,26,18],"IVECO":[0,0,0,0,0,1],"JAECOO":[2,2,3,2,7,19],"JEEP":[24,20,30,24,32,20],"KIA":[3,3,0,0,0,1],"LANDROVER":[0,0,3,2,0,1],"LEAPMOTORS":[2,0,0,0,2,2],"LEXUS":[0,0,0,1,0,0],"MBENZ":[3,2,2,1,0,2],"MG":[0,0,0,0,0,1],"MINI":[0,0,0,1,0,0],"MMC":[2,1,2,3,5,1],"NISSAN":[11,3,7,6,6,5],"OMODA":[4,7,3,10,5,7],"PEUGEOT":[3,5,4,2,2,3],"PORSCHE":[2,1,1,2,3,0],"RAM":[5,6,5,8,8,5],"RENAULT":[3,7,3,6,8,5],"TOYOTA":[11,13,10,20,19,18],"VOLKSWAGEN":[24,72,56,78,74,70],"VOLVO":[4,0,0,1,1,1],"VW":[0,0,0,0,3,0],"ZEEKR":[0,0,0,0,0,1]},"modelos":{"RENAULT":{"BOREAL":[0,2,0,1,2,1],"DUSTER":[0,1,0,0,2,1],"KANGOO":[0,0,0,2,1,0],"KARDIAN":[2,2,1,0,1,1],"KWID":[0,2,2,2,0,2],"KWID E-TECH":[1,0,0,0,0,0],"MASTER":[0,0,0,1,0,0],"OROCH":[0,0,0,0,2,0]},"GWM":{"HAVAL H6":[7,4,8,5,11,6],"HAVAL H9":[0,1,1,1,1,2],"ORA 03":[1,0,1,0,1,0],"POER P30":[0,1,2,1,0,1],"TANK 300":[0,3,4,1,0,1],"WEY 07":[0,0,0,0,1,1]},"PEUGEOT":{"":[2,5,4,2,2,3],"PARTNER RAPID":[1,0,0,0,0,0]},"CITROEN":{"BASALT":[2,2,0,1,0,1],"C3":[3,1,2,2,1,2],"C3 AIRCROSS":[1,0,0,0,0,0],"JUMPY":[0,0,0,1,2,3]}}},"TUBARAO":{"marcas":{"AUDI":[0,0,0,0,1,0],"BMW":[1,0,1,0,2,0],"BYD":[7,4,9,12,8,24],"CAOACHERY":[7,6,7,13,16,19],"CITROEN":[1,2,2,0,3,3],"EFFA":[1,0,0,0,0,0],"FIAT":[20,25,34,15,27,25],"FORD":[5,2,5,6,2,7],"FOTON":[0,0,0,0,0,1],"GAC":[0,0,2,0,0,0],"GEELY":[1,0,1,1,4,2],"GM":[5,11,8,22,19,15],"GWM":[1,1,4,5,11,4],"HONDA":[4,7,22,16,9,11],"HYUNDAI":[5,6,12,10,6,8],"IVECO":[0,0,1,0,0,0],"JAECOO":[0,0,0,1,2,4],"JEEP":[9,10,18,11,11,9],"JETOUR":[0,0,0,1,0,0],"KIA":[0,1,1,1,1,1],"LANDROVER":[0,0,1,0,0,0],"LEAPMOTORS":[1,0,0,0,0,0],"MBENZ":[1,2,1,0,2,1],"MMC":[5,8,7,5,6,4],"NISSAN":[4,3,4,5,4,3],"OMODA":[0,2,1,2,2,3],"PEUGEOT":[0,4,1,1,1,3],"PORSCHE":[0,2,1,0,0,0],"RAM":[0,0,0,1,3,0],"RENAULT":[6,4,6,3,5,2],"TOYOTA":[5,8,9,10,11,11],"VOLKSWAGEN":[14,22,33,27,22,26],"VOLVO":[1,1,0,0,1,0],"VW":[0,0,0,0,2,0]},"modelos":{"RENAULT":{"BOREAL":[0,0,1,0,0,0],"DUSTER":[0,0,0,1,0,0],"KANGOO":[0,2,0,0,1,0],"KARDIAN":[1,0,2,0,0,0],"KWID":[5,2,2,1,2,2],"MASTER":[0,0,0,1,1,0],"OROCH":[0,0,1,0,1,0]},"GWM":{"HAVAL H6":[1,1,0,3,9,1],"HAVAL H9":[0,0,1,1,1,3],"ORA 03":[0,0,1,0,0,0],"POER P30":[0,0,1,1,1,0],"TANK 300":[0,0,1,0,0,0]},"PEUGEOT":{"":[0,4,1,1,1,2],"EXPERT":[0,0,0,0,0,1]},"CITROEN":{"BASALT":[0,0,1,0,0,2],"C3":[0,2,0,0,3,1],"C3 AIRCROSS":[1,0,1,0,0,0]}}},"CACADOR":{"marcas":{"AUDI":[1,0,0,0,0,0],"BMW":[1,1,0,4,0,1],"BYD":[2,0,0,6,6,11],"CAOACHERY":[0,1,3,0,0,1],"CHANGAN":[0,0,0,0,0,1],"CITROEN":[4,3,5,1,4,0],"EFFA":[0,0,0,0,0,1],"FIAT":[19,25,19,18,17,16],"FORD":[3,2,5,3,3,3],"GEELY":[0,0,0,0,1,0],"GM":[4,11,10,12,7,9],"GWM":[6,7,6,1,2,1],"HONDA":[2,15,2,6,6,5],"HYUNDAI":[5,6,9,8,9,13],"JAECOO":[0,0,0,0,0,5],"JEEP":[2,1,3,2,3,4],"JETOUR":[0,0,0,0,0,1],"KIA":[1,0,0,0,0,1],"LANDROVER":[0,0,0,0,1,0],"LEAPMOTORS":[0,3,0,1,0,0],"MBENZ":[0,0,0,1,0,0],"MG":[0,0,0,1,0,0],"MMC":[1,0,0,0,0,0],"NISSAN":[0,0,0,0,1,0],"PEUGEOT":[4,1,4,0,1,2],"PORSCHE":[1,0,0,0,0,0],"RAM":[1,1,1,0,2,3],"RENAULT":[3,4,6,3,0,1],"TOYOTA":[0,2,3,4,1,4],"VOLKSWAGEN":[21,21,22,15,19,22],"VOLVO":[1,0,0,0,1,0],"VW":[0,0,0,0,1,0]},"modelos":{"RENAULT":{"BOREAL":[1,0,1,0,0,1],"KARDIAN":[0,1,1,1,0,0],"KWID":[2,1,3,1,0,0],"OROCH":[0,2,1,1,0,0]},"GWM":{"HAVAL H6":[3,6,1,1,1,1],"HAVAL H9":[0,0,0,0,1,0],"POER P30":[1,0,1,0,0,0],"TANK 300":[2,1,4,0,0,0]},"PEUGEOT":{"":[3,1,4,0,0,1],"EXPERT":[1,0,0,0,1,1]},"CITROEN":{"BASALT":[3,1,2,1,2,0],"C3":[1,1,3,0,2,0],"C3 AIRCROSS":[0,1,0,0,0,0]}}},"CANOINHAS":{"marcas":{"BMW":[0,0,0,1,1,0],"BYD":[0,1,1,2,3,0],"CAOACHERY":[1,0,0,0,1,0],"CITROEN":[2,5,2,1,0,2],"EFFA":[0,0,0,0,1,0],"FIAT":[8,5,9,14,9,12],"FORD":[1,0,0,2,0,3],"GAC":[0,0,0,0,0,1],"GM":[3,6,8,7,5,7],"GWM":[0,1,0,0,0,1],"HONDA":[0,0,0,0,0,1],"JEEP":[3,2,1,3,2,3],"MBENZ":[0,1,0,0,0,0],"NISSAN":[0,0,0,1,0,0],"OMODA":[0,1,0,0,0,0],"PEUGEOT":[2,1,1,0,0,2],"RAM":[1,1,1,1,1,1],"RENAULT":[1,0,1,0,1,1],"TOYOTA":[5,2,1,9,12,8],"VOLKSWAGEN":[14,11,14,20,17,16],"ZEEKR":[0,0,0,1,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,0,1,0,0,0],"KARDIAN":[1,0,0,0,0,0],"KWID":[0,0,0,0,1,1]},"GWM":{"HAVAL H6":[0,1,0,0,0,0],"ORA 03":[0,0,0,0,0,1]},"PEUGEOT":{"":[2,1,0,0,0,2],"BOXER":[0,0,1,0,0,0]},"CITROEN":{"BASALT":[1,2,2,1,0,2],"C3":[0,1,0,0,0,0],"C3 AIRCROSS":[1,2,0,0,0,0]}}},"CONCORDIA":{"marcas":{"BMW":[0,1,0,1,0,1],"BYD":[0,0,2,4,10,10],"CAOACHERY":[1,1,6,2,1,1],"CITROEN":[3,3,4,3,5,3],"EFFA":[1,1,0,0,2,0],"FIAT":[14,15,10,10,10,12],"FORD":[4,4,13,3,5,6],"GEELY":[1,0,1,1,0,0],"GM":[12,9,5,13,8,10],"GWM":[2,2,2,2,3,2],"HONDA":[2,7,1,4,5,7],"HYUNDAI":[25,27,31,21,37,28],"JAECOO":[0,0,0,0,1,2],"JEEP":[23,8,12,16,16,17],"KIA":[0,0,0,0,0,2],"LEXUS":[0,1,0,0,0,0],"MBENZ":[1,0,2,1,0,1],"MMC":[1,0,0,0,0,1],"NISSAN":[0,0,1,0,0,0],"OMODA":[0,1,1,0,1,0],"PEUGEOT":[3,1,3,4,2,1],"PORSCHE":[0,0,1,0,0,0],"RAM":[0,3,5,3,3,7],"RENAULT":[2,4,1,1,5,10],"TOYOTA":[2,9,3,3,8,5],"VOLKSWAGEN":[14,28,28,27,29,22],"VOLVO":[0,0,1,1,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,1,0,0,0,1],"KARDIAN":[0,1,1,0,2,1],"KWID":[1,1,0,1,3,6],"KWID E-TECH":[1,0,0,0,0,0],"OROCH":[0,1,0,0,0,2]},"GWM":{"HAVAL H6":[0,1,1,0,2,0],"HAVAL H9":[1,1,0,1,0,0],"ORA 03":[1,0,0,0,0,0],"TANK 300":[0,0,1,0,0,1],"WEY 07":[0,0,0,1,1,1]},"PEUGEOT":{"":[3,1,3,3,2,1],"EXPERT":[0,0,0,1,0,0]},"CITROEN":{"BASALT":[2,1,3,1,2,1],"C3":[0,1,0,1,3,1],"C3 AIRCROSS":[1,1,0,1,0,0],"JUMPY":[0,0,1,0,0,1]}}},"SAO MIGUEL DO OESTE":{"marcas":{"BMW":[0,0,0,0,2,0],"BYD":[0,0,0,1,0,1],"CAOACHERY":[0,0,0,0,1,0],"FIAT":[4,3,13,10,11,9],"FORD":[1,6,3,6,3,7],"GM":[2,2,4,4,7,10],"GWM":[0,1,1,4,2,0],"HONDA":[2,2,3,8,5,3],"HYUNDAI":[2,11,5,2,2,4],"JEEP":[3,1,5,0,5,5],"KIA":[0,0,0,1,0,0],"OMODA":[0,0,0,1,0,0],"PEUGEOT":[1,1,0,0,0,0],"RENAULT":[1,5,2,4,5,0],"TOYOTA":[2,0,3,3,4,2],"VOLKSWAGEN":[6,5,11,11,9,7]},"modelos":{"RENAULT":{"BOREAL":[0,0,1,0,0,0],"KARDIAN":[0,0,1,0,0,0],"KWID":[1,1,0,1,0,0],"MASTER":[0,0,0,1,1,0],"OROCH":[0,4,0,2,4,0]},"GWM":{"HAVAL H6":[0,0,1,3,2,0],"HAVAL H9":[0,1,0,0,0,0],"ORA 03":[0,0,0,1,0,0]},"PEUGEOT":{"":[1,1,0,0,0,0]}}},"VIDEIRA":{"marcas":{"AUDI":[0,1,0,0,1,0],"BMW":[1,2,0,0,0,0],"BYD":[3,0,2,4,5,6],"CAOACHERY":[0,2,0,2,0,0],"CITROEN":[0,0,1,0,1,1],"FIAT":[32,34,36,18,20,84],"FORD":[0,1,3,1,1,1],"GEELY":[0,0,1,0,1,2],"GM":[5,10,4,14,14,9],"GWM":[5,4,8,2,7,8],"HONDA":[0,0,3,1,0,1],"HYUNDAI":[3,1,3,4,2,2],"JEEP":[8,4,7,5,8,2],"MMC":[0,1,0,0,1,0],"NISSAN":[0,0,1,1,0,0],"OMODA":[0,0,1,1,0,0],"PEUGEOT":[2,1,0,1,1,0],"PORSCHE":[0,0,0,0,0,1],"RAM":[0,1,3,1,2,2],"RENAULT":[6,4,2,2,3,1],"TOYOTA":[3,8,8,3,4,4],"VOLKSWAGEN":[16,16,22,19,27,25],"VOLVO":[0,0,0,1,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,0,1,0,2,1],"KARDIAN":[3,0,0,0,1,0],"KWID":[2,2,0,0,0,0],"KWID E-TECH":[1,0,0,1,0,0],"MASTER":[0,0,0,1,0,0],"OROCH":[0,2,1,0,0,0]},"GWM":{"HAVAL H6":[2,3,5,1,4,4],"HAVAL H9":[1,1,0,0,2,2],"ORA 03":[0,0,0,0,1,0],"POER P30":[0,0,2,0,0,1],"TANK 300":[1,0,0,0,0,1],"WEY 07":[1,0,1,1,0,0]},"PEUGEOT":{"":[2,1,0,1,1,0]},"CITROEN":{"BASALT":[0,0,0,0,1,1],"C3 AIRCROSS":[0,0,1,0,0,0]}}},"RIO DO SUL":{"marcas":{"AUDI":[0,0,1,0,0,0],"BMW":[1,0,3,1,2,0],"BYD":[7,8,17,15,24,22],"CAOACHERY":[0,1,0,0,1,1],"EFFA":[1,1,0,0,0,0],"FIAT":[9,13,12,9,15,17],"FORD":[0,6,0,3,3,1],"GEELY":[0,0,0,1,2,4],"GM":[8,16,17,6,11,10],"GWM":[0,3,3,3,6,2],"HONDA":[5,5,13,6,5,4],"HYUNDAI":[9,3,13,6,10,4],"JAECOO":[0,0,1,0,0,1],"JEEP":[10,13,8,11,13,8],"JETOUR":[0,0,1,0,0,0],"KIA":[0,0,0,0,0,1],"LANDROVER":[1,0,0,1,1,0],"LEAPMOTORS":[1,0,0,0,0,0],"MBENZ":[1,4,2,2,2,3],"MG":[0,0,0,0,1,0],"MMC":[1,0,1,0,3,0],"NISSAN":[1,1,4,0,0,2],"OMODA":[1,0,0,0,1,0],"PEUGEOT":[2,2,2,1,0,1],"PORSCHE":[1,0,0,0,0,0],"RAM":[0,0,1,0,0,0],"RENAULT":[5,2,7,4,3,1],"TOYOTA":[2,5,3,3,3,6],"VOLKSWAGEN":[11,21,30,19,26,19],"VOLVO":[1,0,1,0,1,0],"VW":[0,0,0,0,1,0]},"modelos":{"RENAULT":{"BOREAL":[2,1,1,1,0,0],"DUSTER":[1,0,5,0,0,0],"KARDIAN":[1,1,1,1,2,0],"KWID":[0,0,0,1,1,1],"MASTER":[0,0,0,1,0,0],"OROCH":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[0,2,1,2,5,1],"HAVAL H9":[0,1,0,0,0,0],"ORA 03":[0,0,1,0,0,1],"WEY 07":[0,0,1,1,1,0]},"PEUGEOT":{"":[2,2,0,1,0,0],"EXPERT":[0,0,2,0,0,1]}}},"LAGES":{"marcas":{"AUDI":[1,1,0,0,0,1],"BMW":[1,0,2,1,0,0],"BYD":[3,8,9,9,12,11],"CAOACHERY":[8,10,16,16,18,13],"CITROEN":[4,5,6,7,7,9],"FIAT":[16,30,29,39,25,31],"FORD":[8,8,13,17,10,24],"GAC":[0,0,0,1,0,1],"GEELY":[1,0,1,0,3,5],"GM":[7,14,10,12,18,31],"GWM":[4,5,10,7,8,7],"HONDA":[4,5,6,4,6,9],"HYUNDAI":[11,15,15,16,13,9],"JAECOO":[0,2,2,1,4,8],"JEEP":[13,13,13,13,8,12],"KIA":[0,0,1,0,0,0],"LANDROVER":[1,1,1,0,0,0],"LEAPMOTORS":[0,0,0,0,1,0],"MBENZ":[1,0,2,1,1,1],"MMC":[1,2,2,4,8,3],"NISSAN":[4,0,8,3,2,3],"OMODA":[2,2,3,3,3,5],"PEUGEOT":[9,10,7,7,4,6],"PORSCHE":[0,0,1,0,2,1],"RAM":[3,2,4,8,6,4],"RENAULT":[8,9,3,5,2,5],"TOYOTA":[6,13,12,5,28,13],"VOLKSWAGEN":[17,30,22,38,25,25],"VOLVO":[0,1,3,1,2,1],"VW":[0,0,0,0,1,0],"ZEEKR":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"BOREAL":[1,0,0,0,0,0],"DUSTER":[1,0,0,0,0,0],"KANGOO":[1,0,0,0,0,1],"KARDIAN":[1,0,0,0,1,0],"KWID":[2,3,3,5,1,2],"KWID E-TECH":[0,1,0,0,0,0],"MASTER":[0,2,0,0,0,1],"OROCH":[2,3,0,0,0,1]},"GWM":{"HAVAL H6":[3,3,3,3,4,3],"HAVAL H9":[0,0,2,1,0,1],"ORA 03":[0,1,0,2,3,0],"POER P30":[0,0,2,0,1,2],"TANK 300":[1,1,2,0,0,1],"WEY 07":[0,0,1,1,0,0]},"PEUGEOT":{"":[9,9,7,6,3,6],"BOXER":[0,0,0,0,1,0],"EXPERT":[0,1,0,1,0,0]},"CITROEN":{"BASALT":[2,4,3,3,2,5],"C3":[0,1,2,2,5,2],"C3 AIRCROSS":[2,0,0,1,0,0],"JUMPY":[0,0,1,1,0,2]}}}},"grupo":{"RENAULT":"Renault","GWM":"GWM","YAMAHA":"Yamaha","TRIUMPH":"Triumph","CF MOTO":"CF Motos","PEUGEOT":"Peugeot","CITROEN":"Citroën"}};
+// ════════════════════════════════════════════
+//  DADOS EMBUTIDOS
+// ════════════════════════════════════════════
+const _D = {"meses_pt":["Jan","Fev","Mar","Abr","Mai","Jun"],"brasil":{"FIAT":[34261,39670,52677,45641,49645,49082],"VOLKSWAGEN":[25873,29306,42432,39097,43124,46146],"GM":[16176,16883,28148,25123,27765,26703],"BYD":[9919,11553,16524,18563,22037,21820],"HYUNDAI":[10206,12138,19157,18565,20239,16429],"TOYOTA":[9545,10469,16018,14617,14818,14510],"RENAULT":[7783,9598,12475,12082,11060,10868],"JEEP":[8894,8236,10063,8531,10394,10257],"HONDA":[6722,7574,9912,9016,10290,10033],"CAOACHERY":[3550,3402,8771,7484,6660,7152],"NISSAN":[4559,4955,8787,5454,7122,6005],"GWM":[4416,4813,6215,4725,6489,6051],"FORD":[3954,3572,5050,4833,5166,4636],"GEELY":[1337,423,1375,4003,5215,5835],"CITROEN":[2536,2248,2844,2726,4575,2544],"RAM":[2177,2005,2576,2361,2336,2625],"OMODA":[1213,1376,1792,2116,1785,2095],"MMC":[1351,1350,1712,1593,1563,2370],"PEUGEOT":[1534,1175,1929,1331,1729,1058],"BMW":[960,1104,1455,1168,1245,1325],"MBENZ":[963,1002,1307,1174,1118,1126],"JAECOO":[476,457,659,710,1391,2736],"GAC":[709,467,694,918,672,1488],"VOLVO":[719,393,818,760,645,646],"LEAPMOTORS":[442,317,516,681,893,989],"JETOUR":[0,124,540,623,691,951],"KIA":[376,435,622,454,530,431],"IVECO":[207,253,332,465,742,556],"CHANGAN":[0,2,42,260,1164,1054],"PORSCHE":[364,347,529,345,341,315]},"sc":{"GM":[689,807,992,981,1054,1086],"EFFA":[17,12,6,3,18,19],"HYUNDAI":[502,491,665,677,610,507],"AUDI":[24,25,41,22,27,29],"BMW":[100,99,136,97,108,136],"CITROEN":[145,152,175,113,164,146],"BYD":[492,626,814,971,1091,1105],"FORD":[235,268,356,326,343,298],"GAC":[25,32,36,75,30,83],"GEELY":[45,8,71,125,172,254],"GWM":[244,285,367,258,362,272],"LEAPMOTORS":[28,19,20,34,30,28],"MBENZ":[78,103,78,69,80,81],"MMC":[123,76,95,90,96,110],"NISSAN":[212,163,215,214,220,207],"OMODA":[95,125,145,170,156,179],"PEUGEOT":[143,150,167,126,126,114],"TOYOTA":[306,455,533,592,560,592],"VOLVO":[60,41,79,77,61,43],"VOLKSWAGEN":[1245,1747,2140,1969,1819,1862],"LANDROVER":[19,13,42,16,16,20],"KIA":[46,61,64,53,42,46],"MG":[9,12,14,13,14,11],"PORSCHE":[39,48,52,34,37,28],"RENAULT":[400,383,322,343,302,332],"RAM":[95,111,123,131,113,150],"DODGE":[5,3,8,1,12,7],"FIAT":[1310,1551,1776,1631,1522,1499],"HONDA":[319,398,649,467,617,554],"JEEP":[707,628,811,610,688,657],"JAECOO":[50,56,80,56,123,257],"CAOACHERY":[175,210,407,371,335,316],"CADILLAC":[2,2,11,6,9,9],"JETOUR":[0,0,7,17,7,20],"ZEEKR":[7,9,9,5,1,7],"MINI":[6,9,18,8,5,2],"FERRARI":[0,3,4,3,1,3],"LEXUS":[6,4,5,5,10,9],"OUTRASMARCAS":[0,0,20,1,0,1],"FOTON":[1,1,2,1,1,3],"GMC":[0,0,0,0,0,1],"ROLLSROYCE":[0,0,0,0,2,1],"IVECO":[1,4,25,12,11,9],"CHANGAN":[0,0,0,1,6,8],"VW":[0,1,1,0,34,4],"PLYMOUTH":[0,0,0,0,0,2],"ASTON":[1,0,0,0,0,1],"ENGESA":[0,0,4,1,0,1],"LINCOLN":[0,0,0,0,1,0],"MCLAREN":[0,0,0,0,1,0],"WILLYS":[0,0,0,0,1,0],"JINBEI":[1,2,3,1,0,0],"ARO":[0,0,0,1,0,0],"TESLA":[1,1,1,0,0,0],"DONGFENG":[0,0,1,0,0,0],"SUZUKI":[2,3,1,0,0,0],"LAMBORGHINI":[0,1,1,0,0,0],"JAGUAR":[0,1,0,0,0,0],"BENTLEY":[0,1,0,0,0,0],"JAC":[2,0,0,0,0,0],"NEXTEM":[1,0,0,0,0,0]},"r1":{"BMW":[257,296,401,296,306,375],"CHANGAN":[0,0,0,38,142,164],"GM":[3791,4078,6629,6263,7197,5826],"CITROEN":[555,508,596,517,548,646],"EFFA":[55,41,31,23,53,57],"HYUNDAI":[2304,2690,3891,4499,5981,4513],"AUDI":[95,76,121,74,84,111],"BYD":[1899,2399,3089,3799,4198,4186],"FIAT":[6174,6250,7764,7305,6363,6377],"FORD":[1138,1159,1763,1531,1497,1436],"FOTON":[8,20,18,28,15,25],"GAC":[118,110,168,218,107,246],"GEELY":[240,77,343,929,1206,1388],"GWM":[951,986,1413,982,1347,1128],"HONDA":[1066,1302,1808,1528,1810,1755],"JETOUR":[0,19,63,124,94,144],"LEAPMOTORS":[98,66,118,184,223,216],"MBENZ":[236,307,302,307,297,288],"MMC":[338,286,383,333,325,520],"NISSAN":[988,759,1196,988,1133,979],"OMODA":[257,319,412,513,427,498],"PEUGEOT":[577,431,544,396,384,369],"RAM":[435,420,521,480,511,624],"RENAULT":[1876,3167,4192,4963,4092,3722],"TOYOTA":[1708,2089,2984,3026,3024,3045],"VOLVO":[156,114,206,228,164,133],"VOLKSWAGEN":[5589,6346,9019,9583,9897,10707],"LANDROVER":[56,26,95,55,49,50],"MG":[24,33,147,50,49,56],"MINI":[19,33,43,25,25,18],"PORSCHE":[95,103,122,83,87,77],"VW":[0,1,1,0,72,17],"IVECO":[33,112,102,174,103,310],"KIA":[93,102,146,106,111,93],"DODGE":[7,4,13,6,18,12],"JEEP":[2097,1824,2248,1838,2091,1924],"JAECOO":[125,145,207,190,302,663],"CAOACHERY":[742,781,1708,1562,1368,1364],"CADILLAC":[5,3,13,7,11,10],"NETA":[23,2,41,0,0,25],"ZEEKR":[21,17,32,25,13,17],"HUMMER":[0,0,0,0,0,1],"LEXUS":[36,15,20,21,23,33],"FERRARI":[4,5,9,6,3,6],"OUTRASMARCAS":[6,2,32,4,0,65],"AGRALE":[0,0,0,0,0,1],"FYBER":[0,0,0,0,0,1],"DKW":[0,0,0,0,0,1],"JINBEI":[3,6,6,1,0,3],"GMC":[1,0,0,1,0,1],"LAMBORGHINI":[1,2,1,0,1,1],"ROLLSROYCE":[0,0,1,0,2,2],"CHAMONIX":[0,0,1,0,0,1],"SSANGYONG":[0,2,2,2,4,3],"PLYMOUTH":[0,0,0,0,0,2],"ASTON":[1,0,2,1,0,2],"ENGESA":[0,0,4,1,1,1],"MAZDA":[0,0,1,0,0,1],"WILLYS":[0,0,0,0,1,1],"JAC":[5,13,5,1,5,0],"LINCOLN":[0,0,0,0,2,0],"CHRYSLER":[1,0,0,0,1,0],"SUZUKI":[12,6,2,0,1,0],"MCLAREN":[1,0,1,1,1,0],"RDK":[0,0,0,1,0,0],"ARO":[0,0,0,1,0,0],"TESLA":[1,1,2,0,0,0],"DONGFENG":[0,0,1,0,0,0],"BEACH":[0,0,1,0,0,0],"JAGUAR":[0,2,1,0,0,0],"HUDSON":[0,1,0,0,0,0],"SELVAGEM":[0,1,0,0,0,0],"LANCIA":[0,1,0,0,0,0],"BENTLEY":[0,1,0,0,0,0],"NEXTEM":[1,0,0,0,0,0],"SUBARU":[1,0,0,0,0,0],"PONTIAC":[1,0,0,0,0,0]},"micro":{"BLUMENAU":{"marcas":{"GM":[57,75,87,84,100,93],"HYUNDAI":[29,42,36,45,40,38],"BMW":[4,15,10,9,10,15],"BYD":[52,70,91,99,97,100],"GAC":[3,2,5,6,4,16],"MBENZ":[7,8,8,7,10,12],"PEUGEOT":[20,14,32,16,12,10],"VOLVO":[7,4,14,14,9,9],"VOLKSWAGEN":[142,183,220,206,206,195],"OMODA":[10,11,8,14,16,12],"HONDA":[59,45,83,59,84,78],"JEEP":[45,27,55,45,50,42],"FIAT":[111,125,147,150,118,119],"RENAULT":[31,32,22,15,25,39],"GEELY":[3,0,8,11,11,23],"TOYOTA":[15,34,42,39,40,45],"JAECOO":[7,10,11,4,11,17],"RAM":[5,8,10,11,7,15],"FORD":[20,21,23,28,17,17],"CAOACHERY":[14,16,43,33,31,21],"KIA":[5,7,7,10,4,3],"MINI":[0,0,0,0,0,1],"NISSAN":[27,11,11,19,23,27],"CITROEN":[12,8,10,10,6,13],"GWM":[25,32,34,20,31,34],"MMC":[4,4,6,7,1,7],"PORSCHE":[4,6,10,6,6,2],"AUDI":[5,6,9,7,5,3],"EFFA":[0,0,0,0,1,2],"CHANGAN":[0,0,0,0,0,1],"MG":[1,0,1,0,1,1],"JETOUR":[0,0,0,1,0,2],"IVECO":[0,0,1,2,2,1],"VW":[0,0,0,0,4,0],"LEXUS":[1,0,0,0,1,0],"WILLYS":[0,0,0,0,1,0],"LEAPMOTORS":[2,0,1,1,0,0],"LANDROVER":[1,0,5,3,0,0],"FERRARI":[0,0,0,1,0,0],"FOTON":[0,0,1,0,0,0],"JAC":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"DUSTER":[1,1,2,0,1,2],"KARDIAN":[4,5,4,5,4,5],"KWID":[12,14,8,5,10,22],"MASTER":[1,2,2,2,2,4],"KANGOO":[4,2,0,1,2,3],"BOREAL":[3,7,5,1,2,2],"MEGANE E-TECH":[0,0,0,0,0,1],"OROCH":[4,1,1,0,4,0],"KOLEOS E-TECH":[0,0,0,1,0,0],"KWID E-TECH":[2,0,0,0,0,0]},"GWM":{"HAVAL H6":[17,26,15,13,23,27],"WEY 07":[0,1,0,4,0,4],"TANK 300":[3,4,13,0,1,1],"HAVAL H9":[2,1,2,2,5,1],"POER P30":[3,0,0,1,1,1],"ORA 03":[0,0,4,0,1,0]},"PEUGEOT":{"EXPERT":[0,3,7,2,6,5],"":[17,11,18,10,4,5],"PARTNER RAPID":[0,0,0,1,1,0],"BOXER":[3,0,7,3,1,0]},"CITROEN":{"BASALT":[5,3,6,4,3,8],"JUMPY":[0,0,0,1,1,1],"C3":[4,4,3,4,2,3],"C3 AIRCROSS":[3,1,1,1,0,1]},"GEELY":{"EX2":[3,0,8,10,10,20],"EX5 EM-I":[0,0,0,1,1,3]}},"cidades":{"BLUMENAU":{"marcas":{"GM":[37,31,35,40,49,53],"HYUNDAI":[18,31,23,29,24,28],"BMW":[4,12,8,6,7,13],"GAC":[2,2,5,3,4,11],"MBENZ":[5,8,4,3,5,8],"VOLVO":[6,4,7,6,7,6],"VOLKSWAGEN":[93,138,148,139,144,139],"OMODA":[8,8,6,10,14,10],"HONDA":[44,36,65,36,59,48],"JEEP":[29,19,33,33,33,25],"BYD":[29,48,65,74,67,74],"RENAULT":[17,22,13,12,14,34],"GEELY":[2,0,8,9,10,10],"FIAT":[58,69,78,88,67,70],"JAECOO":[7,6,5,2,9,8],"CAOACHERY":[8,12,30,22,19,15],"TOYOTA":[6,21,20,19,22,21],"PEUGEOT":[16,9,22,12,8,4],"CITROEN":[10,3,6,8,6,11],"GWM":[18,30,23,16,19,23],"RAM":[2,3,6,4,5,5],"MMC":[3,2,3,4,1,6],"NISSAN":[21,7,10,15,20,19],"FORD":[11,11,12,18,14,7],"AUDI":[5,4,8,7,5,2],"EFFA":[0,0,0,0,0,1],"MG":[0,0,1,0,0,1],"JETOUR":[0,0,0,0,0,2],"PORSCHE":[3,6,10,5,5,0],"KIA":[3,7,4,6,3,0],"VW":[0,0,0,0,2,0],"IVECO":[0,0,1,2,1,0],"WILLYS":[0,0,0,0,1,0],"LEAPMOTORS":[2,0,1,1,0,0],"LANDROVER":[0,0,4,1,0,0],"FERRARI":[0,0,0,1,0,0],"FOTON":[0,0,1,0,0,0],"LEXUS":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"DUSTER":[0,1,0,0,0,2],"KARDIAN":[4,5,2,5,3,4],"KWID":[5,9,5,4,8,22],"MASTER":[1,2,0,1,1,3],"BOREAL":[2,5,5,0,1,2],"MEGANE E-TECH":[0,0,0,0,0,1],"OROCH":[1,0,1,0,1,0],"KOLEOS E-TECH":[0,0,0,1,0,0],"KANGOO":[2,0,0,1,0,0],"KWID E-TECH":[2,0,0,0,0,0]},"GWM":{"HAVAL H6":[12,24,12,11,15,19],"TANK 300":[2,4,7,0,0,1],"WEY 07":[0,1,0,3,0,3],"HAVAL H9":[2,1,1,2,2,0],"ORA 03":[0,0,3,0,1,0],"POER P30":[2,0,0,0,1,0]},"PEUGEOT":{"EXPERT":[0,1,6,2,3,1],"":[14,8,11,7,3,3],"PARTNER RAPID":[0,0,0,1,1,0],"BOXER":[2,0,5,2,1,0]},"CITROEN":{"BASALT":[4,2,4,4,3,7],"JUMPY":[0,0,0,1,1,1],"C3":[3,1,2,2,2,3],"C3 AIRCROSS":[3,0,0,1,0,0]},"GEELY":{"EX2":[2,0,8,8,9,7],"EX5 EM-I":[0,0,0,1,1,3]}}},"GASPAR":{"marcas":{"BYD":[5,3,3,7,3,6],"GAC":[0,0,0,1,0,2],"PEUGEOT":[1,1,5,2,4,3],"FIAT":[11,7,13,17,10,14],"HONDA":[5,3,3,6,6,4],"JEEP":[2,4,6,2,5,7],"VOLKSWAGEN":[10,10,23,13,16,17],"GEELY":[1,0,0,0,0,6],"NISSAN":[1,1,1,2,1,4],"RENAULT":[2,3,4,0,5,2],"TOYOTA":[1,2,2,3,6,3],"JAECOO":[0,0,1,0,0,2],"MBENZ":[2,0,0,1,1,2],"GM":[5,7,11,10,16,7],"PORSCHE":[0,0,0,1,1,2],"GWM":[1,0,0,1,1,3],"CHANGAN":[0,0,0,0,0,1],"HYUNDAI":[3,3,5,2,5,3],"CAOACHERY":[0,1,3,3,4,1],"CITROEN":[0,0,0,1,0,1],"OMODA":[0,1,0,1,2,0],"BMW":[0,0,1,1,3,0],"VW":[0,0,0,0,1,0],"VOLVO":[0,0,2,4,1,0],"FORD":[0,0,3,4,1,0],"RAM":[0,1,1,1,1,0],"KIA":[1,0,3,1,0,0],"AUDI":[0,1,1,0,0,0]},"modelos":{"RENAULT":{"KANGOO":[0,1,0,0,1,2],"OROCH":[0,0,0,0,2,0],"KWID":[0,1,0,0,1,0],"MASTER":[0,0,2,0,1,0],"DUSTER":[1,0,1,0,0,0],"KARDIAN":[0,0,1,0,0,0],"BOREAL":[1,1,0,0,0,0]},"GWM":{"HAVAL H6":[1,0,0,0,1,1],"HAVAL H9":[0,0,0,0,0,1],"POER P30":[0,0,0,1,0,1]},"PEUGEOT":{"EXPERT":[0,1,1,0,3,3],"":[0,0,4,1,1,0],"BOXER":[1,0,0,1,0,0]},"CITROEN":{"C3 AIRCROSS":[0,0,0,0,0,1],"C3":[0,0,0,1,0,0]},"GEELY":{"EX2":[1,0,0,0,0,6]}}},"INDAIAL":{"marcas":{"VOLKSWAGEN":[10,7,17,10,1,10],"FIAT":[13,11,13,11,13,11],"BYD":[5,5,5,9,7,9],"GM":[3,8,9,7,6,10],"TOYOTA":[1,0,3,4,2,8],"MBENZ":[0,0,1,1,1,1],"JEEP":[7,2,3,3,2,4],"HONDA":[1,1,3,6,6,6],"JAECOO":[0,2,1,1,2,1],"CAOACHERY":[1,0,3,2,2,1],"GAC":[0,0,0,0,0,1],"GWM":[3,0,2,1,4,1],"FORD":[1,0,0,3,0,2],"GEELY":[0,0,0,0,1,1],"RAM":[0,0,1,2,1,1],"HYUNDAI":[2,2,0,2,1,1],"KIA":[0,0,0,0,0,1],"RENAULT":[2,2,3,0,2,1],"NISSAN":[2,1,0,0,1,1],"OMODA":[1,1,1,1,0,1],"VW":[0,0,0,0,1,0],"IVECO":[0,0,0,0,1,0],"PEUGEOT":[2,0,3,2,0,0],"MMC":[0,1,0,1,0,0],"BMW":[0,0,1,0,0,0],"VOLVO":[0,0,1,0,0,0],"CITROEN":[1,1,0,0,0,0],"AUDI":[0,1,0,0,0,0],"PORSCHE":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,0,0,0,1],"KWID":[2,1,1,0,1,0],"KANGOO":[0,0,0,0,1,0],"DUSTER":[0,0,1,0,0,0],"KARDIAN":[0,0,1,0,0,0],"OROCH":[0,1,0,0,0,0]},"GWM":{"HAVAL H6":[2,0,0,0,3,1],"HAVAL H9":[0,0,1,0,1,0],"WEY 07":[0,0,0,1,0,0],"TANK 300":[1,0,1,0,0,0]},"PEUGEOT":{"":[2,0,1,2,0,0],"BOXER":[0,0,2,0,0,0]},"CITROEN":{"BASALT":[1,1,0,0,0,0]},"GEELY":{"EX2":[0,0,0,0,1,1]}}},"POMERODE":{"marcas":{"VOLKSWAGEN":[10,7,3,11,13,9],"HONDA":[1,2,4,3,5,7],"BYD":[4,5,2,0,3,3],"JAECOO":[0,1,1,1,0,1],"RAM":[2,0,0,3,0,1],"FORD":[1,4,0,1,1,1],"MINI":[0,0,0,0,0,1],"GM":[0,4,4,3,5,3],"NISSAN":[1,1,0,0,0,1],"HYUNDAI":[0,1,2,2,1,2],"PEUGEOT":[0,0,0,0,0,1],"JEEP":[0,1,3,3,4,1],"RENAULT":[3,2,0,1,0,1],"KIA":[0,0,0,0,0,1],"GEELY":[0,0,0,0,0,1],"FIAT":[4,1,7,3,1,0],"CAOACHERY":[1,1,1,3,3,0],"TOYOTA":[1,2,4,2,1,0],"GWM":[0,0,1,1,3,0],"MG":[0,0,0,0,1,0],"VOLVO":[0,0,1,1,0,0],"OMODA":[0,0,1,1,0,0],"MMC":[0,1,2,1,0,0],"BMW":[0,1,0,0,0,0],"CITROEN":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[0,0,0,0,0,1],"BOREAL":[0,1,0,1,0,0],"KWID":[2,1,0,0,0,0],"KANGOO":[1,0,0,0,0,0]},"GWM":{"TANK 300":[0,0,1,0,1,0],"HAVAL H6":[0,0,0,1,2,0]},"PEUGEOT":{"":[0,0,0,0,0,1]},"CITROEN":{"C3":[0,1,0,0,0,0]},"GEELY":{"EX2":[0,0,0,0,0,1]}}},"GUABIRUBA":{"marcas":{"HYUNDAI":[1,1,1,1,4,1],"BMW":[0,0,0,0,0,2],"FIAT":[6,5,6,5,9,4],"PEUGEOT":[0,1,2,0,0,2],"JEEP":[0,1,2,1,1,1],"HONDA":[2,1,1,2,6,2],"NISSAN":[0,1,0,0,1,2],"GM":[0,0,1,3,5,3],"IVECO":[0,0,0,0,0,1],"VOLKSWAGEN":[5,3,5,4,8,2],"BYD":[2,1,4,3,2,2],"TOYOTA":[0,3,2,1,4,3],"GWM":[0,0,3,0,2,0],"MBENZ":[0,0,1,0,2,0],"LEXUS":[0,0,0,0,1,0],"JETOUR":[0,0,0,1,0,0],"GEELY":[0,0,0,1,0,0],"CITROEN":[1,1,1,1,0,0],"GAC":[0,0,0,1,0,0],"KIA":[0,0,0,2,0,0],"MMC":[0,0,0,1,0,0],"JAECOO":[0,0,1,0,0,0],"RENAULT":[2,1,1,0,0,0],"FORD":[2,1,1,0,0,0],"MG":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[2,0,1,0,0,0],"KANGOO":[0,1,0,0,0,0]},"GWM":{"HAVAL H9":[0,0,0,0,1,0],"HAVAL H6":[0,0,2,0,1,0],"TANK 300":[0,0,1,0,0,0]},"PEUGEOT":{"":[0,0,2,0,0,1],"EXPERT":[0,1,0,0,0,1]},"CITROEN":{"C3":[1,1,1,1,0,0]},"GEELY":{"EX2":[0,0,0,1,0,0]}}},"RODEIO":{"marcas":{"GEELY":[0,0,0,0,0,1],"FIAT":[0,4,1,2,1,5],"GM":[2,5,1,4,1,2],"HONDA":[0,0,2,1,0,1],"GWM":[1,1,0,1,1,2],"TOYOTA":[0,0,1,1,0,1],"FORD":[0,1,0,0,0,1],"JEEP":[1,0,0,0,0,2],"VOLKSWAGEN":[1,2,5,4,2,0],"MBENZ":[0,0,0,1,0,0],"HYUNDAI":[0,0,0,2,0,0],"GAC":[1,0,0,1,0,0],"BYD":[0,0,2,0,0,0],"CITROEN":[0,0,1,0,0,0],"CAOACHERY":[0,0,1,0,0,0],"RENAULT":[2,0,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[2,0,0,0,0,0]},"GWM":{"WEY 07":[0,0,0,0,0,1],"HAVAL H6":[1,1,0,1,1,1]},"CITROEN":{"C3 AIRCROSS":[0,0,1,0,0,0]},"GEELY":{"EX2":[0,0,0,0,0,1]}}},"LUIZ ALVES":{"marcas":{"TOYOTA":[1,2,1,4,1,5],"KIA":[0,0,0,0,0,1],"GWM":[0,0,0,0,1,1],"FIAT":[5,5,3,2,5,3],"VOLKSWAGEN":[6,4,3,3,7,6],"RAM":[0,0,0,0,0,1],"HONDA":[1,0,2,1,0,1],"GM":[1,3,5,3,5,2],"OMODA":[0,0,0,0,0,1],"FORD":[0,0,0,0,0,1],"VOLVO":[0,0,0,0,1,1],"HYUNDAI":[0,0,2,2,2,0],"JEEP":[1,0,0,1,0,0],"BYD":[0,1,3,0,0,0],"CAOACHERY":[0,0,1,0,0,0],"RENAULT":[0,1,0,0,0,0],"NISSAN":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,1,0,0,0,0]},"GWM":{"HAVAL H6":[0,0,0,0,0,1],"HAVAL H9":[0,0,0,0,1,0]}}},"BENEDITO NOVO":{"marcas":{"HONDA":[0,1,0,1,0,1],"MMC":[0,0,0,0,0,1],"FIAT":[1,0,0,0,0,2],"RAM":[0,0,0,0,0,1],"BYD":[0,0,0,0,0,1],"FORD":[0,0,1,0,0,1],"VOLKSWAGEN":[1,1,1,0,0,1],"GM":[0,0,2,3,2,0],"HYUNDAI":[0,0,1,2,1,0],"TOYOTA":[0,1,1,0,2,0],"VOLVO":[0,0,1,1,0,0],"JAECOO":[0,0,1,0,0,0],"CITROEN":[0,0,1,0,0,0]},"modelos":{"CITROEN":{"BASALT":[0,0,1,0,0,0]}}},"TIMBO":{"marcas":{"HONDA":[3,0,3,1,1,6],"VOLKSWAGEN":[4,6,7,14,15,6],"GAC":[0,0,0,0,0,2],"FIAT":[4,7,13,11,4,2],"GEELY":[0,0,0,1,0,4],"GWM":[1,1,5,0,0,4],"FORD":[4,3,4,0,1,3],"MBENZ":[0,0,1,0,0,1],"JAECOO":[0,1,1,0,0,3],"TOYOTA":[4,2,1,4,2,2],"BYD":[6,7,6,4,12,3],"RAM":[1,4,2,1,0,1],"AUDI":[0,0,0,0,0,1],"GM":[5,13,14,5,10,8],"VOLVO":[1,0,2,2,0,2],"HYUNDAI":[4,2,2,2,1,1],"CAOACHERY":[3,1,3,2,3,4],"JEEP":[3,0,3,1,4,1],"RENAULT":[2,1,1,1,2,1],"BMW":[0,2,0,1,0,0],"KIA":[1,0,0,1,0,0],"NISSAN":[1,0,0,1,0,0],"MMC":[1,0,1,0,0,0],"LANDROVER":[0,0,1,0,0,0],"CITROEN":[0,2,1,0,0,0],"PEUGEOT":[1,2,0,0,0,0],"JAC":[1,0,0,0,0,0],"OMODA":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KANGOO":[0,0,0,0,0,1],"KARDIAN":[0,0,0,0,1,0],"DUSTER":[0,0,0,0,1,0],"KWID":[1,1,1,1,0,0],"OROCH":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[1,1,1,0,0,4],"TANK 300":[0,0,3,0,0,0],"ORA 03":[0,0,1,0,0,0]},"PEUGEOT":{"":[1,2,0,0,0,0]},"CITROEN":{"BASALT":[0,0,1,0,0,0],"C3 AIRCROSS":[0,1,0,0,0,0],"C3":[0,1,0,0,0,0]},"GEELY":{"EX2":[0,0,0,1,0,4]}}},"DOUTOR PEDRINHO":{"marcas":{"GM":[1,0,0,0,0,1],"FIAT":[3,1,1,2,0,2],"BYD":[0,0,0,0,0,1],"EFFA":[0,0,0,0,1,0],"FORD":[0,0,0,1,0,0],"RENAULT":[0,0,0,1,0,0],"HONDA":[0,1,0,0,0,0],"JEEP":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,0,1,0,0]}}},"APIUNA":{"marcas":{"VOLKSWAGEN":[0,0,0,0,0,1],"FIAT":[0,6,3,7,0,2],"TOYOTA":[1,0,0,1,0,1],"RAM":[0,0,0,0,0,1],"GM":[2,1,3,4,1,0],"BYD":[1,0,0,1,0,0],"CAOACHERY":[0,1,0,1,0,0],"JEEP":[0,0,0,1,0,0],"BMW":[0,0,0,1,0,0],"FORD":[1,1,2,0,0,0],"MBENZ":[0,0,1,0,0,0],"PEUGEOT":[0,1,0,0,0,0],"GWM":[1,0,0,0,0,0],"LANDROVER":[1,0,0,0,0,0]},"modelos":{"GWM":{"POER P30":[1,0,0,0,0,0]},"PEUGEOT":{"":[0,1,0,0,0,0]}}},"RIO DOS CEDROS":{"marcas":{"GM":[0,0,0,1,0,3],"FIAT":[0,4,4,2,5,1],"JAECOO":[0,0,0,0,0,1],"RAM":[0,0,0,0,0,1],"HYUNDAI":[0,2,0,0,0,2],"VOLKSWAGEN":[1,4,6,4,0,2],"HONDA":[1,0,0,2,0,1],"FORD":[0,0,0,0,0,1],"RENAULT":[1,0,0,0,2,0],"BYD":[0,0,1,0,2,0],"LANDROVER":[0,0,0,2,0,0],"MBENZ":[0,0,0,1,0,0],"NISSAN":[0,0,0,1,0,0],"JEEP":[0,0,1,0,0,0],"TOYOTA":[0,1,2,0,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,0,0,0,1,0],"OROCH":[0,0,0,0,1,0],"KANGOO":[1,0,0,0,0,0]}}},"BOTUVERA":{"marcas":{"JEEP":[0,0,3,0,0,1],"VOLKSWAGEN":[1,0,0,1,0,2],"TOYOTA":[0,0,4,0,0,1],"CITROEN":[0,0,0,0,0,1],"FIAT":[6,0,2,0,1,1],"KIA":[0,0,0,0,1,0],"GM":[1,2,2,1,0,0],"BYD":[0,0,0,1,0,0],"OMODA":[0,1,0,0,0,0],"HYUNDAI":[1,0,0,0,0,0]},"modelos":{"CITROEN":{"BASALT":[0,0,0,0,0,1]}}},"ASCURRA":{"marcas":{"GM":[0,1,0,0,0,1],"RAM":[0,0,0,0,0,3],"FIAT":[0,5,3,0,2,2],"JAECOO":[0,0,0,0,0,1],"HONDA":[1,0,0,0,1,1],"BYD":[0,0,0,0,1,1],"EFFA":[0,0,0,0,0,1],"MBENZ":[0,0,0,0,1,0],"JEEP":[1,0,1,0,1,0],"HYUNDAI":[0,0,0,1,1,0],"VOLKSWAGEN":[0,1,2,3,0,0],"OMODA":[0,0,0,1,0,0],"FORD":[0,0,0,1,0,0],"CAOACHERY":[1,0,1,0,0,0],"TOYOTA":[0,0,1,0,0,0]},"modelos":{}}}},"CAMPOS DE LAGES":{"marcas":{"CITROEN":[4,5,7,7,9,9],"VOLKSWAGEN":[36,46,46,66,37,42],"OMODA":[2,2,4,3,3,5],"JEEP":[15,16,15,15,14,17],"GEELY":[1,1,1,1,3,5],"HONDA":[5,7,7,5,7,14],"RENAULT":[11,11,4,6,4,5],"RAM":[5,3,6,10,7,6],"BYD":[3,10,12,12,14,13],"FIAT":[38,50,53,82,50,49],"GM":[19,21,21,23,31,47],"HYUNDAI":[15,18,19,19,16,10],"JAECOO":[0,2,2,1,4,8],"NISSAN":[4,0,8,3,2,4],"FORD":[11,14,15,21,16,28],"PEUGEOT":[9,10,7,7,4,7],"TOYOTA":[10,18,16,13,39,21],"CAOACHERY":[8,11,17,18,20,18],"MMC":[3,4,6,8,10,4],"GWM":[5,6,10,9,9,8],"AUDI":[1,1,0,0,0,1],"MBENZ":[1,0,2,1,1,3],"PORSCHE":[0,0,1,0,2,1],"BMW":[1,1,2,1,0,1],"GAC":[0,0,0,1,0,1],"VOLVO":[0,2,3,1,2,1],"VW":[0,0,0,0,2,0],"LEAPMOTORS":[0,0,0,1,1,0],"IVECO":[0,0,1,0,0,0],"LANDROVER":[1,1,1,0,0,0],"KIA":[0,0,1,0,0,0],"ZEEKR":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[3,4,0,0,1,1],"KWID":[3,3,3,6,1,2],"MASTER":[1,2,1,0,0,1],"KANGOO":[1,0,0,0,0,1],"DUSTER":[1,0,0,0,1,0],"KARDIAN":[1,1,0,0,1,0],"KWID E-TECH":[0,1,0,0,0,0],"BOREAL":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[3,3,3,5,5,4],"TANK 300":[1,1,2,0,0,1],"POER P30":[0,0,2,0,1,2],"HAVAL H9":[1,0,2,1,0,1],"ORA 03":[0,2,0,2,3,0],"WEY 07":[0,0,1,1,0,0]},"PEUGEOT":{"":[9,9,7,6,3,7],"BOXER":[0,0,0,0,1,0],"EXPERT":[0,1,0,1,0,0]},"CITROEN":{"JUMPY":[0,0,2,1,1,2],"C3":[0,1,2,2,6,2],"BASALT":[2,4,3,3,2,5],"C3 AIRCROSS":[2,0,0,1,0,0]},"GEELY":{"EX2":[1,0,1,1,3,4],"EX5 EM-I":[0,0,0,0,0,1],"EX5":[0,1,0,0,0,0]}},"cidades":{"LAGES":{"marcas":{"CITROEN":[4,5,6,7,7,9],"VOLKSWAGEN":[17,30,22,38,25,25],"OMODA":[2,2,3,3,3,5],"JEEP":[13,13,13,13,8,12],"GEELY":[1,0,1,0,3,5],"RENAULT":[8,9,3,5,2,5],"FIAT":[16,30,29,39,25,31],"HONDA":[4,5,6,4,6,9],"GM":[7,14,10,12,18,31],"HYUNDAI":[11,15,15,16,13,9],"JAECOO":[0,2,2,1,4,8],"FORD":[8,8,13,17,10,24],"PEUGEOT":[9,10,7,7,4,6],"TOYOTA":[6,13,12,5,28,13],"RAM":[3,2,4,8,6,4],"BYD":[3,8,9,9,12,11],"CAOACHERY":[8,10,16,16,18,13],"MMC":[1,2,2,4,8,3],"GWM":[4,5,10,7,8,7],"AUDI":[1,1,0,0,0,1],"NISSAN":[4,0,8,3,2,3],"MBENZ":[1,0,2,1,1,1],"PORSCHE":[0,0,1,0,2,1],"GAC":[0,0,0,1,0,1],"VOLVO":[0,1,3,1,2,1],"LEAPMOTORS":[0,0,0,0,1,0],"VW":[0,0,0,0,1,0],"BMW":[1,0,2,1,0,0],"LANDROVER":[1,1,1,0,0,0],"KIA":[0,0,1,0,0,0],"ZEEKR":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[2,3,0,0,0,1],"KWID":[2,3,3,5,1,2],"MASTER":[0,2,0,0,0,1],"KANGOO":[1,0,0,0,0,1],"KARDIAN":[1,0,0,0,1,0],"KWID E-TECH":[0,1,0,0,0,0],"BOREAL":[1,0,0,0,0,0],"DUSTER":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[3,3,3,3,4,3],"TANK 300":[1,1,2,0,0,1],"POER P30":[0,0,2,0,1,2],"HAVAL H9":[0,0,2,1,0,1],"ORA 03":[0,1,0,2,3,0],"WEY 07":[0,0,1,1,0,0]},"PEUGEOT":{"":[9,9,7,6,3,6],"BOXER":[0,0,0,0,1,0],"EXPERT":[0,1,0,1,0,0]},"CITROEN":{"JUMPY":[0,0,1,1,0,2],"C3":[0,1,2,2,5,2],"BASALT":[2,4,3,3,2,5],"C3 AIRCROSS":[2,0,0,1,0,0]},"GEELY":{"EX2":[1,0,1,0,3,4],"EX5 EM-I":[0,0,0,0,0,1]}}},"SAO JOAQUIM":{"marcas":{"JEEP":[1,0,1,0,1,1],"VOLKSWAGEN":[10,11,15,17,7,9],"TOYOTA":[2,3,1,2,2,2],"CAOACHERY":[0,0,0,0,0,2],"FORD":[0,1,2,0,2,1],"HONDA":[0,0,0,1,0,2],"PEUGEOT":[0,0,0,0,0,1],"GM":[1,1,2,1,3,1],"BMW":[0,0,0,0,0,1],"GWM":[1,0,0,1,1,1],"MMC":[1,1,1,1,1,1],"HYUNDAI":[0,0,2,0,1,0],"RENAULT":[1,0,0,1,1,0],"CITROEN":[0,0,0,0,1,0],"FIAT":[4,4,7,9,4,0],"VW":[0,0,0,0,1,0],"RAM":[1,0,1,0,1,0],"IVECO":[0,0,1,0,0,0],"VOLVO":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"DUSTER":[0,0,0,0,1,0],"KWID":[0,0,0,1,0,0],"OROCH":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[0,0,0,1,1,1],"HAVAL H9":[1,0,0,0,0,0]},"PEUGEOT":{"":[0,0,0,0,0,1]},"CITROEN":{"C3":[0,0,0,0,1,0]}}},"URUBICI":{"marcas":{"HONDA":[0,1,0,0,1,1],"BYD":[0,0,0,0,0,2],"JEEP":[0,0,0,1,1,2],"GM":[0,0,2,1,0,3],"FORD":[1,1,0,0,0,1],"FIAT":[2,4,2,9,3,0],"MMC":[1,0,1,0,1,0],"VOLKSWAGEN":[2,0,1,3,0,0],"CAOACHERY":[0,0,0,1,0,0],"RAM":[0,1,0,0,0,0],"HYUNDAI":[1,0,0,0,0,0]},"modelos":{}},"SAO JOSE DO CERRITO":{"marcas":{"RAM":[0,0,0,0,0,1],"GM":[1,0,0,0,0,1],"FIAT":[1,1,2,3,4,0],"TOYOTA":[0,0,0,1,1,0],"MMC":[0,0,1,1,0,0],"FORD":[0,0,0,2,0,0],"VOLKSWAGEN":[1,0,0,1,0,0],"LEAPMOTORS":[0,0,0,1,0,0],"JEEP":[0,1,0,0,0,0]},"modelos":{}},"BOM JARDIM DA SERRA":{"marcas":{"FIAT":[0,0,1,0,2,3],"GM":[0,0,1,2,0,3],"VOLKSWAGEN":[1,0,1,2,1,1],"JEEP":[0,0,0,0,1,0],"TOYOTA":[0,1,0,0,1,0],"BYD":[0,0,0,0,1,0],"RAM":[0,0,0,1,0,0],"OMODA":[0,0,1,0,0,0]},"modelos":{}},"CORREIA PINTO":{"marcas":{"NISSAN":[0,0,0,0,0,1],"FIAT":[0,0,3,2,3,4],"GM":[1,0,3,2,2,1],"CAOACHERY":[0,0,0,0,1,1],"MBENZ":[0,0,0,0,0,1],"HYUNDAI":[0,1,1,0,1,0],"TOYOTA":[0,0,1,0,1,0],"FORD":[1,0,0,0,1,0],"CITROEN":[0,0,0,0,1,0],"BYD":[0,0,1,1,1,0],"JEEP":[0,1,0,0,1,0],"MMC":[0,1,0,0,0,0],"VOLKSWAGEN":[1,0,0,0,0,0]},"modelos":{"CITROEN":{"JUMPY":[0,0,0,0,1,0]}}},"OTACILIO COSTA":{"marcas":{"VOLKSWAGEN":[0,2,4,3,0,4],"HONDA":[1,0,0,0,0,1],"GM":[1,1,0,0,2,2],"CAOACHERY":[0,1,1,1,0,2],"FIAT":[6,3,4,7,2,3],"JEEP":[1,1,0,0,1,1],"FORD":[0,2,0,1,0,1],"HYUNDAI":[0,1,1,0,0,1],"TOYOTA":[1,0,1,0,2,0],"RENAULT":[0,1,0,0,1,0],"MMC":[0,0,0,1,0,0],"BYD":[0,2,2,2,0,0],"CITROEN":[0,0,1,0,0,0],"RAM":[0,0,1,0,0,0],"GWM":[0,1,0,0,0,0],"GEELY":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[0,0,0,0,1,0],"KARDIAN":[0,1,0,0,0,0]},"GWM":{"ORA 03":[0,1,0,0,0,0]},"CITROEN":{"JUMPY":[0,0,1,0,0,0]},"GEELY":{"EX5":[0,1,0,0,0,0]}}},"BOCAINA DO SUL":{"marcas":{"FORD":[0,0,0,0,0,1],"TOYOTA":[0,0,0,0,1,0],"RAM":[0,0,0,1,0,0],"FIAT":[1,2,0,2,0,0],"VOLKSWAGEN":[0,1,1,0,0,0],"GM":[0,1,0,0,0,0],"HYUNDAI":[1,0,0,0,0,0]},"modelos":{}},"ANITA GARIBALDI":{"marcas":{"JEEP":[0,0,0,0,0,1],"TOYOTA":[0,0,0,0,0,3],"FIAT":[0,0,1,2,2,3],"VOLKSWAGEN":[0,0,0,0,0,1],"FORD":[0,1,0,0,1,0],"GWM":[0,0,0,1,0,0],"GM":[0,0,0,2,0,0]},"modelos":{"GWM":{"HAVAL H6":[0,0,0,1,0,0]}}},"BOM RETIRO":{"marcas":{"TOYOTA":[0,0,1,2,0,1],"MBENZ":[0,0,0,0,0,1],"HONDA":[0,0,0,0,0,1],"VOLKSWAGEN":[3,0,0,0,1,1],"GM":[1,1,0,1,1,1],"FIAT":[1,1,0,0,2,0],"JEEP":[0,0,1,0,0,0],"FORD":[0,1,0,0,0,0],"RENAULT":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[1,0,0,0,0,0]}}},"PALMEIRA":{"marcas":{"GM":[2,2,0,0,0,1],"FIAT":[0,2,2,2,0,1],"HYUNDAI":[0,0,0,1,1,0],"VOLKSWAGEN":[0,0,0,1,0,0]},"modelos":{}},"CERRO NEGRO":{"marcas":{"RAM":[0,0,0,0,0,1],"TOYOTA":[0,0,0,2,3,0],"FORD":[0,0,0,0,1,0],"GM":[0,0,1,1,0,0],"FIAT":[1,0,0,2,0,0],"HONDA":[0,0,1,0,0,0]},"modelos":{}},"CAMPO BELO DO SUL":{"marcas":{"FIAT":[0,0,0,1,1,2],"GM":[2,0,0,0,2,1],"FORD":[0,0,0,0,1,0],"HYUNDAI":[1,0,0,1,0,0],"TOYOTA":[0,0,0,1,0,0],"RENAULT":[1,0,1,0,0,0],"BMW":[0,1,0,0,0,0],"RAM":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[1,0,1,0,0,0]}}},"PAINEL":{"marcas":{"FIAT":[1,0,0,1,0,2],"GM":[2,0,1,1,1,2],"MMC":[0,0,0,1,0,0],"JEEP":[0,0,0,1,0,0],"VOLKSWAGEN":[1,0,0,0,0,0]},"modelos":{}},"URUPEMA":{"marcas":{"TOYOTA":[1,0,0,0,0,1],"JEEP":[0,0,0,0,1,0],"CAOACHERY":[0,0,0,0,1,0],"VOLKSWAGEN":[0,2,1,0,2,0],"GM":[1,0,0,0,1,0],"GEELY":[0,0,0,1,0,0],"FIAT":[3,2,1,0,0,0],"MMC":[0,0,1,0,0,0],"FORD":[1,0,0,0,0,0],"HYUNDAI":[1,0,0,0,0,0]},"modelos":{"GEELY":{"EX2":[0,0,0,1,0,0]}}},"CAPAO ALTO":{"marcas":{"VOLKSWAGEN":[0,0,1,1,1,1],"TOYOTA":[0,0,0,0,0,1],"FORD":[0,0,0,1,0,0],"FIAT":[0,1,1,2,0,0]},"modelos":{}},"RIO RUFINO":{"marcas":{"GM":[0,1,1,0,1,0],"FIAT":[1,0,0,1,2,0],"HYUNDAI":[0,1,0,1,0,0]},"modelos":{}},"CELSO RAMOS":{"marcas":{"RENAULT":[0,1,0,0,0,0],"HONDA":[0,1,0,0,0,0],"TOYOTA":[0,1,0,0,0,0],"FIAT":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[0,1,0,0,0,0]}}}}},"CANOINHAS":{"marcas":{"GM":[15,20,37,29,32,33],"TOYOTA":[10,6,5,23,23,20],"HONDA":[0,2,2,3,1,5],"JEEP":[18,14,14,16,15,15],"BYD":[0,2,6,19,17,20],"GEELY":[0,0,0,0,0,2],"RENAULT":[9,12,5,4,4,2],"VOLKSWAGEN":[33,55,41,59,48,44],"RAM":[3,5,4,6,5,5],"FIAT":[31,47,63,57,41,58],"CITROEN":[3,6,3,2,2,2],"JAECOO":[0,0,0,0,1,1],"FORD":[3,1,1,7,4,7],"OMODA":[0,1,1,0,0,1],"GAC":[0,0,0,0,0,1],"MMC":[0,1,0,0,0,3],"GWM":[1,3,0,1,0,3],"PEUGEOT":[2,1,1,1,0,2],"BMW":[1,0,1,1,1,1],"CAOACHERY":[1,0,0,3,1,2],"VW":[0,0,0,0,0,1],"EFFA":[0,1,0,0,1,0],"HYUNDAI":[1,1,1,0,2,0],"MBENZ":[1,2,1,0,1,0],"ZEEKR":[0,0,0,1,0,0],"NISSAN":[0,0,1,2,0,0],"MG":[0,0,1,0,0,0]},"modelos":{"RENAULT":{"KWID":[3,5,0,1,2,2],"KARDIAN":[3,0,0,1,2,0],"BOREAL":[0,2,1,1,0,0],"DUSTER":[1,1,3,1,0,0],"MASTER":[1,1,1,0,0,0],"OROCH":[1,3,0,0,0,0]},"GWM":{"ORA 03":[0,0,0,0,0,1],"WEY 07":[0,0,0,0,0,1],"HAVAL H6":[1,3,0,1,0,1]},"PEUGEOT":{"":[2,1,0,0,0,2],"BOXER":[0,0,1,1,0,0]},"CITROEN":{"BASALT":[1,3,3,1,1,2],"C3":[1,1,0,1,1,0],"C3 AIRCROSS":[1,2,0,0,0,0]},"GEELY":{"EX2":[0,0,0,0,0,2]}},"cidades":{"CANOINHAS":{"marcas":{"GM":[3,6,8,7,5,7],"TOYOTA":[5,2,1,9,12,8],"VOLKSWAGEN":[14,11,14,20,17,16],"CITROEN":[2,5,2,1,0,2],"FIAT":[8,5,9,14,9,12],"JEEP":[3,2,1,3,2,3],"HONDA":[0,0,0,0,0,1],"FORD":[1,0,0,2,0,3],"GAC":[0,0,0,0,0,1],"RAM":[1,1,1,1,1,1],"GWM":[0,1,0,0,0,1],"PEUGEOT":[2,1,1,0,0,2],"RENAULT":[1,0,1,0,1,1],"EFFA":[0,0,0,0,1,0],"BYD":[0,1,1,2,3,0],"CAOACHERY":[1,0,0,0,1,0],"BMW":[0,0,0,1,1,0],"ZEEKR":[0,0,0,1,0,0],"NISSAN":[0,0,0,1,0,0],"MBENZ":[0,1,0,0,0,0],"OMODA":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,0,1,1],"BOREAL":[0,0,1,0,0,0],"KARDIAN":[1,0,0,0,0,0]},"GWM":{"ORA 03":[0,0,0,0,0,1],"HAVAL H6":[0,1,0,0,0,0]},"PEUGEOT":{"":[2,1,0,0,0,2],"BOXER":[0,0,1,0,0,0]},"CITROEN":{"BASALT":[1,2,2,1,0,2],"C3":[0,1,0,0,0,0],"C3 AIRCROSS":[1,2,0,0,0,0]}}},"MAFRA":{"marcas":{"HONDA":[0,2,0,1,0,2],"JEEP":[12,7,10,10,11,8],"BYD":[0,1,5,16,14,18],"GEELY":[0,0,0,0,0,2],"GM":[7,8,13,10,13,13],"VOLKSWAGEN":[9,31,11,23,16,13],"RAM":[1,4,3,5,3,4],"FIAT":[9,17,28,20,12,28],"TOYOTA":[1,1,2,3,2,4],"FORD":[1,0,1,3,2,3],"BMW":[1,0,0,0,0,1],"GWM":[1,1,0,1,0,1],"CAOACHERY":[0,0,0,1,0,2],"VW":[0,0,0,0,0,1],"JAECOO":[0,0,0,0,1,0],"RENAULT":[2,8,1,2,2,0],"CITROEN":[0,1,0,0,1,0],"NISSAN":[0,0,0,1,0,0],"MBENZ":[1,0,1,0,0,0],"MG":[0,0,1,0,0,0],"OMODA":[0,0,1,0,0,0],"HYUNDAI":[1,1,0,0,0,0],"MMC":[0,1,0,0,0,0],"EFFA":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[1,5,0,1,1,0],"KARDIAN":[0,0,0,0,1,0],"BOREAL":[0,2,0,1,0,0],"MASTER":[1,0,1,0,0,0],"OROCH":[0,1,0,0,0,0]},"GWM":{"HAVAL H6":[1,1,0,1,0,1]},"CITROEN":{"BASALT":[0,1,0,0,1,0]},"GEELY":{"EX2":[0,0,0,0,0,2]}}},"TIMBO GRANDE":{"marcas":{"RENAULT":[0,0,0,0,0,1],"GM":[0,1,1,1,1,2],"FIAT":[0,1,3,0,2,2],"HYUNDAI":[0,0,0,0,1,0],"JEEP":[0,0,0,1,0,0],"TOYOTA":[0,0,0,1,0,0],"CAOACHERY":[0,0,0,1,0,0],"VOLKSWAGEN":[1,2,0,1,0,0],"NISSAN":[0,0,1,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,0,0,1]}}},"MONTE CASTELO":{"marcas":{"FIAT":[0,1,3,0,1,1],"HONDA":[0,0,0,0,0,1],"VOLKSWAGEN":[0,1,1,2,0,3],"MMC":[0,0,0,0,0,1],"GM":[1,0,1,2,1,0],"RAM":[0,0,0,0,1,0],"MBENZ":[0,0,0,0,1,0],"RENAULT":[0,0,1,0,0,0],"JEEP":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"DUSTER":[0,0,1,0,0,0]}}},"ITAIOPOLIS":{"marcas":{"VOLKSWAGEN":[3,3,4,4,5,6],"FIAT":[5,11,9,7,4,5],"OMODA":[0,0,0,0,0,1],"GM":[0,1,2,2,4,4],"TOYOTA":[1,0,0,1,1,2],"HONDA":[0,0,0,1,0,1],"BYD":[0,0,0,0,0,1],"JEEP":[0,1,1,2,1,1],"FORD":[0,0,0,1,0,0],"CITROEN":[0,0,1,0,0,0],"RENAULT":[3,1,1,0,0,0],"BMW":[0,0,1,0,0,0],"MBENZ":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"DUSTER":[1,1,1,0,0,0],"KARDIAN":[1,0,0,0,0,0],"KWID":[1,0,0,0,0,0]},"CITROEN":{"BASALT":[0,0,1,0,0,0]}}},"BELA VISTA DO TOLDO":{"marcas":{"VOLKSWAGEN":[1,1,3,1,2,2],"FIAT":[0,2,1,7,1,1],"TOYOTA":[0,0,0,1,2,1],"CITROEN":[0,0,0,1,0,0],"RENAULT":[0,1,1,1,0,0],"GM":[0,0,3,1,0,0],"JEEP":[0,0,1,0,0,0],"FORD":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[0,0,0,1,0,0],"DUSTER":[0,0,1,0,0,0],"OROCH":[0,1,0,0,0,0]},"CITROEN":{"C3":[0,0,0,1,0,0]}}},"PAPANDUVA":{"marcas":{"JAECOO":[0,0,0,0,0,1],"FIAT":[2,2,2,2,3,4],"JEEP":[0,1,0,0,0,2],"VOLKSWAGEN":[1,1,1,0,3,1],"GM":[0,0,2,3,2,4],"TOYOTA":[0,1,0,0,3,0],"FORD":[0,0,0,0,1,0],"HONDA":[0,0,2,0,1,0],"BYD":[0,0,0,1,0,0],"HYUNDAI":[0,0,1,0,0,0],"RENAULT":[0,1,0,0,0,0],"GWM":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[0,1,0,0,0,0]},"GWM":{"HAVAL H6":[0,1,0,0,0,0]}}},"IRINEOPOLIS":{"marcas":{"FORD":[0,0,0,1,0,1],"GM":[2,1,4,0,3,3],"VOLKSWAGEN":[1,2,3,4,2,1],"FIAT":[1,2,4,3,6,4],"JEEP":[1,0,0,0,0,1],"HYUNDAI":[0,0,0,0,1,0],"CITROEN":[0,0,0,0,1,0],"TOYOTA":[2,0,1,1,0,0]},"modelos":{"CITROEN":{"C3":[0,0,0,0,1,0]}}},"TRES BARRAS":{"marcas":{"TOYOTA":[0,2,0,5,0,2],"VOLKSWAGEN":[2,2,3,3,2,1],"BYD":[0,0,0,0,0,1],"JEEP":[1,1,0,0,1,0],"RENAULT":[2,0,0,0,1,0],"GM":[1,1,2,0,3,0],"FIAT":[4,2,1,1,1,0],"FORD":[1,0,0,0,1,0],"PEUGEOT":[0,0,0,1,0,0],"CAOACHERY":[0,0,0,1,0,0],"CITROEN":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[1,0,0,0,1,0],"OROCH":[1,0,0,0,0,0]},"PEUGEOT":{"BOXER":[0,0,0,1,0,0]},"CITROEN":{"C3":[1,0,0,0,0,0]}}},"MAJOR VIEIRA":{"marcas":{"MMC":[0,0,0,0,0,2],"TOYOTA":[1,0,1,1,2,2],"FIAT":[0,3,2,2,2,1],"VOLKSWAGEN":[0,1,1,1,1,0],"HONDA":[0,0,0,1,0,0],"GM":[0,0,0,1,0,0],"JEEP":[1,0,1,0,0,0],"RENAULT":[1,1,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,1,0,0,0,0],"KWID":[1,0,0,0,0,0]}}},"SANTA TEREZINHA":{"marcas":{"TOYOTA":[0,0,0,1,1,1],"GWM":[0,0,0,0,0,1],"VOLKSWAGEN":[1,0,0,0,0,1],"GM":[1,2,1,2,0,0],"RENAULT":[0,0,0,1,0,0],"FIAT":[2,1,1,1,0,0],"JEEP":[0,1,0,0,0,0],"RAM":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"DUSTER":[0,0,0,1,0,0]},"GWM":{"WEY 07":[0,0,0,0,0,1]}}}}},"CHAPECO":{"marcas":{"GM":[42,50,70,63,52,66],"AUDI":[0,0,0,0,0,1],"CITROEN":[0,6,7,7,8,6],"FORD":[18,28,20,26,16,26],"MMC":[3,3,7,3,8,8],"PEUGEOT":[6,5,11,5,5,3],"HONDA":[9,15,23,21,24,18],"JEEP":[27,43,36,43,37,41],"HYUNDAI":[36,27,39,44,44,40],"FIAT":[79,110,130,112,117,87],"BYD":[26,27,51,51,51,45],"RENAULT":[20,19,21,16,19,12],"JAECOO":[2,3,3,3,4,8],"NISSAN":[16,3,4,9,6,8],"VOLKSWAGEN":[84,115,166,118,109,104],"CAOACHERY":[14,14,23,30,21,33],"BMW":[0,5,10,0,3,11],"GWM":[22,22,32,16,23,25],"GEELY":[0,0,1,1,1,1],"TOYOTA":[17,18,27,33,26,19],"RAM":[5,7,8,10,3,11],"MBENZ":[6,3,3,6,2,2],"LANDROVER":[1,0,1,0,1,1],"GAC":[0,0,1,13,1,7],"OMODA":[1,7,3,8,7,5],"VW":[0,0,0,0,1,3],"MG":[0,0,0,0,0,1],"EFFA":[0,0,0,0,1,2],"KIA":[0,5,0,4,1,1],"CHANGAN":[0,0,0,1,0,0],"LEAPMOTORS":[1,0,0,1,0,0],"VOLVO":[2,2,3,1,0,0],"PORSCHE":[2,0,1,1,0,0],"ZEEKR":[0,0,1,0,0,0],"MINI":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"DUSTER":[0,1,0,0,2,1],"OROCH":[4,3,1,4,3,4],"BOREAL":[2,4,5,1,3,1],"KOLEOS E-TECH":[0,0,0,0,0,2],"MASTER":[4,5,6,3,4,1],"KWID":[3,2,7,4,4,3],"KARDIAN":[3,3,2,4,1,0],"KANGOO":[3,0,0,0,2,0],"KWID E-TECH":[1,1,0,0,0,0]},"GWM":{"WEY 07":[1,1,3,3,1,3],"ORA 5":[0,0,0,0,0,1],"HAVAL H6":[14,18,18,8,17,17],"ORA 03":[0,2,4,1,2,1],"TANK 300":[2,0,2,1,2,1],"HAVAL H9":[3,0,4,3,0,2],"POER P30":[2,1,1,0,1,0]},"PEUGEOT":{"":[5,5,6,5,4,3],"EXPERT":[1,0,3,0,1,0],"BOXER":[0,0,1,0,0,0],"PARTNER RAPID":[0,0,1,0,0,0]},"CITROEN":{"JUMPY":[0,1,1,0,0,2],"BASALT":[0,2,2,4,2,4],"C3":[0,2,4,3,4,0],"C3 AIRCROSS":[0,1,0,0,2,0]},"GEELY":{"EX2":[0,0,1,1,1,1]}},"cidades":{"CHAPECO":{"marcas":{"GM":[25,22,35,37,27,35],"AUDI":[0,0,0,0,0,1],"CITROEN":[0,5,6,7,8,6],"FORD":[10,15,13,18,9,18],"MMC":[1,3,5,2,5,5],"PEUGEOT":[4,4,10,5,3,2],"HONDA":[6,12,19,14,16,13],"JEEP":[20,30,22,26,27,27],"HYUNDAI":[35,25,32,39,38,36],"BYD":[25,26,48,46,45,40],"RENAULT":[13,15,16,8,12,11],"JAECOO":[2,3,2,3,3,6],"NISSAN":[15,2,4,8,6,8],"FIAT":[41,75,77,70,73,56],"VOLKSWAGEN":[54,72,112,61,70,67],"CAOACHERY":[13,8,22,21,18,27],"GWM":[21,20,26,13,19,21],"GEELY":[0,0,1,1,1,1],"RAM":[5,7,6,10,2,9],"MBENZ":[3,0,2,4,1,2],"BMW":[0,3,9,0,2,10],"LANDROVER":[1,0,1,0,1,1],"TOYOTA":[13,15,19,20,18,11],"GAC":[0,0,1,11,1,6],"OMODA":[1,6,2,7,7,5],"VW":[0,0,0,0,1,2],"MG":[0,0,0,0,0,1],"EFFA":[0,0,0,0,1,1],"KIA":[0,4,0,3,1,1],"VOLVO":[1,2,3,1,0,0],"PORSCHE":[2,0,1,1,0,0],"LEAPMOTORS":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"DUSTER":[0,0,0,0,2,1],"OROCH":[2,3,1,2,1,4],"BOREAL":[1,4,3,1,1,1],"KOLEOS E-TECH":[0,0,0,0,0,2],"KWID":[3,1,6,2,4,3],"KARDIAN":[2,2,1,0,1,0],"MASTER":[1,4,5,3,1,0],"KANGOO":[3,0,0,0,2,0],"KWID E-TECH":[1,1,0,0,0,0]},"GWM":{"WEY 07":[1,1,2,2,1,2],"ORA 5":[0,0,0,0,0,1],"HAVAL H6":[14,16,14,6,14,16],"ORA 03":[0,2,4,1,1,1],"TANK 300":[2,0,2,1,2,1],"POER P30":[1,1,1,0,1,0],"HAVAL H9":[3,0,3,3,0,0]},"PEUGEOT":{"":[4,4,6,5,3,2],"BOXER":[0,0,1,0,0,0],"EXPERT":[0,0,2,0,0,0],"PARTNER RAPID":[0,0,1,0,0,0]},"CITROEN":{"JUMPY":[0,1,1,0,0,2],"BASALT":[0,1,2,4,2,4],"C3":[0,2,3,3,4,0],"C3 AIRCROSS":[0,1,0,0,2,0]},"GEELY":{"EX2":[0,0,1,1,1,1]}}},"SERRA ALTA":{"marcas":{"GM":[1,1,0,2,0,1],"VOLKSWAGEN":[0,1,0,1,0,0],"GWM":[0,0,1,0,0,0],"FORD":[0,0,1,0,0,0],"FIAT":[0,0,1,0,0,0]},"modelos":{"GWM":{"HAVAL H6":[0,0,1,0,0,0]}}},"PINHALZINHO":{"marcas":{"GM":[0,7,9,7,3,4],"BYD":[0,0,1,3,0,3],"TOYOTA":[0,1,2,1,0,1],"FIAT":[4,13,3,5,7,1],"VOLKSWAGEN":[6,4,3,2,1,4],"GAC":[0,0,0,0,0,1],"JEEP":[2,3,3,1,1,3],"FORD":[1,1,1,0,2,2],"VW":[0,0,0,0,0,1],"HYUNDAI":[1,0,1,1,1,0],"BMW":[0,0,0,0,1,0],"RENAULT":[0,0,0,1,1,0],"CAOACHERY":[0,0,0,0,1,0],"OMODA":[0,0,0,1,0,0],"HONDA":[1,1,2,0,0,0],"GWM":[0,0,1,0,0,0],"NISSAN":[0,1,0,0,0,0],"MBENZ":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,0,0,1,0],"KWID":[0,0,0,1,0,0]},"GWM":{"HAVAL H6":[0,0,1,0,0,0]}}},"MARAVILHA":{"marcas":{"JEEP":[1,3,4,4,3,5],"GM":[5,4,4,5,9,9],"FIAT":[9,3,10,6,12,9],"MMC":[1,0,0,0,1,2],"VOLKSWAGEN":[7,6,10,9,11,5],"HONDA":[0,0,1,2,3,2],"BYD":[0,1,0,1,1,1],"HYUNDAI":[0,0,0,0,3,2],"JAECOO":[0,0,0,0,1,0],"RAM":[0,0,1,0,1,0],"MBENZ":[0,0,0,0,1,0],"GWM":[1,1,1,2,2,0],"FORD":[0,2,0,3,2,0],"CAOACHERY":[0,1,1,1,1,0],"GAC":[0,0,0,1,0,0],"NISSAN":[0,0,0,1,0,0],"TOYOTA":[1,0,0,2,0,0],"KIA":[0,0,0,1,0,0],"RENAULT":[0,0,1,0,0,0],"OMODA":[0,1,0,0,0,0],"VOLVO":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[0,0,1,0,0,0]},"GWM":{"HAVAL H6":[0,1,0,2,2,0],"WEY 07":[0,0,1,0,0,0],"POER P30":[1,0,0,0,0,0]}}},"SANTA TEREZINHA DO PROGRESSO":{"marcas":{"FIAT":[0,1,2,0,3,1],"TOYOTA":[0,0,0,0,0,1],"RENAULT":[0,1,0,0,1,0],"GM":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,1,0,0,1,0]}}},"QUILOMBO":{"marcas":{"FIAT":[0,1,0,1,0,3],"VOLKSWAGEN":[0,1,1,4,0,3],"CAOACHERY":[0,2,0,0,0,1],"GM":[0,2,1,0,1,1],"BYD":[0,0,0,1,0,1],"TOYOTA":[1,0,1,1,1,0],"MBENZ":[0,0,0,1,0,0],"JEEP":[1,0,1,0,0,0],"RENAULT":[0,0,1,0,0,0],"HYUNDAI":[0,0,1,0,0,0],"HONDA":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,1,0,0,0]}}},"AGUAS DE CHAPECO":{"marcas":{"VOLKSWAGEN":[2,3,3,1,3,1],"HONDA":[0,0,0,0,1,1],"HYUNDAI":[0,0,0,0,1,0],"GM":[0,0,1,1,0,0],"FIAT":[0,1,1,1,0,0],"MMC":[0,0,1,0,0,0]},"modelos":{}},"FLOR DO SERTAO":{"marcas":{"FIAT":[2,0,0,1,0,1],"VOLKSWAGEN":[0,1,0,0,0,0],"GM":[0,1,0,0,0,0],"FORD":[0,2,0,0,0,0]},"modelos":{}},"CUNHATAI":{"marcas":{"VOLKSWAGEN":[0,0,0,0,0,1],"GM":[1,0,2,0,0,1],"MMC":[0,0,0,0,1,0]},"modelos":{}},"IRACEMINHA":{"marcas":{"VOLKSWAGEN":[0,0,0,1,2,1],"JEEP":[0,0,0,0,0,1],"FORD":[0,1,0,0,0,1],"FIAT":[0,0,0,1,2,0],"GM":[2,0,0,0,1,0],"HONDA":[0,0,0,1,0,0],"MBENZ":[0,1,0,0,0,0]},"modelos":{}},"NOVA ITABERABA":{"marcas":{"GM":[0,1,0,1,0,2],"VOLKSWAGEN":[0,0,1,0,0,2],"FIAT":[2,0,4,4,3,1],"BYD":[0,0,0,0,2,0],"RENAULT":[1,0,1,1,1,0],"TOYOTA":[0,1,2,1,0,0],"PEUGEOT":[1,0,0,0,0,0],"CAOACHERY":[1,0,0,0,0,0],"JEEP":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[0,0,0,1,1,0],"KWID":[0,0,1,0,0,0],"BOREAL":[1,0,0,0,0,0]},"PEUGEOT":{"":[1,0,0,0,0,0]}}},"CORDILHEIRA ALTA":{"marcas":{"HONDA":[0,1,1,0,0,1],"JAECOO":[0,0,0,0,0,1],"VOLKSWAGEN":[0,3,6,2,1,1],"RAM":[0,0,0,0,0,1],"FIAT":[1,0,4,1,1,1],"CAOACHERY":[0,0,0,0,0,1],"FORD":[0,1,1,1,1,1],"GWM":[0,0,0,0,1,1],"TOYOTA":[1,0,0,0,2,0],"GAC":[0,0,0,1,0,0],"JEEP":[0,0,0,2,0,0],"RENAULT":[3,1,0,3,0,0],"HYUNDAI":[0,0,1,0,0,0],"CITROEN":[0,0,1,0,0,0],"MBENZ":[0,1,1,0,0,0],"GM":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[0,1,0,3,0,0],"MASTER":[2,0,0,0,0,0],"OROCH":[1,0,0,0,0,0]},"GWM":{"HAVAL H9":[0,0,0,0,0,1],"ORA 03":[0,0,0,0,1,0]},"CITROEN":{"C3":[0,0,1,0,0,0]}}},"CORONEL FREITAS":{"marcas":{"BMW":[0,1,0,0,0,1],"FORD":[1,0,0,0,0,1],"VOLKSWAGEN":[1,2,0,2,1,2],"FIAT":[3,1,6,2,3,1],"GM":[1,0,2,0,2,2],"CAOACHERY":[0,0,0,1,0,1],"RENAULT":[0,0,0,0,0,1],"HYUNDAI":[0,0,0,0,0,1],"JEEP":[0,0,0,1,1,0],"BYD":[0,0,1,0,0,0],"TOYOTA":[0,1,1,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,0,0,0,1]}}},"PALMITOS":{"marcas":{"GWM":[0,0,0,0,0,1],"FIAT":[3,0,3,3,2,2],"VOLKSWAGEN":[6,10,11,5,4,4],"TOYOTA":[0,0,0,2,1,1],"MMC":[0,0,0,0,0,1],"EFFA":[0,0,0,0,0,1],"JEEP":[0,1,0,1,0,1],"CAOACHERY":[0,0,0,0,1,1],"PEUGEOT":[1,0,0,0,2,0],"HONDA":[0,0,0,2,1,0],"GM":[1,1,1,0,1,0],"FORD":[0,0,0,1,0,0],"MBENZ":[1,0,0,0,0,0]},"modelos":{"GWM":{"WEY 07":[0,0,0,0,0,1]},"PEUGEOT":{"":[0,0,0,0,1,0],"EXPERT":[1,0,0,0,1,0]}}},"CAIBI":{"marcas":{"VOLKSWAGEN":[1,0,1,2,2,2],"GM":[1,2,2,1,0,2],"CAOACHERY":[0,0,0,0,0,2],"TOYOTA":[0,0,0,1,1,1],"GWM":[0,1,1,0,1,1],"RENAULT":[0,2,0,0,1,0],"JEEP":[2,0,0,1,1,0],"FIAT":[2,1,4,0,3,0],"BMW":[0,0,1,0,0,0],"HYUNDAI":[0,0,1,0,0,0],"MMC":[0,0,1,0,0,0],"MBENZ":[1,0,0,0,0,0],"FORD":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,0,0,1,0],"KWID":[0,1,0,0,0,0],"DUSTER":[0,1,0,0,0,0]},"GWM":{"HAVAL H6":[0,1,1,0,1,1]}}},"SAUDADES":{"marcas":{"GM":[0,1,1,3,2,4],"VOLKSWAGEN":[0,1,2,0,1,1],"FIAT":[1,0,2,4,1,1],"JEEP":[0,1,1,1,2,1],"MMC":[0,0,0,0,1,0],"HONDA":[0,0,0,0,1,0],"CAOACHERY":[0,2,0,2,0,0],"TOYOTA":[0,0,1,1,0,0],"RENAULT":[0,0,1,0,0,0],"OMODA":[0,0,1,0,0,0],"BMW":[0,1,0,0,0,0],"FORD":[2,0,0,0,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,0,1,0,0,0]}}},"UNIAO DO OESTE":{"marcas":{"JEEP":[0,0,0,0,0,1],"GM":[0,0,0,0,1,0],"MBENZ":[0,0,0,1,0,0],"VOLKSWAGEN":[0,0,1,0,0,0],"FIAT":[0,1,0,0,0,0]},"modelos":{}},"CAMPO ERE":{"marcas":{"FORD":[0,2,1,1,1,1],"GM":[0,0,1,0,0,1],"RAM":[0,0,0,0,0,1],"HYUNDAI":[0,0,0,2,0,1],"FIAT":[2,0,0,0,1,1],"TOYOTA":[0,0,0,0,0,1],"VOLKSWAGEN":[0,0,0,0,0,1],"HONDA":[0,1,0,0,1,0],"CAOACHERY":[0,0,0,1,0,0],"JEEP":[0,1,0,0,0,0]},"modelos":{}},"CAXAMBU DO SUL":{"marcas":{"JEEP":[0,0,0,0,0,1],"VOLKSWAGEN":[0,0,2,1,1,0],"FIAT":[0,2,1,0,0,0],"PEUGEOT":[0,1,0,0,0,0],"GM":[1,0,0,0,0,0]},"modelos":{"PEUGEOT":{"":[0,1,0,0,0,0]}}},"GUATAMBU":{"marcas":{"FIAT":[2,3,3,2,1,3],"JEEP":[0,0,1,3,1,0],"GM":[0,1,1,2,2,0],"VOLKSWAGEN":[1,1,2,1,1,0],"HYUNDAI":[0,0,0,1,0,0],"RENAULT":[1,0,0,1,0,0],"CAOACHERY":[0,0,0,1,0,0],"FORD":[0,0,0,1,0,0],"BYD":[0,0,1,0,0,0],"KIA":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[0,0,0,1,0,0],"KARDIAN":[1,0,0,0,0,0]}}},"SAO CARLOS":{"marcas":{"VOLKSWAGEN":[1,5,2,11,8,4],"FIAT":[1,3,1,3,2,2],"FORD":[0,0,0,1,0,1],"PEUGEOT":[0,0,0,0,0,1],"BYD":[0,0,0,0,3,0],"RENAULT":[0,0,0,1,2,0],"LEAPMOTORS":[0,0,0,1,0,0],"HONDA":[0,0,0,1,0,0],"TOYOTA":[0,0,1,2,0,0],"CAOACHERY":[0,1,0,1,0,0],"GM":[0,0,3,0,0,0],"JAECOO":[0,0,1,0,0,0],"JEEP":[0,2,0,0,0,0],"NISSAN":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,0,0,0,1,0],"OROCH":[0,0,0,0,1,0],"KARDIAN":[0,0,0,1,0,0]},"PEUGEOT":{"":[0,0,0,0,0,1]}}},"SALTINHO":{"marcas":{"GM":[0,0,1,1,0,1],"TOYOTA":[0,0,0,0,1,1],"JEEP":[0,0,0,1,0,0],"VOLKSWAGEN":[0,1,0,0,0,0],"RENAULT":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[1,0,0,0,0,0]}}},"CUNHA PORA":{"marcas":{"JAECOO":[0,0,0,0,0,1],"FIAT":[2,2,4,3,1,2],"TOYOTA":[0,0,0,1,1,1],"JEEP":[0,2,3,1,1,0],"GM":[3,0,0,1,2,0],"GWM":[0,0,1,1,0,0],"VOLKSWAGEN":[2,1,4,7,0,0],"HYUNDAI":[0,0,1,1,0,0],"RENAULT":[0,0,0,1,0,0],"CAOACHERY":[0,0,0,1,0,0],"FORD":[2,3,2,0,0,0],"RAM":[0,0,1,0,0,0],"BYD":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,1,0,0]},"GWM":{"WEY 07":[0,0,0,1,0,0],"HAVAL H6":[0,0,1,0,0,0]}}},"PLANALTO ALEGRE":{"marcas":{"VOLKSWAGEN":[0,0,0,0,0,1],"GM":[0,0,2,0,0,1],"HYUNDAI":[0,0,0,0,1,0],"MMC":[0,0,0,1,0,0],"HONDA":[0,0,0,1,0,0],"FIAT":[0,0,1,0,0,0]},"modelos":{}},"AGUAS FRIAS":{"marcas":{"GM":[0,0,0,0,1,2],"JEEP":[0,0,0,0,0,1],"FIAT":[0,0,0,0,2,0],"RENAULT":[0,0,0,0,1,0],"VOLKSWAGEN":[0,0,0,1,1,0],"FORD":[1,0,1,0,0,0],"HYUNDAI":[0,1,0,0,0,0],"MINI":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,0,0,0,1,0]}}},"SUL BRASIL":{"marcas":{"FIAT":[0,1,2,2,0,1],"VOLKSWAGEN":[0,0,2,0,0,2],"CAOACHERY":[0,0,0,1,0,0],"GM":[0,1,0,0,0,0]},"modelos":{}},"MODELO":{"marcas":{"FORD":[0,0,0,0,0,1],"TOYOTA":[0,0,0,0,0,1],"VOLKSWAGEN":[0,1,0,1,0,1],"GWM":[0,0,0,0,0,1],"CHANGAN":[0,0,0,1,0,0],"GM":[0,1,2,1,0,0],"FIAT":[1,0,1,0,0,0],"PEUGEOT":[0,0,1,0,0,0],"HYUNDAI":[0,1,2,0,0,0],"JEEP":[0,0,1,0,0,0],"HONDA":[1,0,0,0,0,0]},"modelos":{"GWM":{"HAVAL H9":[0,0,0,0,0,1]},"PEUGEOT":{"EXPERT":[0,0,1,0,0,0]}}},"TIGRINHOS":{"marcas":{"VOLKSWAGEN":[0,0,0,1,0,1],"FIAT":[0,1,0,1,0,0],"ZEEKR":[0,0,1,0,0,0],"FORD":[0,1,0,0,0,0]},"modelos":{}},"NOVO HORIZONTE":{"marcas":{"FIAT":[1,0,0,0,0,1],"FORD":[0,0,0,0,1,0],"VOLKSWAGEN":[1,0,0,0,0,0]},"modelos":{}},"NOVA ERECHIM":{"marcas":{"HONDA":[0,0,0,0,1,1],"VOLKSWAGEN":[0,1,2,1,2,0],"TOYOTA":[1,0,0,1,1,0],"JEEP":[0,0,0,1,0,0],"GM":[1,2,1,0,0,0],"RENAULT":[0,0,1,0,0,0],"CITROEN":[0,1,0,0,0,0],"MBENZ":[0,1,0,0,0,0],"FIAT":[1,1,0,0,0,0],"MMC":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,0,1,0,0,0]},"CITROEN":{"BASALT":[0,1,0,0,0,0]}}},"FORMOSA DO SUL":{"marcas":{"VOLKSWAGEN":[2,0,1,2,0,0],"GM":[0,0,0,1,0,0],"FIAT":[1,0,0,1,0,0],"RENAULT":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[1,0,0,0,0,0]}}},"SAO MIGUEL DA BOA VISTA":{"marcas":{"VOLKSWAGEN":[0,1,0,2,0,0],"FIAT":[0,0,0,1,0,0],"GWM":[0,0,1,0,0,0],"GM":[0,1,1,0,0,0]},"modelos":{"GWM":{"HAVAL H9":[0,0,1,0,0,0]}}}}},"CONCORDIA":{"marcas":{"FORD":[8,6,19,4,11,9],"MMC":[2,1,0,1,0,2],"CITROEN":[3,4,5,3,6,3],"HYUNDAI":[25,27,35,22,39,30],"HONDA":[4,7,3,6,6,10],"VOLKSWAGEN":[24,39,46,36,35,38],"RAM":[2,3,7,3,3,7],"BYD":[0,1,3,4,10,11],"CAOACHERY":[2,2,8,5,1,4],"FIAT":[20,29,23,27,18,24],"TOYOTA":[5,9,4,5,11,11],"JEEP":[27,11,14,24,21,20],"RENAULT":[5,4,8,3,8,12],"BMW":[0,1,0,1,0,1],"GM":[16,10,10,26,21,18],"KIA":[0,0,1,1,0,2],"JAECOO":[0,0,0,0,1,2],"GWM":[2,2,6,2,4,4],"PEUGEOT":[3,1,5,4,3,1],"MBENZ":[1,2,2,1,0,2],"EFFA":[1,1,0,0,2,0],"OMODA":[0,2,1,0,1,0],"GEELY":[1,0,1,1,0,0],"VOLVO":[0,0,1,1,0,0],"NISSAN":[0,1,1,0,0,0],"PORSCHE":[0,0,1,0,0,0],"IVECO":[0,1,0,0,0,0],"LEXUS":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[0,1,2,0,1,3],"KWID":[2,1,1,2,3,6],"BOREAL":[1,1,3,0,0,1],"KARDIAN":[0,1,2,1,2,2],"MASTER":[0,0,0,0,2,0],"KWID E-TECH":[2,0,0,0,0,0]},"GWM":{"WEY 07":[0,0,0,1,1,1],"HAVAL H6":[0,1,5,0,2,2],"TANK 300":[0,0,1,0,0,1],"POER P30":[0,0,0,0,1,0],"HAVAL H9":[1,1,0,1,0,0],"ORA 03":[1,0,0,0,0,0]},"PEUGEOT":{"":[3,1,5,3,3,1],"EXPERT":[0,0,0,1,0,0]},"CITROEN":{"BASALT":[2,1,4,1,3,1],"C3":[0,2,0,1,3,1],"JUMPY":[0,0,1,0,0,1],"C3 AIRCROSS":[1,1,0,1,0,0]},"GEELY":{"EX2":[1,0,1,1,0,0]}},"cidades":{"CONCORDIA":{"marcas":{"FORD":[4,4,13,3,5,6],"MMC":[1,0,0,0,0,1],"CITROEN":[3,3,4,3,5,3],"HYUNDAI":[25,27,31,21,37,28],"HONDA":[2,7,1,4,5,7],"RAM":[0,3,5,3,3,7],"VOLKSWAGEN":[14,28,28,27,29,22],"BYD":[0,0,2,4,10,10],"FIAT":[14,15,10,10,10,12],"JEEP":[23,8,12,16,16,17],"RENAULT":[2,4,1,1,5,10],"CAOACHERY":[1,1,6,2,1,1],"TOYOTA":[2,9,3,3,8,5],"BMW":[0,1,0,1,0,1],"GM":[12,9,5,13,8,10],"KIA":[0,0,0,0,0,2],"JAECOO":[0,0,0,0,1,2],"GWM":[2,2,2,2,3,2],"PEUGEOT":[3,1,3,4,2,1],"MBENZ":[1,0,2,1,0,1],"EFFA":[1,1,0,0,2,0],"OMODA":[0,1,1,0,1,0],"GEELY":[1,0,1,1,0,0],"VOLVO":[0,0,1,1,0,0],"NISSAN":[0,0,1,0,0,0],"PORSCHE":[0,0,1,0,0,0],"LEXUS":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[0,1,0,0,0,2],"KWID":[1,1,0,1,3,6],"BOREAL":[0,1,0,0,0,1],"KARDIAN":[0,1,1,0,2,1],"KWID E-TECH":[1,0,0,0,0,0]},"GWM":{"WEY 07":[0,0,0,1,1,1],"TANK 300":[0,0,1,0,0,1],"HAVAL H6":[0,1,1,0,2,0],"HAVAL H9":[1,1,0,1,0,0],"ORA 03":[1,0,0,0,0,0]},"PEUGEOT":{"":[3,1,3,3,2,1],"EXPERT":[0,0,0,1,0,0]},"CITROEN":{"BASALT":[2,1,3,1,2,1],"C3":[0,1,0,1,3,1],"JUMPY":[0,0,1,0,0,1],"C3 AIRCROSS":[1,1,0,1,0,0]},"GEELY":{"EX2":[1,0,1,1,0,0]}}},"ITA":{"marcas":{"VOLKSWAGEN":[0,1,2,1,0,2],"CAOACHERY":[0,0,1,2,0,2],"JEEP":[1,0,0,2,1,1],"FORD":[0,0,1,0,0,1],"HYUNDAI":[0,0,0,0,0,1],"GM":[0,0,1,0,0,1],"CITROEN":[0,1,0,0,1,0],"GWM":[0,0,1,0,1,0],"TOYOTA":[1,0,0,0,1,0],"HONDA":[0,0,0,1,0,0],"FIAT":[1,0,0,6,0,0],"RENAULT":[0,0,2,1,0,0],"PEUGEOT":[0,0,1,0,0,0],"RAM":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,1,0,0],"OROCH":[0,0,2,0,0,0]},"GWM":{"POER P30":[0,0,0,0,1,0],"HAVAL H6":[0,0,1,0,0,0]},"PEUGEOT":{"":[0,0,1,0,0,0]},"CITROEN":{"BASALT":[0,0,0,0,1,0],"C3":[0,1,0,0,0,0]}}},"SEARA":{"marcas":{"VOLKSWAGEN":[5,2,11,1,0,2],"FIAT":[2,1,6,5,1,4],"CAOACHERY":[1,0,0,0,0,1],"TOYOTA":[0,0,0,0,1,2],"HYUNDAI":[0,0,1,0,0,1],"BYD":[0,1,0,0,0,1],"GM":[3,0,0,7,2,2],"MBENZ":[0,0,0,0,0,1],"FORD":[0,1,0,0,0,1],"RENAULT":[0,0,2,0,1,0],"PEUGEOT":[0,0,0,0,1,0],"JEEP":[3,1,0,1,1,0],"HONDA":[0,0,1,0,0,0],"GWM":[0,0,2,0,0,0],"NISSAN":[0,1,0,0,0,0],"RAM":[1,0,0,0,0,0],"MMC":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[0,0,0,0,1,0],"BOREAL":[0,0,2,0,0,0]},"GWM":{"HAVAL H6":[0,0,2,0,0,0]},"PEUGEOT":{"":[0,0,0,0,1,0]}}},"PERITIBA":{"marcas":{"VOLKSWAGEN":[0,0,0,0,0,2],"RENAULT":[0,0,0,1,0,1],"JEEP":[0,0,0,0,1,1],"FIAT":[0,1,0,0,2,1],"FORD":[0,0,1,0,1,0],"HONDA":[0,0,0,1,0,0],"GM":[0,0,1,0,0,0],"HYUNDAI":[0,0,1,0,0,0],"MBENZ":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[0,0,0,1,0,1]}}},"IPUMIRIM":{"marcas":{"TOYOTA":[2,0,0,0,0,1],"VOLKSWAGEN":[0,1,0,1,0,1],"GM":[0,0,1,1,2,1],"GWM":[0,0,0,0,0,1],"JEEP":[0,0,0,1,0,1],"FIAT":[0,2,1,1,0,0],"FORD":[0,1,2,0,0,0],"RAM":[0,0,2,0,0,0],"CAOACHERY":[0,1,0,0,0,0],"RENAULT":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID E-TECH":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[0,0,0,0,0,1]}}},"XAVANTINA":{"marcas":{"VOLKSWAGEN":[2,2,2,1,1,3],"RENAULT":[0,0,0,0,0,1],"FIAT":[1,1,1,1,3,4],"GM":[0,1,0,0,1,1],"HONDA":[0,0,0,0,1,0],"FORD":[0,0,0,0,1,0],"PEUGEOT":[0,0,1,0,0,0]},"modelos":{"RENAULT":{"OROCH":[0,0,0,0,0,1]},"PEUGEOT":{"":[0,0,1,0,0,0]}}},"PIRATUBA":{"marcas":{"MMC":[0,1,0,1,0,1],"VOLKSWAGEN":[0,1,0,0,0,2],"HONDA":[1,0,0,0,0,2],"GM":[0,0,0,0,1,1],"HYUNDAI":[0,0,0,0,1,0],"FORD":[2,0,1,0,2,0],"JEEP":[0,1,1,2,2,0],"FIAT":[1,2,0,0,1,0],"KIA":[0,0,0,1,0,0],"CAOACHERY":[0,0,0,1,0,0],"RENAULT":[1,0,1,0,0,0],"MBENZ":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"BOREAL":[1,0,1,0,0,0]}}},"IRANI":{"marcas":{"VOLKSWAGEN":[0,0,0,1,0,1],"TOYOTA":[0,0,1,2,1,2],"FIAT":[0,2,2,2,0,2],"FORD":[2,0,1,0,1,1],"GWM":[0,0,1,0,0,1],"GM":[0,0,0,0,0,2],"RENAULT":[1,0,0,0,1,0],"JEEP":[0,0,0,1,0,0],"BYD":[0,0,1,0,0,0],"HYUNDAI":[0,0,2,0,0,0],"IVECO":[0,1,0,0,0,0],"HONDA":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,0,0,1,0],"KWID":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[0,0,1,0,0,1]}}},"ARABUTA":{"marcas":{"HONDA":[0,0,1,0,0,1],"FIAT":[0,2,2,2,0,1],"VOLKSWAGEN":[1,1,1,2,2,2],"FORD":[0,0,0,1,1,0],"GM":[1,0,0,3,1,0],"CITROEN":[0,0,1,0,0,0],"KIA":[0,0,1,0,0,0]},"modelos":{"CITROEN":{"BASALT":[0,0,1,0,0,0]}}},"PRESIDENTE CASTELO BRANCO":{"marcas":{"VOLKSWAGEN":[0,1,1,1,2,1],"GM":[0,0,0,0,2,0],"CAOACHERY":[0,0,1,0,0,0]},"modelos":{}},"LINDOIA DO SUL":{"marcas":{"TOYOTA":[0,0,0,0,0,1],"HYUNDAI":[0,0,0,1,1,0],"GM":[0,0,0,2,4,0],"RENAULT":[0,0,1,0,1,0],"FIAT":[0,2,0,0,1,0],"JEEP":[0,1,0,0,0,0],"OMODA":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,0,0,1,0],"KWID":[0,0,1,0,0,0]}}},"ALTO BELA VISTA":{"marcas":{"VOLKSWAGEN":[0,2,0,0,1,0],"FIAT":[1,1,1,0,0,0],"JEEP":[0,0,1,0,0,0]},"modelos":{}},"IPIRA":{"marcas":{"JEEP":[0,0,0,1,0,0],"VOLKSWAGEN":[2,0,1,1,0,0],"RENAULT":[0,0,1,0,0,0],"GM":[0,0,2,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[0,0,1,0,0,0]}}}}},"CRICIUMA":{"marcas":{"GM":[34,45,68,52,74,58],"BMW":[4,2,6,7,5,8],"FORD":[15,12,22,11,15,12],"OMODA":[4,8,5,16,7,11],"HONDA":[14,23,35,24,39,26],"TOYOTA":[21,24,20,39,33,32],"HYUNDAI":[33,32,33,23,37,34],"FIAT":[68,97,105,83,79,81],"BYD":[21,18,19,37,19,43],"GWM":[11,12,27,19,22,19],"VOLKSWAGEN":[43,113,108,123,113,106],"RAM":[7,8,6,10,10,7],"JEEP":[34,28,44,30,37,27],"RENAULT":[5,8,6,15,9,10],"MMC":[5,4,5,6,10,6],"GAC":[0,0,0,0,0,3],"MBENZ":[3,2,4,1,2,4],"PEUGEOT":[4,9,4,5,4,3],"JAECOO":[3,2,5,3,8,27],"CAOACHERY":[12,18,33,27,30,20],"LEAPMOTORS":[2,0,0,0,3,3],"NISSAN":[15,6,11,10,10,6],"GEELY":[0,0,0,1,3,2],"MG":[0,0,0,0,1,1],"KIA":[3,4,2,1,0,1],"CITROEN":[6,5,4,6,7,7],"CADILLAC":[0,0,0,0,0,1],"VOLVO":[4,1,0,2,1,1],"LANDROVER":[0,0,4,2,0,1],"IVECO":[0,0,1,1,0,2],"ZEEKR":[0,0,0,0,0,1],"VW":[0,0,0,0,3,0],"PORSCHE":[2,2,1,2,3,0],"FOTON":[1,0,0,0,1,0],"JETOUR":[0,0,0,0,1,0],"LEXUS":[0,0,0,1,0,0],"DODGE":[0,0,0,1,0,0],"MINI":[0,0,0,1,0,0],"EFFA":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[2,2,1,1,1,1],"MASTER":[0,0,1,3,0,3],"KWID":[0,3,4,8,1,3],"BOREAL":[0,2,0,1,2,2],"DUSTER":[1,1,0,0,2,1],"OROCH":[0,0,0,0,2,0],"KANGOO":[0,0,0,2,1,0],"KWID E-TECH":[2,0,0,0,0,0]},"GWM":{"HAVAL H6":[9,6,10,10,14,13],"HAVAL H9":[0,2,4,2,3,3],"POER P30":[0,1,4,2,1,1],"WEY 07":[1,0,0,3,1,1],"TANK 300":[0,3,7,1,0,1],"ORA 03":[1,0,2,1,3,0]},"PEUGEOT":{"":[3,7,4,5,3,3],"EXPERT":[0,2,0,0,1,0],"PARTNER RAPID":[1,0,0,0,0,0]},"CITROEN":{"C3":[3,3,3,3,3,3],"JUMPY":[0,0,0,1,3,3],"BASALT":[2,2,0,2,1,1],"C3 AIRCROSS":[1,0,1,0,0,0]},"GEELY":{"EX5 EM-I":[0,0,0,0,1,1],"EX5":[0,0,0,0,0,1],"EX2":[0,0,0,1,2,0]}},"cidades":{"CRICIUMA":{"marcas":{"GM":[18,24,30,18,39,37],"BMW":[4,2,1,6,4,8],"FORD":[10,7,18,6,10,6],"OMODA":[4,7,3,10,5,7],"TOYOTA":[11,13,10,20,19,18],"FIAT":[36,60,59,46,44,49],"BYD":[7,14,10,28,12,32],"GWM":[8,9,16,8,14,11],"HONDA":[9,16,23,15,29,10],"VOLKSWAGEN":[24,72,56,78,74,70],"RAM":[5,6,5,8,8,5],"HYUNDAI":[20,16,20,20,26,18],"JEEP":[24,20,30,24,32,20],"RENAULT":[3,7,3,6,8,5],"GAC":[0,0,0,0,0,3],"MBENZ":[3,2,2,1,0,2],"PEUGEOT":[3,5,4,2,2,3],"JAECOO":[2,2,3,2,7,19],"LEAPMOTORS":[2,0,0,0,2,2],"CAOACHERY":[8,11,22,21,18,13],"GEELY":[0,0,0,0,1,2],"MG":[0,0,0,0,0,1],"NISSAN":[11,3,7,6,6,5],"KIA":[3,3,0,0,0,1],"CITROEN":[6,3,2,4,3,6],"VOLVO":[4,0,0,1,1,1],"MMC":[2,1,2,3,5,1],"LANDROVER":[0,0,3,2,0,1],"IVECO":[0,0,0,0,0,1],"ZEEKR":[0,0,0,0,0,1],"VW":[0,0,0,0,3,0],"PORSCHE":[2,1,1,2,3,0],"LEXUS":[0,0,0,1,0,0],"MINI":[0,0,0,1,0,0],"EFFA":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[2,2,1,0,1,1],"KWID":[0,2,2,2,0,2],"BOREAL":[0,2,0,1,2,1],"DUSTER":[0,1,0,0,2,1],"OROCH":[0,0,0,0,2,0],"KANGOO":[0,0,0,2,1,0],"MASTER":[0,0,0,1,0,0],"KWID E-TECH":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[7,4,8,5,11,6],"POER P30":[0,1,2,1,0,1],"WEY 07":[0,0,0,0,1,1],"HAVAL H9":[0,1,1,1,1,2],"TANK 300":[0,3,4,1,0,1],"ORA 03":[1,0,1,0,1,0]},"PEUGEOT":{"":[2,5,4,2,2,3],"PARTNER RAPID":[1,0,0,0,0,0]},"CITROEN":{"C3":[3,1,2,2,1,2],"JUMPY":[0,0,0,1,2,3],"BASALT":[2,2,0,1,0,1],"C3 AIRCROSS":[1,0,0,0,0,0]},"GEELY":{"EX5 EM-I":[0,0,0,0,0,1],"EX5":[0,0,0,0,0,1],"EX2":[0,0,0,0,1,0]}}},"MORRO DA FUMACA":{"marcas":{"HONDA":[0,1,1,1,0,2],"TOYOTA":[2,1,0,3,1,1],"FIAT":[1,1,6,3,0,2],"CADILLAC":[0,0,0,0,0,1],"JAECOO":[1,0,0,0,0,1],"RENAULT":[0,0,0,1,0,1],"VOLKSWAGEN":[1,4,4,6,4,4],"GM":[1,2,0,0,3,2],"FORD":[0,0,0,1,1,1],"HYUNDAI":[1,1,1,1,1,1],"RAM":[0,0,0,0,0,1],"MG":[0,0,0,0,1,0],"CITROEN":[0,0,1,0,1,0],"NISSAN":[0,0,0,1,1,0],"JEEP":[2,3,1,1,1,0],"GWM":[0,1,0,2,2,0],"CAOACHERY":[0,0,1,2,2,0],"MMC":[0,0,0,0,1,0],"BYD":[0,0,1,1,0,0],"OMODA":[0,0,1,1,0,0],"VOLVO":[0,0,0,1,0,0],"BMW":[0,0,3,0,0,0],"KIA":[0,1,2,0,0,0],"PEUGEOT":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,0,0,1],"KARDIAN":[0,0,0,1,0,0]},"GWM":{"HAVAL H6":[0,1,0,1,2,0],"HAVAL H9":[0,0,0,1,0,0]},"PEUGEOT":{"":[0,1,0,0,0,0]},"CITROEN":{"JUMPY":[0,0,0,0,1,0],"C3":[0,0,1,0,0,0]}}},"ICARA":{"marcas":{"HYUNDAI":[6,4,2,1,2,6],"FIAT":[12,10,13,15,12,8],"VOLKSWAGEN":[5,19,26,16,14,10],"GM":[3,1,5,5,6,5],"MMC":[0,1,1,1,3,2],"TOYOTA":[2,4,3,5,5,4],"HONDA":[1,1,2,1,2,3],"JAECOO":[0,0,2,1,0,1],"RAM":[1,1,1,1,0,1],"GWM":[3,1,4,6,0,4],"FORD":[3,4,1,3,3,2],"JEEP":[3,0,4,2,2,3],"CAOACHERY":[2,2,5,0,2,3],"RENAULT":[1,0,1,4,0,1],"BYD":[12,3,2,2,3,2],"OMODA":[0,0,0,4,1,1],"CITROEN":[0,1,0,0,2,1],"IVECO":[0,0,1,0,0,1],"PEUGEOT":[0,2,0,0,2,0],"NISSAN":[1,0,0,3,2,0],"GEELY":[0,0,0,1,1,0],"MBENZ":[0,0,1,0,1,0],"DODGE":[0,0,0,1,0,0],"BMW":[0,0,1,0,0,0],"PORSCHE":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,0,0,0,0,1],"KWID":[0,0,1,2,0,0],"MASTER":[0,0,0,2,0,0],"KWID E-TECH":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[2,1,1,2,0,4],"ORA 03":[0,0,0,1,0,0],"WEY 07":[1,0,0,3,0,0],"POER P30":[0,0,1,0,0,0],"TANK 300":[0,0,2,0,0,0]},"PEUGEOT":{"EXPERT":[0,2,0,0,1,0],"":[0,0,0,0,1,0]},"CITROEN":{"C3":[0,1,0,0,1,1],"BASALT":[0,0,0,0,1,0]},"GEELY":{"EX5 EM-I":[0,0,0,0,1,0],"EX2":[0,0,0,1,0,0]}}},"FORQUILHINHA":{"marcas":{"HONDA":[0,1,2,0,1,2],"GM":[2,1,2,5,1,5],"FIAT":[4,6,6,2,2,7],"BYD":[0,0,1,1,2,3],"CAOACHERY":[0,0,1,1,1,3],"VOLKSWAGEN":[1,4,2,3,1,3],"OMODA":[0,0,0,0,0,1],"HYUNDAI":[1,2,3,0,2,2],"JAECOO":[0,0,0,0,0,1],"RAM":[1,0,0,0,1,0],"TOYOTA":[1,0,1,1,2,0],"RENAULT":[1,0,0,0,1,0],"PEUGEOT":[0,0,0,2,0,0],"GWM":[0,0,0,1,0,0],"JEEP":[2,0,1,1,0,0],"CITROEN":[0,0,1,0,0,0],"LANDROVER":[0,0,1,0,0,0],"FORD":[0,1,0,0,0,0],"NISSAN":[0,2,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,0,1,0],"DUSTER":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[0,0,0,1,0,0]},"PEUGEOT":{"":[0,0,0,2,0,0]},"CITROEN":{"C3 AIRCROSS":[0,0,1,0,0,0]}}},"SIDEROPOLIS":{"marcas":{"VOLKSWAGEN":[1,0,2,3,3,2],"FIAT":[1,2,3,3,2,2],"GM":[0,3,5,0,4,1],"BYD":[0,0,0,0,0,2],"NISSAN":[0,0,0,0,0,1],"FORD":[0,0,0,1,0,1],"JEEP":[0,1,1,0,0,1],"RENAULT":[0,0,1,1,0,1],"OMODA":[0,0,1,0,0,1],"TOYOTA":[1,0,2,1,1,1],"GWM":[0,0,1,0,2,0],"CAOACHERY":[0,2,0,0,1,0],"HYUNDAI":[0,1,1,0,1,0],"JETOUR":[0,0,0,0,1,0],"RAM":[0,0,0,1,0,0],"HONDA":[1,0,0,2,0,0],"MMC":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,1,0,0,1],"KWID":[0,0,0,1,0,0]},"GWM":{"ORA 03":[0,0,0,0,1,0],"HAVAL H9":[0,0,1,0,1,0]}}},"LAURO MULLER":{"marcas":{"FIAT":[2,1,6,0,1,2],"GM":[0,6,12,8,5,2],"TOYOTA":[0,0,2,3,0,3],"HYUNDAI":[0,2,1,0,0,2],"BYD":[0,0,0,0,0,1],"VOLKSWAGEN":[0,0,2,0,1,1],"MMC":[0,0,0,0,0,1],"OMODA":[0,0,0,0,1,0],"HONDA":[0,0,0,0,1,0],"CITROEN":[0,0,0,1,0,0],"RENAULT":[0,0,0,1,0,0],"CAOACHERY":[1,0,1,0,0,0],"JEEP":[0,0,1,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,1,0,0]},"CITROEN":{"BASALT":[0,0,0,1,0,0]}}},"COCAL DO SUL":{"marcas":{"VOLKSWAGEN":[3,4,6,6,5,5],"HONDA":[0,0,4,3,4,3],"RENAULT":[0,0,1,0,0,1],"TOYOTA":[1,3,1,1,1,2],"JAECOO":[0,0,0,0,0,1],"FIAT":[2,3,1,0,1,3],"CAOACHERY":[0,1,0,2,1,1],"GM":[5,1,4,5,2,3],"HYUNDAI":[0,1,1,0,0,1],"GWM":[0,0,1,1,1,1],"JEEP":[1,2,1,0,2,1],"LEAPMOTORS":[0,0,0,0,1,1],"BYD":[1,0,0,2,2,1],"MBENZ":[0,0,0,0,1,0],"CITROEN":[0,0,0,0,1,0],"FORD":[1,0,1,0,1,0],"MMC":[1,0,1,1,0,0],"PEUGEOT":[1,0,0,1,0,0],"BMW":[0,0,1,1,0,0],"KIA":[0,0,0,1,0,0],"NISSAN":[1,0,1,0,0,0],"RAM":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,0,0,0,1],"KWID":[0,0,1,0,0,0]},"GWM":{"HAVAL H6":[0,0,0,0,0,1],"POER P30":[0,0,1,1,1,0]},"PEUGEOT":{"":[1,0,0,1,0,0]},"CITROEN":{"C3":[0,0,0,0,1,0]}}},"URUSSANGA":{"marcas":{"HONDA":[2,3,1,1,1,4],"FIAT":[6,5,4,7,4,4],"RENAULT":[0,0,0,0,0,1],"TOYOTA":[3,0,0,4,0,3],"JEEP":[2,0,1,2,0,1],"VOLKSWAGEN":[3,4,3,4,6,4],"MMC":[0,1,0,1,1,2],"GM":[3,5,5,7,5,1],"MBENZ":[0,0,0,0,0,1],"HYUNDAI":[1,2,3,0,4,1],"GEELY":[0,0,0,0,1,0],"CAOACHERY":[1,0,1,0,3,0],"RAM":[0,0,0,0,1,0],"NISSAN":[1,0,1,0,1,0],"CITROEN":[0,0,0,1,0,0],"BYD":[0,0,1,1,0,0],"FORD":[0,0,1,0,0,0],"GWM":[0,0,1,0,0,0],"OMODA":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,0,0,0,1]},"GWM":{"HAVAL H6":[0,0,1,0,0,0]},"CITROEN":{"C3":[0,0,0,1,0,0]},"GEELY":{"EX2":[0,0,0,0,1,0]}}},"BALNEARIO RINCAO":{"marcas":{"VOLKSWAGEN":[2,4,3,4,0,1],"HYUNDAI":[4,3,1,1,1,2],"HONDA":[1,1,2,1,1,2],"MBENZ":[0,0,0,0,0,1],"BYD":[1,1,2,2,0,1],"JAECOO":[0,0,0,0,1,3],"OMODA":[0,0,0,1,0,1],"JEEP":[0,0,3,0,0,1],"FORD":[0,0,0,0,0,1],"FIAT":[1,3,0,2,7,1],"GM":[0,1,4,1,8,0],"GWM":[0,0,3,0,1,0],"CAOACHERY":[0,1,0,1,1,0],"FOTON":[1,0,0,0,1,0],"TOYOTA":[0,1,0,0,1,0],"IVECO":[0,0,0,1,0,0],"NISSAN":[1,0,1,0,0,0],"MMC":[1,1,1,0,0,0],"CITROEN":[0,1,0,0,0,0],"VOLVO":[0,1,0,0,0,0],"RENAULT":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,1,0,0,0,0]},"GWM":{"HAVAL H9":[0,0,1,0,1,0],"TANK 300":[0,0,1,0,0,0],"ORA 03":[0,0,1,0,0,0]},"CITROEN":{"C3":[0,1,0,0,0,0]}}},"NOVA VENEZA":{"marcas":{"VOLKSWAGEN":[2,2,3,2,3,5],"FIAT":[3,5,6,5,5,3],"GWM":[0,1,1,1,2,2],"GM":[2,1,1,2,1,1],"JAECOO":[0,0,0,0,0,1],"BYD":[0,0,2,0,0,1],"FORD":[1,0,1,0,0,1],"CAOACHERY":[0,1,2,0,1,0],"TOYOTA":[0,1,0,1,2,0],"BMW":[0,0,0,0,1,0],"RENAULT":[0,0,0,1,0,0],"MBENZ":[0,0,1,0,0,0],"NISSAN":[0,1,1,0,0,0],"JEEP":[0,1,1,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,1,0,0]},"GWM":{"HAVAL H9":[0,1,1,0,0,1],"HAVAL H6":[0,0,0,1,1,1],"ORA 03":[0,0,0,0,1,0]}}},"TREVISO":{"marcas":{"GWM":[0,0,0,0,0,1],"HYUNDAI":[0,0,0,0,0,1],"VOLKSWAGEN":[1,0,1,1,2,1],"GM":[0,0,0,1,0,1],"FIAT":[0,1,1,0,1,0],"TOYOTA":[0,1,1,0,1,0],"RENAULT":[0,0,0,1,0,0],"PEUGEOT":[0,1,0,0,0,0],"JEEP":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,1,0,0]},"GWM":{"HAVAL H6":[0,0,0,0,0,1]},"PEUGEOT":{"":[0,1,0,0,0,0]}}}}},"JOACABA":{"marcas":{"GM":[29,44,45,52,47,59],"HYUNDAI":[8,8,14,17,15,16],"CITROEN":[5,5,8,2,6,2],"GWM":[17,22,21,5,26,18],"VOLKSWAGEN":[99,113,120,107,110,116],"HONDA":[6,25,11,13,12,13],"FIAT":[82,97,98,67,75,135],"RENAULT":[22,26,19,22,13,20],"GEELY":[0,1,1,1,3,3],"TOYOTA":[11,16,19,21,16,23],"JAECOO":[0,0,1,1,0,6],"RAM":[6,5,7,4,7,9],"BYD":[7,5,6,14,18,25],"JETOUR":[0,0,0,0,0,1],"JEEP":[15,20,21,21,18,22],"FORD":[11,12,20,17,20,12],"GAC":[1,0,0,0,0,1],"BMW":[3,3,2,4,1,3],"OMODA":[0,0,3,2,0,2],"MBENZ":[1,4,4,2,2,1],"MMC":[2,1,1,0,1,4],"CAOACHERY":[5,3,4,6,2,3],"EFFA":[1,1,0,0,2,4],"PEUGEOT":[6,2,6,1,2,2],"VOLVO":[1,0,1,1,2,1],"KIA":[1,0,1,0,0,1],"DODGE":[0,0,0,0,0,1],"PORSCHE":[1,0,1,1,0,1],"CHANGAN":[0,0,0,0,0,1],"AUDI":[2,1,0,0,1,0],"VW":[0,0,0,0,2,0],"NISSAN":[2,1,1,1,2,0],"LANDROVER":[1,0,0,1,1,0],"LEAPMOTORS":[1,3,0,1,0,0],"MG":[0,0,1,1,0,0],"IVECO":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"DUSTER":[0,0,0,1,0,2],"KARDIAN":[8,4,3,5,5,4],"KWID":[8,7,8,6,3,9],"KANGOO":[1,1,1,1,0,2],"BOREAL":[2,5,4,3,4,2],"OROCH":[1,8,3,3,1,1],"KWID E-TECH":[2,0,0,2,0,0],"MASTER":[0,1,0,1,0,0]},"GWM":{"TANK 300":[3,4,5,0,0,1],"HAVAL H9":[1,2,2,0,5,2],"POER P30":[2,0,5,1,2,3],"HAVAL H6":[10,16,8,3,17,12],"ORA 03":[0,0,0,0,2,0],"WEY 07":[1,0,1,1,0,0]},"PEUGEOT":{"":[5,2,5,1,1,1],"EXPERT":[1,0,1,0,1,1]},"CITROEN":{"JUMPY":[0,1,0,0,0,1],"BASALT":[3,1,4,2,3,1],"C3":[2,1,3,0,3,0],"C3 AIRCROSS":[0,2,1,0,0,0]},"GEELY":{"EX2":[0,0,1,1,2,3],"EX5 EM-I":[0,0,0,0,1,0],"EX5":[0,1,0,0,0,0]}},"cidades":{"VIDEIRA":{"marcas":{"GM":[5,10,4,14,14,9],"GWM":[5,4,8,2,7,8],"VOLKSWAGEN":[16,16,22,19,27,25],"FIAT":[32,34,36,18,20,84],"BYD":[3,0,2,4,5,6],"CITROEN":[0,0,1,0,1,1],"HONDA":[0,0,3,1,0,1],"RENAULT":[6,4,2,2,3,1],"GEELY":[0,0,1,0,1,2],"JEEP":[8,4,7,5,8,2],"HYUNDAI":[3,1,3,4,2,2],"FORD":[0,1,3,1,1,1],"RAM":[0,1,3,1,2,2],"TOYOTA":[3,8,8,3,4,4],"PORSCHE":[0,0,0,0,0,1],"AUDI":[0,1,0,0,1,0],"PEUGEOT":[2,1,0,1,1,0],"MMC":[0,1,0,0,1,0],"OMODA":[0,0,1,1,0,0],"VOLVO":[0,0,0,1,0,0],"CAOACHERY":[0,2,0,2,0,0],"NISSAN":[0,0,1,1,0,0],"BMW":[1,2,0,0,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,0,1,0,2,1],"KARDIAN":[3,0,0,0,1,0],"KWID E-TECH":[1,0,0,1,0,0],"MASTER":[0,0,0,1,0,0],"OROCH":[0,2,1,0,0,0],"KWID":[2,2,0,0,0,0]},"GWM":{"TANK 300":[1,0,0,0,0,1],"HAVAL H9":[1,1,0,0,2,2],"POER P30":[0,0,2,0,0,1],"HAVAL H6":[2,3,5,1,4,4],"ORA 03":[0,0,0,0,1,0],"WEY 07":[1,0,1,1,0,0]},"PEUGEOT":{"":[2,1,0,1,1,0]},"CITROEN":{"BASALT":[0,0,0,0,1,1],"C3 AIRCROSS":[0,0,1,0,0,0]},"GEELY":{"EX2":[0,0,1,0,1,2]}}},"CACADOR":{"marcas":{"HYUNDAI":[5,6,9,8,9,13],"TOYOTA":[0,2,3,4,1,4],"JAECOO":[0,0,0,0,0,5],"FIAT":[19,25,19,18,17,16],"JETOUR":[0,0,0,0,0,1],"VOLKSWAGEN":[21,21,22,15,19,22],"GM":[4,11,10,12,7,9],"JEEP":[2,1,3,2,3,4],"HONDA":[2,15,2,6,6,5],"FORD":[3,2,5,3,3,3],"BYD":[2,0,0,6,6,11],"RAM":[1,1,1,0,2,3],"GWM":[6,7,6,1,2,1],"CAOACHERY":[0,1,3,0,0,1],"PEUGEOT":[4,1,4,0,1,2],"RENAULT":[3,4,6,3,0,1],"EFFA":[0,0,0,0,0,1],"KIA":[1,0,0,0,0,1],"BMW":[1,1,0,4,0,1],"CHANGAN":[0,0,0,0,0,1],"VW":[0,0,0,0,1,0],"CITROEN":[4,3,5,1,4,0],"GEELY":[0,0,0,0,1,0],"NISSAN":[0,0,0,0,1,0],"VOLVO":[1,0,0,0,1,0],"LANDROVER":[0,0,0,0,1,0],"LEAPMOTORS":[0,3,0,1,0,0],"MBENZ":[0,0,0,1,0,0],"MG":[0,0,0,1,0,0],"AUDI":[1,0,0,0,0,0],"PORSCHE":[1,0,0,0,0,0],"MMC":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"BOREAL":[1,0,1,0,0,1],"OROCH":[0,2,1,1,0,0],"KARDIAN":[0,1,1,1,0,0],"KWID":[2,1,3,1,0,0]},"GWM":{"HAVAL H6":[3,6,1,1,1,1],"HAVAL H9":[0,0,0,0,1,0],"POER P30":[1,0,1,0,0,0],"TANK 300":[2,1,4,0,0,0]},"PEUGEOT":{"":[3,1,4,0,0,1],"EXPERT":[1,0,0,0,1,1]},"CITROEN":{"C3":[1,1,3,0,2,0],"BASALT":[3,1,2,1,2,0],"C3 AIRCROSS":[0,1,0,0,0,0]},"GEELY":{"EX2":[0,0,0,0,1,0]}}},"LUZERNA":{"marcas":{"CITROEN":[0,0,0,0,0,1],"VOLKSWAGEN":[0,1,8,1,4,3],"FIAT":[3,2,3,0,3,2],"GM":[2,1,0,2,0,1],"EFFA":[0,0,0,0,0,1],"TOYOTA":[1,0,0,0,2,0],"GWM":[0,0,0,0,1,0],"JEEP":[0,1,1,1,1,0],"HONDA":[0,0,1,1,0,0],"RAM":[0,0,1,0,0,0],"FORD":[1,1,0,0,0,0],"RENAULT":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[0,0,0,0,1,0]},"CITROEN":{"JUMPY":[0,0,0,0,0,1]}}},"CAPINZAL":{"marcas":{"VOLKSWAGEN":[12,15,9,12,16,14],"GM":[2,0,1,0,1,3],"FIAT":[4,0,7,4,1,3],"RENAULT":[0,1,1,0,1,5],"FORD":[1,1,0,3,0,1],"HONDA":[0,0,1,0,1,1],"CAOACHERY":[1,0,0,1,1,1],"RAM":[0,0,0,1,0,1],"TOYOTA":[0,0,0,1,0,1],"JEEP":[1,2,2,1,1,1],"HYUNDAI":[0,1,0,1,1,0],"GEELY":[0,0,0,0,1,0],"BYD":[0,0,0,0,1,0],"MBENZ":[0,0,1,0,0,0],"CITROEN":[1,0,1,0,0,0],"OMODA":[0,0,1,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,1,0,1,5],"BOREAL":[0,1,0,0,0,0]},"CITROEN":{"BASALT":[0,0,1,0,0,0],"C3":[1,0,0,0,0,0]},"GEELY":{"EX5 EM-I":[0,0,0,0,1,0]}}},"HERVAL D'OESTE":{"marcas":{"HONDA":[0,0,1,0,0,2],"RENAULT":[1,1,2,1,1,1],"VOLKSWAGEN":[0,10,9,3,3,4],"JEEP":[1,3,3,2,0,2],"GM":[0,0,2,2,7,7],"FIAT":[0,0,0,1,1,1],"GWM":[1,0,0,0,0,1],"CITROEN":[0,0,0,1,1,0],"BYD":[0,0,0,0,1,0],"CAOACHERY":[0,0,0,0,1,0],"MG":[0,0,1,0,0,0],"TOYOTA":[0,0,1,0,0,0],"MBENZ":[0,1,0,0,0,0],"NISSAN":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"DUSTER":[0,0,0,0,0,1],"BOREAL":[0,0,0,0,1,0],"KWID":[0,1,0,1,0,0],"KARDIAN":[1,0,1,0,0,0],"OROCH":[0,0,1,0,0,0]},"GWM":{"HAVAL H6":[1,0,0,0,0,1]},"CITROEN":{"C3":[0,0,0,0,1,0],"BASALT":[0,0,0,1,0,0]}}},"JOACABA":{"marcas":{"GEELY":[0,1,0,1,0,1],"VOLKSWAGEN":[23,20,14,15,15,25],"TOYOTA":[0,0,0,2,0,4],"HYUNDAI":[0,0,0,0,1,1],"GM":[3,3,9,8,4,9],"JEEP":[1,6,4,3,4,5],"RENAULT":[4,7,7,9,3,5],"HONDA":[2,10,2,3,3,1],"FORD":[4,2,4,4,9,2],"BMW":[1,0,1,0,0,1],"OMODA":[0,0,0,0,0,1],"MMC":[0,0,1,0,0,1],"GWM":[0,6,3,0,4,2],"FIAT":[3,8,5,6,10,5],"EFFA":[0,0,0,0,1,2],"VOLVO":[0,0,1,0,1,1],"JAECOO":[0,0,0,0,0,1],"BYD":[2,1,2,3,2,1],"DODGE":[0,0,0,0,0,1],"RAM":[4,2,2,1,1,0],"LANDROVER":[1,0,0,1,0,0],"CAOACHERY":[1,0,0,1,0,0],"PORSCHE":[0,0,0,1,0,0],"PEUGEOT":[0,0,2,0,0,0],"MBENZ":[0,2,0,0,0,0],"CITROEN":[0,1,0,0,0,0],"IVECO":[0,1,0,0,0,0],"GAC":[1,0,0,0,0,0],"NISSAN":[1,0,0,0,0,0],"AUDI":[1,0,0,0,0,0],"LEAPMOTORS":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[1,2,3,2,0,1],"KARDIAN":[3,0,1,4,2,2],"KANGOO":[0,1,1,1,0,2],"BOREAL":[0,4,2,1,1,0],"DUSTER":[0,0,0,1,0,0]},"GWM":{"HAVAL H6":[0,4,0,0,3,2],"HAVAL H9":[0,0,1,0,1,0],"POER P30":[0,0,2,0,0,0],"TANK 300":[0,2,0,0,0,0]},"PEUGEOT":{"":[0,0,1,0,0,0],"EXPERT":[0,0,1,0,0,0]},"CITROEN":{"C3 AIRCROSS":[0,1,0,0,0,0]},"GEELY":{"EX2":[0,0,0,1,0,1],"EX5":[0,1,0,0,0,0]}}},"TREZE TILIAS":{"marcas":{"RENAULT":[0,3,0,1,1,3],"TOYOTA":[2,1,1,3,1,1],"GM":[1,1,0,3,0,4],"VOLKSWAGEN":[3,1,1,9,0,3],"JEEP":[0,0,0,0,0,2],"GWM":[1,0,0,0,3,1],"FIAT":[1,4,4,1,4,3],"HONDA":[0,0,0,0,0,1],"VW":[0,0,0,0,1,0],"FORD":[0,0,2,1,1,0],"MBENZ":[1,1,2,0,0,0],"RAM":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[0,0,0,0,0,2],"OROCH":[0,2,0,1,1,1],"MASTER":[0,1,0,0,0,0]},"GWM":{"HAVAL H6":[1,0,0,0,1,1],"HAVAL H9":[0,0,0,0,1,0],"POER P30":[0,0,0,0,1,0]}}},"FRAIBURGO":{"marcas":{"RAM":[0,0,0,0,0,1],"BYD":[0,2,0,0,1,2],"FIAT":[4,4,4,1,2,3],"FORD":[0,1,0,1,0,2],"GWM":[0,2,1,2,2,1],"HONDA":[1,0,0,1,1,1],"OMODA":[0,0,0,1,0,1],"TOYOTA":[1,1,1,0,4,4],"RENAULT":[0,0,0,2,1,1],"GM":[2,6,6,3,4,1],"VOLKSWAGEN":[0,7,7,7,4,3],"JEEP":[2,1,0,4,0,1],"MMC":[0,0,0,0,0,1],"CAOACHERY":[1,0,0,0,0,1],"BMW":[0,0,1,0,1,0],"HYUNDAI":[0,0,1,1,0,0],"JAECOO":[0,0,1,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,0,1,1],"BOREAL":[0,0,0,2,0,0]},"GWM":{"HAVAL H6":[0,1,1,1,2,1],"POER P30":[0,0,0,1,0,0],"TANK 300":[0,1,0,0,0,0]}}},"RIO DAS ANTAS":{"marcas":{"FIAT":[3,2,0,1,1,1],"RENAULT":[1,0,0,0,0,2],"GM":[1,0,0,0,1,2],"JEEP":[0,0,0,0,0,1],"VOLKSWAGEN":[0,2,2,2,1,0],"TOYOTA":[0,0,0,2,1,0],"FORD":[0,0,0,1,0,0]},"modelos":{"RENAULT":{"KWID":[1,0,0,0,0,2]}}},"TANGARA":{"marcas":{"GM":[3,1,0,1,0,2],"VOLKSWAGEN":[4,0,6,6,2,5],"FIAT":[1,4,3,0,2,3],"TOYOTA":[2,1,0,1,1,1],"JEEP":[0,1,0,1,0,1],"HYUNDAI":[0,0,0,0,1,0],"KIA":[0,0,1,0,0,0],"BYD":[0,1,0,0,0,0],"RENAULT":[1,1,0,0,0,0],"GWM":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[1,1,0,0,0,0]},"GWM":{"HAVAL H6":[1,0,0,0,0,0]}}},"AGUA DOCE":{"marcas":{"FIAT":[1,2,3,3,2,2],"BYD":[0,0,0,0,0,1],"GM":[1,0,1,1,0,1],"MMC":[0,0,0,0,0,1],"TOYOTA":[1,0,0,0,0,1],"FORD":[0,0,0,1,2,1],"GWM":[0,0,0,0,1,1],"HYUNDAI":[0,0,0,0,1,0],"NISSAN":[0,0,0,0,1,0],"VOLKSWAGEN":[2,1,1,1,1,0],"CAOACHERY":[0,0,1,0,0,0],"CITROEN":[0,0,1,0,0,0],"RENAULT":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[0,1,0,0,0,0]},"GWM":{"POER P30":[0,0,0,0,0,1],"HAVAL H6":[0,0,0,0,1,0]},"CITROEN":{"BASALT":[0,0,1,0,0,0]}}},"IOMERE":{"marcas":{"VOLKSWAGEN":[0,0,3,0,0,1],"TOYOTA":[0,1,1,1,0,2],"FIAT":[2,1,2,6,0,1],"GM":[0,1,0,0,3,0],"HONDA":[0,0,0,1,1,0],"MBENZ":[0,0,0,1,0,0],"FORD":[0,0,1,0,0,0],"PORSCHE":[0,0,1,0,0,0],"GWM":[1,0,0,0,0,0]},"modelos":{"GWM":{"HAVAL H6":[1,0,0,0,0,0]}}},"LEBON REGIS":{"marcas":{"FIAT":[2,0,1,2,1,2],"FORD":[0,0,0,0,0,1],"RAM":[1,0,0,0,0,1],"GM":[0,0,1,1,0,4],"GWM":[1,0,0,0,1,0],"VOLKSWAGEN":[0,1,1,3,0,0],"TOYOTA":[0,0,0,1,0,0],"RENAULT":[1,0,0,1,0,0],"OMODA":[0,0,1,0,0,0]},"modelos":{"RENAULT":{"KWID E-TECH":[0,0,0,1,0,0],"KANGOO":[1,0,0,0,0,0]},"GWM":{"POER P30":[1,0,0,0,1,0]}}},"OURO":{"marcas":{"VOLKSWAGEN":[5,4,0,3,6,4],"JEEP":[0,0,0,0,0,2],"FIAT":[3,1,1,1,0,1],"MMC":[0,0,0,0,0,1],"GWM":[0,1,0,0,2,0],"GM":[1,0,0,0,1,0],"TOYOTA":[0,0,1,1,0,0],"BYD":[0,0,2,0,0,0],"HYUNDAI":[0,0,1,0,0,0],"HONDA":[1,0,0,0,0,0],"EFFA":[1,0,0,0,0,0],"FORD":[1,0,0,0,0,0],"CAOACHERY":[1,0,0,0,0,0]},"modelos":{"GWM":{"HAVAL H6":[0,0,0,0,2,0],"HAVAL H9":[0,1,0,0,0,0]}}},"IBICARE":{"marcas":{"FIAT":[1,4,0,1,2,2],"VOLKSWAGEN":[3,1,0,0,1,1],"GWM":[0,0,0,0,0,1],"BYD":[0,0,0,1,1,0],"RENAULT":[1,0,0,1,1,0],"HYUNDAI":[0,0,0,1,0,0],"TOYOTA":[0,0,1,0,0,0],"GM":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[0,0,0,0,1,0],"OROCH":[0,0,0,1,0,0],"KWID E-TECH":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[0,0,0,0,0,1]}}},"SALTO VELOSO":{"marcas":{"FIAT":[0,0,0,0,2,2],"MBENZ":[0,0,0,0,1,1],"GM":[0,3,2,1,2,1],"TOYOTA":[0,1,1,0,1,1],"VOLKSWAGEN":[2,0,2,1,1,0],"RAM":[0,0,0,0,1,0],"JEEP":[0,0,1,1,0,0],"FORD":[1,0,0,1,0,0]},"modelos":{}},"JABORA":{"marcas":{"GAC":[0,0,0,0,0,1],"BYD":[0,0,0,0,0,1],"FORD":[0,1,1,0,0,1],"RENAULT":[0,0,0,0,1,0],"GWM":[0,0,0,0,1,0],"GM":[0,0,1,0,2,0],"VOLKSWAGEN":[0,1,6,1,0,0],"RAM":[0,0,0,1,0,0],"JEEP":[0,1,0,1,0,0],"FIAT":[0,0,1,0,0,0],"TOYOTA":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,0,1,0]},"GWM":{"ORA 03":[0,0,0,0,1,0]}}},"CATANDUVAS":{"marcas":{"JEEP":[0,0,0,0,0,1],"FIAT":[0,2,4,2,3,2],"VOLKSWAGEN":[1,2,1,1,3,2],"GWM":[0,1,0,0,1,2],"RENAULT":[1,2,1,2,0,1],"BYD":[0,0,0,0,0,1],"HONDA":[0,0,0,0,0,1],"GM":[1,3,4,1,0,1],"FORD":[0,0,1,1,1,0],"JAECOO":[0,0,0,1,0,0],"CAOACHERY":[1,0,0,1,0,0],"NISSAN":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"DUSTER":[0,0,0,0,0,1],"KWID":[0,0,1,2,0,0],"OROCH":[0,1,0,0,0,0],"KARDIAN":[0,1,0,0,0,0],"BOREAL":[1,0,0,0,0,0]},"GWM":{"POER P30":[0,0,0,0,0,1],"HAVAL H6":[0,1,0,0,1,1]}}},"ARROIO TRINTA":{"marcas":{"RAM":[0,0,0,0,0,1],"BMW":[0,0,0,0,0,1],"VOLKSWAGEN":[1,1,2,1,0,1],"GM":[0,2,0,1,0,2],"JEEP":[0,0,0,0,1,0],"FORD":[0,1,0,0,2,0],"FIAT":[1,2,1,1,1,0],"TOYOTA":[0,1,0,1,1,0],"CAOACHERY":[0,0,0,1,0,0],"GWM":[0,0,1,0,0,0],"RENAULT":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[0,1,0,0,0,0]},"GWM":{"HAVAL H9":[0,0,1,0,0,0]}}},"IBIAM":{"marcas":{"BYD":[0,0,0,0,0,2],"FIAT":[0,1,2,0,0,1],"VOLKSWAGEN":[0,2,0,1,1,0],"RENAULT":[0,0,0,0,1,0],"FORD":[0,1,1,0,1,0],"GM":[2,0,1,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[0,0,0,0,1,0]}}},"PINHEIRO PRETO":{"marcas":{"VOLKSWAGEN":[0,0,2,4,4,2],"GM":[0,0,1,0,0,1],"BYD":[0,0,0,0,1,0],"RAM":[0,0,0,0,1,0],"HYUNDAI":[0,0,0,2,0,0],"GWM":[1,1,2,0,0,0],"TOYOTA":[0,0,1,0,0,0],"RENAULT":[0,1,0,0,0,0],"FIAT":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,1,0,0,0,0]},"GWM":{"HAVAL H6":[1,1,1,0,0,0],"TANK 300":[0,0,1,0,0,0]}}},"ERVAL VELHO":{"marcas":{"FIAT":[1,1,1,1,1,1],"EFFA":[0,1,0,0,1,0],"MBENZ":[0,0,1,0,1,0],"GM":[0,0,1,1,0,0],"VOLKSWAGEN":[3,3,1,1,0,0],"FORD":[0,1,1,0,0,0],"HONDA":[0,0,1,0,0,0],"CITROEN":[0,1,0,0,0,0],"RENAULT":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[1,0,0,0,0,0]},"CITROEN":{"JUMPY":[0,1,0,0,0,0]}}},"MATOS COSTA":{"marcas":{"GM":[0,1,1,0,0,1],"TOYOTA":[0,0,0,1,0,0],"FORD":[0,0,1,0,0,0],"VOLKSWAGEN":[0,2,0,0,0,0],"BYD":[0,1,0,0,0,0]},"modelos":{}},"LACERDOPOLIS":{"marcas":{"VOLKSWAGEN":[3,2,1,1,2,1],"GM":[1,0,0,1,1,1],"GWM":[0,0,0,0,1,0],"FIAT":[0,0,1,0,2,0],"RENAULT":[1,0,0,0,0,0],"MMC":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[0,0,0,0,1,0]}}}}},"PORTO UNIAO":{"marcas":{"GM":[4,4,6,4,6,9],"TOYOTA":[0,0,2,5,4,2],"VOLKSWAGEN":[10,6,6,17,6,6],"OMODA":[0,1,0,1,0,1],"FIAT":[4,10,4,4,5,8],"BYD":[1,0,2,0,3,1],"LEAPMOTORS":[0,0,0,0,0,1],"GEELY":[0,0,0,0,1,1],"HYUNDAI":[0,0,0,1,0,1],"FORD":[4,2,3,0,3,1],"NISSAN":[0,0,0,0,1,0],"RAM":[0,0,0,0,1,0],"RENAULT":[3,3,2,4,0,0],"CAOACHERY":[0,0,2,2,0,0],"JEEP":[0,3,0,2,0,0],"GWM":[0,0,0,3,0,0],"MMC":[0,0,1,1,0,0],"JAECOO":[1,0,1,0,0,0],"HONDA":[0,0,1,0,0,0],"PEUGEOT":[0,0,1,0,0,0],"VOLVO":[0,1,0,0,0,0],"BMW":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[1,1,0,1,0,0],"BOREAL":[0,1,0,2,0,0],"KWID":[1,0,1,1,0,0],"DUSTER":[0,1,1,0,0,0],"OROCH":[1,0,0,0,0,0]},"GWM":{"HAVAL H9":[0,0,0,1,0,0],"TANK 300":[0,0,0,1,0,0],"HAVAL H6":[0,0,0,1,0,0]},"PEUGEOT":{"EXPERT":[0,0,1,0,0,0]},"GEELY":{"EX2":[0,0,0,0,1,1]}},"cidades":{"PORTO UNIAO":{"marcas":{"GM":[4,4,6,4,6,9],"TOYOTA":[0,0,2,5,4,2],"VOLKSWAGEN":[10,6,6,17,6,6],"OMODA":[0,1,0,1,0,1],"FIAT":[4,10,4,4,5,8],"BYD":[1,0,2,0,3,1],"LEAPMOTORS":[0,0,0,0,0,1],"GEELY":[0,0,0,0,1,1],"HYUNDAI":[0,0,0,1,0,1],"FORD":[4,2,3,0,3,1],"NISSAN":[0,0,0,0,1,0],"RAM":[0,0,0,0,1,0],"RENAULT":[3,3,2,4,0,0],"CAOACHERY":[0,0,2,2,0,0],"JEEP":[0,3,0,2,0,0],"GWM":[0,0,0,3,0,0],"MMC":[0,0,1,1,0,0],"JAECOO":[1,0,1,0,0,0],"HONDA":[0,0,1,0,0,0],"PEUGEOT":[0,0,1,0,0,0],"VOLVO":[0,1,0,0,0,0],"BMW":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[1,1,0,1,0,0],"BOREAL":[0,1,0,2,0,0],"KWID":[1,0,1,1,0,0],"DUSTER":[0,1,1,0,0,0],"OROCH":[1,0,0,0,0,0]},"GWM":{"HAVAL H9":[0,0,0,1,0,0],"TANK 300":[0,0,0,1,0,0],"HAVAL H6":[0,0,0,1,0,0]},"PEUGEOT":{"EXPERT":[0,0,1,0,0,0]},"GEELY":{"EX2":[0,0,0,0,1,1]}}}}},"RIO DO SUL":{"marcas":{"GM":[22,29,36,28,32,28],"MBENZ":[2,6,2,3,3,4],"VOLKSWAGEN":[30,54,63,45,47,44],"FIAT":[43,52,47,44,39,48],"HONDA":[8,11,19,11,12,16],"JEEP":[16,20,20,17,24,14],"HYUNDAI":[10,8,18,16,15,8],"BYD":[8,11,25,19,35,28],"TOYOTA":[4,6,11,10,12,17],"RENAULT":[11,6,9,15,7,3],"FORD":[2,10,6,10,12,8],"GAC":[1,1,1,0,0,1],"GEELY":[0,0,1,1,2,6],"JAECOO":[0,0,1,1,2,1],"LANDROVER":[2,0,0,1,1,1],"GWM":[0,4,4,6,11,3],"NISSAN":[4,4,4,3,2,2],"CAOACHERY":[0,2,2,0,2,2],"KIA":[0,2,0,0,1,1],"RAM":[1,1,2,0,1,2],"PEUGEOT":[3,2,3,1,1,3],"OMODA":[1,0,0,1,4,1],"MMC":[1,0,2,1,4,1],"BMW":[1,0,3,2,3,1],"VW":[0,0,0,0,2,0],"MG":[0,0,1,0,1,0],"AUDI":[0,0,1,0,1,0],"PORSCHE":[2,0,0,0,1,0],"VOLVO":[1,0,1,0,1,0],"CITROEN":[0,0,0,1,0,0],"JETOUR":[0,0,1,0,0,0],"EFFA":[1,1,0,0,0,0],"LEAPMOTORS":[1,0,0,0,0,0],"ZEEKR":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[3,1,0,7,3,3],"KARDIAN":[1,1,2,1,2,0],"DUSTER":[1,0,5,2,1,0],"OROCH":[2,0,0,0,1,0],"BOREAL":[3,4,2,2,0,0],"MASTER":[0,0,0,3,0,0],"KANGOO":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[0,3,1,4,6,2],"ORA 03":[0,0,1,0,1,1],"WEY 07":[0,0,1,1,2,0],"TANK 300":[0,0,0,1,1,0],"HAVAL H9":[0,1,1,0,1,0]},"PEUGEOT":{"EXPERT":[1,0,3,0,1,3],"":[2,2,0,1,0,0]},"CITROEN":{"BASALT":[0,0,0,1,0,0]},"GEELY":{"EX5":[0,0,0,0,0,2],"EX2":[0,0,1,1,2,4]}},"cidades":{"RIO DO SUL":{"marcas":{"GM":[8,16,17,6,11,10],"HONDA":[5,5,13,6,5,4],"JEEP":[10,13,8,11,13,8],"HYUNDAI":[9,3,13,6,10,4],"BYD":[7,8,17,15,24,22],"RENAULT":[5,2,7,4,3,1],"FIAT":[9,13,12,9,15,17],"MBENZ":[1,4,2,2,2,3],"TOYOTA":[2,5,3,3,3,6],"JAECOO":[0,0,1,0,0,1],"VOLKSWAGEN":[11,21,30,19,26,19],"GEELY":[0,0,0,1,2,4],"NISSAN":[1,1,4,0,0,2],"KIA":[0,0,0,0,0,1],"CAOACHERY":[0,1,0,0,1,1],"PEUGEOT":[2,2,2,1,0,1],"GWM":[0,3,3,3,6,2],"FORD":[0,6,0,3,3,1],"BMW":[1,0,3,1,2,0],"OMODA":[1,0,0,0,1,0],"MMC":[1,0,1,0,3,0],"VW":[0,0,0,0,1,0],"LANDROVER":[1,0,0,1,1,0],"MG":[0,0,0,0,1,0],"VOLVO":[1,0,1,0,1,0],"AUDI":[0,0,1,0,0,0],"JETOUR":[0,0,1,0,0,0],"RAM":[0,0,1,0,0,0],"EFFA":[1,1,0,0,0,0],"LEAPMOTORS":[1,0,0,0,0,0],"PORSCHE":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,1,1,1],"KARDIAN":[1,1,1,1,2,0],"BOREAL":[2,1,1,1,0,0],"MASTER":[0,0,0,1,0,0],"DUSTER":[1,0,5,0,0,0],"OROCH":[1,0,0,0,0,0]},"GWM":{"ORA 03":[0,0,1,0,0,1],"HAVAL H6":[0,2,1,2,5,1],"WEY 07":[0,0,1,1,1,0],"HAVAL H9":[0,1,0,0,0,0]},"PEUGEOT":{"EXPERT":[0,0,2,0,0,1],"":[2,2,0,1,0,0]},"GEELY":{"EX2":[0,0,0,1,2,3],"EX5":[0,0,0,0,0,1]}}},"TROMBUDO CENTRAL":{"marcas":{"MBENZ":[0,0,0,0,0,1],"VOLKSWAGEN":[1,2,1,2,1,2],"FORD":[0,0,1,1,0,1],"JEEP":[1,2,1,1,1,0],"BYD":[0,0,0,1,1,0],"RENAULT":[1,0,1,1,1,0],"HONDA":[0,0,0,1,0,0],"HYUNDAI":[0,0,0,1,0,0],"GM":[0,0,4,0,0,0],"TOYOTA":[0,0,1,0,0,0],"FIAT":[0,1,1,0,0,0]},"modelos":{"RENAULT":{"DUSTER":[0,0,0,1,1,0],"KARDIAN":[0,0,1,0,0,0],"KWID":[1,0,0,0,0,0]}}},"RIO DO CAMPO":{"marcas":{"FIAT":[0,1,1,1,1,2],"VOLKSWAGEN":[0,0,1,0,0,1],"TOYOTA":[0,0,0,0,0,1],"PEUGEOT":[0,0,0,0,0,2],"GM":[0,0,1,1,4,0],"FORD":[0,0,0,2,0,0],"RENAULT":[0,0,0,1,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,1,0,0]},"PEUGEOT":{"EXPERT":[0,0,0,0,0,2]}}},"VITOR MEIRELES":{"marcas":{"FIAT":[0,2,1,0,1,3],"GM":[0,0,1,0,0,1],"FORD":[0,0,0,0,0,1],"HONDA":[0,1,0,0,1,0],"VOLKSWAGEN":[0,0,1,1,0,0],"TOYOTA":[0,0,1,0,0,0],"CAOACHERY":[0,0,1,0,0,0],"KIA":[0,1,0,0,0,0],"NISSAN":[1,0,0,0,0,0]},"modelos":{}},"PRESIDENTE NEREU":{"marcas":{"HYUNDAI":[0,0,1,0,0,1],"FIAT":[1,2,1,2,1,1],"TOYOTA":[0,0,0,1,1,0],"GM":[0,0,0,1,0,0]},"modelos":{}},"IBIRAMA":{"marcas":{"TOYOTA":[1,0,0,1,2,1],"GEELY":[0,0,1,0,0,1],"FIAT":[2,5,3,6,2,3],"GM":[1,8,3,8,2,6],"VOLKSWAGEN":[2,2,1,4,4,3],"BYD":[1,0,1,0,4,1],"HONDA":[1,1,0,3,2,3],"JEEP":[0,0,1,0,1,1],"GWM":[0,0,0,1,2,0],"RENAULT":[0,0,0,5,1,0],"HYUNDAI":[0,0,1,0,2,0],"BMW":[0,0,0,0,1,0],"FORD":[0,1,0,2,1,0],"CITROEN":[0,0,0,1,0,0],"MG":[0,0,1,0,0,0],"CAOACHERY":[0,0,1,0,0,0],"KIA":[0,1,0,0,0,0],"MBENZ":[0,1,0,0,0,0],"PEUGEOT":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,4,1,0],"DUSTER":[0,0,0,1,0,0]},"GWM":{"HAVAL H6":[0,0,0,1,1,0],"WEY 07":[0,0,0,0,1,0]},"PEUGEOT":{"EXPERT":[1,0,0,0,0,0]},"CITROEN":{"BASALT":[0,0,0,1,0,0]},"GEELY":{"EX5":[0,0,0,0,0,1],"EX2":[0,0,1,0,0,0]}}},"LAURENTINO":{"marcas":{"HONDA":[0,1,0,0,0,1],"VOLKSWAGEN":[2,0,4,0,0,1],"JEEP":[0,0,0,0,1,1],"FIAT":[5,0,2,1,2,2],"RENAULT":[0,1,0,0,0,1],"BYD":[0,0,1,1,1,0],"FORD":[0,0,1,0,2,0],"GM":[1,0,2,1,2,0],"MBENZ":[0,0,0,1,0,0],"HYUNDAI":[0,0,0,1,0,0],"NISSAN":[0,0,0,1,0,0],"TOYOTA":[0,1,1,0,0,0],"GWM":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,0,0,1],"BOREAL":[0,1,0,0,0,0]},"GWM":{"HAVAL H6":[0,1,0,0,0,0]}}},"PRESIDENTE GETULIO":{"marcas":{"FORD":[1,0,1,1,1,1],"FIAT":[5,4,3,3,2,5],"TOYOTA":[0,0,1,2,0,3],"VOLKSWAGEN":[3,6,6,2,4,1],"HONDA":[2,0,0,1,2,3],"JEEP":[0,2,6,0,0,1],"GWM":[0,0,0,1,1,1],"GM":[2,0,1,1,3,2],"RAM":[0,1,0,0,0,2],"MMC":[0,0,1,0,1,0],"BYD":[0,0,2,0,1,0],"AUDI":[0,0,0,0,1,0],"PORSCHE":[1,0,0,0,1,0],"HYUNDAI":[1,0,0,1,0,0],"RENAULT":[1,0,0,1,0,0],"NISSAN":[1,0,0,1,0,0],"GAC":[0,1,1,0,0,0],"LANDROVER":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,0,1,0,0],"OROCH":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[0,0,0,0,0,1],"TANK 300":[0,0,0,1,1,0]}}},"LONTRAS":{"marcas":{"FORD":[0,0,0,0,1,1],"GAC":[0,0,0,0,0,1],"BYD":[0,1,1,1,3,1],"HONDA":[0,0,0,0,0,2],"FIAT":[2,3,3,4,2,2],"TOYOTA":[0,0,1,0,0,2],"GEELY":[0,0,0,0,0,1],"VOLKSWAGEN":[2,2,1,2,1,1],"OMODA":[0,0,0,0,1,1],"HYUNDAI":[0,2,0,2,0,1],"JAECOO":[0,0,0,0,1,0],"VW":[0,0,0,0,1,0],"GM":[2,2,0,1,3,0],"NISSAN":[0,2,0,0,1,0],"MBENZ":[0,0,0,0,1,0],"RAM":[1,0,0,0,1,0],"JEEP":[0,0,2,0,0,0],"RENAULT":[1,1,0,0,0,0],"ZEEKR":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,1,0,0,0,0],"KWID":[1,0,0,0,0,0]},"GEELY":{"EX2":[0,0,0,0,0,1]}}},"RIO DO OESTE":{"marcas":{"TOYOTA":[0,0,0,0,1,2],"RENAULT":[0,0,1,0,2,0],"HYUNDAI":[0,0,0,0,1,0],"VOLKSWAGEN":[0,3,1,2,1,0],"FIAT":[3,2,3,2,1,0],"GM":[1,1,3,0,1,0],"FORD":[0,0,0,0,1,0],"NISSAN":[0,0,0,0,1,0],"BYD":[0,2,0,0,1,0],"HONDA":[0,0,2,0,0,0],"JEEP":[0,0,1,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,0,1,0],"OROCH":[0,0,0,0,1,0],"BOREAL":[0,0,1,0,0,0]}}},"SALETE":{"marcas":{"FIAT":[1,1,0,3,0,2],"LANDROVER":[0,0,0,0,0,1],"CAOACHERY":[0,0,0,0,0,1],"TOYOTA":[1,0,0,0,0,1],"HONDA":[0,1,0,0,0,1],"HYUNDAI":[0,0,0,0,1,0],"GM":[1,0,0,0,2,0],"NISSAN":[0,0,0,1,0,0],"MMC":[0,0,0,1,0,0],"VOLKSWAGEN":[0,2,2,1,0,0],"BYD":[0,0,1,0,0,0],"RENAULT":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,1,0,0,0,0]}}},"AGRONOMICA":{"marcas":{"FIAT":[1,1,2,1,3,4],"HONDA":[0,1,0,0,0,1],"RENAULT":[0,0,0,1,0,1],"VOLKSWAGEN":[3,2,0,5,3,2],"HYUNDAI":[0,0,0,1,0,1],"GM":[1,0,1,0,0,2],"JEEP":[1,0,0,0,2,0],"TOYOTA":[0,0,0,1,0,0],"FORD":[0,2,1,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,0,0,1],"BOREAL":[0,0,0,1,0,0]}}},"AURORA":{"marcas":{"VOLKSWAGEN":[0,2,2,1,0,2],"GM":[0,0,1,1,0,1],"JEEP":[1,0,0,0,0,1],"HYUNDAI":[0,1,0,1,0,1],"FORD":[0,0,0,0,2,0],"FIAT":[0,4,1,0,1,0],"TOYOTA":[0,0,1,0,0,0]},"modelos":{}},"JOSE BOITEUX":{"marcas":{"FIAT":[2,0,0,3,1,2],"FORD":[0,0,0,0,0,1],"GM":[0,0,0,0,0,1],"VOLKSWAGEN":[0,0,0,0,0,1],"TOYOTA":[0,0,1,1,1,0],"RENAULT":[1,0,0,1,0,0],"JEEP":[0,1,0,1,0,0],"BYD":[0,0,1,0,0,0],"HYUNDAI":[0,0,1,0,0,0],"NISSAN":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,0,1,0,0],"BOREAL":[1,0,0,0,0,0]}}},"POUSO REDONDO":{"marcas":{"GM":[2,2,2,4,2,3],"JEEP":[2,0,1,1,0,1],"BYD":[0,0,0,0,0,1],"VOLKSWAGEN":[0,3,6,1,5,4],"FIAT":[7,5,7,7,2,4],"FORD":[1,0,1,0,0,1],"KIA":[0,0,0,0,1,0],"TOYOTA":[0,0,0,0,3,0],"CAOACHERY":[0,0,0,0,1,0],"GWM":[0,0,0,1,0,0],"HYUNDAI":[0,1,2,2,0,0],"HONDA":[0,0,1,0,0,0]},"modelos":{"GWM":{"HAVAL H6":[0,0,0,1,0,0]}}},"TAIO":{"marcas":{"BYD":[0,0,1,1,0,2],"VOLKSWAGEN":[5,5,3,4,1,3],"FIAT":[4,5,7,2,4,1],"MMC":[0,0,0,0,0,1],"BMW":[0,0,0,1,0,1],"JEEP":[1,1,0,1,6,1],"HONDA":[0,0,2,0,2,0],"GWM":[0,0,0,0,2,0],"FORD":[0,1,0,1,1,0],"GM":[1,0,0,3,1,0],"JAECOO":[0,0,0,1,1,0],"OMODA":[0,0,0,1,2,0],"HYUNDAI":[0,0,0,1,0,0],"RENAULT":[2,1,0,1,0,0],"TOYOTA":[0,0,1,0,0,0],"MBENZ":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[1,1,0,1,0,0],"KANGOO":[1,0,0,0,0,0]},"GWM":{"ORA 03":[0,0,0,0,1,0],"HAVAL H9":[0,0,0,0,1,0]}}},"WITMARSUM":{"marcas":{"VOLKSWAGEN":[0,0,3,0,0,2],"GM":[0,0,0,0,0,1],"PEUGEOT":[0,0,1,0,1,0],"TOYOTA":[0,0,0,1,1,0],"JEEP":[0,1,0,1,0,0],"RAM":[0,0,1,0,0,0],"GWM":[0,0,1,0,0,0],"CAOACHERY":[0,1,0,0,0,0],"FIAT":[0,2,0,0,0,0],"MBENZ":[1,0,0,0,0,0]},"modelos":{"GWM":{"HAVAL H9":[0,0,1,0,0,0]},"PEUGEOT":{"EXPERT":[0,0,1,0,1,0]}}},"MIRIM DOCE":{"marcas":{"TOYOTA":[0,0,0,0,0,1],"FIAT":[0,1,0,0,1,0],"GM":[1,0,0,0,1,0],"JEEP":[0,0,0,1,0,0],"VOLKSWAGEN":[0,2,0,0,0,0]},"modelos":{}},"BRACO DO TROMBUDO":{"marcas":{"HONDA":[0,1,1,0,0,1],"FORD":[0,0,1,0,0,1],"GM":[0,0,0,0,0,1],"VOLKSWAGEN":[1,2,0,0,1,0],"HYUNDAI":[0,1,0,0,0,0],"GAC":[1,0,0,0,0,0]},"modelos":{}},"DONA EMMA":{"marcas":{"VOLKSWAGEN":[0,0,1,1,0,2],"BYD":[0,0,0,0,0,1],"HYUNDAI":[0,0,0,0,1,0],"GM":[1,0,0,1,0,0],"FIAT":[1,0,0,0,0,0],"NISSAN":[1,0,0,0,0,0]},"modelos":{}}}},"SAO MIGUEL DO OESTE":{"marcas":{"EFFA":[1,0,0,0,0,1],"JEEP":[2,4,6,1,8,4],"FIAT":[26,22,49,32,33,35],"GM":[8,6,13,10,17,11],"CAOACHERY":[4,0,4,1,1,3],"BMW":[2,0,0,0,0,1],"VOLKSWAGEN":[12,6,33,22,23,22],"FORD":[6,4,8,7,1,10],"HYUNDAI":[4,3,5,2,3,6],"TOYOTA":[3,2,3,7,7,6],"GWM":[3,0,1,3,2,4],"OMODA":[1,0,1,0,0,1],"JAECOO":[0,0,1,0,1,4],"RENAULT":[2,1,4,1,1,3],"HONDA":[2,1,2,6,3,2],"RAM":[1,0,0,0,0,1],"BYD":[0,0,0,4,1,1],"GEELY":[0,0,0,0,0,1],"MBENZ":[0,0,1,0,2,0],"PEUGEOT":[0,0,0,1,0,0],"LANDROVER":[0,0,0,1,0,0],"VOLVO":[0,0,2,0,0,0],"MMC":[0,0,1,0,0,0],"MG":[0,1,0,0,0,0],"PORSCHE":[0,1,0,0,0,0],"CITROEN":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[1,0,1,0,0,1],"MASTER":[1,1,3,1,0,2],"BOREAL":[0,0,0,0,1,0]},"GWM":{"HAVAL H6":[2,0,1,2,2,4],"TANK 300":[0,0,0,1,0,0],"HAVAL H9":[1,0,0,0,0,0]},"PEUGEOT":{"":[0,0,0,1,0,0]},"CITROEN":{"C3":[1,0,0,0,0,0]},"GEELY":{"EX5 EM-I":[0,0,0,0,0,1]}},"cidades":{"SAO JOAO DO OESTE":{"marcas":{"EFFA":[0,0,0,0,0,1],"FIAT":[4,4,4,6,2,5],"BMW":[0,0,0,0,0,1],"GWM":[0,0,0,0,0,1],"VOLKSWAGEN":[0,0,1,0,2,2],"TOYOTA":[1,0,0,0,0,2],"HYUNDAI":[1,0,2,1,2,2],"GEELY":[0,0,0,0,0,1],"RENAULT":[0,0,1,1,0,0],"JEEP":[1,0,1,0,0,0],"GM":[1,0,1,0,0,0],"FORD":[0,0,1,0,0,0],"MG":[0,1,0,0,0,0],"HONDA":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,1,1,0,0]},"GWM":{"HAVAL H6":[0,0,0,0,0,1]},"GEELY":{"EX5 EM-I":[0,0,0,0,0,1]}}},"SAO JOSE DO CEDRO":{"marcas":{"JEEP":[0,0,1,0,1,2],"GM":[0,0,0,1,2,5],"VOLKSWAGEN":[0,0,8,4,3,3],"FORD":[1,0,0,3,0,1],"GWM":[0,0,0,0,1,1],"JAECOO":[0,0,0,0,0,1],"FIAT":[0,2,4,6,6,0],"TOYOTA":[0,0,0,1,0,0],"HONDA":[0,1,0,3,0,0],"HYUNDAI":[0,0,1,1,0,0],"BYD":[0,0,0,1,0,0]},"modelos":{"GWM":{"HAVAL H6":[0,0,0,0,1,1]}}},"DIONISIO CERQUEIRA":{"marcas":{"FIAT":[1,1,2,0,1,1],"FORD":[1,0,0,0,0,2],"JEEP":[0,2,1,0,2,1],"GM":[1,3,0,2,2,1],"VOLKSWAGEN":[4,0,7,6,5,3],"HYUNDAI":[0,0,0,0,0,1],"GWM":[0,0,0,1,0,0],"TOYOTA":[0,0,1,1,0,0],"HONDA":[1,0,1,0,0,0],"CAOACHERY":[1,0,1,0,0,0],"BMW":[1,0,0,0,0,0]},"modelos":{"GWM":{"HAVAL H6":[0,0,0,1,0,0]}}},"IPORA DO OESTE":{"marcas":{"CAOACHERY":[0,0,0,0,0,3],"FIAT":[4,3,10,2,1,3],"FORD":[0,0,0,1,0,1],"OMODA":[0,0,0,0,0,1],"HYUNDAI":[0,0,1,0,0,1],"VOLKSWAGEN":[1,1,3,4,3,1],"GWM":[1,0,0,0,0,1],"BYD":[0,0,0,0,1,0],"GM":[0,1,2,0,1,0],"TOYOTA":[0,0,0,0,1,0],"RENAULT":[0,0,1,0,0,0],"CITROEN":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,1,0,0,0]},"GWM":{"HAVAL H6":[1,0,0,0,0,1]},"CITROEN":{"C3":[1,0,0,0,0,0]}}},"ITAPIRANGA":{"marcas":{"VOLKSWAGEN":[0,2,1,3,1,2],"FIAT":[4,4,7,3,3,5],"GM":[1,0,2,3,3,1],"TOYOTA":[0,2,0,0,0,1],"HONDA":[0,0,0,0,1,2],"JAECOO":[0,0,1,0,0,1],"GWM":[1,0,1,2,0,1],"JEEP":[1,1,2,0,1,0],"MBENZ":[0,0,0,0,1,0],"CAOACHERY":[0,0,1,0,1,0],"HYUNDAI":[0,0,0,0,1,0],"BYD":[0,0,0,1,0,0],"OMODA":[0,0,1,0,0,0],"VOLVO":[0,0,2,0,0,0]},"modelos":{"GWM":{"HAVAL H6":[1,0,1,1,0,1],"TANK 300":[0,0,0,1,0,0]}}},"DESCANSO":{"marcas":{"FIAT":[2,2,5,3,2,5],"GM":[0,0,1,1,1,1],"VOLKSWAGEN":[0,0,1,1,2,3],"RENAULT":[0,0,0,0,0,1],"TOYOTA":[0,0,0,0,2,0],"FORD":[0,1,2,1,0,0],"MBENZ":[0,0,1,0,0,0],"CAOACHERY":[1,0,1,0,0,0],"MMC":[0,0,1,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,0,0,0,0,1]}}},"MONDAI":{"marcas":{"FORD":[2,0,0,0,0,2],"VOLKSWAGEN":[4,2,5,0,0,2],"JAECOO":[0,0,0,0,0,1],"FIAT":[2,0,2,1,4,2],"TOYOTA":[0,0,0,0,1,0],"JEEP":[0,0,0,0,1,0],"GM":[1,0,0,0,1,0],"PEUGEOT":[0,0,0,1,0,0],"CAOACHERY":[1,0,0,1,0,0],"LANDROVER":[0,0,0,1,0,0],"BYD":[0,0,0,1,0,0],"HYUNDAI":[1,0,0,0,0,0],"BMW":[1,0,0,0,0,0]},"modelos":{"PEUGEOT":{"":[0,0,0,1,0,0]}}},"GUARUJA DO SUL":{"marcas":{"FIAT":[3,0,1,0,0,1],"TOYOTA":[0,0,1,0,0,1],"FORD":[1,1,0,0,1,0],"HONDA":[0,0,0,1,0,0],"GM":[0,0,1,0,0,0],"PORSCHE":[0,1,0,0,0,0],"RENAULT":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[1,0,0,0,0,0]}}},"ROMELANDIA":{"marcas":{"FORD":[0,0,0,0,0,1],"VOLKSWAGEN":[0,1,0,0,1,1],"GM":[0,0,0,1,1,0],"FIAT":[0,0,0,0,2,0],"HYUNDAI":[1,0,0,0,0,0]},"modelos":{}},"GUARACIABA":{"marcas":{"FIAT":[1,2,3,4,4,5],"FORD":[0,0,1,0,0,1],"GM":[0,0,0,0,4,0],"JEEP":[0,1,0,0,2,0],"HONDA":[0,0,1,0,1,0],"VOLKSWAGEN":[0,0,2,1,1,0],"TOYOTA":[0,0,1,1,0,0],"RENAULT":[0,0,1,0,0,0],"HYUNDAI":[0,1,1,0,0,0],"EFFA":[1,0,0,0,0,0],"RAM":[1,0,0,0,0,0],"CAOACHERY":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,1,0,0,0]}}},"TUNAPOLIS":{"marcas":{"HYUNDAI":[0,1,0,0,0,1],"FIAT":[1,2,2,0,3,2],"GM":[0,0,0,0,0,2],"VOLKSWAGEN":[1,0,1,1,2,2],"TOYOTA":[0,0,0,1,3,1],"JEEP":[0,0,0,0,1,1],"FORD":[0,0,1,2,0,0]},"modelos":{}},"BARRA BONITA":{"marcas":{"FIAT":[0,0,1,0,1,2],"VOLKSWAGEN":[0,0,1,0,0,0],"CAOACHERY":[0,0,1,0,0,0],"FORD":[0,1,0,0,0,0]},"modelos":{}},"PALMA SOLA":{"marcas":{"JAECOO":[0,0,0,0,1,1],"RENAULT":[0,0,0,0,1,2],"RAM":[0,0,0,0,0,1],"GM":[1,1,0,1,1,1],"VOLKSWAGEN":[1,0,1,0,1,0],"GWM":[0,0,0,0,1,0],"FIAT":[0,1,3,2,0,0],"BYD":[0,0,0,1,0,0],"FORD":[0,0,1,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,0,0,1],"MASTER":[0,0,0,0,0,1],"BOREAL":[0,0,0,0,1,0]},"GWM":{"HAVAL H6":[0,0,0,0,1,0]}}},"RIQUEZA":{"marcas":{"TOYOTA":[0,0,0,1,0,1],"VOLKSWAGEN":[0,0,1,0,1,2],"FIAT":[1,0,1,0,2,1],"HONDA":[0,0,0,1,0,0],"JEEP":[0,0,1,0,0,0],"GM":[1,1,4,0,0,0],"FORD":[0,1,1,0,0,0],"RENAULT":[0,1,0,0,0,0],"OMODA":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[0,1,0,0,0,0]}}},"BELMONTE":{"marcas":{"FORD":[0,0,0,0,0,1],"FIAT":[1,0,1,1,1,2],"GM":[1,0,0,1,1,0],"VOLKSWAGEN":[0,0,0,1,0,0],"TOYOTA":[0,0,0,1,0,0],"HONDA":[0,0,0,1,0,0]},"modelos":{}},"ANCHIETA":{"marcas":{"BYD":[0,0,0,0,0,1],"FIAT":[1,0,2,1,0,1],"HYUNDAI":[1,1,0,0,0,1],"HONDA":[0,0,0,0,1,0],"MBENZ":[0,0,0,0,1,0],"VOLKSWAGEN":[1,0,0,1,0,0],"GM":[0,0,1,0,0,0],"FORD":[0,0,1,0,0,0],"RENAULT":[1,0,1,0,0,0],"GWM":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"MASTER":[1,0,1,0,0,0]},"GWM":{"HAVAL H9":[1,0,0,0,0,0]}}},"PRINCESA":{"marcas":{"FORD":[0,0,0,0,0,1],"VOLKSWAGEN":[0,0,0,0,1,0],"FIAT":[0,0,0,0,1,0],"TOYOTA":[0,0,0,1,0,0],"GM":[0,0,1,0,0,0]},"modelos":{}},"BANDEIRANTE":{"marcas":{"VOLKSWAGEN":[0,0,1,0,0,1],"JEEP":[0,0,0,1,0,0],"FIAT":[1,1,1,3,0,0],"FORD":[1,0,0,0,0,0],"GM":[1,0,0,0,0,0],"TOYOTA":[2,0,0,0,0,0]},"modelos":{}}}},"XANXERE":{"marcas":{"AUDI":[0,0,0,0,0,1],"VOLKSWAGEN":[15,19,28,23,22,18],"RAM":[0,1,1,1,3,3],"FIAT":[15,35,28,23,18,27],"GM":[10,6,16,12,25,16],"LANDROVER":[0,0,0,0,0,1],"MBENZ":[0,0,0,0,0,2],"VOLVO":[0,2,1,0,0,1],"FORD":[5,4,8,5,8,3],"HONDA":[2,0,2,1,1,4],"JEEP":[9,7,5,2,10,7],"BYD":[2,2,4,1,5,2],"CAOACHERY":[1,2,8,3,6,4],"RENAULT":[5,11,7,6,4,4],"GWM":[3,7,2,3,5,3],"GAC":[0,0,0,0,4,1],"BMW":[1,1,2,0,4,2],"TOYOTA":[3,7,5,4,8,4],"CITROEN":[0,1,1,0,1,1],"PEUGEOT":[1,2,1,0,2,0],"HYUNDAI":[2,0,2,3,6,0],"MMC":[0,0,2,1,1,0],"NISSAN":[1,1,1,1,1,0],"JAECOO":[0,0,0,0,1,0],"GEELY":[0,0,0,0,1,0],"OMODA":[0,0,1,0,1,0],"MG":[0,0,0,1,0,0],"EFFA":[0,0,1,0,0,0],"LEXUS":[0,1,0,0,0,0],"PORSCHE":[0,1,0,0,0,0],"KIA":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KANGOO":[0,0,0,0,0,1],"KARDIAN":[0,1,3,2,0,1],"MASTER":[1,1,0,0,0,1],"DUSTER":[0,0,0,0,0,1],"KWID":[3,4,2,3,2,0],"BOREAL":[0,1,2,0,2,0],"OROCH":[1,3,0,1,0,0],"KWID E-TECH":[0,1,0,0,0,0]},"GWM":{"HAVAL H6":[3,6,1,3,3,3],"TANK 300":[0,0,1,0,1,0],"WEY 07":[0,1,0,0,1,0]},"PEUGEOT":{"EXPERT":[0,1,0,0,1,0],"":[1,0,1,0,1,0],"PARTNER RAPID":[0,1,0,0,0,0]},"CITROEN":{"JUMPY":[0,0,0,0,1,1],"JUMPER":[0,0,1,0,0,0],"BASALT":[0,1,0,0,0,0]},"GEELY":{"EX2":[0,0,0,0,1,0]}},"cidades":{"XANXERE":{"marcas":{"AUDI":[0,0,0,0,0,1],"VOLKSWAGEN":[8,13,16,10,15,10],"GM":[3,3,7,3,7,4],"FIAT":[4,11,18,12,11,11],"VOLVO":[0,2,1,0,0,1],"RAM":[0,1,0,1,2,1],"FORD":[3,2,3,2,7,1],"JEEP":[3,2,5,2,2,4],"MBENZ":[0,0,0,0,0,1],"CAOACHERY":[1,0,6,0,4,1],"RENAULT":[5,7,6,3,3,4],"GWM":[3,0,2,2,2,1],"BMW":[0,0,2,0,2,2],"CITROEN":[0,1,0,0,0,1],"TOYOTA":[2,1,4,1,4,2],"BYD":[0,1,2,1,5,0],"GAC":[0,0,0,0,4,0],"HYUNDAI":[1,0,1,2,5,0],"JAECOO":[0,0,0,0,1,0],"PEUGEOT":[1,2,0,0,1,0],"MMC":[0,0,0,1,0,0],"NISSAN":[0,1,1,1,0,0],"EFFA":[0,0,1,0,0,0],"OMODA":[0,0,1,0,0,0],"LEXUS":[0,1,0,0,0,0],"HONDA":[1,0,0,0,0,0],"KIA":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"KANGOO":[0,0,0,0,0,1],"KARDIAN":[0,1,2,1,0,1],"MASTER":[1,0,0,0,0,1],"DUSTER":[0,0,0,0,0,1],"KWID":[3,3,2,2,2,0],"BOREAL":[0,1,2,0,1,0],"OROCH":[1,1,0,0,0,0],"KWID E-TECH":[0,1,0,0,0,0]},"GWM":{"HAVAL H6":[3,0,1,2,1,1],"TANK 300":[0,0,1,0,1,0]},"PEUGEOT":{"":[1,0,0,0,1,0],"PARTNER RAPID":[0,1,0,0,0,0],"EXPERT":[0,1,0,0,0,0]},"CITROEN":{"JUMPY":[0,0,0,0,0,1],"BASALT":[0,1,0,0,0,0]}}},"PONTE SERRADA":{"marcas":{"RAM":[0,0,0,0,1,1],"HONDA":[0,0,0,0,0,1],"FIAT":[1,6,0,1,0,6],"VOLKSWAGEN":[2,2,1,0,1,1],"GAC":[0,0,0,0,0,1],"CAOACHERY":[0,0,0,1,1,1],"JEEP":[1,1,0,0,2,0],"PEUGEOT":[0,0,1,0,1,0],"TOYOTA":[0,0,1,0,1,0],"MG":[0,0,0,1,0,0],"HYUNDAI":[0,0,0,1,0,0],"FORD":[0,0,1,0,0,0],"GM":[0,0,2,0,0,0],"RENAULT":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[0,1,0,0,0,0]},"PEUGEOT":{"EXPERT":[0,0,0,0,1,0],"":[0,0,1,0,0,0]}}},"PASSOS MAIA":{"marcas":{"RAM":[0,0,0,0,0,1],"FORD":[0,0,0,0,0,2],"BYD":[0,0,0,0,0,1],"TOYOTA":[0,0,0,0,0,1],"GM":[1,0,0,0,0,4],"VOLKSWAGEN":[0,0,0,4,0,0],"FIAT":[2,3,1,0,0,0],"HYUNDAI":[0,0,1,0,0,0]},"modelos":{}},"ABELARDO LUZ":{"marcas":{"FIAT":[3,8,2,7,3,3],"VOLKSWAGEN":[1,0,3,2,2,2],"GM":[2,1,1,3,6,3],"GWM":[0,0,0,0,0,1],"BMW":[0,0,0,0,1,0],"MMC":[0,0,1,0,1,0],"FORD":[1,0,3,2,1,0],"CAOACHERY":[0,1,2,1,0,0],"CITROEN":[0,0,1,0,0,0],"BYD":[0,0,2,0,0,0],"TOYOTA":[0,5,0,0,0,0],"RENAULT":[0,1,0,0,0,0],"JEEP":[1,0,0,0,0,0]},"modelos":{"RENAULT":{"OROCH":[0,1,0,0,0,0]},"GWM":{"HAVAL H6":[0,0,0,0,0,1]},"CITROEN":{"JUMPER":[0,0,1,0,0,0]}}},"XAXIM":{"marcas":{"GM":[1,1,4,3,7,4],"LANDROVER":[0,0,0,0,0,1],"HONDA":[0,0,1,0,1,2],"JEEP":[3,4,0,0,3,2],"FIAT":[3,3,2,1,2,2],"VOLKSWAGEN":[3,1,3,5,3,3],"GWM":[0,1,0,0,3,1],"BYD":[2,1,0,0,0,1],"CAOACHERY":[0,1,0,1,1,1],"TOYOTA":[1,0,0,0,2,0],"NISSAN":[1,0,0,0,1,0],"BMW":[1,0,0,0,1,0],"HYUNDAI":[1,0,0,0,1,0],"GEELY":[0,0,0,0,1,0],"OMODA":[0,0,0,0,1,0],"CITROEN":[0,0,0,0,1,0],"FORD":[1,0,1,1,0,0],"RENAULT":[0,2,1,2,0,0],"MMC":[0,0,1,0,0,0],"PORSCHE":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KARDIAN":[0,0,1,1,0,0],"OROCH":[0,0,0,1,0,0],"KWID":[0,1,0,0,0,0],"MASTER":[0,1,0,0,0,0]},"GWM":{"HAVAL H6":[0,0,0,0,2,1],"WEY 07":[0,1,0,0,1,0]},"CITROEN":{"JUMPY":[0,0,0,0,1,0]},"GEELY":{"EX2":[0,0,0,0,1,0]}}},"ENTRE RIOS":{"marcas":{"MBENZ":[0,0,0,0,0,1],"FIAT":[0,0,0,0,0,1],"GM":[1,0,0,1,1,0],"TOYOTA":[0,0,0,1,0,0],"HONDA":[0,0,0,1,0,0],"RAM":[0,0,1,0,0,0],"VOLKSWAGEN":[1,0,1,0,0,0]},"modelos":{}},"MAREMA":{"marcas":{"VOLKSWAGEN":[0,2,0,0,0,1],"TOYOTA":[0,0,0,1,0,1],"FIAT":[0,1,2,0,0,1],"GM":[0,0,0,1,0,0],"JEEP":[1,0,0,0,0,0]},"modelos":{}},"VARGEAO":{"marcas":{"GM":[1,1,0,0,1,1],"VOLKSWAGEN":[0,0,1,0,0,1],"FIAT":[0,1,0,0,1,2],"HONDA":[0,0,1,0,0,1],"RENAULT":[0,0,0,1,0,0],"GWM":[0,6,0,1,0,0],"FORD":[0,1,0,0,0,0],"BMW":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"KWID":[0,0,0,1,0,0]},"GWM":{"HAVAL H6":[0,6,0,1,0,0]}}},"OURO VERDE":{"marcas":{"FIAT":[1,1,0,2,1,1],"CAOACHERY":[0,0,0,0,0,1],"VOLKSWAGEN":[0,1,0,2,1,0],"RENAULT":[0,0,0,0,1,0],"TOYOTA":[0,0,0,1,1,0]},"modelos":{"RENAULT":{"BOREAL":[0,0,0,0,1,0]}}},"LAGEADO GRANDE":{"marcas":{"JEEP":[0,0,0,0,2,1],"GM":[0,0,2,0,2,0],"VOLKSWAGEN":[0,0,1,0,0,0],"FIAT":[0,1,1,0,0,0],"TOYOTA":[0,1,0,0,0,0],"FORD":[0,1,0,0,0,0]},"modelos":{}},"JUPIA":{"marcas":{"GM":[0,0,0,0,1,0]},"modelos":{}},"CORONEL MARTINS":{"marcas":{"JEEP":[0,0,0,0,1,0],"GM":[1,0,0,1,0,0],"VOLKSWAGEN":[0,0,1,0,0,0],"HONDA":[1,0,0,0,0,0]},"modelos":{}},"GALVAO":{"marcas":{"FIAT":[1,0,2,0,0,0],"VOLKSWAGEN":[0,0,1,0,0,0]},"modelos":{}}}}},"areas_influencia":{"GWM":["CHAPECO","CRICIUMA","CAMPOS DE LAGES"],"RENAULT":["BLUMENAU","SAO MIGUEL DO OESTE","CHAPECO","CONCORDIA","JOACABA","PORTO UNIAO","XANXERE","CANOINHAS","RIO DO SUL"],"GEELY":["BLUMENAU","CHAPECO"],"TRIUMPH":["BLUMENAU","CHAPECO"],"YAMAHA":["JOACABA","CHAPECO"],"PEUGEOT":["CANOINHAS"],"CITROEN":["CANOINHAS"],"CF MOTO":["CHAPECO"]},"grupo":{"RENAULT":"Renault","GWM":"GWM","YAMAHA":"Yamaha","TRIUMPH":"Triumph","CF MOTO":"CF Motos","PEUGEOT":"Peugeot","CITROEN":"Citroën","GEELY":"Geely"},"micro_label":{"BLUMENAU":"Blumenau","CAMPOS DE LAGES":"Campos de Lages","CANOINHAS":"Canoinhas","CHAPECO":"Chapecó","CONCORDIA":"Concórdia","CRICIUMA":"Criciúma","JOACABA":"Joaçaba","PORTO UNIAO":"Porto União","RIO DO SUL":"Rio do Sul","SAO MIGUEL DO OESTE":"São Miguel do Oeste","XANXERE":"Xanxerê"}};
 
 Chart.defaults.font.family = "'Segoe UI',sans-serif";
 Chart.defaults.color = '#475569';
 Chart.defaults.borderColor = '#1e293b';
 const GRID = { color:'#1e293b' };
 
-// Paleta 20 cores distintas (sem vermelho)
-const PAL = [
+const PAL20 = [
   '#f5c518','#38bdf8','#22d3ee','#818cf8','#34d399','#fb923c',
   '#4ade80','#a78bfa','#2dd4bf','#fbbf24','#60a5fa','#c084fc',
   '#86efac','#67e8f9','#fcd34d','#93c5fd','#d8b4fe','#6ee7b7',
-  '#e0f2fe','#f0fdf4'
+  '#f0f9ff','#fefce8'
 ];
-const COR_GRUPO = { // cor fixa por marca do grupo
-  'RENAULT':'#f5c518','GWM':'#22d3ee','YAMAHA':'#38bdf8',
-  'TRIUMPH':'#818cf8','CF MOTO':'#fb923c','PEUGEOT':'#4ade80','CITROEN':'#f97316'
+const COR_GRUPO = {
+  RENAULT:'#f5c518', GWM:'#22d3ee', YAMAHA:'#38bdf8',
+  TRIUMPH:'#818cf8', 'CF MOTO':'#fb923c', PEUGEOT:'#4ade80',
+  CITROEN:'#f97316', GEELY:'#34d399'
 };
 
-// ── Estado dos gráficos ──
 let charts = {};
-function destroyChart(id) { if(charts[id]) { charts[id].destroy(); delete charts[id]; } }
+function destroyChart(id) { if(charts[id]){ charts[id].destroy(); delete charts[id]; } }
 
 // ── Helpers ──
-function sumMeses(arr, mesIdx) {
+function sumM(arr, idx) {
   if(!arr) return 0;
-  if(mesIdx === 'all') return arr.reduce((a,b)=>a+b,0);
-  return arr[mesIdx] || 0;
+  if(idx==='all') return arr.reduce((a,b)=>a+b,0);
+  return arr[parseInt(idx)] || 0;
 }
-function pct(v, total) { return total > 0 ? (v/total*100).toFixed(1)+'%' : '—'; }
+function pct(v,t) { return t>0 ? (v/t*100).toFixed(1)+'%' : '—'; }
 function fmt(n) {
-  if(n >= 1000000) return (n/1000000).toFixed(1)+'M';
-  if(n >= 1000) return (n/1000).toFixed(1)+'k';
+  if(n>=1000000) return (n/1000000).toFixed(1)+'M';
+  if(n>=10000)   return (n/1000).toFixed(1)+'k';
   return n.toLocaleString('pt-BR');
 }
-function getTop10(mapaObj, mesIdx, nTop=10) {
-  return Object.entries(mapaObj)
-    .map(([marca,vals])=>([marca, sumMeses(vals,mesIdx)]))
+function top10obj(obj, mesIdx, n=10) {
+  return Object.entries(obj)
+    .map(([k,v])=>[k, sumM(v,mesIdx)])
     .filter(([,v])=>v>0)
-    .sort((a,b)=>b[1]-a[1])
-    .slice(0, nTop);
+    .sort((a,b)=>b[1]-a[1]).slice(0,n);
+}
+function palCor(marca, idx) { return COR_GRUPO[marca] || PAL20[idx % PAL20.length]; }
+
+// ════════════════════════════════════════════
+//  INICIALIZA DROPDOWNS
+// ════════════════════════════════════════════
+function mercadoTrocarMarca() {
+  const marca = document.getElementById('mf-marca').value;
+  const areas  = (_D.areas_influencia[marca] || []).filter(m => _D.micro[m]);
+  const sel    = document.getElementById('mf-micro');
+  sel.innerHTML = areas.map(m =>
+    `<option value="${m}">${_D.micro_label[m] || m}</option>`
+  ).join('');
+  mercadoTrocarMicro();
 }
 
-// ═══ ATUALIZAR PAINEL ═══
+function mercadoTrocarMicro() {
+  const micro = document.getElementById('mf-micro').value;
+  const cidades = micro && _D.micro[micro]
+    ? Object.keys(_D.micro[micro].cidades || {}).sort()
+    : [];
+  const sel = document.getElementById('mf-cidade');
+  sel.innerHTML = '<option value="all">Toda a micro-região</option>' +
+    cidades.map(c => `<option value="${c}">${c.replace(/\b\w/g,l=>l.toUpperCase())}</option>`).join('');
+  mercadoAtualizar();
+}
+
+// ════════════════════════════════════════════
+//  ATUALIZA PAINEL PRINCIPAL
+// ════════════════════════════════════════════
 function mercadoAtualizar() {
   const mesIdx  = document.getElementById('mf-mes').value;
   const marca   = document.getElementById('mf-marca').value;
-  const cidNorm = document.getElementById('mf-cidade').value;
-  const cidLabel= document.getElementById('mf-cidade').options[document.getElementById('mf-cidade').selectedIndex].text;
+  const microNm = document.getElementById('mf-micro').value;
+  const cidNm   = document.getElementById('mf-cidade').value;
 
-  const cidData  = _D.cidades[cidNorm] || {};
-  const cidMarcas= cidData.marcas || {};
-  const cidMods  = (cidData.modelos || {})[marca] || {};
+  if(!microNm || !_D.micro[microNm]) return;
+
+  const microData = _D.micro[microNm];
+  // Decide se usa dados da micro-região ou de uma cidade específica
+  let areaObj;
+  let areaLabel;
+  if(cidNm && cidNm !== 'all' && microData.cidades[cidNm]) {
+    areaObj   = microData.cidades[cidNm];
+    areaLabel = cidNm.replace(/\b\w/g, l=>l.toUpperCase());
+  } else {
+    areaObj   = microData;
+    areaLabel = _D.micro_label[microNm] || microNm;
+  }
+
+  const areaMarcas = areaObj.marcas || {};
+  const areaModelos= (areaObj.modelos || {})[marca] || {};
 
   // ── KPIs ──
-  const totBR    = Object.values(_D.brasil).reduce((s,v)=>s+sumMeses(v,mesIdx),0);
-  const totSC    = Object.values(_D.sc    ).reduce((s,v)=>s+sumMeses(v,mesIdx),0);
-  const marcaBR  = sumMeses(_D.brasil[marca], mesIdx);
-  const marcaSC  = sumMeses(_D.sc[marca],     mesIdx);
-  const marcaCID = sumMeses(cidMarcas[marca], mesIdx);
-  const totCID   = Object.values(cidMarcas).reduce((s,v)=>s+sumMeses(v,mesIdx),0);
+  const totArea = Object.values(areaMarcas).reduce((s,v)=>s+sumM(v,mesIdx),0);
+  const totSC   = Object.values(_D.sc   ).reduce((s,v)=>s+sumM(v,mesIdx),0);
+  const totBR   = Object.values(_D.brasil).reduce((s,v)=>s+sumM(v,mesIdx),0);
+  const vArea   = sumM(areaMarcas[marca], mesIdx);
+  const vSC     = sumM(_D.sc[marca],      mesIdx);
+  const vBR     = sumM(_D.brasil[marca],  mesIdx);
+  const marcaLabel = _D.grupo[marca] || marca;
 
-  document.getElementById('kv-brasil').textContent       = fmt(marcaBR);
-  document.getElementById('kv-share-br').textContent     = pct(marcaBR, totBR);
-  document.getElementById('kv-sc').textContent           = fmt(marcaSC);
-  document.getElementById('kv-share-sc').textContent     = pct(marcaSC, totSC);
-  document.getElementById('kv-cidade').textContent       = fmt(marcaCID);
-  document.getElementById('kv-share-cidade').textContent = pct(marcaCID, totCID);
-  document.getElementById('ks-cidade').textContent       = cidLabel;
-  document.getElementById('ks-share-cidade').textContent = cidLabel;
+  document.getElementById('kv-area').textContent       = fmt(vArea);
+  document.getElementById('kl-area').textContent       = `Empl. ${marcaLabel}`;
+  document.getElementById('ks-area').textContent       = areaLabel;
+  document.getElementById('kv-share-area').textContent = pct(vArea, totArea);
+  document.getElementById('kl-share-area').textContent = `Share ${areaLabel}`;
+  document.getElementById('kv-sc').textContent         = fmt(vSC);
+  document.getElementById('kv-share-sc').textContent   = pct(vSC, totSC);
+  document.getElementById('kv-br').textContent         = fmt(vBR);
+  document.getElementById('kv-share-br').textContent   = pct(vBR, totBR);
 
-  // ── Gráfico 1: Top 10 marcas na cidade ──
-  const top10 = getTop10(cidMarcas, mesIdx, 10);
-  const t10Labels = top10.map(([m])=>m);
-  const t10Vals   = top10.map(([,v])=>v);
-  const t10Cores  = t10Labels.map((m,i)=> COR_GRUPO[m] || PAL[i % PAL.length]);
-  const t10Border = t10Labels.map(m=> m===marca ? '#ffffff' : 'transparent');
-  const t10BW     = t10Labels.map(m=> m===marca ? 2 : 0);
+  const corMarca = COR_GRUPO[marca] || '#f5c518';
+  const meses    = _D.meses_pt;
 
-  destroyChart('top10');
-  charts['top10'] = new Chart(document.getElementById('chartTop10Cidade'), {
+  // ── GRÁFICO 1: Top 10 marcas na área ──
+  const top10 = top10obj(areaMarcas, mesIdx, 10);
+  const t10l = top10.map(([m])=>m);
+  const t10v = top10.map(([,v])=>v);
+  destroyChart('g1');
+  charts['g1'] = new Chart(document.getElementById('chartTop10'),{
     type:'bar',
-    data:{ labels:t10Labels, datasets:[{
-      data:t10Vals,
-      backgroundColor: t10Cores.map((c,i)=> t10Labels[i]===marca ? c : c+'88'),
-      borderColor: t10Border, borderWidth: t10BW, borderRadius:6
+    data:{ labels:t10l, datasets:[{
+      data: t10v,
+      backgroundColor: t10l.map((m,i) => m===marca ? palCor(m,i) : palCor(m,i)+'66'),
+      borderColor:     t10l.map((m,i) => m===marca ? '#ffffff' : 'transparent'),
+      borderWidth:     t10l.map(m => m===marca ? 2 : 0),
+      borderRadius:6
     }]},
     options:{ indexAxis:'y', responsive:true,
       plugins:{ legend:{display:false},
@@ -3369,26 +3413,25 @@ function mercadoAtualizar() {
       },
       scales:{
         x:{beginAtZero:true,grid:GRID,ticks:{color:'#475569',callback:v=>v>=1000?(v/1000).toFixed(0)+'k':v}},
-        y:{grid:{display:false},ticks:{color:ctx=> t10Labels[ctx.index]===marca?'#f5c518':'#94a3b8', font:{weight:ctx=> t10Labels[ctx.index]===marca?'bold':'normal'}}}
+        y:{grid:{display:false},ticks:{
+          color: (ctx) => t10l[ctx.index]===marca ? '#f5c518' : '#94a3b8',
+          font:  (ctx) => ({ weight: t10l[ctx.index]===marca ? '800':'normal' })
+        }}
       }
     }
   });
-  document.getElementById('ct-top10').textContent = `Top 10 Marcas em ${cidLabel}`;
+  document.getElementById('ct-top10').textContent = `Top 10 Marcas — ${areaLabel}`;
 
-  // ── Gráfico 2: Modelos da marca na cidade ──
-  const modTop = Object.entries(cidMods)
-    .map(([m,v])=>([m, sumMeses(v,mesIdx)]))
-    .filter(([,v])=>v>0)
-    .sort((a,b)=>b[1]-a[1])
-    .slice(0,10);
-
-  destroyChart('modelos');
-  if(modTop.length > 0) {
-    const corMarca = COR_GRUPO[marca] || '#f5c518';
-    charts['modelos'] = new Chart(document.getElementById('chartModelosCidade'), {
+  // ── GRÁFICO 2: Modelos da marca na área ──
+  const modTop = Object.entries(areaModelos)
+    .map(([m,v])=>[m, sumM(v,mesIdx)]).filter(([,v])=>v>0)
+    .sort((a,b)=>b[1]-a[1]).slice(0,10);
+  destroyChart('g2');
+  if(modTop.length) {
+    charts['g2'] = new Chart(document.getElementById('chartModelos'),{
       type:'bar',
       data:{ labels:modTop.map(([m])=>m), datasets:[{
-        data:modTop.map(([,v])=>v),
+        data: modTop.map(([,v])=>v),
         backgroundColor: modTop.map((_,i)=> i===0 ? corMarca : corMarca+'55'),
         borderColor:corMarca, borderWidth:1, borderRadius:6
       }]},
@@ -3401,38 +3444,45 @@ function mercadoAtualizar() {
       }
     });
   } else {
-    const ctx2 = document.getElementById('chartModelosCidade').getContext('2d');
-    ctx2.clearRect(0,0,ctx2.canvas.width,ctx2.canvas.height);
-    ctx2.fillStyle='#475569'; ctx2.font='13px Segoe UI'; ctx2.textAlign='center';
-    ctx2.fillText('Sem dados de modelo para esta seleção', ctx2.canvas.width/2, 80);
+    const ctx = document.getElementById('chartModelos').getContext('2d');
+    ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+    ctx.fillStyle='#334155'; ctx.font='13px Segoe UI'; ctx.textAlign='center';
+    ctx.fillText('Sem dados de modelo para esta seleção', ctx.canvas.width/2, 80);
   }
-  document.getElementById('ct-modelos').textContent =
-    `Modelos ${_D.grupo[marca] || marca} em ${cidLabel}`;
+  document.getElementById('ct-modelos').textContent = `Modelos ${marcaLabel} — ${areaLabel}`;
 
-  // ── Gráfico 3: Share comparativo mensal (linha) ──
-  const meses = _D.meses_pt;
-  function sharesPorMes(mapaObj, marcaKey) {
-    const totArr = meses.map((_,i)=> Object.values(mapaObj).reduce((s,v)=>s+(v[i]||0),0));
-    const mArr   = meses.map((_,i)=> (mapaObj[marcaKey]?.[i] || 0));
-    return meses.map((_,i)=> totArr[i]>0 ? parseFloat((mArr[i]/totArr[i]*100).toFixed(2)) : 0);
+  // ── GRÁFICO 3: Share comparativo mês a mês (linha) ──
+  function sharePorMes(mapaObj, marcaKey) {
+    return meses.map((_,i) => {
+      const tot = Object.values(mapaObj).reduce((s,v)=>s+(v[i]||0),0);
+      const vm  = (mapaObj[marcaKey]?.[i] || 0);
+      return tot>0 ? parseFloat((vm/tot*100).toFixed(2)) : 0;
+    });
   }
-  const shareBR  = sharesPorMes(_D.brasil, marca);
-  const shareSC  = sharesPorMes(_D.sc,     marca);
-  const shareR1  = sharesPorMes(_D.r1,     marca);
-  const shareCID = sharesPorMes(cidMarcas, marca);
-  const corMarca = COR_GRUPO[marca] || '#f5c518';
+  const shareArea = sharePorMes(areaMarcas,  marca);
+  const shareSC   = sharePorMes(_D.sc,       marca);
+  const shareR1   = sharePorMes(_D.r1,       marca);
+  const shareBR   = sharePorMes(_D.brasil,   marca);
 
-  destroyChart('shareComp');
-  charts['shareComp'] = new Chart(document.getElementById('chartShareComp'), {
+  destroyChart('g3');
+  charts['g3'] = new Chart(document.getElementById('chartShare'),{
     type:'line',
     data:{ labels:meses, datasets:[
-      {label:`${cidLabel}`,data:shareCID,borderColor:corMarca,backgroundColor:corMarca+'20',tension:.4,fill:true,pointRadius:5,borderWidth:3,pointBackgroundColor:corMarca,pointBorderColor:'#0f1623',pointBorderWidth:2},
-      {label:'Santa Catarina',data:shareSC,borderColor:'#38bdf8',backgroundColor:'transparent',tension:.4,fill:false,pointRadius:4,borderWidth:2,pointBackgroundColor:'#38bdf8',pointBorderColor:'#0f1623',pointBorderWidth:1},
-      {label:'Regional Sul (R1)',data:shareR1,borderColor:'#818cf8',backgroundColor:'transparent',tension:.4,fill:false,pointRadius:4,borderWidth:2,borderDash:[4,3],pointBackgroundColor:'#818cf8',pointBorderColor:'#0f1623',pointBorderWidth:1},
-      {label:'Brasil',data:shareBR,borderColor:'#475569',backgroundColor:'transparent',tension:.4,fill:false,pointRadius:4,borderWidth:1.5,borderDash:[6,4],pointBackgroundColor:'#475569',pointBorderColor:'#0f1623',pointBorderWidth:1}
+      {label:areaLabel, data:shareArea, borderColor:corMarca, backgroundColor:corMarca+'25',
+        tension:.4, fill:true, pointRadius:5, borderWidth:3,
+        pointBackgroundColor:corMarca, pointBorderColor:'#0f1623', pointBorderWidth:2},
+      {label:'Santa Catarina', data:shareSC, borderColor:'#38bdf8', backgroundColor:'transparent',
+        tension:.4, fill:false, pointRadius:4, borderWidth:2,
+        pointBackgroundColor:'#38bdf8', pointBorderColor:'#0f1623', pointBorderWidth:1},
+      {label:'Sul R1', data:shareR1, borderColor:'#818cf8', backgroundColor:'transparent',
+        tension:.4, fill:false, pointRadius:4, borderWidth:2, borderDash:[5,3],
+        pointBackgroundColor:'#818cf8', pointBorderColor:'#0f1623', pointBorderWidth:1},
+      {label:'Brasil', data:shareBR, borderColor:'#475569', backgroundColor:'transparent',
+        tension:.4, fill:false, pointRadius:4, borderWidth:1.5, borderDash:[7,4],
+        pointBackgroundColor:'#475569', pointBorderColor:'#0f1623', pointBorderWidth:1},
     ]},
     options:{ responsive:true, interaction:{mode:'index',intersect:false},
-      plugins:{legend:{position:'top',labels:{color:'#94a3b8',font:{size:11},boxWidth:10}},
+      plugins:{ legend:{position:'top',labels:{color:'#94a3b8',font:{size:11},boxWidth:10}},
         tooltip:{callbacks:{label:ctx=>` ${ctx.dataset.label}: ${ctx.raw}%`}}
       },
       scales:{
@@ -3441,89 +3491,98 @@ function mercadoAtualizar() {
       }
     }
   });
-  document.getElementById('ct-share-comp').textContent =
-    `Market Share ${_D.grupo[marca]||marca} — Cidade vs SC vs Sul (R1) vs Brasil (%)`;
+  document.getElementById('ct-share').textContent =
+    `Market Share ${marcaLabel} — Mês a Mês: ${areaLabel} vs SC vs Sul R1 vs Brasil (%)`;
 
-  // ── Gráfico 4: Evolução mensal top 5 na cidade ──
-  const top5evo = getTop10(cidMarcas, 'all', 5).map(([m])=>m);
-  // garante que a marca selecionada está incluída
-  if(marca && !top5evo.includes(marca) && cidMarcas[marca]) top5evo.push(marca);
+  // ── GRÁFICO 4: Evolução mensal top 6 marcas na área ──
+  const top6evo = top10obj(areaMarcas,'all',6).map(([m])=>m);
+  if(marca && !top6evo.includes(marca) && areaMarcas[marca]) top6evo.push(marca);
 
-  destroyChart('evoCidade');
-  charts['evoCidade'] = new Chart(document.getElementById('chartEvoCidade'), {
+  destroyChart('g4');
+  charts['g4'] = new Chart(document.getElementById('chartEvo'),{
     type:'line',
-    data:{ labels:meses, datasets: top5evo.map((m,i)=>{
-      const cor = COR_GRUPO[m] || PAL[i % PAL.length];
-      const isMarca = m === marca;
+    data:{ labels:meses, datasets: top6evo.map((m,i) => {
+      const cor    = palCor(m,i);
+      const isSel  = m===marca;
       return {
-        label:m, data:meses.map((_,mi)=>(cidMarcas[m]?.[mi]||0)),
-        borderColor:cor, backgroundColor: isMarca ? cor+'25':'transparent',
-        tension:.4, fill:isMarca, pointRadius: isMarca?5:3,
-        borderWidth: isMarca?3:1.5,
-        pointBackgroundColor:cor, pointBorderColor:'#0f1623', pointBorderWidth: isMarca?2:1
+        label:m, data:meses.map((_,mi)=>(areaMarcas[m]?.[mi]||0)),
+        borderColor:cor, backgroundColor: isSel ? cor+'22':'transparent',
+        tension:.4, fill:isSel, pointRadius:isSel?5:3,
+        borderWidth:isSel?3:1.5,
+        pointBackgroundColor:cor, pointBorderColor:'#0f1623', pointBorderWidth:isSel?2:1
       };
     })},
     options:{ responsive:true, interaction:{mode:'index',intersect:false},
-      plugins:{legend:{position:'top',labels:{color:'#94a3b8',font:{size:11},boxWidth:10}}},
-      scales:{y:{beginAtZero:true,grid:GRID,ticks:{color:'#475569'}},x:{grid:GRID,ticks:{color:'#475569'}}}
+      plugins:{ legend:{position:'top',labels:{color:'#94a3b8',font:{size:11},boxWidth:10}}},
+      scales:{
+        y:{beginAtZero:true,grid:GRID,ticks:{color:'#475569'}},
+        x:{grid:GRID,ticks:{color:'#475569'}}
+      }
     }
   });
-  document.getElementById('ct-evo').textContent = `Evolução Mensal — Top Marcas em ${cidLabel}`;
+  document.getElementById('ct-evo').textContent =
+    `Evolução Mensal — Top Marcas em ${areaLabel} (jan–jun 2026)`;
 
-  // ── Gráfico 5: Pizza share na cidade ──
-  destroyChart('pieCidade');
-  const pieTop8 = getTop10(cidMarcas, mesIdx, 8);
-  const outrosVol = totCID - pieTop8.reduce((s,[,v])=>s+v,0);
-  const pieLabels = pieTop8.map(([m])=>m); if(outrosVol>0) pieLabels.push('Outros');
-  const pieVals   = pieTop8.map(([,v])=>v); if(outrosVol>0) pieVals.push(outrosVol);
-  const pieCores  = pieLabels.map((m,i)=> COR_GRUPO[m] || PAL[i % PAL.length]);
-  charts['pieCidade'] = new Chart(document.getElementById('chartPieCidade'), {
+  // ── GRÁFICO 5: Pizza ──
+  const pie8 = top10obj(areaMarcas, mesIdx, 8);
+  const outrosV = totArea - pie8.reduce((s,[,v])=>s+v,0);
+  const pieL = pie8.map(([m])=>m); if(outrosV>0) pieL.push('Outros');
+  const pieV = pie8.map(([,v])=>v); if(outrosV>0) pieV.push(outrosV);
+  destroyChart('g5');
+  charts['g5'] = new Chart(document.getElementById('chartPizza'),{
     type:'doughnut',
-    data:{ labels:pieLabels, datasets:[{
-      data:pieVals, backgroundColor:pieCores, borderWidth:3, borderColor:'#0f1623', hoverOffset:8
+    data:{ labels:pieL, datasets:[{
+      data:pieV,
+      backgroundColor:pieL.map((m,i)=> palCor(m,i)),
+      borderWidth:3, borderColor:'#0f1623', hoverOffset:8
     }]},
     options:{ responsive:true, cutout:'58%',
       plugins:{
         legend:{position:'right',labels:{color:'#94a3b8',font:{size:10}}},
-        tooltip:{callbacks:{label:ctx=>` ${ctx.label}: ${pct(ctx.raw,totCID)}`}}
+        tooltip:{callbacks:{label:ctx=>` ${ctx.label}: ${pct(ctx.raw,totArea)}`}}
       }
     }
   });
+  document.getElementById('ct-pizza').textContent = `Share em ${areaLabel}`;
 
   // ── Tabela ranking ──
   const tbody = document.getElementById('tbody-ranking');
   tbody.innerHTML = '';
-  const totBR2  = Object.values(_D.brasil).reduce((s,v)=>s+sumMeses(v,mesIdx),0);
-  const totSC2  = Object.values(_D.sc    ).reduce((s,v)=>s+sumMeses(v,mesIdx),0);
   top10.forEach(([m, vol], idx) => {
-    const isMarca = m === marca;
-    const volBR   = sumMeses(_D.brasil[m], mesIdx);
-    const volSC   = sumMeses(_D.sc[m],     mesIdx);
-    const cor     = COR_GRUPO[m] ? `color:${COR_GRUPO[m]};font-weight:800` : 'color:#94a3b8';
-    const bg      = isMarca ? 'background:#1a2a1a' : '';
-    tbody.innerHTML += `<tr style="${bg}">
-      <td style="color:#475569;font-size:11px">#${idx+1}</td>
-      <td><span style="${cor}">${m}</span></td>
+    const vsc2 = sumM(_D.sc[m],     mesIdx);
+    const vbr2 = sumM(_D.brasil[m], mesIdx);
+    const isSel = m === marca;
+    const cor   = palCor(m, idx);
+    tbody.innerHTML += `<tr style="${isSel?'background:#111c11':''}">
+      <td style="color:#334155;font-size:11px">#${idx+1}</td>
+      <td style="color:${cor};font-weight:${isSel?800:400}">${m}</td>
       <td class="num bold">${vol.toLocaleString('pt-BR')}</td>
-      <td class="num">${pct(vol, totCID)}</td>
-      <td class="num">${pct(volSC, totSC2)}</td>
-      <td class="num">${pct(volBR, totBR2)}</td>
-      <td class="num"><span style="color:#475569">—</span></td>
+      <td class="num">${pct(vol, totArea)}</td>
+      <td class="num">${pct(vsc2, totSC)}</td>
+      <td class="num">${pct(vbr2, totBR)}</td>
     </tr>`;
   });
-  document.getElementById('ct-tabela').textContent = `Ranking — ${cidLabel}`;
+  document.getElementById('ct-tabela').textContent = `Ranking — ${areaLabel}`;
 }
 
-// Inicializa na abertura da aba
-document.addEventListener('DOMContentLoaded', mercadoAtualizar);
-// Também inicializa quando a aba Mercado é clicada
-(function() {
-  const orig = window.abrirAba;
+// ════════════════════════════════════════════
+//  INICIALIZAÇÃO
+// ════════════════════════════════════════════
+function mercadoInit() {
+  mercadoTrocarMarca();  // preenche áreas → cidades → atualiza painel
+}
+
+// Dispara ao abrir a aba
+(function(){
+  const origAbrirAba = window.abrirAba;
   window.abrirAba = function(nome, btn) {
-    orig(nome, btn);
-    if(nome === 'mercado') setTimeout(mercadoAtualizar, 50);
+    origAbrirAba(nome, btn);
+    if(nome==='mercado') setTimeout(mercadoInit, 60);
   };
 })();
+
+// Também inicializa se a aba já estiver ativa ao carregar
+if(document.getElementById('aba-mercado')?.classList.contains('active')) mercadoInit();
 </script>
 
 </div>
