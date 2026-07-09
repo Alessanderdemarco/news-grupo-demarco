@@ -161,7 +161,7 @@
     <div style="font-size:0.7rem;opacity:0.5;margin-bottom:4px;letter-spacing:2px">GRUPO DEMARCO / TOZZO</div>
     <h1>Central de Inteligencia Automotiva</h1>
   </div>
-  <div class="meta">Atualizado em<br><strong style="font-size:1rem;opacity:1">09/07/2026 as 14:39</strong></div>
+  <div class="meta">Atualizado em<br><strong style="font-size:1rem;opacity:1">09/07/2026 as 16:36</strong></div>
 </header>
 
 <nav class="tabs-nav">
@@ -710,6 +710,20 @@
     <div class="card card-geral">
         <div class="card-header">
             <span class="portal">Noticias Automotivas</span>
+            <span class="marca">GWM</span>
+            <span class="badge-carro">Carro</span>
+        </div>
+        <h3><a href="https://www.noticiasautomotivas.com.br/com-20-anos-de-historia-na-volkswagen-o-tiguan-ganha-serie-comemorativa-na-europa-e-estreia-na-alemanha-partindo-de-48-180-euros/" target="_blank">Com 20 anos de história na Volkswagen, o Tiguan ganha série comemorativa na Europa e estreia na Alemanha partindo de 48.180 euros</a></h3>
+        <p class="resumo">Aqui ele ainda parece um ator distante, mas na Europa, a realidade se aplica ao SUV ...  </p>
+        <div class="card-footer">
+            <span class="data">Thu, 09 Jul 2026</span>
+            <a href="https://www.noticiasautomotivas.com.br/com-20-anos-de-historia-na-volkswagen-o-tiguan-ganha-serie-comemorativa-na-europa-e-estreia-na-alemanha-partindo-de-48-180-euros/" target="_blank" class="btn-ler">Ler materia &rarr;</a>
+        </div>
+    </div>
+
+    <div class="card card-geral">
+        <div class="card-header">
+            <span class="portal">Noticias Automotivas</span>
             <span class="marca">Renault</span>
             <span class="badge-carro">Carro</span>
         </div>
@@ -760,20 +774,6 @@
         <div class="card-footer">
             <span class="data">Thu, 09 Jul 2026</span>
             <a href="https://www.noticiasautomotivas.com.br/geely-conquista-recorde-gravado-no-guinness-de-maior-distancia-percorrida-por-um-seda-hibrido-plug-in-de-producao-sem-abastecer-ou-recarregar/" target="_blank" class="btn-ler">Ler materia &rarr;</a>
-        </div>
-    </div>
-
-    <div class="card card-geral">
-        <div class="card-header">
-            <span class="portal">Noticias Automotivas</span>
-            <span class="marca">GWM</span>
-            <span class="badge-carro">Carro</span>
-        </div>
-        <h3><a href="https://www.noticiasautomotivas.com.br/harley-davidson-tem-seus-titulos-de-divida-classificados-como-lixo-por-agencias-globais-de-classificacao/" target="_blank">Harley-Davidson tem seus títulos de dívida classificados como “lixo” por agências globais de classificação</a></h3>
-        <p class="resumo">A aposta da Harley-Davidson em motos mais baratas agora cobra seu preço no mercado de crédito, ...  </p>
-        <div class="card-footer">
-            <span class="data">Thu, 09 Jul 2026</span>
-            <a href="https://www.noticiasautomotivas.com.br/harley-davidson-tem-seus-titulos-de-divida-classificados-como-lixo-por-agencias-globais-de-classificacao/" target="_blank" class="btn-ler">Ler materia &rarr;</a>
         </div>
     </div>
 
@@ -2680,7 +2680,7 @@ The post Vinicius Nunes passa a comandar comercial da divisão de construção d
 </div></div>
 </div>
 </section>
-    <div style="text-align:center;padding:24px 0 8px;font-size:12px;color:#9ca3af">Grupo Demarco / Tozzo &mdash; 09/07/2026 as 14:39</div>
+    <div style="text-align:center;padding:24px 0 8px;font-size:12px;color:#9ca3af">Grupo Demarco / Tozzo &mdash; 09/07/2026 as 16:36</div>
   </div>
 </div>
 
@@ -3105,179 +3105,156 @@ new Chart(document.getElementById('chartShareInvest'),{
   
 <div id="mkt-root" class="mercado-root">
 
-<!-- ── Filtros ── -->
+<!-- ═══ FILTROS ═══ -->
 <div class="mercado-filtros">
   <div class="filtro-grupo">
     <label>Período</label>
-    <select id="fil-periodo" onchange="atualizarMercado()">
-      <option value="jun26">Junho 2026</option>
-      <option value="mai26">Maio 2026</option>
-      <option value="abr26">Abril 2026</option>
-      <option value="t2-26">2º Trim. 2026</option>
-      <option value="t1-26">1º Trim. 2026</option>
-      <option value="ano26">Acum. 2026</option>
+    <select id="mf-mes" onchange="mercadoAtualizar()">
+      <option value="0">Jan</option>
+<option value="1">Fev</option>
+<option value="2">Mar</option>
+<option value="3">Abr</option>
+<option value="4">Mai</option>
+<option value="5">Jun</option>
+<option value="all" selected>Acumulado Jan–Jun</option>
     </select>
   </div>
   <div class="filtro-grupo">
-    <label>Segmento</label>
-    <select id="fil-segmento" onchange="atualizarMercado()">
-      <option value="todos">Todos os segmentos</option>
-      <option value="hatch">Hatch</option>
-      <option value="suv">SUV / Crossover</option>
-      <option value="sedan">Sedan</option>
-      <option value="pickup">Pickup</option>
-      <option value="moto">Motocicleta</option>
+    <label>Marca do Grupo</label>
+    <select id="mf-marca" onchange="mercadoAtualizar()">
+      <option value="RENAULT">Renault</option>
+<option value="GWM">GWM</option>
+<option value="PEUGEOT">Peugeot</option>
+<option value="CITROEN">Citroën</option>
     </select>
   </div>
   <div class="filtro-grupo">
-    <label>Região</label>
-    <select id="fil-regiao" onchange="atualizarMercado()">
-      <option value="brasil">Brasil</option>
-      <option value="sc">Santa Catarina</option>
-      <option value="cidade">Cidade Específica</option>
-    </select>
-  </div>
-  <div class="filtro-grupo" id="wrap-cidade" style="display:none">
     <label>Cidade</label>
-    <select id="fil-cidade" onchange="atualizarMercado()">
-      <option value="Chapecó">Chapecó</option><option value="Caçador">Caçador</option><option value="Canoinhas">Canoinhas</option><option value="Rio do Sul">Rio do Sul</option><option value="Concórdia">Concórdia</option><option value="Joaçaba">Joaçaba</option><option value="Blumenau">Blumenau</option><option value="Criciúma">Criciúma</option><option value="Lages">Lages</option><option value="São Miguel do Oeste">São Miguel do Oeste</option><option value="Tubarão">Tubarão</option><option value="Videira">Videira</option>
+    <select id="mf-cidade" onchange="mercadoAtualizar()">
+      <option value="BLUMENAU">Blumenau</option>
+<option value="CACADOR">Caçador</option>
+<option value="CANOINHAS">Canoinhas</option>
+<option value="CHAPECO">Chapecó</option>
+<option value="CONCORDIA">Concórdia</option>
+<option value="CRICIUMA">Criciúma</option>
+<option value="JOACABA">Joaçaba</option>
+<option value="LAGES">Lages</option>
+<option value="RIO DO SUL">Rio do Sul</option>
+<option value="SAO MIGUEL DO OESTE">São Miguel do Oeste</option>
+<option value="TUBARAO">Tubarão</option>
+<option value="VIDEIRA">Videira</option>
     </select>
   </div>
   <div class="filtro-grupo" style="align-self:flex-end">
-    <div class="aviso-mock">⚠ Dados Fictícios — Conectar FENABRAVE</div>
+    <div style="font-size:10px;color:#475569;line-height:1.5">
+      Fonte: FENABRAVE/DENATRAN<br>
+      <span style="color:#34d399">● Dados reais Jan–Jun 2026</span>
+    </div>
   </div>
 </div>
 
-<!-- ── KPIs ── -->
-<div class="mkt-kpis" id="mercado-kpis">
+<!-- ═══ KPIs dinâmicos ═══ -->
+<div class="mkt-kpis" id="merc-kpis">
   <div class="kpi-card" style="--accent:#f5c518">
     <div class="kpi-icon" style="color:#f5c518">&#9651;</div>
-    <div class="kpi-valor" id="kpi-total">218.450</div>
-    <div class="kpi-label">Emplacamentos no Período</div>
-    <div class="kpi-sub" id="kpi-sub-total">Brasil — Jun 2026</div>
-  </div>
-  <div class="kpi-card" style="--accent:#34d399">
-    <div class="kpi-icon" style="color:#34d399">&#9650;</div>
-    <div class="kpi-valor">+4,2%</div>
-    <div class="kpi-label">Crescimento vs Período Ant.</div>
-    <div class="kpi-sub">Mai 2026: 209.638</div>
+    <div class="kpi-valor" id="kv-brasil">—</div>
+    <div class="kpi-label">Empl. Brasil</div>
+    <div class="kpi-sub" id="ks-brasil">Jan–Jun 2026</div>
   </div>
   <div class="kpi-card" style="--accent:#38bdf8">
     <div class="kpi-icon" style="color:#38bdf8">%</div>
-    <div class="kpi-valor">6,8%</div>
-    <div class="kpi-label">Market Share Renault</div>
-    <div class="kpi-sub">14.854 unid. no período</div>
+    <div class="kpi-valor" id="kv-share-br">—</div>
+    <div class="kpi-label">Share Brasil</div>
+    <div class="kpi-sub" id="ks-share-br">Marca selecionada</div>
   </div>
-  <div class="kpi-card" style="--accent:#22d3ee">
-    <div class="kpi-icon" style="color:#22d3ee">%</div>
-    <div class="kpi-valor">2,1%</div>
-    <div class="kpi-label">Market Share GWM</div>
-    <div class="kpi-sub">4.587 unid. no período</div>
+  <div class="kpi-card" style="--accent:#4ade80">
+    <div class="kpi-icon" style="color:#4ade80">&#9651;</div>
+    <div class="kpi-valor" id="kv-sc">—</div>
+    <div class="kpi-label">Empl. SC</div>
+    <div class="kpi-sub" id="ks-sc">Santa Catarina</div>
   </div>
   <div class="kpi-card" style="--accent:#818cf8">
-    <div class="kpi-icon" style="color:#818cf8">&#9733;</div>
-    <div class="kpi-valor">Kwid</div>
-    <div class="kpi-label">Top Modelo Renault</div>
-    <div class="kpi-sub">3.218 unid. — 1º Hatch Entry</div>
+    <div class="kpi-icon" style="color:#818cf8">%</div>
+    <div class="kpi-valor" id="kv-share-sc">—</div>
+    <div class="kpi-label">Share SC</div>
+    <div class="kpi-sub">Santa Catarina</div>
+  </div>
+  <div class="kpi-card" style="--accent:#22d3ee">
+    <div class="kpi-icon" style="color:#22d3ee">&#9651;</div>
+    <div class="kpi-valor" id="kv-cidade">—</div>
+    <div class="kpi-label">Empl. Cidade</div>
+    <div class="kpi-sub" id="ks-cidade">Cidade selecionada</div>
   </div>
   <div class="kpi-card" style="--accent:#fb923c">
-    <div class="kpi-icon" style="color:#fb923c">&#9650;</div>
-    <div class="kpi-valor">Fiat</div>
-    <div class="kpi-label">Líder de Mercado</div>
-    <div class="kpi-sub">28,4% share — 62.040 unid.</div>
+    <div class="kpi-icon" style="color:#fb923c">%</div>
+    <div class="kpi-valor" id="kv-share-cidade">—</div>
+    <div class="kpi-label">Share Cidade</div>
+    <div class="kpi-sub" id="ks-share-cidade">Cidade selecionada</div>
   </div>
 </div>
 
-<!-- ── Linha 1: Emplacamentos diários + Market Share marcas ── -->
+<!-- ═══ Linha 1: Top 10 marcas na cidade + Modelos da marca ═══ -->
+<div class="mkt-row">
+  <div class="mkt-chart-card" style="flex:1.2">
+    <div class="chart-title" id="ct-top10">Top 10 Marcas na Cidade</div>
+    <canvas id="chartTop10Cidade" height="240"></canvas>
+  </div>
+  <div class="mkt-chart-card" style="flex:1">
+    <div class="chart-title" id="ct-modelos">Modelos da Marca na Cidade</div>
+    <canvas id="chartModelosCidade" height="240"></canvas>
+  </div>
+</div>
+
+<!-- ═══ Linha 2: Comparativo share Cidade / SC / R1 / Brasil (mensal) ═══ -->
+<div class="mkt-row">
+  <div class="mkt-chart-card full">
+    <div class="chart-title" id="ct-share-comp">Market Share Comparativo — Cidade vs SC vs Regional Sul (R1) vs Brasil (%)</div>
+    <canvas id="chartShareComp" height="80"></canvas>
+  </div>
+</div>
+
+<!-- ═══ Linha 3: Evolução mensal top marcas na cidade ═══ -->
 <div class="mkt-row">
   <div class="mkt-chart-card" style="flex:2">
-    <div class="chart-title">Emplacamentos Diários — Brasil (Jun 2026)</div>
-    <canvas id="chartEmplDiario" height="90"></canvas>
+    <div class="chart-title" id="ct-evo">Evolução Mensal de Emplacamentos — Top Marcas na Cidade</div>
+    <canvas id="chartEvoCidade" height="100"></canvas>
   </div>
   <div class="mkt-chart-card" style="flex:1">
-    <div class="chart-title">Market Share por Marca — Brasil</div>
-    <canvas id="chartShareMarcas" height="230"></canvas>
+    <div class="chart-title">Share de Mercado na Cidade (acumulado)</div>
+    <canvas id="chartPieCidade" height="240"></canvas>
   </div>
 </div>
 
-<!-- ── Linha 2: Top modelos por segmento ── -->
-<div class="mkt-row">
-  <div class="mkt-chart-card" style="flex:1">
-    <div class="chart-title">Top 10 Modelos — Hatch &amp; Entry</div>
-    <canvas id="chartTopHatch" height="200"></canvas>
-  </div>
-  <div class="mkt-chart-card" style="flex:1">
-    <div class="chart-title">Top 10 Modelos — SUV / Crossover</div>
-    <canvas id="chartTopSUV" height="200"></canvas>
-  </div>
-</div>
-
-<!-- ── Linha 3: SC + Cidades Demarco ── -->
-<div class="mkt-row">
-  <div class="mkt-chart-card" style="flex:1.5">
-    <div class="chart-title">Emplacamentos Mensais — SC vs Brasil (índice)</div>
-    <canvas id="chartSCvsBR" height="120"></canvas>
-  </div>
-  <div class="mkt-chart-card" style="flex:1">
-    <div class="chart-title">Top Marcas em SC — Jun 2026</div>
-    <canvas id="chartSCMarcas" height="230"></canvas>
-  </div>
-</div>
-
-<!-- ── Linha 4: Emplacamentos por cidades Demarco ── -->
+<!-- ═══ Linha 4: Tabela top 10 ═══ -->
 <div class="mkt-row">
   <div class="mkt-chart-card full">
-    <div class="chart-title">Emplacamentos nas Cidades do Grupo — Jun 2026</div>
-    <canvas id="chartCidades" height="60"></canvas>
-  </div>
-</div>
-
-<!-- ── Linha 5: Tabela detalhada ── -->
-<div class="mkt-row">
-  <div class="mkt-chart-card full">
-    <div class="chart-title">Emplacamentos por Cidade — Grupo Demarco (Top Marcas)</div>
+    <div class="chart-title" id="ct-tabela">Ranking de Emplacamentos — Cidade Selecionada</div>
     <div style="overflow-x:auto">
-    <table class="mkt-table">
-      <thead>
-        <tr>
-          <th style="text-align:left">Cidade</th>
-          <th>Total</th><th>Renault</th><th>GWM</th><th>Peugeot</th>
-          <th>Citroën</th><th>Yamaha</th><th>Share Demarco</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td><span class="cidade-tag">Chapecó</span></td><td class="num">1.842</td><td class="num bold" style="color:#f5c518">134</td><td class="num bold" style="color:#22d3ee">48</td><td class="num">22</td><td class="num">18</td><td class="num">76</td><td class="num"><span class="cpl-badge cpl-ok">16,2%</span></td></tr>
-        <tr><td><span class="cidade-tag">Blumenau</span></td><td class="num">3.210</td><td class="num bold" style="color:#f5c518">198</td><td class="num bold" style="color:#22d3ee">71</td><td class="num">—</td><td class="num">—</td><td class="num">112</td><td class="num"><span class="cpl-badge cpl-medio">11,8%</span></td></tr>
-        <tr><td><span class="cidade-tag">Joaçaba</span></td><td class="num">387</td><td class="num bold" style="color:#f5c518">41</td><td class="num bold" style="color:#22d3ee">18</td><td class="num">—</td><td class="num">—</td><td class="num">28</td><td class="num"><span class="cpl-badge cpl-ok">22,5%</span></td></tr>
-        <tr><td><span class="cidade-tag">Canoinhas</span></td><td class="num">298</td><td class="num bold" style="color:#f5c518">38</td><td class="num">—</td><td class="num">14</td><td class="num">12</td><td class="num">—</td><td class="num"><span class="cpl-badge cpl-best">21,5%</span></td></tr>
-        <tr><td><span class="cidade-tag">Rio do Sul</span></td><td class="num">621</td><td class="num bold" style="color:#f5c518">62</td><td class="num bold" style="color:#22d3ee">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num"><span class="cpl-badge cpl-medio">10,0%</span></td></tr>
-        <tr><td><span class="cidade-tag">Caçador</span></td><td class="num">312</td><td class="num bold" style="color:#f5c518">44</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">31</td><td class="num"><span class="cpl-badge cpl-ok">24,0%</span></td></tr>
-        <tr><td><span class="cidade-tag">Criciúma</span></td><td class="num">1.104</td><td class="num">—</td><td class="num bold" style="color:#22d3ee">62</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num"><span class="cpl-badge cpl-alto">5,6%</span></td></tr>
-        <tr><td><span class="cidade-tag">Lages</span></td><td class="num">718</td><td class="num">—</td><td class="num bold" style="color:#22d3ee">54</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num"><span class="cpl-badge cpl-alto">7,5%</span></td></tr>
-        <tr><td><span class="cidade-tag">Concórdia</span></td><td class="num">284</td><td class="num bold" style="color:#f5c518">36</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num"><span class="cpl-badge cpl-ok">12,7%</span></td></tr>
-        <tr><td><span class="cidade-tag">S.M. Oeste</span></td><td class="num">218</td><td class="num bold" style="color:#f5c518">29</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num"><span class="cpl-badge cpl-ok">13,3%</span></td></tr>
-        <tr><td><span class="cidade-tag">Tubarão</span></td><td class="num">489</td><td class="num">—</td><td class="num bold" style="color:#22d3ee">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num"><span class="cpl-badge cpl-alto">0,0%</span></td></tr>
-        <tr class="total-row">
-          <td><span style="font-weight:800;color:#f5c518">TOTAL CIDADES</span></td>
-          <td class="num bold">9.483</td>
-          <td class="num bold" style="color:#f5c518">582</td>
-          <td class="num bold" style="color:#22d3ee">253</td>
-          <td class="num bold">36</td><td class="num bold">30</td><td class="num bold">247</td>
-          <td class="num bold" style="color:#f5c518">12,1%</td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="mkt-table" id="tbl-ranking">
+        <thead>
+          <tr>
+            <th style="text-align:left">#</th>
+            <th style="text-align:left">Marca</th>
+            <th>Total</th>
+            <th>Share Cidade</th>
+            <th>Share SC</th>
+            <th>Share Brasil</th>
+            <th>vs Mês Ant.</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-ranking"></tbody>
+      </table>
     </div>
   </div>
 </div>
 
 <div style="text-align:center;font-size:11px;color:#475569;padding:12px 0 4px">
-  ⚠ Dados fictícios para estruturação do painel — integrar FENABRAVE/DENATRAN para dados reais
+  Base: FENABRAVE/DENATRAN — Jan–Jun 2026 — 12 cidades do Grupo De Marco
 </div>
 </div>
 
 <style>
-.mercado-root { background:#080c14; color:#e2e8f0; padding:28px 32px; max-width:1400px; margin:0 auto; border-radius:0; }
+.mercado-root { background:#080c14; color:#e2e8f0; padding:28px 32px; max-width:1400px; margin:0 auto; }
 .mercado-filtros {
   display:flex; gap:16px; flex-wrap:wrap; align-items:flex-end;
   background:#0f1623; border:1px solid #1e293b; border-radius:14px;
@@ -3288,192 +3265,265 @@ new Chart(document.getElementById('chartShareInvest'),{
 .filtro-grupo select {
   background:#161f2e; border:1px solid #1e293b; color:#e2e8f0;
   border-radius:8px; padding:8px 32px 8px 12px; font-size:13px;
-  cursor:pointer; outline:none; appearance:none;
+  cursor:pointer; outline:none; -webkit-appearance:none; appearance:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
   background-repeat:no-repeat; background-position:right 10px center;
 }
 .filtro-grupo select:focus { border-color:#f5c518; }
-.aviso-mock {
-  background:#7c2d0020; border:1px solid #fb923c40; color:#fb923c;
-  border-radius:8px; padding:8px 14px; font-size:11px; font-weight:700;
-}
-.cidade-tag {
-  display:inline-block; background:#1e293b; color:#94a3b8;
-  border-radius:6px; padding:3px 10px; font-size:11px; font-weight:600;
-}
-@media(max-width:900px) { .mercado-root{ padding:20px 16px; } .mercado-filtros{ gap:10px; } }
+@media(max-width:900px){ .mercado-root{ padding:20px 16px; } .mercado-filtros{ gap:10px; } }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
-// ── Mock data ──
-const MESES_MERC = ['Jan','Fev','Mar','Abr','Mai','Jun'];
-const DIAS_JUN   = Array.from({length:20},(_,i)=>i+1+'jun');
-
-// Emplacamentos diários Brasil (fictício)
-const emplDiario = [8800,9200,7600,10100,9800,10400,8200,9600,9100,10200,9800,10600,8400,9200,10800,9400,10100,9900,8600,10200];
-
-// Share marcas Brasil
-const marcasBR  = ['Fiat','Chevrolet','Volkswagen','Toyota','Renault','Hyundai','Jeep','GWM','Ford','Outros'];
-const sharesBR  = [28.4,14.2,11.8,9.6,6.8,6.1,4.9,2.1,2.0,14.1];
-const coresMerc = ['#fb923c','#f5c518','#38bdf8','#34d399','#f59e0b','#818cf8','#22d3ee','#4ade80','#a78bfa','#475569'];
-
-// Top Hatch
-const topHatchMod   = ['Fiat Argo','Chev Onix','Kwid','HB20','Moby','Polo','Sandero','Yaris','Argo Drive','Gol'];
-const topHatchUnids = [18400,17200,16800,14100,12800,11200,9800,7600,6400,5100];
-
-// Top SUV
-const topSUVMod   = ['Creta','T-Cross','Renegade','Compass','Captur','Tracker','HR-V','Nivus','GWM Haval','Pulse'];
-const topSUVUnids = [21200,18400,15600,14800,13200,12100,10400,9800,8200,7600];
-
-// SC vs BR (índice base 100 = Jan)
-const indSC = [100,102,98,105,108,111];
-const indBR = [100,101,99,103,106,108];
-
-// SC marcas
-const scMarcas = ['Fiat','Volkswagen','Renault','Chevrolet','Toyota','Outros'];
-const scShares = [24.1,13.8,8.4,12.6,7.9,33.2];
-
-// Cidades Demarco emplacamentos
-const cidadesLabels = ['Chapecó','Blumenau','Criciúma','Lages','Rio do Sul','Joaçaba','Caçador','Canoinhas','Concórdia','S.M.Oeste','Tubarão','Videira'];
-const cidadesTotal  = [1842,3210,1104,718,621,387,312,298,284,218,489,142];
-const cidadesShare  = [16.2,11.8,5.6,7.5,10.0,22.5,24.0,21.5,12.7,13.3,0,8.5];
+// ═══ DADOS ═══
+const _D = {"meses":["Jan","Fev","Mar","Abr","Mai","Jun"],"brasil":{"FIAT":[34261,39670,52677,45641,49645,49082],"VOLKSWAGEN":[25873,29306,42432,39097,43124,46146],"GM":[16176,16883,28148,25123,27765,26703],"BYD":[9919,11553,16524,18563,22037,21820],"HYUNDAI":[10206,12138,19157,18565,20239,16429],"TOYOTA":[9545,10469,16018,14617,14818,14510],"RENAULT":[7783,9598,12475,12082,11060,10868],"JEEP":[8894,8236,10063,8531,10394,10257],"HONDA":[6722,7574,9912,9016,10290,10033],"CAOACHERY":[3550,3402,8771,7484,6660,7152],"NISSAN":[4559,4955,8787,5454,7122,6005],"GWM":[4416,4813,6215,4725,6489,6051],"FORD":[3954,3572,5050,4833,5166,4636],"GEELY":[1337,423,1375,4003,5215,5835],"CITROEN":[2536,2248,2844,2726,4575,2544],"RAM":[2177,2005,2576,2361,2336,2625],"OMODA":[1213,1376,1792,2116,1785,2095],"MMC":[1351,1350,1712,1593,1563,2370],"PEUGEOT":[1534,1175,1929,1331,1729,1058],"BMW":[960,1104,1455,1168,1245,1325],"MBENZ":[963,1002,1307,1174,1118,1126],"JAECOO":[476,457,659,710,1391,2736],"GAC":[709,467,694,918,672,1488],"VOLVO":[719,393,818,760,645,646],"LEAPMOTORS":[442,317,516,681,893,989],"JETOUR":[0,124,540,623,691,951],"KIA":[376,435,622,454,530,431],"IVECO":[207,253,332,465,742,556],"CHANGAN":[0,2,42,260,1164,1054],"PORSCHE":[364,347,529,345,341,315]},"sc":{"ARO":[0,0,0,1,0,0],"ASTON":[1,0,0,0,0,1],"AUDI":[24,25,41,22,27,29],"BENTLEY":[0,1,0,0,0,0],"BMW":[100,99,136,97,108,136],"BYD":[492,626,814,971,1091,1105],"CADILLAC":[2,2,11,6,9,9],"CAOACHERY":[175,210,407,371,335,316],"CHANGAN":[0,0,0,1,6,8],"CITROEN":[145,152,175,113,164,146],"DODGE":[5,3,8,1,12,7],"DONGFENG":[0,0,1,0,0,0],"EFFA":[17,12,6,3,18,19],"ENGESA":[0,0,4,1,0,1],"FERRARI":[0,3,4,3,1,3],"FIAT":[1310,1551,1776,1631,1522,1499],"FORD":[235,268,356,326,343,298],"FOTON":[1,1,2,1,1,3],"GAC":[25,32,36,75,30,83],"GEELY":[45,8,71,125,172,254],"GM":[689,807,992,981,1054,1086],"GMC":[0,0,0,0,0,1],"GWM":[244,285,367,258,362,272],"HONDA":[319,398,649,467,617,554],"HYUNDAI":[502,491,665,677,610,507],"IVECO":[1,4,25,12,11,9],"JAC":[2,0,0,0,0,0],"JAECOO":[50,56,80,56,123,257],"JAGUAR":[0,1,0,0,0,0],"JEEP":[707,628,811,610,688,657],"JETOUR":[0,0,7,17,7,20],"JINBEI":[1,2,3,1,0,0],"KIA":[46,61,64,53,42,46],"LAMBORGHINI":[0,1,1,0,0,0],"LANDROVER":[19,13,42,16,16,20],"LEAPMOTORS":[28,19,20,34,30,28],"LEXUS":[6,4,5,5,10,9],"LINCOLN":[0,0,0,0,1,0],"MBENZ":[78,103,78,69,80,81],"MCLAREN":[0,0,0,0,1,0],"MG":[9,12,14,13,14,11],"MINI":[6,9,18,8,5,2],"MMC":[123,76,95,90,96,110],"NEXTEM":[1,0,0,0,0,0],"NISSAN":[212,163,215,214,220,207],"OMODA":[95,125,145,170,156,179],"OUTRASMARCAS":[0,0,20,1,0,1],"PEUGEOT":[143,150,167,126,126,114],"PLYMOUTH":[0,0,0,0,0,2],"PORSCHE":[39,48,52,34,37,28],"RAM":[95,111,123,131,113,150],"RENAULT":[400,383,322,343,302,332],"ROLLSROYCE":[0,0,0,0,2,1],"SUZUKI":[2,3,1,0,0,0],"TESLA":[1,1,1,0,0,0],"TOYOTA":[306,455,533,592,560,592],"VOLKSWAGEN":[1245,1747,2140,1969,1819,1862],"VOLVO":[60,41,79,77,61,43],"VW":[0,1,1,0,34,4],"WILLYS":[0,0,0,0,1,0],"ZEEKR":[7,9,9,5,1,7]},"r1":{"AGRALE":[0,0,0,0,0,1],"ARO":[0,0,0,1,0,0],"ASTON":[1,0,2,1,0,2],"AUDI":[95,76,121,74,84,111],"BEACH":[0,0,1,0,0,0],"BENTLEY":[0,1,0,0,0,0],"BMW":[257,296,401,296,306,375],"BYD":[1899,2399,3089,3799,4198,4186],"CADILLAC":[5,3,13,7,11,10],"CAOACHERY":[742,781,1708,1562,1368,1364],"CHAMONIX":[0,0,1,0,0,1],"CHANGAN":[0,0,0,38,142,164],"CHRYSLER":[1,0,0,0,1,0],"CITROEN":[555,508,596,517,548,646],"DKW":[0,0,0,0,0,1],"DODGE":[7,4,13,6,18,12],"DONGFENG":[0,0,1,0,0,0],"EFFA":[55,41,31,23,53,57],"ENGESA":[0,0,4,1,1,1],"FERRARI":[4,5,9,6,3,6],"FIAT":[6174,6250,7764,7305,6363,6377],"FORD":[1138,1159,1763,1531,1497,1436],"FOTON":[8,20,18,28,15,25],"FYBER":[0,0,0,0,0,1],"GAC":[118,110,168,218,107,246],"GEELY":[240,77,343,929,1206,1388],"GM":[3791,4078,6629,6263,7197,5826],"GMC":[1,0,0,1,0,1],"GWM":[951,986,1413,982,1347,1128],"HONDA":[1066,1302,1808,1528,1810,1755],"HUDSON":[0,1,0,0,0,0],"HUMMER":[0,0,0,0,0,1],"HYUNDAI":[2304,2690,3891,4499,5981,4513],"IVECO":[33,112,102,174,103,310],"JAC":[5,13,5,1,5,0],"JAECOO":[125,145,207,190,302,663],"JAGUAR":[0,2,1,0,0,0],"JEEP":[2097,1824,2248,1838,2091,1924],"JETOUR":[0,19,63,124,94,144],"JINBEI":[3,6,6,1,0,3],"KIA":[93,102,146,106,111,93],"LAMBORGHINI":[1,2,1,0,1,1],"LANCIA":[0,1,0,0,0,0],"LANDROVER":[56,26,95,55,49,50],"LEAPMOTORS":[98,66,118,184,223,216],"LEXUS":[36,15,20,21,23,33],"LINCOLN":[0,0,0,0,2,0],"MAZDA":[0,0,1,0,0,1],"MBENZ":[236,307,302,307,297,288],"MCLAREN":[1,0,1,1,1,0],"MG":[24,33,147,50,49,56],"MINI":[19,33,43,25,25,18],"MMC":[338,286,383,333,325,520],"NETA":[23,2,41,0,0,25],"NEXTEM":[1,0,0,0,0,0],"NISSAN":[988,759,1196,988,1133,979],"OMODA":[257,319,412,513,427,498],"OUTRASMARCAS":[6,2,32,4,0,65],"PEUGEOT":[577,431,544,396,384,369],"PLYMOUTH":[0,0,0,0,0,2],"PONTIAC":[1,0,0,0,0,0],"PORSCHE":[95,103,122,83,87,77],"RAM":[435,420,521,480,511,624],"RDK":[0,0,0,1,0,0],"RENAULT":[1876,3167,4192,4963,4092,3722],"ROLLSROYCE":[0,0,1,0,2,2],"SELVAGEM":[0,1,0,0,0,0],"SSANGYONG":[0,2,2,2,4,3],"SUBARU":[1,0,0,0,0,0],"SUZUKI":[12,6,2,0,1,0],"TESLA":[1,1,2,0,0,0],"TOYOTA":[1708,2089,2984,3026,3024,3045],"VOLKSWAGEN":[5589,6346,9019,9583,9897,10707],"VOLVO":[156,114,206,228,164,133],"VW":[0,1,1,0,72,17],"WILLYS":[0,0,0,0,1,1],"ZEEKR":[21,17,32,25,13,17]},"cidades":{"BLUMENAU":{"marcas":{"AUDI":[5,4,8,7,5,2],"BMW":[4,12,8,6,7,13],"BYD":[29,48,65,74,67,74],"CAOACHERY":[8,12,30,22,19,15],"CITROEN":[10,3,6,8,6,11],"EFFA":[0,0,0,0,0,1],"FERRARI":[0,0,0,1,0,0],"FIAT":[58,69,78,88,67,70],"FORD":[11,11,12,18,14,7],"FOTON":[0,0,1,0,0,0],"GAC":[2,2,5,3,4,11],"GEELY":[2,0,8,9,10,10],"GM":[37,31,35,40,49,53],"GWM":[18,30,23,16,19,23],"HONDA":[44,36,65,36,59,48],"HYUNDAI":[18,31,23,29,24,28],"IVECO":[0,0,1,2,1,0],"JAECOO":[7,6,5,2,9,8],"JEEP":[29,19,33,33,33,25],"JETOUR":[0,0,0,0,0,2],"KIA":[3,7,4,6,3,0],"LANDROVER":[0,0,4,1,0,0],"LEAPMOTORS":[2,0,1,1,0,0],"LEXUS":[1,0,0,0,0,0],"MBENZ":[5,8,4,3,5,8],"MG":[0,0,1,0,0,1],"MMC":[3,2,3,4,1,6],"NISSAN":[21,7,10,15,20,19],"OMODA":[8,8,6,10,14,10],"PEUGEOT":[16,9,22,12,8,4],"PORSCHE":[3,6,10,5,5,0],"RAM":[2,3,6,4,5,5],"RENAULT":[17,22,13,12,14,34],"TOYOTA":[6,21,20,19,22,21],"VOLKSWAGEN":[93,138,148,139,144,139],"VOLVO":[6,4,7,6,7,6],"VW":[0,0,0,0,2,0],"WILLYS":[0,0,0,0,1,0]},"modelos":{"RENAULT":{"BOREAL":[2,5,5,0,1,2],"DUSTER":[0,1,0,0,0,2],"KANGOO":[2,0,0,1,0,0],"KARDIAN":[4,5,2,5,3,4],"KOLEOS E-TECH":[0,0,0,1,0,0],"KWID":[5,9,5,4,8,22],"KWID E-TECH":[2,0,0,0,0,0],"MASTER":[1,2,0,1,1,3],"MEGANE E-TECH":[0,0,0,0,0,1],"OROCH":[1,0,1,0,1,0]},"GWM":{"HAVAL H6":[12,24,12,11,15,19],"HAVAL H9":[2,1,1,2,2,0],"ORA 03":[0,0,3,0,1,0],"POER P30":[2,0,0,0,1,0],"TANK 300":[2,4,7,0,0,1],"WEY 07":[0,1,0,3,0,3]},"PEUGEOT":{"":[14,8,11,7,3,3],"BOXER":[2,0,5,2,1,0],"EXPERT":[0,1,6,2,3,1],"PARTNER RAPID":[0,0,0,1,1,0]},"CITROEN":{"BASALT":[4,2,4,4,3,7],"C3":[3,1,2,2,2,3],"C3 AIRCROSS":[3,0,0,1,0,0],"JUMPY":[0,0,0,1,1,1]}}},"JOACABA":{"marcas":{"AUDI":[1,0,0,0,0,0],"BMW":[1,0,1,0,0,1],"BYD":[2,1,2,3,2,1],"CAOACHERY":[1,0,0,1,0,0],"CITROEN":[0,1,0,0,0,0],"DODGE":[0,0,0,0,0,1],"EFFA":[0,0,0,0,1,2],"FIAT":[3,8,5,6,10,5],"FORD":[4,2,4,4,9,2],"GAC":[1,0,0,0,0,0],"GEELY":[0,1,0,1,0,1],"GM":[3,3,9,8,4,9],"GWM":[0,6,3,0,4,2],"HONDA":[2,10,2,3,3,1],"HYUNDAI":[0,0,0,0,1,1],"IVECO":[0,1,0,0,0,0],"JAECOO":[0,0,0,0,0,1],"JEEP":[1,6,4,3,4,5],"LANDROVER":[1,0,0,1,0,0],"LEAPMOTORS":[1,0,0,0,0,0],"MBENZ":[0,2,0,0,0,0],"MMC":[0,0,1,0,0,1],"NISSAN":[1,0,0,0,0,0],"OMODA":[0,0,0,0,0,1],"PEUGEOT":[0,0,2,0,0,0],"PORSCHE":[0,0,0,1,0,0],"RAM":[4,2,2,1,1,0],"RENAULT":[4,7,7,9,3,5],"TOYOTA":[0,0,0,2,0,4],"VOLKSWAGEN":[23,20,14,15,15,25],"VOLVO":[0,0,1,0,1,1]},"modelos":{"RENAULT":{"BOREAL":[0,4,2,1,1,0],"DUSTER":[0,0,0,1,0,0],"KANGOO":[0,1,1,1,0,2],"KARDIAN":[3,0,1,4,2,2],"KWID":[1,2,3,2,0,1]},"GWM":{"HAVAL H6":[0,4,0,0,3,2],"HAVAL H9":[0,0,1,0,1,0],"POER P30":[0,0,2,0,0,0],"TANK 300":[0,2,0,0,0,0]},"PEUGEOT":{"":[0,0,1,0,0,0],"EXPERT":[0,0,1,0,0,0]},"CITROEN":{"C3 AIRCROSS":[0,1,0,0,0,0]}}},"CHAPECO":{"marcas":{"AUDI":[0,0,0,0,0,1],"BMW":[0,3,9,0,2,10],"BYD":[25,26,48,46,45,40],"CAOACHERY":[13,8,22,21,18,27],"CITROEN":[0,5,6,7,8,6],"EFFA":[0,0,0,0,1,1],"FIAT":[41,75,77,70,73,56],"FORD":[10,15,13,18,9,18],"GAC":[0,0,1,11,1,6],"GEELY":[0,0,1,1,1,1],"GM":[25,22,35,37,27,35],"GWM":[21,20,26,13,19,21],"HONDA":[6,12,19,14,16,13],"HYUNDAI":[35,25,32,39,38,36],"JAECOO":[2,3,2,3,3,6],"JEEP":[20,30,22,26,27,27],"KIA":[0,4,0,3,1,1],"LANDROVER":[1,0,1,0,1,1],"LEAPMOTORS":[1,0,0,0,0,0],"MBENZ":[3,0,2,4,1,2],"MG":[0,0,0,0,0,1],"MMC":[1,3,5,2,5,5],"NISSAN":[15,2,4,8,6,8],"OMODA":[1,6,2,7,7,5],"PEUGEOT":[4,4,10,5,3,2],"PORSCHE":[2,0,1,1,0,0],"RAM":[5,7,6,10,2,9],"RENAULT":[13,15,16,8,12,11],"TOYOTA":[13,15,19,20,18,11],"VOLKSWAGEN":[54,72,112,61,70,67],"VOLVO":[1,2,3,1,0,0],"VW":[0,0,0,0,1,2]},"modelos":{"RENAULT":{"BOREAL":[1,4,3,1,1,1],"DUSTER":[0,0,0,0,2,1],"KANGOO":[3,0,0,0,2,0],"KARDIAN":[2,2,1,0,1,0],"KOLEOS E-TECH":[0,0,0,0,0,2],"KWID":[3,1,6,2,4,3],"KWID E-TECH":[1,1,0,0,0,0],"MASTER":[1,4,5,3,1,0],"OROCH":[2,3,1,2,1,4]},"GWM":{"HAVAL H6":[14,16,14,6,14,16],"HAVAL H9":[3,0,3,3,0,0],"ORA 03":[0,2,4,1,1,1],"ORA 5":[0,0,0,0,0,1],"POER P30":[1,1,1,0,1,0],"TANK 300":[2,0,2,1,2,1],"WEY 07":[1,1,2,2,1,2]},"PEUGEOT":{"":[4,4,6,5,3,2],"BOXER":[0,0,1,0,0,0],"EXPERT":[0,0,2,0,0,0],"PARTNER RAPID":[0,0,1,0,0,0]},"CITROEN":{"BASALT":[0,1,2,4,2,4],"C3":[0,2,3,3,4,0],"C3 AIRCROSS":[0,1,0,0,2,0],"JUMPY":[0,1,1,0,0,2]}}},"CRICIUMA":{"marcas":{"BMW":[4,2,1,6,4,8],"BYD":[7,14,10,28,12,32],"CAOACHERY":[8,11,22,21,18,13],"CITROEN":[6,3,2,4,3,6],"EFFA":[1,0,0,0,0,0],"FIAT":[36,60,59,46,44,49],"FORD":[10,7,18,6,10,6],"GAC":[0,0,0,0,0,3],"GEELY":[0,0,0,0,1,2],"GM":[18,24,30,18,39,37],"GWM":[8,9,16,8,14,11],"HONDA":[9,16,23,15,29,10],"HYUNDAI":[20,16,20,20,26,18],"IVECO":[0,0,0,0,0,1],"JAECOO":[2,2,3,2,7,19],"JEEP":[24,20,30,24,32,20],"KIA":[3,3,0,0,0,1],"LANDROVER":[0,0,3,2,0,1],"LEAPMOTORS":[2,0,0,0,2,2],"LEXUS":[0,0,0,1,0,0],"MBENZ":[3,2,2,1,0,2],"MG":[0,0,0,0,0,1],"MINI":[0,0,0,1,0,0],"MMC":[2,1,2,3,5,1],"NISSAN":[11,3,7,6,6,5],"OMODA":[4,7,3,10,5,7],"PEUGEOT":[3,5,4,2,2,3],"PORSCHE":[2,1,1,2,3,0],"RAM":[5,6,5,8,8,5],"RENAULT":[3,7,3,6,8,5],"TOYOTA":[11,13,10,20,19,18],"VOLKSWAGEN":[24,72,56,78,74,70],"VOLVO":[4,0,0,1,1,1],"VW":[0,0,0,0,3,0],"ZEEKR":[0,0,0,0,0,1]},"modelos":{"RENAULT":{"BOREAL":[0,2,0,1,2,1],"DUSTER":[0,1,0,0,2,1],"KANGOO":[0,0,0,2,1,0],"KARDIAN":[2,2,1,0,1,1],"KWID":[0,2,2,2,0,2],"KWID E-TECH":[1,0,0,0,0,0],"MASTER":[0,0,0,1,0,0],"OROCH":[0,0,0,0,2,0]},"GWM":{"HAVAL H6":[7,4,8,5,11,6],"HAVAL H9":[0,1,1,1,1,2],"ORA 03":[1,0,1,0,1,0],"POER P30":[0,1,2,1,0,1],"TANK 300":[0,3,4,1,0,1],"WEY 07":[0,0,0,0,1,1]},"PEUGEOT":{"":[2,5,4,2,2,3],"PARTNER RAPID":[1,0,0,0,0,0]},"CITROEN":{"BASALT":[2,2,0,1,0,1],"C3":[3,1,2,2,1,2],"C3 AIRCROSS":[1,0,0,0,0,0],"JUMPY":[0,0,0,1,2,3]}}},"TUBARAO":{"marcas":{"AUDI":[0,0,0,0,1,0],"BMW":[1,0,1,0,2,0],"BYD":[7,4,9,12,8,24],"CAOACHERY":[7,6,7,13,16,19],"CITROEN":[1,2,2,0,3,3],"EFFA":[1,0,0,0,0,0],"FIAT":[20,25,34,15,27,25],"FORD":[5,2,5,6,2,7],"FOTON":[0,0,0,0,0,1],"GAC":[0,0,2,0,0,0],"GEELY":[1,0,1,1,4,2],"GM":[5,11,8,22,19,15],"GWM":[1,1,4,5,11,4],"HONDA":[4,7,22,16,9,11],"HYUNDAI":[5,6,12,10,6,8],"IVECO":[0,0,1,0,0,0],"JAECOO":[0,0,0,1,2,4],"JEEP":[9,10,18,11,11,9],"JETOUR":[0,0,0,1,0,0],"KIA":[0,1,1,1,1,1],"LANDROVER":[0,0,1,0,0,0],"LEAPMOTORS":[1,0,0,0,0,0],"MBENZ":[1,2,1,0,2,1],"MMC":[5,8,7,5,6,4],"NISSAN":[4,3,4,5,4,3],"OMODA":[0,2,1,2,2,3],"PEUGEOT":[0,4,1,1,1,3],"PORSCHE":[0,2,1,0,0,0],"RAM":[0,0,0,1,3,0],"RENAULT":[6,4,6,3,5,2],"TOYOTA":[5,8,9,10,11,11],"VOLKSWAGEN":[14,22,33,27,22,26],"VOLVO":[1,1,0,0,1,0],"VW":[0,0,0,0,2,0]},"modelos":{"RENAULT":{"BOREAL":[0,0,1,0,0,0],"DUSTER":[0,0,0,1,0,0],"KANGOO":[0,2,0,0,1,0],"KARDIAN":[1,0,2,0,0,0],"KWID":[5,2,2,1,2,2],"MASTER":[0,0,0,1,1,0],"OROCH":[0,0,1,0,1,0]},"GWM":{"HAVAL H6":[1,1,0,3,9,1],"HAVAL H9":[0,0,1,1,1,3],"ORA 03":[0,0,1,0,0,0],"POER P30":[0,0,1,1,1,0],"TANK 300":[0,0,1,0,0,0]},"PEUGEOT":{"":[0,4,1,1,1,2],"EXPERT":[0,0,0,0,0,1]},"CITROEN":{"BASALT":[0,0,1,0,0,2],"C3":[0,2,0,0,3,1],"C3 AIRCROSS":[1,0,1,0,0,0]}}},"CACADOR":{"marcas":{"AUDI":[1,0,0,0,0,0],"BMW":[1,1,0,4,0,1],"BYD":[2,0,0,6,6,11],"CAOACHERY":[0,1,3,0,0,1],"CHANGAN":[0,0,0,0,0,1],"CITROEN":[4,3,5,1,4,0],"EFFA":[0,0,0,0,0,1],"FIAT":[19,25,19,18,17,16],"FORD":[3,2,5,3,3,3],"GEELY":[0,0,0,0,1,0],"GM":[4,11,10,12,7,9],"GWM":[6,7,6,1,2,1],"HONDA":[2,15,2,6,6,5],"HYUNDAI":[5,6,9,8,9,13],"JAECOO":[0,0,0,0,0,5],"JEEP":[2,1,3,2,3,4],"JETOUR":[0,0,0,0,0,1],"KIA":[1,0,0,0,0,1],"LANDROVER":[0,0,0,0,1,0],"LEAPMOTORS":[0,3,0,1,0,0],"MBENZ":[0,0,0,1,0,0],"MG":[0,0,0,1,0,0],"MMC":[1,0,0,0,0,0],"NISSAN":[0,0,0,0,1,0],"PEUGEOT":[4,1,4,0,1,2],"PORSCHE":[1,0,0,0,0,0],"RAM":[1,1,1,0,2,3],"RENAULT":[3,4,6,3,0,1],"TOYOTA":[0,2,3,4,1,4],"VOLKSWAGEN":[21,21,22,15,19,22],"VOLVO":[1,0,0,0,1,0],"VW":[0,0,0,0,1,0]},"modelos":{"RENAULT":{"BOREAL":[1,0,1,0,0,1],"KARDIAN":[0,1,1,1,0,0],"KWID":[2,1,3,1,0,0],"OROCH":[0,2,1,1,0,0]},"GWM":{"HAVAL H6":[3,6,1,1,1,1],"HAVAL H9":[0,0,0,0,1,0],"POER P30":[1,0,1,0,0,0],"TANK 300":[2,1,4,0,0,0]},"PEUGEOT":{"":[3,1,4,0,0,1],"EXPERT":[1,0,0,0,1,1]},"CITROEN":{"BASALT":[3,1,2,1,2,0],"C3":[1,1,3,0,2,0],"C3 AIRCROSS":[0,1,0,0,0,0]}}},"CANOINHAS":{"marcas":{"BMW":[0,0,0,1,1,0],"BYD":[0,1,1,2,3,0],"CAOACHERY":[1,0,0,0,1,0],"CITROEN":[2,5,2,1,0,2],"EFFA":[0,0,0,0,1,0],"FIAT":[8,5,9,14,9,12],"FORD":[1,0,0,2,0,3],"GAC":[0,0,0,0,0,1],"GM":[3,6,8,7,5,7],"GWM":[0,1,0,0,0,1],"HONDA":[0,0,0,0,0,1],"JEEP":[3,2,1,3,2,3],"MBENZ":[0,1,0,0,0,0],"NISSAN":[0,0,0,1,0,0],"OMODA":[0,1,0,0,0,0],"PEUGEOT":[2,1,1,0,0,2],"RAM":[1,1,1,1,1,1],"RENAULT":[1,0,1,0,1,1],"TOYOTA":[5,2,1,9,12,8],"VOLKSWAGEN":[14,11,14,20,17,16],"ZEEKR":[0,0,0,1,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,0,1,0,0,0],"KARDIAN":[1,0,0,0,0,0],"KWID":[0,0,0,0,1,1]},"GWM":{"HAVAL H6":[0,1,0,0,0,0],"ORA 03":[0,0,0,0,0,1]},"PEUGEOT":{"":[2,1,0,0,0,2],"BOXER":[0,0,1,0,0,0]},"CITROEN":{"BASALT":[1,2,2,1,0,2],"C3":[0,1,0,0,0,0],"C3 AIRCROSS":[1,2,0,0,0,0]}}},"CONCORDIA":{"marcas":{"BMW":[0,1,0,1,0,1],"BYD":[0,0,2,4,10,10],"CAOACHERY":[1,1,6,2,1,1],"CITROEN":[3,3,4,3,5,3],"EFFA":[1,1,0,0,2,0],"FIAT":[14,15,10,10,10,12],"FORD":[4,4,13,3,5,6],"GEELY":[1,0,1,1,0,0],"GM":[12,9,5,13,8,10],"GWM":[2,2,2,2,3,2],"HONDA":[2,7,1,4,5,7],"HYUNDAI":[25,27,31,21,37,28],"JAECOO":[0,0,0,0,1,2],"JEEP":[23,8,12,16,16,17],"KIA":[0,0,0,0,0,2],"LEXUS":[0,1,0,0,0,0],"MBENZ":[1,0,2,1,0,1],"MMC":[1,0,0,0,0,1],"NISSAN":[0,0,1,0,0,0],"OMODA":[0,1,1,0,1,0],"PEUGEOT":[3,1,3,4,2,1],"PORSCHE":[0,0,1,0,0,0],"RAM":[0,3,5,3,3,7],"RENAULT":[2,4,1,1,5,10],"TOYOTA":[2,9,3,3,8,5],"VOLKSWAGEN":[14,28,28,27,29,22],"VOLVO":[0,0,1,1,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,1,0,0,0,1],"KARDIAN":[0,1,1,0,2,1],"KWID":[1,1,0,1,3,6],"KWID E-TECH":[1,0,0,0,0,0],"OROCH":[0,1,0,0,0,2]},"GWM":{"HAVAL H6":[0,1,1,0,2,0],"HAVAL H9":[1,1,0,1,0,0],"ORA 03":[1,0,0,0,0,0],"TANK 300":[0,0,1,0,0,1],"WEY 07":[0,0,0,1,1,1]},"PEUGEOT":{"":[3,1,3,3,2,1],"EXPERT":[0,0,0,1,0,0]},"CITROEN":{"BASALT":[2,1,3,1,2,1],"C3":[0,1,0,1,3,1],"C3 AIRCROSS":[1,1,0,1,0,0],"JUMPY":[0,0,1,0,0,1]}}},"SAO MIGUEL DO OESTE":{"marcas":{"BMW":[0,0,0,0,2,0],"BYD":[0,0,0,1,0,1],"CAOACHERY":[0,0,0,0,1,0],"FIAT":[4,3,13,10,11,9],"FORD":[1,6,3,6,3,7],"GM":[2,2,4,4,7,10],"GWM":[0,1,1,4,2,0],"HONDA":[2,2,3,8,5,3],"HYUNDAI":[2,11,5,2,2,4],"JEEP":[3,1,5,0,5,5],"KIA":[0,0,0,1,0,0],"OMODA":[0,0,0,1,0,0],"PEUGEOT":[1,1,0,0,0,0],"RENAULT":[1,5,2,4,5,0],"TOYOTA":[2,0,3,3,4,2],"VOLKSWAGEN":[6,5,11,11,9,7]},"modelos":{"RENAULT":{"BOREAL":[0,0,1,0,0,0],"KARDIAN":[0,0,1,0,0,0],"KWID":[1,1,0,1,0,0],"MASTER":[0,0,0,1,1,0],"OROCH":[0,4,0,2,4,0]},"GWM":{"HAVAL H6":[0,0,1,3,2,0],"HAVAL H9":[0,1,0,0,0,0],"ORA 03":[0,0,0,1,0,0]},"PEUGEOT":{"":[1,1,0,0,0,0]}}},"VIDEIRA":{"marcas":{"AUDI":[0,1,0,0,1,0],"BMW":[1,2,0,0,0,0],"BYD":[3,0,2,4,5,6],"CAOACHERY":[0,2,0,2,0,0],"CITROEN":[0,0,1,0,1,1],"FIAT":[32,34,36,18,20,84],"FORD":[0,1,3,1,1,1],"GEELY":[0,0,1,0,1,2],"GM":[5,10,4,14,14,9],"GWM":[5,4,8,2,7,8],"HONDA":[0,0,3,1,0,1],"HYUNDAI":[3,1,3,4,2,2],"JEEP":[8,4,7,5,8,2],"MMC":[0,1,0,0,1,0],"NISSAN":[0,0,1,1,0,0],"OMODA":[0,0,1,1,0,0],"PEUGEOT":[2,1,0,1,1,0],"PORSCHE":[0,0,0,0,0,1],"RAM":[0,1,3,1,2,2],"RENAULT":[6,4,2,2,3,1],"TOYOTA":[3,8,8,3,4,4],"VOLKSWAGEN":[16,16,22,19,27,25],"VOLVO":[0,0,0,1,0,0]},"modelos":{"RENAULT":{"BOREAL":[0,0,1,0,2,1],"KARDIAN":[3,0,0,0,1,0],"KWID":[2,2,0,0,0,0],"KWID E-TECH":[1,0,0,1,0,0],"MASTER":[0,0,0,1,0,0],"OROCH":[0,2,1,0,0,0]},"GWM":{"HAVAL H6":[2,3,5,1,4,4],"HAVAL H9":[1,1,0,0,2,2],"ORA 03":[0,0,0,0,1,0],"POER P30":[0,0,2,0,0,1],"TANK 300":[1,0,0,0,0,1],"WEY 07":[1,0,1,1,0,0]},"PEUGEOT":{"":[2,1,0,1,1,0]},"CITROEN":{"BASALT":[0,0,0,0,1,1],"C3 AIRCROSS":[0,0,1,0,0,0]}}},"RIO DO SUL":{"marcas":{"AUDI":[0,0,1,0,0,0],"BMW":[1,0,3,1,2,0],"BYD":[7,8,17,15,24,22],"CAOACHERY":[0,1,0,0,1,1],"EFFA":[1,1,0,0,0,0],"FIAT":[9,13,12,9,15,17],"FORD":[0,6,0,3,3,1],"GEELY":[0,0,0,1,2,4],"GM":[8,16,17,6,11,10],"GWM":[0,3,3,3,6,2],"HONDA":[5,5,13,6,5,4],"HYUNDAI":[9,3,13,6,10,4],"JAECOO":[0,0,1,0,0,1],"JEEP":[10,13,8,11,13,8],"JETOUR":[0,0,1,0,0,0],"KIA":[0,0,0,0,0,1],"LANDROVER":[1,0,0,1,1,0],"LEAPMOTORS":[1,0,0,0,0,0],"MBENZ":[1,4,2,2,2,3],"MG":[0,0,0,0,1,0],"MMC":[1,0,1,0,3,0],"NISSAN":[1,1,4,0,0,2],"OMODA":[1,0,0,0,1,0],"PEUGEOT":[2,2,2,1,0,1],"PORSCHE":[1,0,0,0,0,0],"RAM":[0,0,1,0,0,0],"RENAULT":[5,2,7,4,3,1],"TOYOTA":[2,5,3,3,3,6],"VOLKSWAGEN":[11,21,30,19,26,19],"VOLVO":[1,0,1,0,1,0],"VW":[0,0,0,0,1,0]},"modelos":{"RENAULT":{"BOREAL":[2,1,1,1,0,0],"DUSTER":[1,0,5,0,0,0],"KARDIAN":[1,1,1,1,2,0],"KWID":[0,0,0,1,1,1],"MASTER":[0,0,0,1,0,0],"OROCH":[1,0,0,0,0,0]},"GWM":{"HAVAL H6":[0,2,1,2,5,1],"HAVAL H9":[0,1,0,0,0,0],"ORA 03":[0,0,1,0,0,1],"WEY 07":[0,0,1,1,1,0]},"PEUGEOT":{"":[2,2,0,1,0,0],"EXPERT":[0,0,2,0,0,1]}}},"LAGES":{"marcas":{"AUDI":[1,1,0,0,0,1],"BMW":[1,0,2,1,0,0],"BYD":[3,8,9,9,12,11],"CAOACHERY":[8,10,16,16,18,13],"CITROEN":[4,5,6,7,7,9],"FIAT":[16,30,29,39,25,31],"FORD":[8,8,13,17,10,24],"GAC":[0,0,0,1,0,1],"GEELY":[1,0,1,0,3,5],"GM":[7,14,10,12,18,31],"GWM":[4,5,10,7,8,7],"HONDA":[4,5,6,4,6,9],"HYUNDAI":[11,15,15,16,13,9],"JAECOO":[0,2,2,1,4,8],"JEEP":[13,13,13,13,8,12],"KIA":[0,0,1,0,0,0],"LANDROVER":[1,1,1,0,0,0],"LEAPMOTORS":[0,0,0,0,1,0],"MBENZ":[1,0,2,1,1,1],"MMC":[1,2,2,4,8,3],"NISSAN":[4,0,8,3,2,3],"OMODA":[2,2,3,3,3,5],"PEUGEOT":[9,10,7,7,4,6],"PORSCHE":[0,0,1,0,2,1],"RAM":[3,2,4,8,6,4],"RENAULT":[8,9,3,5,2,5],"TOYOTA":[6,13,12,5,28,13],"VOLKSWAGEN":[17,30,22,38,25,25],"VOLVO":[0,1,3,1,2,1],"VW":[0,0,0,0,1,0],"ZEEKR":[0,1,0,0,0,0]},"modelos":{"RENAULT":{"BOREAL":[1,0,0,0,0,0],"DUSTER":[1,0,0,0,0,0],"KANGOO":[1,0,0,0,0,1],"KARDIAN":[1,0,0,0,1,0],"KWID":[2,3,3,5,1,2],"KWID E-TECH":[0,1,0,0,0,0],"MASTER":[0,2,0,0,0,1],"OROCH":[2,3,0,0,0,1]},"GWM":{"HAVAL H6":[3,3,3,3,4,3],"HAVAL H9":[0,0,2,1,0,1],"ORA 03":[0,1,0,2,3,0],"POER P30":[0,0,2,0,1,2],"TANK 300":[1,1,2,0,0,1],"WEY 07":[0,0,1,1,0,0]},"PEUGEOT":{"":[9,9,7,6,3,6],"BOXER":[0,0,0,0,1,0],"EXPERT":[0,1,0,1,0,0]},"CITROEN":{"BASALT":[2,4,3,3,2,5],"C3":[0,1,2,2,5,2],"C3 AIRCROSS":[2,0,0,1,0,0],"JUMPY":[0,0,1,1,0,2]}}}},"grupo":{"RENAULT":"Renault","GWM":"GWM","YAMAHA":"Yamaha","TRIUMPH":"Triumph","CF MOTO":"CF Motos","PEUGEOT":"Peugeot","CITROEN":"Citroën"}};
 
 Chart.defaults.font.family = "'Segoe UI',sans-serif";
 Chart.defaults.color = '#475569';
 Chart.defaults.borderColor = '#1e293b';
-const gridOpts = { color:'#1e293b' };
+const GRID = { color:'#1e293b' };
 
-// 1. Emplacamentos diários
-new Chart(document.getElementById('chartEmplDiario'),{
-  type:'bar',
-  data:{labels:DIAS_JUN, datasets:[{
-    label:'Emplacamentos', data:emplDiario,
-    backgroundColor:'#38bdf830', borderColor:'#38bdf8',
-    borderWidth:1.5, borderRadius:3
-  },{
-    label:'Média', type:'line',
-    data:Array(20).fill(Math.round(emplDiario.reduce((a,b)=>a+b)/emplDiario.length)),
-    borderColor:'#f5c518', borderWidth:2, borderDash:[5,4], pointRadius:0, fill:false
-  }]},
-  options:{ responsive:true,
-    plugins:{legend:{labels:{color:'#94a3b8'}}},
-    scales:{
-      x:{grid:{display:false}, ticks:{color:'#334155',maxRotation:0}},
-      y:{beginAtZero:true, grid:gridOpts, ticks:{color:'#475569',callback:v=>v>=1000?(v/1000).toFixed(0)+'k':v}}
-    }
-  }
-});
+// Paleta 20 cores distintas (sem vermelho)
+const PAL = [
+  '#f5c518','#38bdf8','#22d3ee','#818cf8','#34d399','#fb923c',
+  '#4ade80','#a78bfa','#2dd4bf','#fbbf24','#60a5fa','#c084fc',
+  '#86efac','#67e8f9','#fcd34d','#93c5fd','#d8b4fe','#6ee7b7',
+  '#e0f2fe','#f0fdf4'
+];
+const COR_GRUPO = { // cor fixa por marca do grupo
+  'RENAULT':'#f5c518','GWM':'#22d3ee','YAMAHA':'#38bdf8',
+  'TRIUMPH':'#818cf8','CF MOTO':'#fb923c','PEUGEOT':'#4ade80','CITROEN':'#f97316'
+};
 
-// 2. Share marcas Brasil (doughnut)
-new Chart(document.getElementById('chartShareMarcas'),{
-  type:'doughnut',
-  data:{labels:marcasBR, datasets:[{
-    data:sharesBR, backgroundColor:coresMerc,
-    borderWidth:3, borderColor:'#0f1623', hoverOffset:8
-  }]},
-  options:{ responsive:true, cutout:'60%',
-    plugins:{
-      legend:{position:'right',labels:{color:'#94a3b8',font:{size:11}}},
-      tooltip:{callbacks:{label:ctx=>` ${ctx.label}: ${ctx.raw}%`}}
-    }
-  }
-});
+// ── Estado dos gráficos ──
+let charts = {};
+function destroyChart(id) { if(charts[id]) { charts[id].destroy(); delete charts[id]; } }
 
-// 3. Top Hatch
-new Chart(document.getElementById('chartTopHatch'),{
-  type:'bar', data:{
-    labels:topHatchMod,
-    datasets:[{data:topHatchUnids,
-      backgroundColor:topHatchMod.map(m=>m.includes('Kwid')?'#f5c518cc':'#38bdf840'),
-      borderColor:topHatchMod.map(m=>m.includes('Kwid')?'#f5c518':'#38bdf8'),
-      borderWidth:1.5, borderRadius:6
-    }]
-  },
-  options:{ indexAxis:'y', responsive:true,
-    plugins:{legend:{display:false}},
-    scales:{
-      x:{beginAtZero:true,grid:gridOpts,ticks:{color:'#475569',callback:v=>v>=1000?(v/1000).toFixed(0)+'k':v}},
-      y:{grid:{display:false},ticks:{color:'#94a3b8',font:{size:11}}}
-    }
-  }
-});
-
-// 4. Top SUV
-new Chart(document.getElementById('chartTopSUV'),{
-  type:'bar', data:{
-    labels:topSUVMod,
-    datasets:[{data:topSUVUnids,
-      backgroundColor:topSUVMod.map(m=>m.includes('Captur')||m.includes('Haval')?'#f5c518cc':'#818cf840'),
-      borderColor:topSUVMod.map(m=>m.includes('Captur')||m.includes('Haval')?'#f5c518':'#818cf8'),
-      borderWidth:1.5, borderRadius:6
-    }]
-  },
-  options:{ indexAxis:'y', responsive:true,
-    plugins:{legend:{display:false}},
-    scales:{
-      x:{beginAtZero:true,grid:gridOpts,ticks:{color:'#475569',callback:v=>v>=1000?(v/1000).toFixed(0)+'k':v}},
-      y:{grid:{display:false},ticks:{color:'#94a3b8',font:{size:11}}}
-    }
-  }
-});
-
-// 5. SC vs BR
-new Chart(document.getElementById('chartSCvsBR'),{
-  type:'line',
-  data:{labels:MESES_MERC, datasets:[
-    {label:'Santa Catarina',data:indSC,borderColor:'#38bdf8',backgroundColor:'#38bdf815',tension:.4,fill:true,pointRadius:4,borderWidth:2.5,pointBackgroundColor:'#38bdf8',pointBorderColor:'#0f1623',pointBorderWidth:2},
-    {label:'Brasil',data:indBR,borderColor:'#f5c518',backgroundColor:'#f5c51810',tension:.4,fill:false,pointRadius:4,borderWidth:2,borderDash:[5,3],pointBackgroundColor:'#f5c518',pointBorderColor:'#0f1623',pointBorderWidth:2}
-  ]},
-  options:{ responsive:true, interaction:{mode:'index',intersect:false},
-    plugins:{legend:{position:'top',labels:{color:'#94a3b8'}}},
-    scales:{
-      y:{beginAtZero:false,min:95,grid:gridOpts,ticks:{color:'#475569',callback:v=>v}},
-      x:{grid:gridOpts,ticks:{color:'#475569'}}
-    }
-  }
-});
-
-// 6. SC marcas
-new Chart(document.getElementById('chartSCMarcas'),{
-  type:'pie',
-  data:{labels:scMarcas, datasets:[{
-    data:scShares, backgroundColor:coresMerc,
-    borderWidth:3, borderColor:'#0f1623', hoverOffset:8
-  }]},
-  options:{ responsive:true,
-    plugins:{
-      legend:{position:'right',labels:{color:'#94a3b8',font:{size:11}}},
-      tooltip:{callbacks:{label:ctx=>` ${ctx.label}: ${ctx.raw}%`}}
-    }
-  }
-});
-
-// 7. Cidades barras empilhadas (total + share Demarco)
-new Chart(document.getElementById('chartCidades'),{
-  type:'bar',
-  data:{
-    labels:cidadesLabels,
-    datasets:[
-      {label:'Total Emplacamentos',data:cidadesTotal,backgroundColor:'#1e293b',borderColor:'#334155',borderWidth:1,borderRadius:4,yAxisID:'y'},
-      {label:'Share Demarco (%)',data:cidadesShare,backgroundColor:'#f5c51880',borderColor:'#f5c518',borderWidth:1.5,borderRadius:4,yAxisID:'y2',type:'line',tension:.3,pointRadius:5,pointBackgroundColor:'#f5c518',pointBorderColor:'#0f1623',pointBorderWidth:2}
-    ]
-  },
-  options:{ responsive:true,
-    plugins:{legend:{position:'top',labels:{color:'#94a3b8'}}},
-    scales:{
-      y:{beginAtZero:true,grid:gridOpts,ticks:{color:'#475569'},title:{display:true,text:'Emplacamentos',color:'#475569'}},
-      y2:{beginAtZero:true,position:'right',grid:{display:false},ticks:{color:'#f5c518',callback:v=>v+'%'},title:{display:true,text:'Share Demarco',color:'#f5c518'}},
-      x:{grid:{display:false},ticks:{color:'#94a3b8'}}
-    }
-  }
-});
-
-function atualizarMercado() {
-  const reg = document.getElementById('fil-regiao').value;
-  document.getElementById('wrap-cidade').style.display = reg==='cidade' ? 'flex' : 'none';
-  // Aqui entrarão chamadas de API real — por enquanto apenas UI
+// ── Helpers ──
+function sumMeses(arr, mesIdx) {
+  if(!arr) return 0;
+  if(mesIdx === 'all') return arr.reduce((a,b)=>a+b,0);
+  return arr[mesIdx] || 0;
 }
+function pct(v, total) { return total > 0 ? (v/total*100).toFixed(1)+'%' : '—'; }
+function fmt(n) {
+  if(n >= 1000000) return (n/1000000).toFixed(1)+'M';
+  if(n >= 1000) return (n/1000).toFixed(1)+'k';
+  return n.toLocaleString('pt-BR');
+}
+function getTop10(mapaObj, mesIdx, nTop=10) {
+  return Object.entries(mapaObj)
+    .map(([marca,vals])=>([marca, sumMeses(vals,mesIdx)]))
+    .filter(([,v])=>v>0)
+    .sort((a,b)=>b[1]-a[1])
+    .slice(0, nTop);
+}
+
+// ═══ ATUALIZAR PAINEL ═══
+function mercadoAtualizar() {
+  const mesIdx  = document.getElementById('mf-mes').value;
+  const marca   = document.getElementById('mf-marca').value;
+  const cidNorm = document.getElementById('mf-cidade').value;
+  const cidLabel= document.getElementById('mf-cidade').options[document.getElementById('mf-cidade').selectedIndex].text;
+
+  const cidData  = _D.cidades[cidNorm] || {};
+  const cidMarcas= cidData.marcas || {};
+  const cidMods  = (cidData.modelos || {})[marca] || {};
+
+  // ── KPIs ──
+  const totBR    = Object.values(_D.brasil).reduce((s,v)=>s+sumMeses(v,mesIdx),0);
+  const totSC    = Object.values(_D.sc    ).reduce((s,v)=>s+sumMeses(v,mesIdx),0);
+  const marcaBR  = sumMeses(_D.brasil[marca], mesIdx);
+  const marcaSC  = sumMeses(_D.sc[marca],     mesIdx);
+  const marcaCID = sumMeses(cidMarcas[marca], mesIdx);
+  const totCID   = Object.values(cidMarcas).reduce((s,v)=>s+sumMeses(v,mesIdx),0);
+
+  document.getElementById('kv-brasil').textContent       = fmt(marcaBR);
+  document.getElementById('kv-share-br').textContent     = pct(marcaBR, totBR);
+  document.getElementById('kv-sc').textContent           = fmt(marcaSC);
+  document.getElementById('kv-share-sc').textContent     = pct(marcaSC, totSC);
+  document.getElementById('kv-cidade').textContent       = fmt(marcaCID);
+  document.getElementById('kv-share-cidade').textContent = pct(marcaCID, totCID);
+  document.getElementById('ks-cidade').textContent       = cidLabel;
+  document.getElementById('ks-share-cidade').textContent = cidLabel;
+
+  // ── Gráfico 1: Top 10 marcas na cidade ──
+  const top10 = getTop10(cidMarcas, mesIdx, 10);
+  const t10Labels = top10.map(([m])=>m);
+  const t10Vals   = top10.map(([,v])=>v);
+  const t10Cores  = t10Labels.map((m,i)=> COR_GRUPO[m] || PAL[i % PAL.length]);
+  const t10Border = t10Labels.map(m=> m===marca ? '#ffffff' : 'transparent');
+  const t10BW     = t10Labels.map(m=> m===marca ? 2 : 0);
+
+  destroyChart('top10');
+  charts['top10'] = new Chart(document.getElementById('chartTop10Cidade'), {
+    type:'bar',
+    data:{ labels:t10Labels, datasets:[{
+      data:t10Vals,
+      backgroundColor: t10Cores.map((c,i)=> t10Labels[i]===marca ? c : c+'88'),
+      borderColor: t10Border, borderWidth: t10BW, borderRadius:6
+    }]},
+    options:{ indexAxis:'y', responsive:true,
+      plugins:{ legend:{display:false},
+        tooltip:{callbacks:{label:ctx=>` ${ctx.raw.toLocaleString('pt-BR')} empl.`}}
+      },
+      scales:{
+        x:{beginAtZero:true,grid:GRID,ticks:{color:'#475569',callback:v=>v>=1000?(v/1000).toFixed(0)+'k':v}},
+        y:{grid:{display:false},ticks:{color:ctx=> t10Labels[ctx.index]===marca?'#f5c518':'#94a3b8', font:{weight:ctx=> t10Labels[ctx.index]===marca?'bold':'normal'}}}
+      }
+    }
+  });
+  document.getElementById('ct-top10').textContent = `Top 10 Marcas em ${cidLabel}`;
+
+  // ── Gráfico 2: Modelos da marca na cidade ──
+  const modTop = Object.entries(cidMods)
+    .map(([m,v])=>([m, sumMeses(v,mesIdx)]))
+    .filter(([,v])=>v>0)
+    .sort((a,b)=>b[1]-a[1])
+    .slice(0,10);
+
+  destroyChart('modelos');
+  if(modTop.length > 0) {
+    const corMarca = COR_GRUPO[marca] || '#f5c518';
+    charts['modelos'] = new Chart(document.getElementById('chartModelosCidade'), {
+      type:'bar',
+      data:{ labels:modTop.map(([m])=>m), datasets:[{
+        data:modTop.map(([,v])=>v),
+        backgroundColor: modTop.map((_,i)=> i===0 ? corMarca : corMarca+'55'),
+        borderColor:corMarca, borderWidth:1, borderRadius:6
+      }]},
+      options:{ indexAxis:'y', responsive:true,
+        plugins:{ legend:{display:false} },
+        scales:{
+          x:{beginAtZero:true,grid:GRID,ticks:{color:'#475569'}},
+          y:{grid:{display:false},ticks:{color:'#94a3b8'}}
+        }
+      }
+    });
+  } else {
+    const ctx2 = document.getElementById('chartModelosCidade').getContext('2d');
+    ctx2.clearRect(0,0,ctx2.canvas.width,ctx2.canvas.height);
+    ctx2.fillStyle='#475569'; ctx2.font='13px Segoe UI'; ctx2.textAlign='center';
+    ctx2.fillText('Sem dados de modelo para esta seleção', ctx2.canvas.width/2, 80);
+  }
+  document.getElementById('ct-modelos').textContent =
+    `Modelos ${_D.grupo[marca] || marca} em ${cidLabel}`;
+
+  // ── Gráfico 3: Share comparativo mensal (linha) ──
+  const meses = _D.meses_pt;
+  function sharesPorMes(mapaObj, marcaKey) {
+    const totArr = meses.map((_,i)=> Object.values(mapaObj).reduce((s,v)=>s+(v[i]||0),0));
+    const mArr   = meses.map((_,i)=> (mapaObj[marcaKey]?.[i] || 0));
+    return meses.map((_,i)=> totArr[i]>0 ? parseFloat((mArr[i]/totArr[i]*100).toFixed(2)) : 0);
+  }
+  const shareBR  = sharesPorMes(_D.brasil, marca);
+  const shareSC  = sharesPorMes(_D.sc,     marca);
+  const shareR1  = sharesPorMes(_D.r1,     marca);
+  const shareCID = sharesPorMes(cidMarcas, marca);
+  const corMarca = COR_GRUPO[marca] || '#f5c518';
+
+  destroyChart('shareComp');
+  charts['shareComp'] = new Chart(document.getElementById('chartShareComp'), {
+    type:'line',
+    data:{ labels:meses, datasets:[
+      {label:`${cidLabel}`,data:shareCID,borderColor:corMarca,backgroundColor:corMarca+'20',tension:.4,fill:true,pointRadius:5,borderWidth:3,pointBackgroundColor:corMarca,pointBorderColor:'#0f1623',pointBorderWidth:2},
+      {label:'Santa Catarina',data:shareSC,borderColor:'#38bdf8',backgroundColor:'transparent',tension:.4,fill:false,pointRadius:4,borderWidth:2,pointBackgroundColor:'#38bdf8',pointBorderColor:'#0f1623',pointBorderWidth:1},
+      {label:'Regional Sul (R1)',data:shareR1,borderColor:'#818cf8',backgroundColor:'transparent',tension:.4,fill:false,pointRadius:4,borderWidth:2,borderDash:[4,3],pointBackgroundColor:'#818cf8',pointBorderColor:'#0f1623',pointBorderWidth:1},
+      {label:'Brasil',data:shareBR,borderColor:'#475569',backgroundColor:'transparent',tension:.4,fill:false,pointRadius:4,borderWidth:1.5,borderDash:[6,4],pointBackgroundColor:'#475569',pointBorderColor:'#0f1623',pointBorderWidth:1}
+    ]},
+    options:{ responsive:true, interaction:{mode:'index',intersect:false},
+      plugins:{legend:{position:'top',labels:{color:'#94a3b8',font:{size:11},boxWidth:10}},
+        tooltip:{callbacks:{label:ctx=>` ${ctx.dataset.label}: ${ctx.raw}%`}}
+      },
+      scales:{
+        y:{beginAtZero:true,grid:GRID,ticks:{color:'#475569',callback:v=>v+'%'}},
+        x:{grid:GRID,ticks:{color:'#475569'}}
+      }
+    }
+  });
+  document.getElementById('ct-share-comp').textContent =
+    `Market Share ${_D.grupo[marca]||marca} — Cidade vs SC vs Sul (R1) vs Brasil (%)`;
+
+  // ── Gráfico 4: Evolução mensal top 5 na cidade ──
+  const top5evo = getTop10(cidMarcas, 'all', 5).map(([m])=>m);
+  // garante que a marca selecionada está incluída
+  if(marca && !top5evo.includes(marca) && cidMarcas[marca]) top5evo.push(marca);
+
+  destroyChart('evoCidade');
+  charts['evoCidade'] = new Chart(document.getElementById('chartEvoCidade'), {
+    type:'line',
+    data:{ labels:meses, datasets: top5evo.map((m,i)=>{
+      const cor = COR_GRUPO[m] || PAL[i % PAL.length];
+      const isMarca = m === marca;
+      return {
+        label:m, data:meses.map((_,mi)=>(cidMarcas[m]?.[mi]||0)),
+        borderColor:cor, backgroundColor: isMarca ? cor+'25':'transparent',
+        tension:.4, fill:isMarca, pointRadius: isMarca?5:3,
+        borderWidth: isMarca?3:1.5,
+        pointBackgroundColor:cor, pointBorderColor:'#0f1623', pointBorderWidth: isMarca?2:1
+      };
+    })},
+    options:{ responsive:true, interaction:{mode:'index',intersect:false},
+      plugins:{legend:{position:'top',labels:{color:'#94a3b8',font:{size:11},boxWidth:10}}},
+      scales:{y:{beginAtZero:true,grid:GRID,ticks:{color:'#475569'}},x:{grid:GRID,ticks:{color:'#475569'}}}
+    }
+  });
+  document.getElementById('ct-evo').textContent = `Evolução Mensal — Top Marcas em ${cidLabel}`;
+
+  // ── Gráfico 5: Pizza share na cidade ──
+  destroyChart('pieCidade');
+  const pieTop8 = getTop10(cidMarcas, mesIdx, 8);
+  const outrosVol = totCID - pieTop8.reduce((s,[,v])=>s+v,0);
+  const pieLabels = pieTop8.map(([m])=>m); if(outrosVol>0) pieLabels.push('Outros');
+  const pieVals   = pieTop8.map(([,v])=>v); if(outrosVol>0) pieVals.push(outrosVol);
+  const pieCores  = pieLabels.map((m,i)=> COR_GRUPO[m] || PAL[i % PAL.length]);
+  charts['pieCidade'] = new Chart(document.getElementById('chartPieCidade'), {
+    type:'doughnut',
+    data:{ labels:pieLabels, datasets:[{
+      data:pieVals, backgroundColor:pieCores, borderWidth:3, borderColor:'#0f1623', hoverOffset:8
+    }]},
+    options:{ responsive:true, cutout:'58%',
+      plugins:{
+        legend:{position:'right',labels:{color:'#94a3b8',font:{size:10}}},
+        tooltip:{callbacks:{label:ctx=>` ${ctx.label}: ${pct(ctx.raw,totCID)}`}}
+      }
+    }
+  });
+
+  // ── Tabela ranking ──
+  const tbody = document.getElementById('tbody-ranking');
+  tbody.innerHTML = '';
+  const totBR2  = Object.values(_D.brasil).reduce((s,v)=>s+sumMeses(v,mesIdx),0);
+  const totSC2  = Object.values(_D.sc    ).reduce((s,v)=>s+sumMeses(v,mesIdx),0);
+  top10.forEach(([m, vol], idx) => {
+    const isMarca = m === marca;
+    const volBR   = sumMeses(_D.brasil[m], mesIdx);
+    const volSC   = sumMeses(_D.sc[m],     mesIdx);
+    const cor     = COR_GRUPO[m] ? `color:${COR_GRUPO[m]};font-weight:800` : 'color:#94a3b8';
+    const bg      = isMarca ? 'background:#1a2a1a' : '';
+    tbody.innerHTML += `<tr style="${bg}">
+      <td style="color:#475569;font-size:11px">#${idx+1}</td>
+      <td><span style="${cor}">${m}</span></td>
+      <td class="num bold">${vol.toLocaleString('pt-BR')}</td>
+      <td class="num">${pct(vol, totCID)}</td>
+      <td class="num">${pct(volSC, totSC2)}</td>
+      <td class="num">${pct(volBR, totBR2)}</td>
+      <td class="num"><span style="color:#475569">—</span></td>
+    </tr>`;
+  });
+  document.getElementById('ct-tabela').textContent = `Ranking — ${cidLabel}`;
+}
+
+// Inicializa na abertura da aba
+document.addEventListener('DOMContentLoaded', mercadoAtualizar);
+// Também inicializa quando a aba Mercado é clicada
+(function() {
+  const orig = window.abrirAba;
+  window.abrirAba = function(nome, btn) {
+    orig(nome, btn);
+    if(nome === 'mercado') setTimeout(mercadoAtualizar, 50);
+  };
+})();
 </script>
 
 </div>
